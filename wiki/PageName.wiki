@@ -1,5 +1,0 @@
-#summary Reasons behind developing evedb
-
-= Motivation =
-
-TBD
