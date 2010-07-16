@@ -3,4 +3,24 @@
 
 = Getting Started =
 
+== Easy way ==
+
+If you do not want to create your own AppEngine application, load data into it, deploy application, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. I maintain couple of dump versions, so, feel free to use it. Just go to page with available [Methods methods].
+
+== Hard way ==
+
+If you are interested in implementation details or want your own AppEngine application with running EveDb, than this chapter is for you.
+
+=== Static database dump ===
+TBD
+=== Creating CSV files with data ===
+TBD
+=== Uploading data into Datastore ===
+TBD
+=== Deploying application ===
+TBD
+=== Using code ===
+TBD
+
+== Known issues ==
 TBD
