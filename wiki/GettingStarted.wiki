@@ -1,4 +1,5 @@
 #summary How to start using EveDb
+#labels Featured
 
 = Getting Started =
 
