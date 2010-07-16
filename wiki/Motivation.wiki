@@ -2,4 +2,10 @@
 
 = Motivation =
 
-TBD
+During development of various small applications (mostly industry-related calculators) for [http://www.eveonline.com/ EVE Online] I came to realize that I have to enter a lot of in-game data (like material requirements for items), which is tedious and error-prone process. It was OK for some quick-n-dirty calculations, but generally not feasible for serious calculating.
+
+I downloaded static database dump from CCP [http://www.eveonline.com/community/toolkit.asp Toolkit], which is in form of MSSQL database backup. Long story short, it was painful experience: took a lot of time and space on disk. Luckily, there are available conversions on [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev] for MySQL, SQLite and PostgreSQL (thank you guys). Database dump is big (MySQL one is about 250MB, though, you likely won't need most of it), you need to keep database server up and running, make connection to it, write queries with lots of joins. To sum up, just not convenient.
+
+Since I wasn't able to find alternatives, I came up with idea to write simple RESTful web-services that would return information I need for calculations in convenient way from static database dump. It's HTTP based, and can be widely used (Python scripts, reused in other application, etc). I also wanted to try new technologies, so I picked [http://code.google.com/appengine/ Google AppEngine].
+
+EveDb has very limited amount of methods, only those I needed for my calculations and information lookup.
