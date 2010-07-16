@@ -25,7 +25,7 @@ TBD
 == Known issues ==
 
 === Cold start time ===
-Google AppEngine stops application if it is not used by anyone for certain amount of time, like 10 minutes, or so. If requests comes when application is stopped, it gets started, so called "cold start" because it takes longer time. Current application cold start time is about 5 seconds. Which is quite high. This is something that will be improved. _Python has much better cold start times._
+Google AppEngine stops application if it is not used by anyone for certain amount of time, like 10 minutes, or so. If requests comes when application is stopped, it gets started, so called "cold start" because it takes longer time. Current EveDb cold start time is about 5 seconds. Which is quite high. This is something that will be improved. _Python has much better cold start times._
 
 === Lookup queries ===
 Datastore does not support LIKE operations. Yeah, just like that. So, do not expect that `lookupType/orax` would return you `Thorax`. There is a trick how to make LIKE-queries on Datastore, but they are limited. TBD.
