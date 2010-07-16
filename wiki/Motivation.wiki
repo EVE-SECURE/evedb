@@ -1,4 +1,4 @@
-#summary Reasons behind developing evedb
+#summary Reasons behind developing EveDb
 
 = Motivation =
 
