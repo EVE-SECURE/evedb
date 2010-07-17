@@ -15,7 +15,7 @@ If you want your own AppEngine application with running EveDb, you will have to 
 
 ==== Static database dump ====
 
-You will need EVE Online static database dump to create dataset that will be loaded into Datastore. I used MySQL variant from [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev].
+You will need EVE Online static database dump to create dataset that will be loaded into Datastore. There is [http://www.eveonline.com/community/toolkit.asp official one], but it is MSSQL. I used MySQL conversion from [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev].
 
 ==== Create CSV files with data ====
 
