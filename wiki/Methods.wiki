@@ -1,4 +1,7 @@
 #summary Available EveDb methods
+#labels Featured
+
+<wiki:toc max_depth="3" /> 
 
 = Methods =
 
@@ -30,7 +33,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 == Method details ==
 
-=== /baseMaterialsFor(TypeID|TypeName) ===
+=== /baseMaterialsForTypeID and /baseMaterialsForTypeName ===
 
 ==== Attributes ====
 
@@ -61,7 +64,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
 
-=== /blueprintTypeBy(TypeID|TypeName) ===
+=== /blueprintTypeByTypeID and /blueprintTypeByTypeName ===
 
 ==== Attributes ====
 
@@ -88,7 +91,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah blueprintTypeByTypeID/blah-blah] (HTTP 400)
 
-=== /extraMaterialsFor(TypeID|TypeName) ===
+=== /extraMaterialsForTypeID and /extraMaterialsForTypeName ===
 
 ==== Attributes ====
          
@@ -129,6 +132,13 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 || itemCategoryID || Number ||
 || graphicIcon || String ||
 
+==== Limitations ====
+
+  * Maximum 50 results (EveDb constraint)
+  * Minimum 3 letters (EveDb constraint)
+  * Only matches that begin with query string (AppEngine constraint)
+  * Case-sensitive (AppEngine constraint)
+
 ==== Examples ====
 
 [http://odylab-evedb.appspot.com/lookupBlueprintType/Mega lookupBlueprintType/Mega] (JSON)
@@ -159,6 +169,13 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 || itemCategoryID || Number ||
 || graphicIcon || String ||
 
+==== Limitations ====
+
+  * Maximum 50 results (EveDb constraint)
+  * Minimum 3 letters (EveDb constraint)
+  * Only matches that begin with query string (AppEngine constraint)
+  * Case-sensitive (AppEngine constraint)
+
 ==== Examples ====
 
 [http://odylab-evedb.appspot.com/lookupResourceType/Tri lookupResourceType/Tri] (JSON)
@@ -183,6 +200,13 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 || itemCategoryID || Number ||
 || name || String ||
 || graphicIcon || String ||
+
+==== Limitations ====
+
+  * Maximum 50 results (EveDb constraint)
+  * Minimum 3 letters (EveDb constraint)
+  * Only matches that begin with query string (AppEngine constraint)
+  * Case-sensitive (AppEngine constraint)
 
 ==== Examples ====
 
@@ -214,7 +238,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/lookupType/A lookupType/A] (HTTP 400)
 
-=== /typeBasicInfoBy(TypeID}TypeName) ===
+=== /typeBasicInfoByTypeID /typeBasicInfoByTypeName ===
 
 ==== Attributes ====
 
