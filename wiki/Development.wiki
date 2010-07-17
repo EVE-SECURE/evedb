@@ -2,19 +2,21 @@
 
 = Current state =
 
-EveDb has very limited amount of methods, only those I initially needed for my calculations and information lookup. Hopefully, it will be gradually expanded if such need will arise.
+EveDb has very limited amount of methods, only those I initially needed for my calculations and information lookup. Hopefully, it will be gradually expanded by me or other people if such need will arise.
+
+= TODOs =
+
+  * XML support (making responses in both JSON/XML depending on `accept` in headers)
 
 = Known issues =
 
 == Cold start ==
 
-Application cold start takes about 4-5 seconds. This can be improved by using `@LazySingleton` in Guice. Probably other technologies, for instance Python has much better cold start times. Optimization that already been done and considerably reduced cold start time:
+Application cold start takes about 4-5 seconds. This can be improved by using `@LazySingleton` in Guice. Probably by other technologies, for instance Python has much better cold start times. Optimizations that already had been done and considerably reduced cold start time:
   * [http://code.google.com/appengine/docs/java/datastore/usingjdo.html JDO] replaced with [http://code.google.com/p/objectify-appengine/ Objectify]
   * [http://static.springsource.org/spring/docs/2.0.x/reference/beans.html Spring] replaced with [http://code.google.com/p/google-guice/ Guice]
   * [https://jersey.dev.java.net/ Jersey] replaces with [http://www.restlet.org/ Restlet], and then switched to plain Servlets
 
 == Lookup queries ==
 
-Datastore does not support SQL-like LIKE queries. Yeah, just like that. Do not expect that `lookupType/orax` would return you `Thorax`. There is a trick how to make LIKE-queries on Datastore, but they are limited:
-  * matching only from begining
-  * case-sensitive
+Datastore does not support SQL-like LIKE queries. Yeah, just like that. Do not expect that `lookupType/orax` would return you `Thorax`. There is a [http://code.google.com/intl/lv-LV/appengine/docs/python/datastore/queriesandindexes.html#Introducing_Indexes trick] how to make LIKE-queries with inequality filters on Datastore, however they are case-sensitive and limited for matching from the beginning.
