@@ -35,6 +35,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 === /baseMaterialsForTypeID and /baseMaterialsForTypeName ===
 
+Retrieve given item base material requirements. Shows how much material is needed for constructing given item, or how much can be recovered after reprocessing.
+
 ==== Attributes ====
 
 || materialTypeID || Number ||
@@ -66,6 +68,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 === /blueprintTypeByTypeID and /blueprintTypeByTypeName ===
 
+Retrieve blueprint information. Contains generic information like produced item type, base waste factor and maximum production limit. Mainly used to determine what item is produced by given blueprint.
+
 ==== Attributes ====
 
 || blueprintTypeID || Number ||
@@ -92,6 +96,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 [http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah blueprintTypeByTypeID/blah-blah] (HTTP 400)
 
 === /extraMaterialsForTypeID and /extraMaterialsForTypeName ===
+
+Retrieve additional information for given item type. Such information include additional items required for construction, invention and research.
 
 ==== Attributes ====
          
@@ -124,6 +130,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 [http://odylab-evedb.appspot.com/extraMaterialsForTypeID/blah-blah extraMaterialsForTypeID/blah-blah] (HTTP 400)
 
 === /lookupBlueprintType ===
+
+Retrieve list of blueprint matches (categoryID=9) for given query. Subject to some limitiations (see below).
 
 ==== Attributes ====
 
@@ -162,6 +170,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 === /lookupResourceType ===
 
+Retrieves list of resource item matches (categoryID=4) for given query. Subject to some limitiations (see below).
+
 ==== Attributes ====
 
 || itemTypeID || Number ||
@@ -193,6 +203,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 [http://odylab-evedb.appspot.com/lookupResourceType/A lookupResourceType/A] (HTTP 400)
 
 === /lookupType ===
+
+Retrieves list of all item matches for given query. Subject to some limitiations (see below).
 
 ==== Attributes ====
 
@@ -239,6 +251,8 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 [http://odylab-evedb.appspot.com/lookupType/A lookupType/A] (HTTP 400)
 
 === /typeBasicInfoByTypeID /typeBasicInfoByTypeName ===
+
+Retrieve item basic information, like type id, name, category and graphic icon. Can be used to compose image URLs.
 
 ==== Attributes ====
 
@@ -287,7 +301,7 @@ Convert item type name to id.
 
 === /version ===
 
-Returns application version.
+Return application version.
 
 ==== Examples ====
 
