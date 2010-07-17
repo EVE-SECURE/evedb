@@ -29,6 +29,11 @@ Currently, there are two dumps available:
 == Method details ==
 
 === baseMaterialsForTypeID ===
+Request: http://odylab-evedb.appspot.com/baseMaterialsForTypeName/Rifter
+Response (JSON):
+{{{
+[{"materialTypeID":34,"materialTypeName":"Tritanium","materialTypeCategoryID":4,"quantity":20524,"materialTypeGraphicIcon":"06_14"},{"materialTypeID":35,"materialTypeName":"Pyerite","materialTypeCategoryID":4,"quantity":5529,"materialTypeGraphicIcon":"06_15"},{"materialTypeID":36,"materialTypeName":"Mexallon","materialTypeCategoryID":4,"quantity":1841,"materialTypeGraphicIcon":"06_12"},{"materialTypeID":37,"materialTypeName":"Isogen","materialTypeCategoryID":4,"quantity":317,"materialTypeGraphicIcon":"06_16"},{"materialTypeID":38,"materialTypeName":"Nocxium","materialTypeCategoryID":4,"quantity":118,"materialTypeGraphicIcon":"11_09"},{"materialTypeID":39,"materialTypeName":"Zydrine","materialTypeCategoryID":4,"quantity":13,"materialTypeGraphicIcon":"11_11"},{"materialTypeID":40,"materialTypeName":"Megacyte","materialTypeCategoryID":4,"quantity":1,"materialTypeGraphicIcon":"11_10"}]
+}}}
 
 === baseMaterialsForTypeName ===
 
