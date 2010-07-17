@@ -21,7 +21,7 @@ You will need EVE Online static database dump to create dataset that will be loa
 
 Run SQL queries `database/data/*.sql` and store result in corresponding CSV file. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
 
-==== Uploading data into Datastore ====
+==== Upload data into Datastore ====
 
 You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py' scripts to load CSV data into Datastore.
 
