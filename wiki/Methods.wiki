@@ -12,25 +12,25 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 == Summary ==
 
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
-|| baseMaterialsForTypeID || type id || JSON || YES || YES || TBD ||
-|| baseMaterialsForTypeName || type name || JSON || YES || YES || TBD ||
-|| blueprintTypeByTypeID || type id || JSON || YES || YES || TBD ||
-|| blueprintTypeByTypeName || type name || JSON || YES || YES || TBD ||
-|| extraMaterialsForTypeID || type id || JSON || YES || YES || TBD ||
-|| extraMaterialsForTypeName || type name || JSON || YES || YES || TBD ||
-|| lookupBlueprintType || partial type name || JSON || YES || YES || TBD ||
-|| lookupResourceType || partial type name || JSON || YES || YES || TBD ||
-|| lookupType || partial type name || JSON || YES || YES || TBD ||
-|| typeBasicInfoByTypeID || type id || JSON || YES || YES || TBD ||
-|| typeBasicInfoByTypeName || type name || JSON || YES || YES || TBD ||
-|| typeIdToTypeName || type name || TEXT || YES || YES || TBD ||
-|| typeNameToTypeID || type id || TEXT || YES || YES || TBD ||
-|| lookupType || partial type name || JSON || YES || YES || TBD ||
-|| version || NONE || TEXT || YES || YES || TBD ||
+|| /baseMaterialsForTypeID || /typeID || JSON || YES || YES || TBD ||
+|| /baseMaterialsForTypeName || /typeName || JSON || YES || YES || TBD ||
+|| /blueprintTypeByTypeID || /typeID || JSON || YES || YES || TBD ||
+|| /blueprintTypeByTypeName || /typeName || JSON || YES || YES || TBD ||
+|| /extraMaterialsForTypeID || /typeID || JSON || YES || YES || TBD ||
+|| /extraMaterialsForTypeName || /typeName || JSON || YES || YES || TBD ||
+|| /lookupBlueprintType || /partialTypeName || JSON || YES || YES || TBD ||
+|| /lookupResourceType || /partialTypeName || JSON || YES || YES || TBD ||
+|| /lookupType || /partialTypeName || JSON || YES || YES || TBD ||
+|| /typeBasicInfoByTypeID || /typeID || JSON || YES || YES || TBD ||
+|| /typeBasicInfoByTypeName || /typeName || JSON || YES || YES || TBD ||
+|| /typeIdToTypeName || /typeName || TEXT || YES || YES || TBD ||
+|| /typeNameToTypeID || /typeID || TEXT || YES || YES || TBD ||
+|| /lookupType || /partialTypeName || JSON || YES || YES || TBD ||
+|| /version || NONE || TEXT || YES || YES || TBD ||
 
 == Method details ==
 
-=== baseMaterialsFor(TypeID|TypeName) ===
+=== /baseMaterialsFor(TypeID|TypeName) ===
 
 ==== Attributes ====
 
@@ -61,7 +61,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
 
-=== blueprintTypeBy(TypeID|TypeName) ===
+=== /blueprintTypeBy(TypeID|TypeName) ===
 
 ==== Attributes ====
 
@@ -88,7 +88,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah blueprintTypeByTypeID/blah-blah] (HTTP 400)
 
-=== extraMaterialsFor(TypeID|TypeName) ===
+=== /extraMaterialsFor(TypeID|TypeName) ===
 
 ==== Attributes ====
          
@@ -120,7 +120,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/extraMaterialsForTypeID/blah-blah extraMaterialsForTypeID/blah-blah] (HTTP 400)
 
-=== lookupBlueprintType ===
+=== /lookupBlueprintType ===
 
 ==== Attributes ====
 
@@ -150,7 +150,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/lookupBlueprintType/A lookupBlueprintType/A] (HTTP 400)
 
-=== lookupResourceType ===
+=== /lookupResourceType ===
 
 ==== Attributes ====
 
@@ -175,7 +175,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/lookupResourceType/A lookupResourceType/A] (HTTP 400)
 
-=== lookupType ===
+=== /lookupType ===
 
 ==== Attributes ====
 
@@ -214,7 +214,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/lookupType/A lookupType/A] (HTTP 400)
 
-=== typeBasicInfoBy(TypeID}TypeName) ===
+=== /typeBasicInfoBy(TypeID}TypeName) ===
 
 ==== Attributes ====
 
@@ -232,7 +232,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/1234567890 typeBasicInfoByTypeID/1234567890], [http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/blah-blah typeBasicInfoByTypeID/blah-blah] (HTTP 400)
 
-=== typeIdToTypeName ===
+=== /typeIdToTypeName ===
 
 Convert item type id to name;
 
@@ -245,7 +245,7 @@ Obelisk
 
 [http://odylab-evedb.appspot.com/typeIdToTypeName/1234567890 typeIdToTypeName/1234567890], [http://odylab-evedb.appspot.com/typeIdToTypeName/blah-blah typeIdToTypeName/blah-blah] (HTTP 400)
 
-=== typeNameToTypeID ===
+=== /typeNameToTypeID ===
 
 Convert item type name to id.
 
@@ -261,11 +261,11 @@ Convert item type name to id.
 691
 }}}
 
-=== version ===
-
-==== Examples ====
+=== /version ===
 
 Returns application version.
+
+==== Examples ====
 
 [http://odylab-evedb.appspot.com/version], [http://tyr101.latest.odylab-evedb.appspot.com/version] (TEXT)
 {{{
