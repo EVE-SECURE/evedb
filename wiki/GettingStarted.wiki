@@ -9,7 +9,7 @@ If you do not want to create your own AppEngine application, load data into it a
 
 == Creating own instance ==
 
-You you want your own AppEngine application with running EveDb, there is something you will have to do.
+You you want your own AppEngine application with running EveDb, you will have to create data set using dump, upload it into Datastore and deploy application.
 
 === Load data into Datastore ===
 
@@ -25,7 +25,8 @@ Run SQL queries `database/data/*.sql` and store result in corresponding CSV file
 
 You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py' scripts to load CSV data into Datastore.
 
-=== Deploying application ===
+=== Deploy application ===
+
 Build application with `mvn-clean-package.bad` or `mvn clean package`, deploy `ws/appcfg-update.bat` or `appcfg update target/evedb-ws-<VERSION>`. Enjoy.
 
 == Known issues ==
