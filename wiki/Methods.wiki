@@ -3,7 +3,7 @@
 = Methods =
 
 == Available dumps ==
-Currently, there are two dumps available on odylab-evedb:
+Currently, there are two dumps hosted on odylab-evedb:
   * Dominion 1.0.0 (dom100): http://dom100.latest.odylab-evedb.appspot.com
   * Tyrannis 1.0.1 (tyr101): http://tyr101.latest.odylab-evedb.appspot.com
 
@@ -27,20 +27,20 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 || lookupType || partial type name || JSON || YES || YES || TBD ||
 || version || NONE || TEXT || YES || YES || TBD ||
 
-
 == Method details ==
 
-=== baseMaterialsForTypeID ===
+=== baseMaterialsFor(TypeID|TypeName) ===
 
 ==== Attributes ====
-  * materialTypeID
-  * materialTypeName
-  * materialTypeCategoryID
-  * materialTypeGraphicIcon
+|| materialTypeID || Long ||
+|| materialTypeName || String ||
+|| materialTypeCategoryID || Long ||
+|| materialTypeGraphicIcon || String ||
 
 ==== Examples ====
 
-http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 (JSON)
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587],
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeName/Rifter baseMaterialsForTypeName/Rifter] (JSON)
 {{{
 [{"materialTypeID":34,"materialTypeName":"Tritanium","materialTypeCategoryID":4,"quantity":20524,"materialTypeGraphicIcon":"06_14"},
 {"materialTypeID":35,"materialTypeName":"Pyerite","materialTypeCategoryID":4,"quantity":5529,"materialTypeGraphicIcon":"06_15"},
@@ -54,31 +54,6 @@ http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 (JSON)
 http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah (HTTP 400)
 
 http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 (JSON)
-{{{
-[]
-}}}
-
-=== baseMaterialsForTypeName ===
-
-==== Examples ====
-
-http://odylab-evedb.appspot.com/baseMaterialsForTypeName/Rifter (JSON)
-{{{
-[{"materialTypeID":34,"materialTypeName":"Tritanium","materialTypeCategoryID":4,"quantity":20524,"materialTypeGraphicIcon":"06_14"},
-{"materialTypeID":35,"materialTypeName":"Pyerite","materialTypeCategoryID":4,"quantity":5529,"materialTypeGraphicIcon":"06_15"},
-{"materialTypeID":36,"materialTypeName":"Mexallon","materialTypeCategoryID":4,"quantity":1841,"materialTypeGraphicIcon":"06_12"},
-{"materialTypeID":37,"materialTypeName":"Isogen","materialTypeCategoryID":4,"quantity":317,"materialTypeGraphicIcon":"06_16"},
-{"materialTypeID":38,"materialTypeName":"Nocxium","materialTypeCategoryID":4,"quantity":118,"materialTypeGraphicIcon":"11_09"},
-{"materialTypeID":39,"materialTypeName":"Zydrine","materialTypeCategoryID":4,"quantity":13,"materialTypeGraphicIcon":"11_11"},
-{"materialTypeID":40,"materialTypeName":"Megacyte","materialTypeCategoryID":4,"quantity":1,"materialTypeGraphicIcon":"11_10"}]
-}}}
-
-http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah (JSON)
-{{{
-[]
-}}}
-
-http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890
 {{{
 []
 }}}
