@@ -2,4 +2,58 @@
 
 = Methods =
 
-TBD.
+== Available dumps ==
+Currently, there are two dumps available:
+  * Dominion 1.0.0 (dom100): http://dom100.latest.odylab-evedb.appspot.com
+  * Tyrannis 1.0.1 (tyr101): http://tyr101.latest.odylab-evedb.appspot.com
+
+== Summary ==
+|| *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
+|| baseMaterialsForTypeID || type id || JSON || YES || YES || TBD ||
+|| baseMaterialsForTypeName || type name || JSON || YES || YES || TBD ||
+|| blueprintTypeByTypeID || type id || JSON || YES || YES || TBD ||
+|| blueprintTypeByTypeName || type name || JSON || YES || YES || TBD ||
+|| extraMaterialsForTypeID || type id || JSON || YES || YES || TBD ||
+|| extraMaterialsForTypeName || type name || JSON || YES || YES || TBD ||
+|| lookupBlueprintType || partial type name || JSON || YES || YES || TBD ||
+|| lookupResourceType || partial type name || JSON || YES || YES || TBD ||
+|| lookupType || partial type name || JSON || YES || YES || TBD ||
+|| typeBasicInfoByTypeID || type id || JSON || YES || YES || TBD ||
+|| typeBasicInfoByTypeName || type name || JSON || YES || YES || TBD ||
+|| typeIdToTypeName || type name || TEXT || YES || YES || TBD ||
+|| typeNameToTypeID || type id || TEXT || YES || YES || TBD ||
+|| lookupType || partial type name || JSON || YES || YES || TBD ||
+|| version || NONE || TEXT || YES || YES || TBD ||
+
+
+== Method details ==
+
+=== baseMaterialsForTypeID ===
+
+=== baseMaterialsForTypeName ===
+
+=== blueprintTypeByTypeID ===
+
+=== blueprintTypeByTypeName ===
+
+=== extraMaterialsForTypeID ===
+
+=== extraMaterialsForTypeName ===
+
+=== lookupBlueprintType ===
+
+=== lookupResourceType ===
+
+=== lookupType ===
+
+=== typeBasicInfoByTypeID ===
+
+=== typeBasicInfoByTypeName ===
+
+=== typeIdToTypeName ===
+
+=== typeNameToTypeID ===
+
+=== lookupType ===
+
+=== version ===
