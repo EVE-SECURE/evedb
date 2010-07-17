@@ -1,4 +1,4 @@
-#summary Using EveDb: existing or own instance
+#summary Getting started with EveDb
 #labels Featured
 
 = Getting Started =
