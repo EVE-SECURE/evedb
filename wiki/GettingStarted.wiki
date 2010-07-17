@@ -19,7 +19,7 @@ You will need EVE Online static database dump to create dataset that will be loa
 
 ==== Create CSV files with data ====
 
-Run SQL queries `database/data/*.sql` and store result in corresponding CSV file. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
+Run SQL queries `database/data/*.sql` and store result in corresponding CSV files. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
 
 ==== Upload data into Datastore ====
 
