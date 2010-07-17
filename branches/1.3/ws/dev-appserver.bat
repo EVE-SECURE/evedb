@@ -1,1 +1,1 @@
-dev_appserver target/evedb-ws-1.3-SNAPSHOT
+dev_appserver target/evedb-ws-1.3
