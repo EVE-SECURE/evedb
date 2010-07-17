@@ -27,4 +27,4 @@ You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (b
 
 === Deploy application ===
 
-Build application with `mvn-clean-package.bat` or `mvn clean package`, deploy with `ws/appcfg-update.bat` or `appcfg update target/evedb-ws-<VERSION>`.
+Build application with `mvn-clean-package.bat` and deploy with `ws/appcfg-update.bat`.
