@@ -10,13 +10,13 @@ Currently, there are two dumps hosted on odylab-evedb:
   * Dominion 1.0.0 (dom100): http://dom100.latest.odylab-evedb.appspot.com
   * Tyrannis 1.0.1 (tyr101): http://tyr101.latest.odylab-evedb.appspot.com
 
-You can specify exact dump with URLs above, otherwise the latest dump will be used.
+You can specify exact dump with URLs above, if none is specified the latest dump will be used.
 
 == Summary ==
 
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
-|| /baseMaterialsForTypeID || /typeID || JSON || YES || YES || TBD ||
-|| /baseMaterialsForTypeName || /typeName || JSON || YES || YES || TBD ||
+|| /baseMaterialsForTypeID || /typeID || JSON || YES || YES || List of base materials for given item type id ||
+|| /baseMaterialsForTypeName || /typeName || JSON || YES || YES || list of base materials for given item type name ||
 || /blueprintTypeByTypeID || /typeID || JSON || YES || YES || TBD ||
 || /blueprintTypeByTypeName || /typeName || JSON || YES || YES || TBD ||
 || /extraMaterialsForTypeID || /typeID || JSON || YES || YES || TBD ||
@@ -35,7 +35,7 @@ You can specify exact dump with URLs above, otherwise the latest dump will be us
 
 === /baseMaterialsForTypeID and /baseMaterialsForTypeName ===
 
-Retrieve list of base materials for given item. Shows how much material is needed for construction or how much can be recovered after reprocessing.
+Retrieve list of base materials for given item type. Shows how much material is needed for construction or how much can be recovered after reprocessing.
 
 ==== Attributes ====
 
@@ -68,7 +68,7 @@ Retrieve list of base materials for given item. Shows how much material is neede
 
 === /blueprintTypeByTypeID and /blueprintTypeByTypeName ===
 
-Retrieve blueprint information. Contains information like produced item type, base waste factor and maximum production limit. Mainly used to determine what item is produced by given blueprint.
+Retrieve blueprint information. Contains information about produced item type, base waste factor and maximum production limit. Mainly used to determine what item is produced by given blueprint.
 
 ==== Attributes ====
 
@@ -204,7 +204,7 @@ Retrieves list of matching resource item types (categoryID=4) for given query. S
 
 === /lookupType ===
 
-Retrieves list of all item matches for given query. Subject to some limitations (see below).
+Retrieves list of all item type matches for given query. Subject to some limitations (see below).
 
 ==== Attributes ====
 
@@ -301,7 +301,7 @@ Convert item type name to id.
 
 === /version ===
 
-Return application version.
+Get application version. Can be used to determine dump version.
 
 ==== Examples ====
 
