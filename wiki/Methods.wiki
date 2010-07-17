@@ -10,6 +10,7 @@ Currently, there are two dumps hosted on odylab-evedb:
 You can specify exact dump with urls above, otherwise the latest dump will be used.
 
 == Summary ==
+
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
 || baseMaterialsForTypeID || type id || JSON || YES || YES || TBD ||
 || baseMaterialsForTypeName || type name || JSON || YES || YES || TBD ||
@@ -32,9 +33,11 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 === baseMaterialsFor(TypeID|TypeName) ===
 
 ==== Attributes ====
-|| materialTypeID || Long ||
+
+|| materialTypeID || Number ||
 || materialTypeName || String ||
-|| materialTypeCategoryID || Long ||
+|| materialTypeCategoryID || Number ||
+|| quantity || Number ||
 || materialTypeGraphicIcon || String ||
 
 ==== Examples ====
@@ -61,14 +64,15 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 === blueprintTypeBy(TypeID|TypeName) ===
 
 ==== Attributes ====
-|| blueprintTypeID || Long ||
+
+|| blueprintTypeID || Number ||
 || blueprintTypeName || String ||
-|| productTypeID || Long ||
+|| productTypeID || Number ||
 || productTypeName || String ||
-|| productCategoryID || Long ||
+|| productCategoryID || Number ||
 || productGraphicIcon || String ||
-|| wasteFactor || Integer ||
-|| maxProductionLimit || Integer ||
+|| wasteFactor || Number ||
+|| maxProductionLimit || Number ||
 
 ==== Examples ====
 
@@ -84,26 +88,191 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 [http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah blueprintTypeByTypeID/blah-blah] (HTTP 400)
 
-=== blueprintTypeByTypeName ===
+=== extraMaterialsFor(TypeID|TypeName) ===
 
-=== extraMaterialsForTypeID ===
+==== Attributes ====
+         
+|| activityID || Number ||
+|| activityName || String ||
+|| requiredTypeID || Number ||
+|| requiredTypeName || String ||
+|| requiredTypeCategoryID || Number ||
+|| requiredTypeGroupID || String ||
+|| requiredTypeGroupName || String ||
+|| quantity || Number ||
+|| damagePerJob || String ||
+|| requiredTypeNameGraphicIcon || String ||
 
-=== extraMaterialsForTypeName ===
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/20188 extraMaterialsForTypeID/20188], [http://odylab-evedb.appspot.com/extraMaterialsForTypeName/Obelisk%20Blueprint extraMaterialsForTypeName/Obelisk%20Blueprint], [http://odylab-evedb.appspot.com/extraMaterialsForTypeName/Obelisk+Blueprint extraMaterialsForTypeName/Obelisk+Blueprint] (JSON)
+{{{
+[{"activityID":1,"activityName":"Manufacturing","requiredTypeID":22242,"requiredTypeName":"Capital Ship Construction","requiredTypeCategoryID":16,"requiredTypeGroupID":269,"requiredTypeGroupName":"Mechanic","quantity":1,"damagePerJob":"0.0","requiredTypeNameGraphicIcon":"50_11"},
+{"activityID":8,"activityName":"Invention","requiredTypeID":20410,"requiredTypeName":"Datacore - Gallentean Starship Engineering","requiredTypeCategoryID":17,"requiredTypeGroupID":333,"requiredTypeGroupName":"Datacores","quantity":64,"damagePerJob":"1.0","requiredTypeNameGraphicIcon":"64_02"},
+{"activityID":8,"activityName":"Invention","requiredTypeID":20424,"requiredTypeName":"Datacore - Mechanical Engineering","requiredTypeCategoryID":17,"requiredTypeGroupID":333,"requiredTypeGroupName":"Datacores","quantity":64,"damagePerJob":"1.0","requiredTypeNameGraphicIcon":"64_03"},
+{"activityID":8,"activityName":"Invention","requiredTypeID":25855,"requiredTypeName":"Incognito Ship Data Interface","requiredTypeCategoryID":17,"requiredTypeGroupID":716,"requiredTypeGroupName":"Data Interfaces","quantity":1,"damagePerJob":"1.0","requiredTypeNameGraphicIcon":"63_06"}]
+}}}
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/1234567890 extraMaterialsForTypeID/1234567890], [http://odylab-evedb.appspot.com/extraMaterialsForTypeName/blah-blha extraMaterialsForTypeName/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/blah-blah extraMaterialsForTypeID/blah-blah] (HTTP 400)
 
 === lookupBlueprintType ===
 
+==== Attributes ====
+
+|| itemTypeID || Number ||
+|| name || String ||
+|| itemCategoryID || Number ||
+|| graphicIcon || String ||
+
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/Mega lookupBlueprintType/Mega] (JSON)
+{{{
+[{"itemTypeID":847,"itemCategoryID":9,"name":"Mega Beam Laser I Blueprint","graphicIcon":"13_11"},
+{"itemTypeID":3050,"itemCategoryID":9,"name":"Mega Beam Laser II Blueprint","graphicIcon":"13_11"},
+{"itemTypeID":30224,"itemCategoryID":9,"name":"Mega Module Blueprint","graphicIcon":"01_08"},
+{"itemTypeID":846,"itemCategoryID":9,"name":"Mega Pulse Laser I Blueprint","graphicIcon":"13_15"},
+{"itemTypeID":3058,"itemCategoryID":9,"name":"Mega Pulse Laser II Blueprint","graphicIcon":"13_15"},
+{"itemTypeID":995,"itemCategoryID":9,"name":"Megathron Blueprint","graphicIcon":""},
+{"itemTypeID":13203,"itemCategoryID":9,"name":"Megathron Federate Issue Blueprint","graphicIcon":""},
+{"itemTypeID":17729,"itemCategoryID":9,"name":"Megathron Navy Issue Blueprint","graphicIcon":""}]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/blah-blah lookupBlueprintType/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/A lookupBlueprintType/A] (HTTP 400)
+
 === lookupResourceType ===
+
+==== Attributes ====
+
+|| itemTypeID || Number ||
+|| name || String ||
+|| itemCategoryID || Number ||
+|| graphicIcon || String ||
+
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/lookupResourceType/Tri lookupResourceType/Tri] (JSON)
+{{{
+[{"itemTypeID":25612,"itemCategoryID":4,"name":"Trigger Unit","graphicIcon":"69_14"},
+{"itemTypeID":25598,"itemCategoryID":4,"name":"Tripped Power Circuit","graphicIcon":"69_15"},
+{"itemTypeID":34,"itemCategoryID":4,"name":"Tritanium","graphicIcon":"06_14"}]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupResourceType/blah-blah lookupResourceType/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupResourceType/A lookupResourceType/A] (HTTP 400)
 
 === lookupType ===
 
-=== typeBasicInfoByTypeID ===
+==== Attributes ====
 
-=== typeBasicInfoByTypeName ===
+|| itemTypeID || Number ||
+|| itemCategoryID || Number ||
+|| name || String ||
+|| graphicIcon || String ||
+
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/lookupType/Tri lookupType/Tri] (JSON)
+{{{
+[{"itemTypeID":22140,"itemCategoryID":17,"name":"Tri-Vitoc","graphicIcon":"11_15"},
+{"itemTypeID":27951,"itemCategoryID":7,"name":"Triage Module I","graphicIcon":"70_10"},
+{"itemTypeID":27952,"itemCategoryID":9,"name":"Triage Module I Blueprint","graphicIcon":"06_03"},
+{"itemTypeID":17428,"itemCategoryID":25,"name":"Triclinic Bistot","graphicIcon":"23_06"},
+{"itemTypeID":25612,"itemCategoryID":4,"name":"Trigger Unit","graphicIcon":"69_14"},
+{"itemTypeID":11066,"itemCategoryID":17,"name":"Trinary Data","graphicIcon":"34_05"},
+{"itemTypeID":16307,"itemCategoryID":7,"name":"Triple-sheathed Adaptive Nano Plating I","graphicIcon":"01_08"},
+{"itemTypeID":16315,"itemCategoryID":7,"name":"Triple-sheathed Magnetic Plating I","graphicIcon":"01_08"},
+{"itemTypeID":16323,"itemCategoryID":7,"name":"Triple-sheathed Reactive Plating I","graphicIcon":"01_08"},
+{"itemTypeID":16331,"itemCategoryID":7,"name":"Triple-sheathed Reflective Plating I","graphicIcon":"01_08"},
+{"itemTypeID":16347,"itemCategoryID":7,"name":"Triple-sheathed Regenerative Plating I","graphicIcon":"01_08"},
+{"itemTypeID":16339,"itemCategoryID":7,"name":"Triple-sheathed Thermic Plating I","graphicIcon":"01_08"},
+{"itemTypeID":25598,"itemCategoryID":4,"name":"Tripped Power Circuit","graphicIcon":"69_15"},
+{"itemTypeID":593,"itemCategoryID":6,"name":"Tristan","graphicIcon":""},
+{"itemTypeID":940,"itemCategoryID":9,"name":"Tristan Blueprint","graphicIcon":""},
+{"itemTypeID":17916,"itemCategoryID":17,"name":"Tritan\u0027s Forked Key","graphicIcon":"34_06"},
+{"itemTypeID":34,"itemCategoryID":4,"name":"Tritanium","graphicIcon":"06_14"}]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupType/blah-blah lookupType/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupType/A lookupType/A] (HTTP 400)
+
+=== typeBasicInfoBy(TypeID}TypeName) ===
+
+==== Attributes ====
+
+|| itemTypeID || Number ||
+|| itemCategoryID || Number ||
+|| name || String ||
+|| graphicIcon || String ||
+
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/34 typeBasicInfoByTypeID/34], [http://odylab-evedb.appspot.com/typeBasicInfoByTypeName/Tritanium typeBasicInfoByTypeName/Tritanium] (JSON)
+{{{
+{"itemTypeID":34,"itemCategoryID":4,"name":"Tritanium","graphicIcon":"06_14"}
+}}}
+
+[http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/1234567890 typeBasicInfoByTypeID/1234567890], [http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/blah-blah typeBasicInfoByTypeID/blah-blah] (HTTP 400)
 
 === typeIdToTypeName ===
 
+Convert item type id to name;
+
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/typeIdToTypeName/20187 typeIdToTypeName/20187] (TEXT)
+{{{
+Obelisk
+}}}
+
+[http://odylab-evedb.appspot.com/typeIdToTypeName/1234567890 typeIdToTypeName/1234567890], [http://odylab-evedb.appspot.com/typeIdToTypeName/blah-blah typeIdToTypeName/blah-blah] (HTTP 400)
+
 === typeNameToTypeID ===
 
-=== lookupType ===
+Convert item type name to id.
+
+==== Examples ====
+
+[http://odylab-evedb.appspot.com/typeNameToTypeID/Obelisk typeNameToTypeID/Obelisk] (TEXT)
+{{{
+20187
+}}}
+
+[http://odylab-evedb.appspot.com/typeNameToTypeID/Rifter%20Blueprint typeNameToTypeID/Rifter%20Blueprint], [http://odylab-evedb.appspot.com/typeNameToTypeID/Rifter+Blueprint typeNameToTypeID/Rifter+Blueprint] (TEXT)
+{{{
+691
+}}}
 
 === version ===
+
+==== Examples ====
+
+Returns application version.
+
+[http://odylab-evedb.appspot.com/version], [http://tyr101.latest.odylab-evedb.appspot.com/version] (TEXT)
+{{{
+1.3-tyr101
+}}}
+
+[http://dom100.latest.odylab-evedb.appspot.com/version] (TEXT)
+{{{
+1.3-dom100
+}}}
