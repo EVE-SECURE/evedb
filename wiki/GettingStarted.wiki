@@ -5,7 +5,7 @@
 
 == Using existing instance ==
 
-If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. I maintain couple of dump versions, so, feel free to use it. Just go to page with available [Methods Methods] and see what you can do.
+If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. I maintain couple of dump versions, so, feel free to use it. Just go to [Methods Methods] page and see what you can do.
 
 == Creating own instance ==
 
