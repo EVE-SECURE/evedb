@@ -51,23 +51,38 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 {"materialTypeID":40,"materialTypeName":"Megacyte","materialTypeCategoryID":4,"quantity":1,"materialTypeGraphicIcon":"11_10"}]
 }}}
 
-http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah (HTTP 400)
-
-http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 (JSON)
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 baseMaterialsForTypeID/1234567890], [http://odylab-evedb.appspot.com/baseMaterialsForTypeName/blah-blah baseMaterialsForTypeName/blah-blah] (JSON)
 {{{
 []
 }}}
 
-=== blueprintTypeByTypeID ===
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
+
+=== blueprintTypeBy(TypeID|TypeName) ===
+
+==== Attributes ====
+|| blueprintTypeID || Long ||
+|| blueprintTypeName || String ||
+|| productTypeID || Long ||
+|| productTypeName || String ||
+|| productCategoryID || Long ||
+|| productGraphicIcon || String ||
+|| wasteFactor || Integer ||
+|| maxProductionLimit || Integer ||
 
 ==== Examples ====
 
-http://odylab-evedb.appspot.com/blueprintTypeByTypeID/20188 (JSON)
+[http://odylab-evedb.appspot.com/blueprintTypeByTypeID/20188 blueprintTypeByTypeID/20188], [http://odylab-evedb.appspot.com/blueprintTypeByTypeName/Obelisk%20Blueprint blueprintTypeByTypeName/Obelisk%20Blueprint], [http://odylab-evedb.appspot.com/blueprintTypeByTypeName/Obelisk+Blueprint blueprintTypeByTypeName/Obelisk+Blueprint] (JSON)
 {{{
 {"blueprintTypeID":20188,"blueprintTypeName":"Obelisk Blueprint","productTypeID":20187,"productTypeName":"Obelisk","productCategoryID":6,"productGraphicIcon":"","wasteFactor":10,"maxProductionLimit":1}
 }}}
 
-http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah (HTTP 400)
+[http://odylab-evedb.appspot.com/blueprintTypeByTypeID/1234567890 blueprintTypeByTypeID/1234567890], [http://odylab-evedb.appspot.com/blueprintTypeByTypeName/blah-blha blueprintTypeByTypeName/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah blueprintTypeByTypeID/blah-blah] (HTTP 400)
 
 === blueprintTypeByTypeName ===
 
