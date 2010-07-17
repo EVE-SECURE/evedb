@@ -12,7 +12,7 @@ EveDb has very limited amount of methods, only those I initially needed for my c
 
 == Cold start ==
 
-Application cold start takes about 4-5 seconds. This can be improved by using `@LazySingleton` in Guice. Probably by other technologies, for instance Python has much better cold start times. Optimizations that already had been done and considerably reduced cold start time:
+Application cold start takes about 4-5 seconds. This can be improved by using `@LazySingleton` in Guice. Probably by other technologies, for instance, Python has much better cold start times. Optimizations that already had been done and considerably reduced cold start time:
   * [http://code.google.com/appengine/docs/java/datastore/usingjdo.html JDO] replaced with [http://code.google.com/p/objectify-appengine/ Objectify]
   * [http://static.springsource.org/spring/docs/2.0.x/reference/beans.html Spring] replaced with [http://code.google.com/p/google-guice/ Guice]
   * [https://jersey.dev.java.net/ Jersey] replaces with [http://www.restlet.org/ Restlet], and then switched to plain Servlets
