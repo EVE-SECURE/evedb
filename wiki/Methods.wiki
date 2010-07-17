@@ -32,6 +32,14 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 === baseMaterialsForTypeID ===
 
+==== Attributes ====
+  * materialTypeID
+  * materialTypeName
+  * materialTypeCategoryID
+  * materialTypeGraphicIcon
+
+==== Examples ====
+
 http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 (JSON)
 {{{
 [{"materialTypeID":34,"materialTypeName":"Tritanium","materialTypeCategoryID":4,"quantity":20524,"materialTypeGraphicIcon":"06_14"},
@@ -51,6 +59,8 @@ http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 (JSON)
 }}}
 
 === baseMaterialsForTypeName ===
+
+==== Examples ====
 
 http://odylab-evedb.appspot.com/baseMaterialsForTypeName/Rifter (JSON)
 {{{
@@ -74,6 +84,8 @@ http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890
 }}}
 
 === blueprintTypeByTypeID ===
+
+==== Examples ====
 
 http://odylab-evedb.appspot.com/blueprintTypeByTypeID/20188 (JSON)
 {{{
