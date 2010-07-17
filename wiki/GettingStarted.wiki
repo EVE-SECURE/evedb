@@ -1,4 +1,4 @@
-#summary Starting to use EveDb
+#summary Using EveDb: existing or own instance
 #labels Featured
 
 = Getting Started =
@@ -9,7 +9,7 @@ If you do not want to create your own AppEngine application, load data into it a
 
 == Creating own instance ==
 
-You you want your own AppEngine application with running EveDb, you will have to create data set using dump, upload it into Datastore and deploy application.
+If you want your own AppEngine application with running EveDb, you will have to create data set using static database dump, upload it into Datastore and deploy Java application into AppEngine.
 
 === Load data into Datastore ===
 
@@ -23,11 +23,11 @@ Run SQL queries `database/data/*.sql` and store result in corresponding CSV file
 
 ==== Upload data into Datastore ====
 
-You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py' scripts to load CSV data into Datastore.
+You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py` scripts to load CSV data into Datastore.
 
 === Deploy application ===
 
-Build application with `mvn-clean-package.bad` or `mvn clean package`, deploy `ws/appcfg-update.bat` or `appcfg update target/evedb-ws-<VERSION>`. Enjoy.
+Build application with `mvn-clean-package.bad` or `mvn clean package`, deploy with `ws/appcfg-update.bat` or `appcfg update target/evedb-ws-<VERSION>`. Enjoy.
 
 == Known issues ==
 
