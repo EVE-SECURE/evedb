@@ -8,7 +8,7 @@ During development of various small applications (mostly industry-related calcul
 
 == Too much hassle with dump ==
 
-I downloaded static database dump from CCP [http://www.eveonline.com/community/toolkit.asp Toolkit], which is in form of MSSQL database backup. Long story short, it was painful experience: took a lot of time and space on disk. Luckily, there are available conversions on [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev] for MySQL, SQLite and PostgreSQL (thank you guys). Database dump is big (MySQL one is about 250MB and you likely won't need most of it), you need to keep database server up and running, make connection to it, write queries with lots of joins. To sum up, this is just not convenient.
+I downloaded static database dump from [http://www.eveonline.com/community/toolkit.asp CCP Toolkit], which is in form of MSSQL database backup. Long story short, it was painful experience: took a lot of time and space on disk. Luckily, there are available conversions on [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev] for MySQL, SQLite and PostgreSQL (thank you guys). Database dump is big (MySQL one is about 250MB and you likely won't need most of it), you need to keep database server up and running, make connection to it, write queries with lots of joins. To sum up, this is just not convenient.
 
 == HTTP for the win ==
 
