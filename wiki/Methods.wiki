@@ -10,7 +10,7 @@ Currently, there are two dumps hosted on odylab-evedb:
   * Dominion 1.0.0 (dom100): http://dom100.latest.odylab-evedb.appspot.com
   * Tyrannis 1.0.1 (tyr101): http://tyr101.latest.odylab-evedb.appspot.com
 
-You can specify exact dump with urls above, otherwise the latest dump will be used.
+You can specify exact dump with URLs above, otherwise the latest dump will be used.
 
 == Summary ==
 
@@ -35,7 +35,7 @@ You can specify exact dump with urls above, otherwise the latest dump will be us
 
 === /baseMaterialsForTypeID and /baseMaterialsForTypeName ===
 
-Retrieve given item base material requirements. Shows how much material is needed for constructing given item, or how much can be recovered after reprocessing.
+Retrieve list of base materials for given item. Shows how much material is needed for construction or how much can be recovered after reprocessing.
 
 ==== Attributes ====
 
@@ -68,7 +68,7 @@ Retrieve given item base material requirements. Shows how much material is neede
 
 === /blueprintTypeByTypeID and /blueprintTypeByTypeName ===
 
-Retrieve blueprint information. Contains generic information like produced item type, base waste factor and maximum production limit. Mainly used to determine what item is produced by given blueprint.
+Retrieve blueprint information. Contains information like produced item type, base waste factor and maximum production limit. Mainly used to determine what item is produced by given blueprint.
 
 ==== Attributes ====
 
@@ -97,7 +97,7 @@ Retrieve blueprint information. Contains generic information like produced item 
 
 === /extraMaterialsForTypeID and /extraMaterialsForTypeName ===
 
-Retrieve additional information for given item type. Such information include additional items required for construction, invention and research.
+Retrieve list of additional materials for given item type. Such information include extra items required for construction, invention and research.
 
 ==== Attributes ====
          
@@ -131,7 +131,7 @@ Retrieve additional information for given item type. Such information include ad
 
 === /lookupBlueprintType ===
 
-Retrieve list of blueprint matches (categoryID=9) for given query. Subject to some limitiations (see below).
+Retrieve list of matching blueprint item types (categoryID=9) for given query. Subject to some limitations (see below).
 
 ==== Attributes ====
 
@@ -170,7 +170,7 @@ Retrieve list of blueprint matches (categoryID=9) for given query. Subject to so
 
 === /lookupResourceType ===
 
-Retrieves list of resource item matches (categoryID=4) for given query. Subject to some limitiations (see below).
+Retrieves list of matching resource item types (categoryID=4) for given query. Subject to some limitations (see below).
 
 ==== Attributes ====
 
@@ -204,7 +204,7 @@ Retrieves list of resource item matches (categoryID=4) for given query. Subject 
 
 === /lookupType ===
 
-Retrieves list of all item matches for given query. Subject to some limitiations (see below).
+Retrieves list of all item matches for given query. Subject to some limitations (see below).
 
 ==== Attributes ====
 
