@@ -91,6 +91,6 @@ public class EveDbWsClientTest {
 
     @Test
     public void testVersion() {
-        assertEquals("1.4-SNAPSHOT", client.getEveDbVersion());
+        assertEquals("1.3", client.getEveDbVersion());
     }
 }
