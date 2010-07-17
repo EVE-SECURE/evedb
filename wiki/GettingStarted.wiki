@@ -1,26 +1,32 @@
-#summary How to start using EveDb
+#summary Starting to use EveDb
 #labels Featured
 
 = Getting Started =
 
-== Easy way ==
+== Using existing instance ==
 
-If you do not want to create your own AppEngine application, load data into it, deploy application, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. I maintain couple of dump versions, so, feel free to use it. Just go to page with available [Methods methods].
+If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. I maintain couple of dump versions, so, feel free to use it. Just go to page with available [Methods Methods] and see what you can do.
 
-== Hard way ==
+== Creating own instance ==
 
-If you are interested in implementation details or want your own AppEngine application with running EveDb, than this chapter is for you.
+You you want your own AppEngine application with running EveDb, there is something you will have to do.
 
-=== Static database dump ===
-TBD
-=== Creating CSV files with data ===
-TBD
-=== Uploading data into Datastore ===
-TBD
+=== Load data into Datastore ===
+
+==== Static database dump ====
+
+You will need EVE Online static database dump to create dataset that will be loaded into Datastore. I used MySQL variant from [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev].
+
+==== Create CSV files with data ====
+
+Run SQL queries `database/data/*.sql` and store result in corresponding CSV file. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
+
+==== Uploading data into Datastore ====
+
+You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py' scripts to load CSV data into Datastore.
+
 === Deploying application ===
-TBD
-=== Using code ===
-TBD
+Build application with `mvn-clean-package.bad` or `mvn clean package`, deploy `ws/appcfg-update.bat` or `appcfg update target/evedb-ws-<VERSION>`. Enjoy.
 
 == Known issues ==
 
