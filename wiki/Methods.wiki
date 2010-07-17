@@ -3,9 +3,11 @@
 = Methods =
 
 == Available dumps ==
-Currently, there are two dumps available:
+Currently, there are two dumps available on odylab-evedb:
   * Dominion 1.0.0 (dom100): http://dom100.latest.odylab-evedb.appspot.com
   * Tyrannis 1.0.1 (tyr101): http://tyr101.latest.odylab-evedb.appspot.com
+
+You can specify exact dump with urls above, otherwise the latest dump will be used.
 
 == Summary ==
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
@@ -72,6 +74,13 @@ http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890
 }}}
 
 === blueprintTypeByTypeID ===
+
+http://odylab-evedb.appspot.com/blueprintTypeByTypeID/20188 (JSON)
+{{{
+{"blueprintTypeID":20188,"blueprintTypeName":"Obelisk Blueprint","productTypeID":20187,"productTypeName":"Obelisk","productCategoryID":6,"productGraphicIcon":"","wasteFactor":10,"maxProductionLimit":1}
+}}}
+
+http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah (HTTP 400)
 
 === blueprintTypeByTypeName ===
 
