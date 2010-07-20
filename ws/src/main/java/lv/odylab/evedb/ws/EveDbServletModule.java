@@ -23,7 +23,7 @@ public class EveDbServletModule extends ServletModule {
     protected void configureServlets() {
         bind(EveDbWsFacade.class).to(EveDbWsFacadeImpl.class);
 
-        serve("/admin/clearCache").by(ClearCacheResource.class);
+        serve("/admin/clearCache").with(ClearCacheResource.class);
         serve("/baseMaterialsForTypeID/*").with(BaseMaterialsForTypeIdResource.class);
         serve("/baseMaterialsForTypeName/*").with(BaseMaterialsForTypeNameResource.class);
         serve("/blueprintTypeByTypeID/*").with(BlueprintTypeByTypeIdResource.class);

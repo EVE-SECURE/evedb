@@ -130,8 +130,8 @@ public class EveDbClientFacadeImpl implements EveDbClientFacade {
     }
 
     @Override
-    public String getEveDbVersion() {
-        return applicationFacade.getEveDbVersion();
+    public String getVersion() {
+        return applicationFacade.getVersion();
     }
 
     @Override

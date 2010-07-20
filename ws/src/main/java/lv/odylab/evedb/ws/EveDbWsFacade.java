@@ -4,32 +4,54 @@ public interface EveDbWsFacade {
 
     String clearCache();
 
-    String getInvTypeMaterialsForTypeID(Long typeID);
+    String getInvTypeMaterialsForTypeIdAsJson(Long typeID);
 
-    String getInvTypeMaterialsForTypeName(String typeName);
+    String getInvTypeMaterialsForTypeIdAsXml(Long typeID);
 
-    String getBlueprintTypeByTypeID(Long typeID);
+    String getInvTypeMaterialsForTypeNameAsJson(String typeName);
 
-    String getBlueprintTypeByTypeName(String typeName);
+    String getInvTypeMaterialsForTypeNameAsXml(String typeName);
 
-    String getRamTypeRequirementsForTypeID(Long typeID);
+    String getBlueprintTypeByTypeIdAsJson(Long typeID);
 
-    String getRamTypeRequirementsForTypeName(String typeName);
+    String getBlueprintTypeByTypeIdAsXml(Long typeID);
 
-    String findBlueprintTypeByPartialTypeName(String query);
+    String getBlueprintTypeByTypeNameAsJson(String typeName);
 
-    String findResourceTypeByPartialTypeName(String query);
+    String getBlueprintTypeByTypeNameAsXml(String typeName);
 
-    String findTypeByPartialTypeName(String query);
+    String getRamTypeRequirementsForTypeIdAsJson(Long typeID);
 
-    String getTypeBasicInfoByTypeID(Long typeID);
+    String getRamTypeRequirementsForTypeIdAsXml(Long typeID);
 
-    String getTypeBasicInfoByTypeName(String typeName);
+    String getRamTypeRequirementsForTypeNameAsJson(String typeName);
+
+    String getRamTypeRequirementsForTypeNameAsXml(String typeName);
+
+    String findBlueprintTypeByPartialTypeNameAsJson(String query);
+
+    String findBlueprintTypeByPartialTypeNameAsXml(String query);
+
+    String findResourceTypeByPartialTypeNameAsJson(String query);
+
+    String findResourceTypeByPartialTypeNameAsXml(String query);
+
+    String findTypeByPartialTypeNameAsJson(String query);
+
+    String findTypeByPartialTypeNameAsXml(String query);
+
+    String getTypeBasicInfoByTypeIdAsJson(Long typeID);
+
+    String getTypeBasicInfoByTypeIdAsXml(Long typeID);
+
+    String getTypeBasicInfoByTypeNameAsJson(String typeName);
+
+    String getTypeBasicInfoByTypeNameAsXml(String typeName);
 
     String getTypeIdByTypeName(String typeName);
 
     String getTypeNameByTypeID(Long typeID);
 
-    String getEveDbVersion();
+    String getVersion();
 
 }
