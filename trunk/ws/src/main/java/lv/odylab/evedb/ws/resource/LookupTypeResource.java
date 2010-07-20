@@ -2,37 +2,31 @@ package lv.odylab.evedb.ws.resource;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import lv.odylab.evedb.ws.EveDbResource;
 import lv.odylab.evedb.ws.EveDbWsFacade;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lv.odylab.evedb.ws.ProvidesJson;
+import lv.odylab.evedb.ws.ProvidesXml;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.PrintWriter;
 
 @Singleton
-public class LookupTypeResource extends HttpServlet {
-    private static final long serialVersionUID = -1594519307388283672L;
+public class LookupTypeResource extends EveDbResource implements ProvidesJson, ProvidesXml {
+    private static final long serialVersionUID = 6281077530952825694L;
 
-    private final Logger logger = LoggerFactory.getLogger(getClass());
-    private final EveDbWsFacade eveDbWsFacade;
+    private final EveDbWsFacade wsFacade;
 
     @Inject
-    public LookupTypeResource(EveDbWsFacade eveDbWsFacade) {
-        this.eveDbWsFacade = eveDbWsFacade;
+    public LookupTypeResource(EveDbWsFacade wsFacade) {
+        this.wsFacade = wsFacade;
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        try {
-            resp.setContentType("application/json; charset=UTF-8");
-            String query = req.getPathInfo().substring(1);
-            String jsonString = eveDbWsFacade.findTypeByPartialTypeName(query);
-            resp.getWriter().write(jsonString);
-        } catch (Exception e) {
-            logger.error("Application threw exception", e);
-            resp.sendError(400);
-        }
+    public void provideJson(String query, PrintWriter writer) {
+        writer.write(wsFacade.findTypeByPartialTypeNameAsJson(query));
+    }
+
+    @Override
+    public void provideXml(String query, PrintWriter writer) {
+        writer.write(wsFacade.findTypeByPartialTypeNameAsXml(query));
     }
 }

@@ -2,35 +2,25 @@ package lv.odylab.evedb.ws.resource.admin;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import lv.odylab.evedb.ws.EveDbResource;
 import lv.odylab.evedb.ws.EveDbWsFacade;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lv.odylab.evedb.ws.ProvidesText;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.PrintWriter;
 
 @Singleton
-public class ClearCacheResource extends HttpServlet {
-    private static final long serialVersionUID = -6261560710862141980L;
+public class ClearCacheResource extends EveDbResource implements ProvidesText {
+    private static final long serialVersionUID = -1787940503425086639L;
 
-    private final Logger logger = LoggerFactory.getLogger(getClass());
-    private final EveDbWsFacade eveDbWsFacade;
+    private final EveDbWsFacade wsFacade;
 
     @Inject
-    public ClearCacheResource(EveDbWsFacade eveDbWsFacade) {
-        this.eveDbWsFacade = eveDbWsFacade;
+    public ClearCacheResource(EveDbWsFacade wsFacade) {
+        this.wsFacade = wsFacade;
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        try {
-            resp.setContentType("text/plain; charset=UTF-8");
-            resp.getWriter().write(eveDbWsFacade.clearCache());
-        } catch (Exception e) {
-            logger.error("Application threw exception", e);
-            resp.sendError(500);
-        }
+    public void provideText(String pathInfo, PrintWriter writer) {
+        writer.write(wsFacade.clearCache());
     }
 }

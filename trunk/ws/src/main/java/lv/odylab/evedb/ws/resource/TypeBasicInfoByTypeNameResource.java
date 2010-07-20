@@ -2,37 +2,33 @@ package lv.odylab.evedb.ws.resource;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import lv.odylab.evedb.ws.EveDbResource;
 import lv.odylab.evedb.ws.EveDbWsFacade;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lv.odylab.evedb.ws.ProvidesJson;
+import lv.odylab.evedb.ws.ProvidesXml;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.PrintWriter;
 
 @Singleton
-public class TypeBasicInfoByTypeNameResource extends HttpServlet {
-    private static final long serialVersionUID = 6726716081921008636L;
+public class TypeBasicInfoByTypeNameResource extends EveDbResource implements ProvidesJson, ProvidesXml {
+    private static final long serialVersionUID = 5375765512659017206L;
 
-    private final Logger logger = LoggerFactory.getLogger(getClass());
-    private final EveDbWsFacade eveDbWsFacade;
+    private final EveDbWsFacade wsFacade;
 
     @Inject
-    public TypeBasicInfoByTypeNameResource(EveDbWsFacade eveDbWsFacade) {
-        this.eveDbWsFacade = eveDbWsFacade;
+    public TypeBasicInfoByTypeNameResource(EveDbWsFacade wsFacade) {
+        this.wsFacade = wsFacade;
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        try {
-            resp.setContentType("application/json; charset=UTF-8");
-            String typeName = req.getPathInfo().substring(1);
-            String jsonString = eveDbWsFacade.getTypeBasicInfoByTypeName(typeName);
-            resp.getWriter().write(jsonString);
-        } catch (Exception e) {
-            logger.error("Application threw exception", e);
-            resp.sendError(400);
-        }
+    public void provideJson(String typeName, PrintWriter writer) {
+        String jsonString = wsFacade.getTypeBasicInfoByTypeNameAsJson(typeName);
+        writer.write(jsonString);
+    }
+
+    @Override
+    public void provideXml(String typeName, PrintWriter writer) {
+        String xmlString = wsFacade.getTypeBasicInfoByTypeNameAsXml(typeName);
+        writer.write(xmlString);
     }
 }

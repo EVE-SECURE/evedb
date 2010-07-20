@@ -21,6 +21,7 @@ import java.util.List;
 @Singleton
 public class EveDbApplicationFacadeImpl implements EveDbApplicationFacade {
     private final Logger logger = LoggerFactory.getLogger(getClass());
+
     private final GoogleAppEngineServices googleAppEngineServices;
     private final InvBlueprintTypeDao invBlueprintTypeDao;
     private final InvTypeDao invTypeDao;
@@ -111,7 +112,7 @@ public class EveDbApplicationFacadeImpl implements EveDbApplicationFacade {
     }
 
     @Override
-    public String getEveDbVersion() {
+    public String getVersion() {
         return eveDbVersion;
     }
 

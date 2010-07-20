@@ -1,9 +1,11 @@
 package lv.odylab.evedb.client.rpc.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement
 public class InvBlueprintTypeDto implements Serializable {
-    private static final long serialVersionUID = -5260012576803413265L;
+    private static final long serialVersionUID = 4979702377892792598L;
 
     private Long blueprintTypeID;
     private String blueprintTypeName;

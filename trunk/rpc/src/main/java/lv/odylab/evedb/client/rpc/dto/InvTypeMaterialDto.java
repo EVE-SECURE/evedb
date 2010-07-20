@@ -1,9 +1,11 @@
 package lv.odylab.evedb.client.rpc.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement
 public class InvTypeMaterialDto implements Serializable {
-    private static final long serialVersionUID = 5569543166258551654L;
+    private static final long serialVersionUID = -6845371919018218708L;
 
     private Long materialTypeID;
     private String materialTypeName;

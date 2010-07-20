@@ -35,7 +35,7 @@ public interface EveDbApplicationFacade {
 
     List<RamTypeRequirement> getRamTypeRequirementsForTypeName(String typeName);
 
-    String getEveDbVersion();
+    String getVersion();
 
     String clearCache();
 

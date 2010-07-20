@@ -1,9 +1,11 @@
 package lv.odylab.evedb.client.rpc.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement
 public class RamTypeRequirementDto implements Serializable {
-    private static final long serialVersionUID = -1875596158590739941L;
+    private static final long serialVersionUID = -148572142409945768L;
 
     private Long activityID;
     private String activityName;
