@@ -1,4 +1,4 @@
-#summary EveDb news and updated
+#summary EveDb news and updates
 #labels Restrict-View-Commit
 
 = News =
