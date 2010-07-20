@@ -78,7 +78,9 @@ public class EveDbResourceTest {
         request.setURI(baseUrl + PATH_JSON);
         request.setHeader("accept", "application/json");
         response.parse(tester.getResponses(request.generate()));
-        assertEquals(406, response.getStatus());
+        assertEquals(200, response.getStatus());
+        assertEquals("json-null", response.getContent());
+        assertEquals("application/json; charset=utf-8", response.getHeader("Content-Type"));
     }
 
     @Test
