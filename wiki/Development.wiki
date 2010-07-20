@@ -8,7 +8,7 @@ EveDb has very limited amount of methods, only those I initially needed for my c
 
   * XML support (making responses in both JSON/XML depending on `accept` in headers)
   * client libraries (one generic and one for appengine with longer timeouts)
-  * more detailed documentation
+  * more detailed and formal documentation, examples, less copy-pasting
   * extract database dump from Datastore and put into downloads
   * tests, proper logging and enhanced error handling
 
