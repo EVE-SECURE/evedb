@@ -1,0 +1,1 @@
+appcfg.py download_data --url=http://odylab-evedb.appspot.com/remote_api --filename=datastore.dat
