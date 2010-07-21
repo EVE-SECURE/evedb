@@ -1,0 +1,5 @@
+#summary Available clients for using EveDb
+#labels Restrict-View-Commit
+
+= evedb-ws-client =
+TBD
