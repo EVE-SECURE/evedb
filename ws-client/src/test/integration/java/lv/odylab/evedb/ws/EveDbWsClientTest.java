@@ -20,6 +20,12 @@ public class EveDbWsClientTest {
     }
 
     @Test
+    public void testGetBaseMaterialsForTypeID_IdNotFound() {
+        List<InvTypeMaterialDto> invTypeMaterialDtoList = client.getBaseMaterialsForTypeID(1234567890L);
+        assertEquals(4, invTypeMaterialDtoList.size());
+    }
+
+    @Test
     public void testGetBaseMaterialsForTypeName() {
         List<InvTypeMaterialDto> invTypeMaterialDtoList = client.getBaseMaterialsForTypeName("Obelisk");
         assertEquals(4, invTypeMaterialDtoList.size());

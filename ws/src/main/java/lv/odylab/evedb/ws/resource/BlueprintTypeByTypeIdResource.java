@@ -22,11 +22,11 @@ public class BlueprintTypeByTypeIdResource extends EveDbResource implements Prov
 
     @Override
     public void provideJson(String typeID, PrintWriter writer) {
-        wsFacade.getBlueprintTypeByTypeIdAsJson(Long.valueOf(typeID));
+        writer.write(wsFacade.getBlueprintTypeByTypeIdAsJson(Long.valueOf(typeID)));
     }
 
     @Override
     public void provideXml(String typeID, PrintWriter writer) {
-        wsFacade.getBlueprintTypeByTypeIdAsXml(Long.valueOf(typeID));
+        writer.write(wsFacade.getBlueprintTypeByTypeIdAsXml(Long.valueOf(typeID)));
     }
 }

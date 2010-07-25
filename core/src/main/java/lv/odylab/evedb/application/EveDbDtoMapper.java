@@ -11,12 +11,12 @@ import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
 
 public interface EveDbDtoMapper {
 
-    InvTypeBasicInfoDto map(InvType invType);
+    InvTypeMaterialDto map(InvTypeMaterial invTypeMaterial);
 
     InvBlueprintTypeDto map(InvBlueprintType invBlueprintType);
 
-    InvTypeMaterialDto map(InvTypeMaterial invTypeMaterial);
-
     RamTypeRequirementDto map(RamTypeRequirement ramTypeRequirement);
+
+    InvTypeBasicInfoDto map(InvType invType);
 
 }

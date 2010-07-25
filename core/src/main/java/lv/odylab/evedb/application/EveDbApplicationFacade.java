@@ -9,9 +9,19 @@ import java.util.List;
 
 public interface EveDbApplicationFacade {
 
-    String getTypeNameByTypeID(Long typeID);
+    String clearCache();
 
-    Long getTypeIdByTypeName(String typeName);
+    List<InvTypeMaterial> getInvTypeMaterialsForTypeID(Long typeID);
+
+    List<InvTypeMaterial> getInvTypeMaterialsForTypeName(String typeName);
+
+    InvBlueprintType getBlueprintTypeByTypeID(Long typeID);
+
+    InvBlueprintType getBlueprintTypeByTypeName(String typeName);
+
+    List<RamTypeRequirement> getRamTypeRequirementsForTypeID(Long typeID);
+
+    List<RamTypeRequirement> getRamTypeRequirementsForTypeName(String typeName);
 
     List<InvType> findTypeByPartialTypeName(String partialTypeName);
 
@@ -19,24 +29,14 @@ public interface EveDbApplicationFacade {
 
     List<InvType> findBlueprintTypeByPartialTypeName(String partialTypeName);
 
-    InvBlueprintType getBlueprintTypeByTypeID(Long typeID);
-
-    InvBlueprintType getBlueprintTypeByTypeName(String typeName);
-
     InvType getTypeBasicInfoByTypeID(Long typeID);
 
     InvType getTypeBasicInfoByTypeName(String typeName);
 
-    List<InvTypeMaterial> getInvTypeMaterialsForTypeID(Long typeID);
+    String getTypeNameByTypeID(Long typeID);
 
-    List<InvTypeMaterial> getInvTypeMaterialsForTypeName(String typeName);
-
-    List<RamTypeRequirement> getRamTypeRequirementsForTypeID(Long typeID);
-
-    List<RamTypeRequirement> getRamTypeRequirementsForTypeName(String typeName);
+    Long getTypeIdByTypeName(String typeName);
 
     String getVersion();
-
-    String clearCache();
 
 }

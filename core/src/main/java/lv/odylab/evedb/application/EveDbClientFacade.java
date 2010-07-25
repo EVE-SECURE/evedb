@@ -9,34 +9,34 @@ import java.util.List;
 
 public interface EveDbClientFacade {
 
-    String getTypeNameByTypeID(Long typeID);
-
-    Long getTypeIdByTypeName(String typeName);
-
-    List<InvTypeBasicInfoDto> findTypeByPartialTypeName(String partialTypeName);
-
-    List<InvTypeBasicInfoDto> findResourceTypeByPartialTypeName(String partialTypeName);
-
-    List<InvTypeBasicInfoDto> findBlueprintTypeByPartialTypeName(String partialTypeName);
-
-    InvBlueprintTypeDto getBlueprintTypeByTypeID(Long typeID);
-
-    InvBlueprintTypeDto getBlueprintTypeByTypeName(String blueprintTypeName);
-
-    InvTypeBasicInfoDto getTypeBasicInfoByTypeID(Long typeID);
-
-    InvTypeBasicInfoDto getTypeBasicInfoByTypeName(String typeName);
+    String clearCache();
 
     List<InvTypeMaterialDto> getInvTypeMaterialsForTypeID(Long typeID);
 
     List<InvTypeMaterialDto> getInvTypeMaterialsForTypeName(String typeName);
 
+    InvBlueprintTypeDto getBlueprintTypeByTypeID(Long typeID);
+
+    InvBlueprintTypeDto getBlueprintTypeByTypeName(String blueprintTypeName);
+
     List<RamTypeRequirementDto> getRamTypeRequirementsForTypeID(Long typeID);
 
     List<RamTypeRequirementDto> getRamTypeRequirementsForTypeName(String typeName);
 
-    String getVersion();
+    List<InvTypeBasicInfoDto> findBlueprintTypeByPartialTypeName(String partialTypeName);
 
-    String clearCache();
+    List<InvTypeBasicInfoDto> findResourceTypeByPartialTypeName(String partialTypeName);
+
+    List<InvTypeBasicInfoDto> findTypeByPartialTypeName(String partialTypeName);
+
+    InvTypeBasicInfoDto getTypeBasicInfoByTypeID(Long typeID);
+
+    InvTypeBasicInfoDto getTypeBasicInfoByTypeName(String typeName);
+
+    Long getTypeIdByTypeName(String typeName);
+
+    String getTypeNameByTypeID(Long typeID);
+
+    String getVersion();
 
 }

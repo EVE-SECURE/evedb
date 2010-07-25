@@ -2,6 +2,8 @@ package lv.odylab.evedb.domain.inv.type;
 
 import com.google.inject.Inject;
 import com.googlecode.objectify.ObjectifyFactory;
+import lv.odylab.evedb.domain.IdNotFoundException;
+import lv.odylab.evedb.domain.NameNotFoundException;
 import lv.odylab.evedb.domain.TooShortPartialNameException;
 
 import java.util.List;
@@ -18,15 +20,23 @@ public class InvTypeDao {
     }
 
     public InvType getByTypeID(Long typeID, String dumpVersion) {
-        return objectifyFactory.begin().query(InvType.class)
+        InvType invType = objectifyFactory.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID).get();
+        if (invType == null) {
+            throw new IdNotFoundException(typeID);
+        }
+        return invType;
     }
 
     public InvType getByTypeName(String typeName, String dumpVersion) {
-        return objectifyFactory.begin().query(InvType.class)
+        InvType invType = objectifyFactory.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeName", typeName).get();
+        if (invType == null) {
+            throw new NameNotFoundException(typeName);
+        }
+        return invType;
     }
 
     public List<InvType> findByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {

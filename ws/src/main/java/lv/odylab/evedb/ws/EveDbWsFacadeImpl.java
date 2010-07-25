@@ -56,14 +56,14 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getInvTypeMaterialsForTypeIdAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getInvTypeMaterialsForTypeIdAsJson")
     public String getInvTypeMaterialsForTypeIdAsJson(Long typeID) {
         List<InvTypeMaterialDto> invTypeMaterialDtos = clientFacade.getInvTypeMaterialsForTypeID(typeID);
         return gson.toJson(invTypeMaterialDtos, invTypeMaterialDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getInvTypeMaterialsForTypeIdAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getInvTypeMaterialsForTypeIdAsXml")
     public String getInvTypeMaterialsForTypeIdAsXml(Long typeID) {
         List<InvTypeMaterialDto> invTypeMaterialDtos = clientFacade.getInvTypeMaterialsForTypeID(typeID);
         XmlResultContainer<InvTypeMaterialDto> xmlResultContainer = new XmlResultContainer<InvTypeMaterialDto>(invTypeMaterialDtos);
@@ -71,14 +71,14 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getInvTypeMaterialsForTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getInvTypeMaterialsForTypeNameAsJson")
     public String getInvTypeMaterialsForTypeNameAsJson(String typeName) {
         List<InvTypeMaterialDto> invTypeMaterialDtos = clientFacade.getInvTypeMaterialsForTypeName(decodeString(typeName));
         return gson.toJson(invTypeMaterialDtos, invTypeMaterialDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getInvTypeMaterialsForTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getInvTypeMaterialsForTypeNameAsXml")
     public String getInvTypeMaterialsForTypeNameAsXml(String typeName) {
         List<InvTypeMaterialDto> invTypeMaterialDtos = clientFacade.getInvTypeMaterialsForTypeName(decodeString(typeName));
         XmlResultContainer<InvTypeMaterialDto> xmlResultContainer = new XmlResultContainer<InvTypeMaterialDto>(invTypeMaterialDtos);
@@ -86,42 +86,42 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getBlueprintTypeByTypeIdAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getBlueprintTypeByTypeIdAsJson")
     public String getBlueprintTypeByTypeIdAsJson(Long typeID) {
-        InvBlueprintTypeDto invBlueprintTypeDtos = clientFacade.getBlueprintTypeByTypeID(typeID);
-        return gson.toJson(invBlueprintTypeDtos, InvBlueprintTypeDto.class);
+        InvBlueprintTypeDto invBlueprintTypeDto = clientFacade.getBlueprintTypeByTypeID(typeID);
+        return gson.toJson(invBlueprintTypeDto, InvBlueprintTypeDto.class);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getBlueprintTypeByTypeIdAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getBlueprintTypeByTypeIdAsXml")
     public String getBlueprintTypeByTypeIdAsXml(Long typeID) {
-        InvBlueprintTypeDto invBlueprintTypeDtos = clientFacade.getBlueprintTypeByTypeID(typeID);
-        return marshall(invBlueprintTypeDtos);
+        InvBlueprintTypeDto invBlueprintTypeDto = clientFacade.getBlueprintTypeByTypeID(typeID);
+        return marshall(invBlueprintTypeDto);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getBlueprintTypeByTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getBlueprintTypeByTypeNameAsJson")
     public String getBlueprintTypeByTypeNameAsJson(String typeName) {
-        InvBlueprintTypeDto invBlueprintTypeDtos = clientFacade.getBlueprintTypeByTypeName(decodeString(typeName));
-        return gson.toJson(invBlueprintTypeDtos, InvBlueprintTypeDto.class);
+        InvBlueprintTypeDto invBlueprintTypeDto = clientFacade.getBlueprintTypeByTypeName(decodeString(typeName));
+        return gson.toJson(invBlueprintTypeDto, InvBlueprintTypeDto.class);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getBlueprintTypeByTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getBlueprintTypeByTypeNameAsXml")
     public String getBlueprintTypeByTypeNameAsXml(String typeName) {
-        InvBlueprintTypeDto invBlueprintTypeDtos = clientFacade.getBlueprintTypeByTypeName(decodeString(typeName));
-        return marshall(invBlueprintTypeDtos);
+        InvBlueprintTypeDto invBlueprintTypeDto = clientFacade.getBlueprintTypeByTypeName(decodeString(typeName));
+        return marshall(invBlueprintTypeDto);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getRamTypeRequirementsForTypeIdAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getRamTypeRequirementsForTypeIdAsJson")
     public String getRamTypeRequirementsForTypeIdAsJson(Long typeID) {
         List<RamTypeRequirementDto> ramTypeRequirementDtos = clientFacade.getRamTypeRequirementsForTypeID(typeID);
         return gson.toJson(ramTypeRequirementDtos, ramTypeRequirementDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getRamTypeRequirementsForTypeIdAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getRamTypeRequirementsForTypeIdAsXml")
     public String getRamTypeRequirementsForTypeIdAsXml(Long typeID) {
         List<RamTypeRequirementDto> ramTypeRequirementDtos = clientFacade.getRamTypeRequirementsForTypeID(typeID);
         XmlResultContainer<RamTypeRequirementDto> xmlResultContainer = new XmlResultContainer<RamTypeRequirementDto>(ramTypeRequirementDtos);
@@ -129,14 +129,14 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getRamTypeRequirementsForTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getRamTypeRequirementsForTypeNameAsJson")
     public String getRamTypeRequirementsForTypeNameAsJson(String typeName) {
         List<RamTypeRequirementDto> ramTypeRequirementDtos = clientFacade.getRamTypeRequirementsForTypeName(decodeString(typeName));
         return gson.toJson(ramTypeRequirementDtos, ramTypeRequirementDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getRamTypeRequirementsForTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getRamTypeRequirementsForTypeNameAsXml")
     public String getRamTypeRequirementsForTypeNameAsXml(String typeName) {
         List<RamTypeRequirementDto> ramTypeRequirementDtos = clientFacade.getRamTypeRequirementsForTypeName(decodeString(typeName));
         XmlResultContainer<RamTypeRequirementDto> xmlResultContainer = new XmlResultContainer<RamTypeRequirementDto>(ramTypeRequirementDtos);
@@ -144,14 +144,14 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|findBlueprintTypeByPartialTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|findBlueprintTypeByPartialTypeNameAsJson")
     public String findBlueprintTypeByPartialTypeNameAsJson(String query) {
         List<InvTypeBasicInfoDto> invTypeBasicInfoDtos = clientFacade.findBlueprintTypeByPartialTypeName(decodeString(query));
         return gson.toJson(invTypeBasicInfoDtos, invTypeBasicInfoDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|findBlueprintTypeByPartialTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|findBlueprintTypeByPartialTypeNameAsXml")
     public String findBlueprintTypeByPartialTypeNameAsXml(String query) {
         List<InvTypeBasicInfoDto> invTypeBasicInfoDtos = clientFacade.findBlueprintTypeByPartialTypeName(decodeString(query));
         XmlResultContainer<InvTypeBasicInfoDto> xmlResultContainer = new XmlResultContainer<InvTypeBasicInfoDto>(invTypeBasicInfoDtos);
@@ -159,14 +159,14 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|findResourceTypeByPartialTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|findResourceTypeByPartialTypeNameAsJson")
     public String findResourceTypeByPartialTypeNameAsJson(String query) {
         List<InvTypeBasicInfoDto> invTypeBasicInfoDtos = clientFacade.findResourceTypeByPartialTypeName(decodeString(query));
         return gson.toJson(invTypeBasicInfoDtos, invTypeBasicInfoDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|findResourceTypeByPartialTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|findResourceTypeByPartialTypeNameAsXml")
     public String findResourceTypeByPartialTypeNameAsXml(String query) {
         List<InvTypeBasicInfoDto> invTypeBasicInfoDtos = clientFacade.findResourceTypeByPartialTypeName(decodeString(query));
         XmlResultContainer<InvTypeBasicInfoDto> xmlResultContainer = new XmlResultContainer<InvTypeBasicInfoDto>(invTypeBasicInfoDtos);
@@ -174,14 +174,14 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|findTypeByPartialTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|findTypeByPartialTypeNameAsJson")
     public String findTypeByPartialTypeNameAsJson(String query) {
         List<InvTypeBasicInfoDto> invTypeBasicInfoDtos = clientFacade.findTypeByPartialTypeName(decodeString(query));
         return gson.toJson(invTypeBasicInfoDtos, invTypeBasicInfoDtoListType);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|findTypeByPartialTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|findTypeByPartialTypeNameAsXml")
     public String findTypeByPartialTypeNameAsXml(String query) {
         List<InvTypeBasicInfoDto> invTypeBasicInfoDtos = clientFacade.findTypeByPartialTypeName(decodeString(query));
         XmlResultContainer<InvTypeBasicInfoDto> xmlResultContainer = new XmlResultContainer<InvTypeBasicInfoDto>(invTypeBasicInfoDtos);
@@ -189,47 +189,48 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getTypeBasicInfoByTypeIdAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getTypeBasicInfoByTypeIdAsJson")
     public String getTypeBasicInfoByTypeIdAsJson(Long typeID) {
         InvTypeBasicInfoDto invTypeBasicInfoDto = clientFacade.getTypeBasicInfoByTypeID(typeID);
         return gson.toJson(invTypeBasicInfoDto);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getTypeBasicInfoByTypeIdAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getTypeBasicInfoByTypeIdAsXml")
     public String getTypeBasicInfoByTypeIdAsXml(Long typeID) {
         InvTypeBasicInfoDto invTypeBasicInfoDto = clientFacade.getTypeBasicInfoByTypeID(typeID);
         return marshall(invTypeBasicInfoDto);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getTypeBasicInfoByTypeNameAsJson")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getTypeBasicInfoByTypeNameAsJson")
     public String getTypeBasicInfoByTypeNameAsJson(String typeName) {
         InvTypeBasicInfoDto invTypeBasicInfoDto = clientFacade.getTypeBasicInfoByTypeName(decodeString(typeName));
         return gson.toJson(invTypeBasicInfoDto);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getTypeBasicInfoByTypeNameAsXml")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getTypeBasicInfoByTypeNameAsXml")
     public String getTypeBasicInfoByTypeNameAsXml(String typeName) {
         InvTypeBasicInfoDto invTypeBasicInfoDto = clientFacade.getTypeBasicInfoByTypeName(decodeString(typeName));
         return marshall(invTypeBasicInfoDto);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getTypeIdByTypeName")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getTypeIdByTypeName")
     public String getTypeIdByTypeName(String typeName) {
-        return String.valueOf(clientFacade.getTypeIdByTypeName(decodeString(typeName)));
+        Long typeID = clientFacade.getTypeIdByTypeName(decodeString(typeName));
+        return String.valueOf(typeID);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getTypeNameByTypeID")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getTypeNameByTypeID")
     public String getTypeNameByTypeID(Long typeID) {
         return clientFacade.getTypeNameByTypeID(typeID);
     }
 
     @Override
-    @Caching(keyPrefix = "EveDbWsFacade|getVersion")
+    @Caching(keyPrefix = "EveDbWsFacadeImpl|getVersion")
     public String getVersion() {
         return clientFacade.getVersion();
     }
