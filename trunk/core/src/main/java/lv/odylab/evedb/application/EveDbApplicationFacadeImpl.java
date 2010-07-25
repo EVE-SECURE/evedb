@@ -47,13 +47,42 @@ public class EveDbApplicationFacadeImpl implements EveDbApplicationFacade {
     }
 
     @Override
-    public String getTypeNameByTypeID(Long typeID) {
-        return invTypeDao.getByTypeID(typeID, dumpVersion).getTypeName();
+    public String clearCache() {
+        MemcacheService memcacheService = googleAppEngineServices.getMemcacheService();
+        long itemCount = memcacheService.getStatistics().getItemCount();
+        memcacheService.clearAll();
+        logger.debug("Clearing memcache. {} items cleared", itemCount);
+        return "OK, " + itemCount;
     }
 
     @Override
-    public Long getTypeIdByTypeName(String typeName) {
-        return invTypeDao.getByTypeName(typeName, dumpVersion).getTypeID();
+    public List<InvTypeMaterial> getInvTypeMaterialsForTypeID(Long typeID) {
+        return invTypeMaterialDao.getForTypeID(typeID, dumpVersion);
+    }
+
+    @Override
+    public List<InvTypeMaterial> getInvTypeMaterialsForTypeName(String typeName) {
+        return invTypeMaterialDao.getForTypeName(typeName, dumpVersion);
+    }
+
+    @Override
+    public InvBlueprintType getBlueprintTypeByTypeID(Long typeID) {
+        return invBlueprintTypeDao.getByTypeID(typeID, dumpVersion);
+    }
+
+    @Override
+    public InvBlueprintType getBlueprintTypeByTypeName(String typeName) {
+        return invBlueprintTypeDao.getByTypeName(typeName, dumpVersion);
+    }
+
+    @Override
+    public List<RamTypeRequirement> getRamTypeRequirementsForTypeID(Long typeID) {
+        return ramTypeRequirementDao.getForTypeID(typeID, dumpVersion);
+    }
+
+    @Override
+    public List<RamTypeRequirement> getRamTypeRequirementsForTypeName(String typeName) {
+        return ramTypeRequirementDao.getForTypeName(typeName, dumpVersion);
     }
 
     @Override
@@ -72,16 +101,6 @@ public class EveDbApplicationFacadeImpl implements EveDbApplicationFacade {
     }
 
     @Override
-    public InvBlueprintType getBlueprintTypeByTypeID(Long typeID) {
-        return invBlueprintTypeDao.getByTypeID(typeID, dumpVersion);
-    }
-
-    @Override
-    public InvBlueprintType getBlueprintTypeByTypeName(String typeName) {
-        return invBlueprintTypeDao.getByTypeName(typeName, dumpVersion);
-    }
-
-    @Override
     public InvType getTypeBasicInfoByTypeID(Long typeID) {
         return invTypeDao.getByTypeID(typeID, dumpVersion);
     }
@@ -92,36 +111,19 @@ public class EveDbApplicationFacadeImpl implements EveDbApplicationFacade {
     }
 
     @Override
-    public List<InvTypeMaterial> getInvTypeMaterialsForTypeID(Long typeID) {
-        return invTypeMaterialDao.getForTypeID(typeID, dumpVersion);
+    public String getTypeNameByTypeID(Long typeID) {
+        InvType invType = invTypeDao.getByTypeID(typeID, dumpVersion);
+        return invType == null ? null : invType.getTypeName();
     }
 
     @Override
-    public List<InvTypeMaterial> getInvTypeMaterialsForTypeName(String typeName) {
-        return invTypeMaterialDao.getForTypeName(typeName, dumpVersion);
-    }
-
-    @Override
-    public List<RamTypeRequirement> getRamTypeRequirementsForTypeID(Long typeID) {
-        return ramTypeRequirementDao.getForTypeID(typeID, dumpVersion);
-    }
-
-    @Override
-    public List<RamTypeRequirement> getRamTypeRequirementsForTypeName(String typeName) {
-        return ramTypeRequirementDao.getForTypeName(typeName, dumpVersion);
+    public Long getTypeIdByTypeName(String typeName) {
+        InvType invType = invTypeDao.getByTypeName(typeName, dumpVersion);
+        return invType == null ? null : invType.getTypeID();
     }
 
     @Override
     public String getVersion() {
         return eveDbVersion;
-    }
-
-    @Override
-    public String clearCache() {
-        MemcacheService memcacheService = googleAppEngineServices.getMemcacheService();
-        long itemCount = memcacheService.getStatistics().getItemCount();
-        memcacheService.clearAll();
-        logger.debug("Clearing memcache. {} items cleared", itemCount);
-        return "OK, " + itemCount;
     }
 }

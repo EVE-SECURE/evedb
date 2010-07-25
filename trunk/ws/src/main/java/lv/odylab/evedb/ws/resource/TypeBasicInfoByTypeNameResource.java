@@ -22,13 +22,11 @@ public class TypeBasicInfoByTypeNameResource extends EveDbResource implements Pr
 
     @Override
     public void provideJson(String typeName, PrintWriter writer) {
-        String jsonString = wsFacade.getTypeBasicInfoByTypeNameAsJson(typeName);
-        writer.write(jsonString);
+        writer.write(wsFacade.getTypeBasicInfoByTypeNameAsJson(typeName));
     }
 
     @Override
     public void provideXml(String typeName, PrintWriter writer) {
-        String xmlString = wsFacade.getTypeBasicInfoByTypeNameAsXml(typeName);
-        writer.write(xmlString);
+        writer.write(wsFacade.getTypeBasicInfoByTypeNameAsXml(typeName));
     }
 }

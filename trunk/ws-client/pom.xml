@@ -37,6 +37,7 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
+                <filtering>true</filtering>
             </resource>
         </resources>
 
@@ -44,6 +45,7 @@
         <testResources>
             <testResource>
                 <directory>src/test/junit/resources</directory>
+                <filtering>true</filtering>
             </testResource>
         </testResources>
 

@@ -26,13 +26,60 @@ public class EveDbClientFacadeImpl implements EveDbClientFacade {
     }
 
     @Override
-    public String getTypeNameByTypeID(Long typeID) {
-        return applicationFacade.getTypeNameByTypeID(typeID);
+    public String clearCache() {
+        return applicationFacade.clearCache();
     }
 
     @Override
-    public Long getTypeIdByTypeName(String typeName) {
-        return applicationFacade.getTypeIdByTypeName(typeName);
+    public List<InvTypeMaterialDto> getInvTypeMaterialsForTypeID(Long typeID) {
+        List<InvTypeMaterial> invTypeMaterials = applicationFacade.getInvTypeMaterialsForTypeID(typeID);
+        List<InvTypeMaterialDto> invTypeMaterialDtos = new ArrayList<InvTypeMaterialDto>(invTypeMaterials.size());
+        for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
+            invTypeMaterialDtos.add(mapper.map(invTypeMaterial));
+        }
+        return invTypeMaterialDtos;
+    }
+
+    @Override
+    public List<InvTypeMaterialDto> getInvTypeMaterialsForTypeName(String typeName) {
+        List<InvTypeMaterial> invTypeMaterials = applicationFacade.getInvTypeMaterialsForTypeName(typeName);
+        List<InvTypeMaterialDto> invTypeMaterialDtos = new ArrayList<InvTypeMaterialDto>(invTypeMaterials.size());
+        for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
+            invTypeMaterialDtos.add(mapper.map(invTypeMaterial));
+        }
+        return invTypeMaterialDtos;
+    }
+
+    @Override
+    public InvBlueprintTypeDto getBlueprintTypeByTypeID(Long typeID) {
+        InvBlueprintType invBlueprintType = applicationFacade.getBlueprintTypeByTypeID(typeID);
+        return invBlueprintType == null ? null : mapper.map(invBlueprintType);
+    }
+
+    @Override
+    public InvBlueprintTypeDto getBlueprintTypeByTypeName(String blueprintTypeName) {
+        InvBlueprintType invBlueprintType = applicationFacade.getBlueprintTypeByTypeName(blueprintTypeName);
+        return invBlueprintType == null ? null : mapper.map(invBlueprintType);
+    }
+
+    @Override
+    public List<RamTypeRequirementDto> getRamTypeRequirementsForTypeID(Long typeID) {
+        List<RamTypeRequirement> ramTypeRequirements = applicationFacade.getRamTypeRequirementsForTypeID(typeID);
+        List<RamTypeRequirementDto> ramTypeRequirementDtos = new ArrayList<RamTypeRequirementDto>(ramTypeRequirements.size());
+        for (RamTypeRequirement ramTypeRequirement : ramTypeRequirements) {
+            ramTypeRequirementDtos.add(mapper.map(ramTypeRequirement));
+        }
+        return ramTypeRequirementDtos;
+    }
+
+    @Override
+    public List<RamTypeRequirementDto> getRamTypeRequirementsForTypeName(String typeName) {
+        List<RamTypeRequirement> ramTypeRequirements = applicationFacade.getRamTypeRequirementsForTypeName(typeName);
+        List<RamTypeRequirementDto> ramTypeRequirementDtos = new ArrayList<RamTypeRequirementDto>(ramTypeRequirements.size());
+        for (RamTypeRequirement ramTypeRequirement : ramTypeRequirements) {
+            ramTypeRequirementDtos.add(mapper.map(ramTypeRequirement));
+        }
+        return ramTypeRequirementDtos;
     }
 
     @Override
@@ -66,18 +113,6 @@ public class EveDbClientFacadeImpl implements EveDbClientFacade {
     }
 
     @Override
-    public InvBlueprintTypeDto getBlueprintTypeByTypeID(Long typeID) {
-        InvBlueprintType invBlueprintType = applicationFacade.getBlueprintTypeByTypeID(typeID);
-        return invBlueprintType != null ? mapper.map(invBlueprintType) : null;
-    }
-
-    @Override
-    public InvBlueprintTypeDto getBlueprintTypeByTypeName(String blueprintTypeName) {
-        InvBlueprintType invBlueprintType = applicationFacade.getBlueprintTypeByTypeName(blueprintTypeName);
-        return invBlueprintType != null ? mapper.map(invBlueprintType) : null;
-    }
-
-    @Override
     public InvTypeBasicInfoDto getTypeBasicInfoByTypeID(Long typeID) {
         InvType invType = applicationFacade.getTypeBasicInfoByTypeID(typeID);
         return invType != null ? mapper.map(invType) : null;
@@ -90,52 +125,17 @@ public class EveDbClientFacadeImpl implements EveDbClientFacade {
     }
 
     @Override
-    public List<InvTypeMaterialDto> getInvTypeMaterialsForTypeID(Long typeID) {
-        List<InvTypeMaterial> invTypeMaterials = applicationFacade.getInvTypeMaterialsForTypeID(typeID);
-        List<InvTypeMaterialDto> invTypeMaterialDtos = new ArrayList<InvTypeMaterialDto>(invTypeMaterials.size());
-        for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
-            invTypeMaterialDtos.add(mapper.map(invTypeMaterial));
-        }
-        return invTypeMaterialDtos;
+    public String getTypeNameByTypeID(Long typeID) {
+        return applicationFacade.getTypeNameByTypeID(typeID);
     }
 
     @Override
-    public List<InvTypeMaterialDto> getInvTypeMaterialsForTypeName(String typeName) {
-        List<InvTypeMaterial> invTypeMaterials = applicationFacade.getInvTypeMaterialsForTypeName(typeName);
-        List<InvTypeMaterialDto> invTypeMaterialDtos = new ArrayList<InvTypeMaterialDto>(invTypeMaterials.size());
-        for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
-            invTypeMaterialDtos.add(mapper.map(invTypeMaterial));
-        }
-        return invTypeMaterialDtos;
-    }
-
-    @Override
-    public List<RamTypeRequirementDto> getRamTypeRequirementsForTypeID(Long typeID) {
-        List<RamTypeRequirement> ramTypeRequirements = applicationFacade.getRamTypeRequirementsForTypeID(typeID);
-        List<RamTypeRequirementDto> ramTypeRequirementDtos = new ArrayList<RamTypeRequirementDto>(ramTypeRequirements.size());
-        for (RamTypeRequirement ramTypeRequirement : ramTypeRequirements) {
-            ramTypeRequirementDtos.add(mapper.map(ramTypeRequirement));
-        }
-        return ramTypeRequirementDtos;
-    }
-
-    @Override
-    public List<RamTypeRequirementDto> getRamTypeRequirementsForTypeName(String typeName) {
-        List<RamTypeRequirement> ramTypeRequirements = applicationFacade.getRamTypeRequirementsForTypeName(typeName);
-        List<RamTypeRequirementDto> ramTypeRequirementDtos = new ArrayList<RamTypeRequirementDto>(ramTypeRequirements.size());
-        for (RamTypeRequirement ramTypeRequirement : ramTypeRequirements) {
-            ramTypeRequirementDtos.add(mapper.map(ramTypeRequirement));
-        }
-        return ramTypeRequirementDtos;
+    public Long getTypeIdByTypeName(String typeName) {
+        return applicationFacade.getTypeIdByTypeName(typeName);
     }
 
     @Override
     public String getVersion() {
         return applicationFacade.getVersion();
-    }
-
-    @Override
-    public String clearCache() {
-        return applicationFacade.clearCache();
     }
 }

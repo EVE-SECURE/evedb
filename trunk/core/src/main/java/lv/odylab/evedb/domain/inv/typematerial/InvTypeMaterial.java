@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvTypeMaterial implements Serializable {
-    private static final long serialVersionUID = 6880453360326708751L;
+    private static final long serialVersionUID = -7572727474660064936L;
 
     @Id
     private Long id;

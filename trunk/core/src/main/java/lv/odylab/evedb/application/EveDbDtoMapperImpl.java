@@ -14,13 +14,14 @@ import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
 public class EveDbDtoMapperImpl implements EveDbDtoMapper {
 
     @Override
-    public InvTypeBasicInfoDto map(InvType invType) {
-        InvTypeBasicInfoDto invTypeBasicInfoDto = new InvTypeBasicInfoDto();
-        invTypeBasicInfoDto.setItemTypeID(invType.getTypeID());
-        invTypeBasicInfoDto.setItemCategoryID(invType.getCategoryID());
-        invTypeBasicInfoDto.setName(invType.getTypeName());
-        invTypeBasicInfoDto.setGraphicIcon(invType.getTypeIcon());
-        return invTypeBasicInfoDto;
+    public InvTypeMaterialDto map(InvTypeMaterial invTypeMaterial) {
+        InvTypeMaterialDto invTypeMaterialDto = new InvTypeMaterialDto();
+        invTypeMaterialDto.setMaterialTypeID(invTypeMaterial.getMaterialTypeID());
+        invTypeMaterialDto.setMaterialTypeName(invTypeMaterial.getMaterialTypeName());
+        invTypeMaterialDto.setMaterialTypeCategoryID(invTypeMaterial.getMaterialTypeCategoryID());
+        invTypeMaterialDto.setMaterialTypeGraphicIcon(invTypeMaterial.getMaterialTypeIcon());
+        invTypeMaterialDto.setQuantity(invTypeMaterial.getQuantity());
+        return invTypeMaterialDto;
     }
 
     @Override
@@ -38,17 +39,6 @@ public class EveDbDtoMapperImpl implements EveDbDtoMapper {
     }
 
     @Override
-    public InvTypeMaterialDto map(InvTypeMaterial invTypeMaterial) {
-        InvTypeMaterialDto invTypeMaterialDto = new InvTypeMaterialDto();
-        invTypeMaterialDto.setMaterialTypeID(invTypeMaterial.getMaterialTypeID());
-        invTypeMaterialDto.setMaterialTypeName(invTypeMaterial.getMaterialTypeName());
-        invTypeMaterialDto.setMaterialTypeCategoryID(invTypeMaterial.getMaterialTypeCategoryID());
-        invTypeMaterialDto.setMaterialTypeGraphicIcon(invTypeMaterial.getMaterialTypeIcon());
-        invTypeMaterialDto.setQuantity(invTypeMaterial.getQuantity());
-        return invTypeMaterialDto;
-    }
-
-    @Override
     public RamTypeRequirementDto map(RamTypeRequirement ramTypeRequirement) {
         RamTypeRequirementDto ramTypeRequirementDto = new RamTypeRequirementDto();
         ramTypeRequirementDto.setRequiredTypeID(ramTypeRequirement.getRequiredTypeID());
@@ -62,5 +52,15 @@ public class EveDbDtoMapperImpl implements EveDbDtoMapper {
         ramTypeRequirementDto.setDamagePerJob(String.valueOf(ramTypeRequirement.getDamagePerJob()));
         ramTypeRequirementDto.setQuantity(ramTypeRequirement.getQuantity());
         return ramTypeRequirementDto;
+    }
+
+    @Override
+    public InvTypeBasicInfoDto map(InvType invType) {
+        InvTypeBasicInfoDto invTypeBasicInfoDto = new InvTypeBasicInfoDto();
+        invTypeBasicInfoDto.setItemTypeID(invType.getTypeID());
+        invTypeBasicInfoDto.setItemCategoryID(invType.getCategoryID());
+        invTypeBasicInfoDto.setName(invType.getTypeName());
+        invTypeBasicInfoDto.setGraphicIcon(invType.getTypeIcon());
+        return invTypeBasicInfoDto;
     }
 }
