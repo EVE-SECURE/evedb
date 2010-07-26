@@ -228,7 +228,7 @@ public class EveDbResourceTest {
 
     @Test
     public void test_Exception() throws Exception {
-        request.setURI(baseUrl + PATH_EXCEPTION + "/" + Exception.class.getName());
+        request.setURI(baseUrl + PATH_EXCEPTION + "/" + RuntimeException.class.getName());
         request.setHeader("accept", "text/plain");
         response.parse(tester.getResponses(request.generate()));
         assertEquals(500, response.getStatus());
