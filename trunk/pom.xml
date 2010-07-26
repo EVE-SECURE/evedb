@@ -14,7 +14,7 @@
 
     <properties>
         <odylab.evedb.version>1.4-SNAPSHOT</odylab.evedb.version>
-        <odylab.appengine.version>1.7</odylab.appengine.version>
+        <odylab.appengine.version>1.8-SNAPSHOT</odylab.appengine.version>
         <junit.version>4.4</junit.version>
         <mockito.version>1.8.5</mockito.version>
         <jetty.servlet.tester.version>6.1.9</jetty.servlet.tester.version>
@@ -31,6 +31,7 @@
         <module>core</module>
         <module>ws</module>
         <module>ws-client</module>
+        <module>ws-client-appengine</module>
     </modules>
 
     <scm>
@@ -74,9 +75,5 @@
             <id>evedb.googlecode.com</id>
             <url>dav:http://evedb.googlecode.com/svn/mvnrepo</url>
         </repository>
-        <snapshotRepository>
-            <id>evedb.googlecode.com.snapshot</id>
-            <url>dav:http://evedb.googlecode.com/svn/mvnsnapshotrepo</url>
-        </snapshotRepository>
     </distributionManagement>
 </project>
