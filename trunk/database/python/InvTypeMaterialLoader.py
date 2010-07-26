@@ -10,7 +10,7 @@ class InvTypeMaterial(db.Model):
     typeGroupName = db.StringProperty(indexed=False)
     typeCategoryID = db.IntegerProperty(indexed=False)
     typeCategoryName = db.StringProperty(indexed=False)
-    materialTypeID = db.IntegerProperty(indexed=False)
+    materialTypeID = db.IntegerProperty()
     materialTypeName = db.StringProperty(indexed=False)
     materialTypeGraphicID = db.IntegerProperty(indexed=False)
     materialTypeIcon = db.StringProperty(indexed=False)

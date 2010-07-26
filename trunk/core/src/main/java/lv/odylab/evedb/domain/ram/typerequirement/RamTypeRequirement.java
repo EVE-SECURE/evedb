@@ -24,6 +24,7 @@ public class RamTypeRequirement implements Serializable {
     private String typeGroupName;
     private Long typeCategoryID;
     private String typeCategoryName;
+    @Indexed
     private Long requiredTypeID;
     private String requiredTypeName;
     private Long requiredTypeGraphicID;

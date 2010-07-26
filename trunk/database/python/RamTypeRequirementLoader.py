@@ -12,7 +12,7 @@ class RamTypeRequirement(db.Model):
     typeGroupName = db.StringProperty(indexed=False)
     typeCategoryID = db.IntegerProperty(indexed=False)
     typeCategoryName = db.StringProperty(indexed=False)
-    requiredTypeID = db.IntegerProperty(indexed=False)
+    requiredTypeID = db.IntegerProperty()
     requiredTypeName = db.StringProperty(indexed=False)
     requiredTypeGraphicID = db.IntegerProperty(indexed=False)
     requiredTypeIcon = db.StringProperty(indexed=False)

@@ -18,7 +18,8 @@ public class RamTypeRequirementDao {
     public List<RamTypeRequirement> getForTypeID(Long typeID, String dumpVersion) {
         List<RamTypeRequirement> ramTypeRequirements = objectifyFactory.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
-                .filter("typeID", typeID).list();
+                .filter("typeID", typeID)
+                .order("requiredTypeID").list();
         if (ramTypeRequirements.isEmpty()) {
             throw new IdNotFoundException(typeID);
         }
@@ -28,7 +29,8 @@ public class RamTypeRequirementDao {
     public List<RamTypeRequirement> getForTypeName(String typeName, String dumpVersion) {
         List<RamTypeRequirement> ramTypeRequirements = objectifyFactory.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
-                .filter("typeName", typeName).list();
+                .filter("typeName", typeName)
+                .order("requiredTypeID").list();
         if (ramTypeRequirements.isEmpty()) {
             throw new NameNotFoundException(typeName);
         }
