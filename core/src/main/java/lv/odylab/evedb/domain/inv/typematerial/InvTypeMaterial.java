@@ -22,6 +22,7 @@ public class InvTypeMaterial implements Serializable {
     private String typeGroupName;
     private Long typeCategoryID;
     private String typeCategoryName;
+    @Indexed
     private Long materialTypeID;
     private String materialTypeName;
     private Long materialTypeGraphicID;

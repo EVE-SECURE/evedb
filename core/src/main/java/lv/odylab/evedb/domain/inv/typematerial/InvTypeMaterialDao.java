@@ -18,7 +18,8 @@ public class InvTypeMaterialDao {
     public List<InvTypeMaterial> getForTypeID(Long typeID, String dumpVersion) {
         List<InvTypeMaterial> invTypeMaterials = objectifyFactory.begin().query(InvTypeMaterial.class)
                 .filter("dumpVersion", dumpVersion)
-                .filter("typeID", typeID).list();
+                .filter("typeID", typeID)
+                .order("materialTypeID").list();
         if (invTypeMaterials.isEmpty()) {
             throw new IdNotFoundException(typeID);
         }
@@ -28,7 +29,8 @@ public class InvTypeMaterialDao {
     public List<InvTypeMaterial> getForTypeName(String typeName, String dumpVersion) {
         List<InvTypeMaterial> invTypeMaterials = objectifyFactory.begin().query(InvTypeMaterial.class)
                 .filter("dumpVersion", dumpVersion)
-                .filter("typeName", typeName).list();
+                .filter("typeName", typeName)
+                .order("materialTypeID").list();
         if (invTypeMaterials.isEmpty()) {
             throw new NameNotFoundException(typeName);
         }
