@@ -6,6 +6,7 @@ import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
 import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mortbay.jetty.servlet.DefaultServlet;
@@ -39,6 +40,11 @@ public class EveDbServletModuleTest {
         tester.addServlet(DefaultServlet.class, "/");
         baseUrl = tester.createSocketConnector(true);
         tester.start();
+    }
+
+    @After
+    public void stopServlet() throws Exception {
+        tester.stop();
     }
 
     @Test
