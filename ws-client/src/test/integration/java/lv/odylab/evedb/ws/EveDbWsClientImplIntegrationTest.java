@@ -10,8 +10,8 @@ import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 
-public class EveDbWsClientTest {
-    private final EveDbWsClient client = new EveDbWsClient("http://dev.latest.odylab-evedb.appspot.com");
+public class EveDbWsClientImplIntegrationTest {
+    private final EveDbWsClient client = new EveDbWsClientImpl("http://dev.latest.odylab-evedb.appspot.com");
 
     @Test
     public void testGetBaseMaterialsForTypeID() {
@@ -19,10 +19,9 @@ public class EveDbWsClientTest {
         assertEquals(4, invTypeMaterialDtoList.size());
     }
 
-    @Test
+    @Test(expected = BadRequestException.class)
     public void testGetBaseMaterialsForTypeID_IdNotFound() {
-        List<InvTypeMaterialDto> invTypeMaterialDtoList = client.getBaseMaterialsForTypeID(1234567890L);
-        assertEquals(4, invTypeMaterialDtoList.size());
+        client.getBaseMaterialsForTypeID(1234567890L);
     }
 
     @Test
@@ -97,6 +96,6 @@ public class EveDbWsClientTest {
 
     @Test
     public void testVersion() {
-        assertEquals("1.4-SNAPSHOT", client.getEveDbVersion());
+        assertEquals("1.4-SNAPSHOT", client.getVersion());
     }
 }

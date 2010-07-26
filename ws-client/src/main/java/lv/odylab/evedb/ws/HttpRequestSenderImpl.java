@@ -17,6 +17,9 @@ public class HttpRequestSenderImpl implements EveDbWsClient.HttpRequestSender {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", acceptHeader);
+            if (connection.getResponseCode() == 400) {
+                throw new BadRequestException();
+            }
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             StringBuilder stringBuilder = new StringBuilder();
             String line;
