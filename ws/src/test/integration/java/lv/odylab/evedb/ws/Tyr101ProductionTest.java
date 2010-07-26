@@ -12,7 +12,7 @@ import static com.google.appengine.repackaged.com.google.common.base.X.assertTru
 import static junit.framework.Assert.assertEquals;
 
 public class Tyr101ProductionTest {
-    private final String baseUrl = "http://dev.latest.odylab-evedb.appspot.com";
+    private final String baseUrl = "http://tyr101.latest.odylab-evedb.appspot.com";
 
     @Test
     public void test_clearCache() throws Exception {
