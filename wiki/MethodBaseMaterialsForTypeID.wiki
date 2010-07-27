@@ -14,6 +14,10 @@ List of base materials for given item typeID.
 
 == Examples ==
 
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 baseMaterialsForTypeID/1234567890] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
+
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587] (JSON)
 {{{
 [ { "materialTypeCategoryID" : 4,
@@ -116,7 +120,3 @@ List of base materials for given item typeID.
   </row>
 </rowset>
 }}}
-
-[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 baseMaterialsForTypeID/1234567890] (HTTP 400)
-
-[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
