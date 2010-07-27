@@ -16,6 +16,49 @@ List of base materials for given item typeID.
 
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587] (JSON)
 {{{
+[ { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "06_14",
+    "materialTypeID" : 34,
+    "materialTypeName" : "Tritanium",
+    "quantity" : 20524
+  },
+  { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "06_15",
+    "materialTypeID" : 35,
+    "materialTypeName" : "Pyerite",
+    "quantity" : 5529
+  },
+  { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "06_12",
+    "materialTypeID" : 36,
+    "materialTypeName" : "Mexallon",
+    "quantity" : 1841
+  },
+  { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "06_16",
+    "materialTypeID" : 37,
+    "materialTypeName" : "Isogen",
+    "quantity" : 317
+  },
+  { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "11_09",
+    "materialTypeID" : 38,
+    "materialTypeName" : "Nocxium",
+    "quantity" : 118
+  },
+  { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "11_11",
+    "materialTypeID" : 39,
+    "materialTypeName" : "Zydrine",
+    "quantity" : 13
+  },
+  { "materialTypeCategoryID" : 4,
+    "materialTypeGraphicIcon" : "11_10",
+    "materialTypeID" : 40,
+    "materialTypeName" : "Megacyte",
+    "quantity" : 1
+  }
+]
 }}}
 
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587] (XML)
@@ -74,6 +117,6 @@ List of base materials for given item typeID.
 </rowset>
 }}}
 
-[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 baseMaterialsForTypeID/1234567890](HTTP 400)
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 baseMaterialsForTypeID/1234567890] (HTTP 400)
 
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
