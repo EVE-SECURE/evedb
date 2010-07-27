@@ -1,0 +1,79 @@
+#summary Method baseMaterialsForTypeID details
+
+= /baseMaterialsForTypeID/(typeID) =
+
+List of base materials for given item typeID.
+
+== Attributes ==
+
+|| materialTypeID || Number ||
+|| materialTypeName || String ||
+|| materialTypeCategoryID || Number ||
+|| quantity || Number ||
+|| materialTypeGraphicIcon || String ||
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587] (JSON)
+{{{
+}}}
+
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>06_14</materialTypeGraphicIcon>
+    <materialTypeID>34</materialTypeID>
+    <materialTypeName>Tritanium</materialTypeName>
+    <quantity>20524</quantity>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>06_15</materialTypeGraphicIcon>
+    <materialTypeID>35</materialTypeID>
+    <materialTypeName>Pyerite</materialTypeName>
+    <quantity>5529</quantity>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>06_12</materialTypeGraphicIcon>
+    <materialTypeID>36</materialTypeID>
+    <materialTypeName>Mexallon</materialTypeName>
+    <quantity>1841</quantity>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>06_16</materialTypeGraphicIcon>
+    <materialTypeID>37</materialTypeID>
+    <materialTypeName>Isogen</materialTypeName>
+    <quantity>317</quantity>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>11_09</materialTypeGraphicIcon>
+    <materialTypeID>38</materialTypeID>
+    <materialTypeName>Nocxium</materialTypeName>
+    <quantity>118</quantity>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>11_11</materialTypeGraphicIcon>
+    <materialTypeID>39</materialTypeID>
+    <materialTypeName>Zydrine</materialTypeName>
+    <quantity>13</quantity>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeGraphicIcon>11_10</materialTypeGraphicIcon>
+    <materialTypeID>40</materialTypeID>
+    <materialTypeName>Megacyte</materialTypeName>
+    <quantity>1</quantity>
+  </row>
+</rowset>
+}}}
+
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/1234567890 baseMaterialsForTypeID/1234567890](HTTP 400)
+
+[http://odylab-evedb.appspot.com/baseMaterialsForTypeID/blah-blah baseMaterialsForTypeID/blah-blah] (HTTP 400)
