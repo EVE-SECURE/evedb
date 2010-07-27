@@ -5,11 +5,11 @@
 
   * *Added XML support*
 
-  * Issue 1. Return either JSON or XML based on accept header
-  * Issue 2. Create script for datastore dump download
-  * Issue 3. Replace slf4j-log4j with slf4j-jdk14
-  * Issue 4. baseMaterials and extraMaterials return unordered list
   * Issue 5. Introduce new client for Google AppEngine URLFetch
+  * Issue 4. baseMaterials and extraMaterials return unordered list
+  * Issue 3. Replace slf4j-log4j with slf4j-jdk14
+  * Issue 2. Create script for datastore dump download
+  * Issue 1. Return either JSON or XML based on accept header
 
 = 2010.07.16, version 1.3 =
 
