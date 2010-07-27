@@ -6,11 +6,11 @@ List of base materials for given item typeID.
 
 == Attributes ==
 
+|| materialTypeCategoryID || Number ||
+|| materialTypeGraphicIcon || String ||
 || materialTypeID || Number ||
 || materialTypeName || String ||
-|| materialTypeCategoryID || Number ||
 || quantity || Number ||
-|| materialTypeGraphicIcon || String ||
 
 == Examples ==
 
