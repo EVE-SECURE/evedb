@@ -2,14 +2,14 @@
 
 = /lookupBlueprintType/(query) =
 
-List of matching blueprint item types
+List of matching blueprint item types.
 
 == Attributes ==
 
+|| graphicIcon || String ||
+|| itemCategoryID || Number ||
 || itemTypeID || Number ||
 || name || String ||
-|| itemCategoryID || Number ||
-|| graphicIcon || String ||
 
 == Limitations ==
 
