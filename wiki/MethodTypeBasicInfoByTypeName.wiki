@@ -1,0 +1,36 @@
+#summary Method typeBasicInfoByTypeName details
+
+= /typeBasicInfoByTypeName/(typeName) =
+
+Item type basic information for given typeName.
+
+== Attributes ==
+
+|| graphicIcon || String ||
+|| itemCategoryID || Number ||
+|| itemTypeID || Number ||
+|| name || String ||
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/typeBasicInfoByTypeName/blah-blah typeBasicInfoByTypeName/blah-blah] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/typeBasicInfoByTypeName/Tritanium typeBasicInfoByTypeName/Tritanium] (JSON)
+{{{
+{ "graphicIcon" : "06_14",
+  "itemCategoryID" : 4,
+  "itemTypeID" : 34,
+  "name" : "Tritanium"
+}
+}}}
+
+[http://odylab-evedb.appspot.com/typeBasicInfoByTypeName/Tritanium typeBasicInfoByTypeName/Tritanium] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<invTypeBasicInfoDto>
+  <graphicIcon>06_14</graphicIcon>
+  <itemCategoryID>4</itemCategoryID>
+  <itemTypeID>34</itemTypeID>
+  <name>Tritanium</name>
+</invTypeBasicInfoDto>
+}}}
