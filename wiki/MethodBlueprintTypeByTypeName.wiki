@@ -1,0 +1,48 @@
+#summary Method blueprintTypeByTypeName details
+
+= /blueprintTypeByTypeName/(typeName) =
+
+Blueprint information for given blueprint typeName.
+
+== Attributes ==
+
+|| blueprintTypeID || Number ||
+|| blueprintTypeName || String ||
+|| maxProductionLimit || Number ||
+|| productCategoryID || Number ||
+|| productGraphicIcon || String ||
+|| productTypeID || Number ||
+|| productTypeName || String ||
+|| wasteFactor || Number ||
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/blueprintTypeByTypeName/blah-blah blueprintTypeByTypeName/blah-blah] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/blueprintTypeByTypeName/Obelisk+Blueprint blueprintTypeByTypeName/Obelisk+Blueprint] (JSON)
+{{{
+{ "blueprintTypeID" : 20188,
+  "blueprintTypeName" : "Obelisk Blueprint",
+  "maxProductionLimit" : 1,
+  "productCategoryID" : 6,
+  "productGraphicIcon" : "",
+  "productTypeID" : 20187,
+  "productTypeName" : "Obelisk",
+  "wasteFactor" : 10
+}
+}}}
+
+[http://odylab-evedb.appspot.com/blueprintTypeByTypeName/Obelisk+Blueprint blueprintTypeByTypeName/Obelisk+Blueprint] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<invBlueprintTypeDto>
+  <blueprintTypeID>20188</blueprintTypeID>
+  <blueprintTypeName>Obelisk Blueprint</blueprintTypeName>
+  <maxProductionLimit>1</maxProductionLimit>
+  <productCategoryID>6</productCategoryID>
+  <productGraphicIcon/>
+  <productTypeID>20187</productTypeID>
+  <productTypeName>Obelisk</productTypeName>
+  <wasteFactor>10</wasteFactor>
+</invBlueprintTypeDto>
+}}}
