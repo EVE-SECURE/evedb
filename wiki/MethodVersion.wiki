@@ -11,7 +11,7 @@ Application version.
 1.3-tyr101
 }}}
 
-[http://dom100.latest.odylab-evedb.appspot.com/version] (TEXT)
+[http://dom100.latest.odylab-evedb.appspot.com], [http://dom100.latest.odylab-evedb.appspot.com/version] (TEXT)
 {{{
 1.3-dom100
 }}}
