@@ -1,0 +1,129 @@
+#summary Method extraMaterialsForTypeID details
+
+= /extraMaterialsForTypeID/(typeID) =
+
+List of extra materials for given item typeID.
+
+== Attributes ==
+    
+|| activityID || Number ||
+|| activityName || String ||
+|| damagePerJob || String ||
+|| quantity || Number ||
+|| requiredTypeCategoryID || Number ||
+|| requiredTypeGroupID || String ||
+|| requiredTypeGroupName || String ||
+|| requiredTypeID || Number ||
+|| requiredTypeName || String ||
+|| requiredTypeNameGraphicIcon || String ||
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/1234567890 extraMaterialsForTypeID/1234567890] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/blah-blah extraMaterialsForTypeID/blah-blah] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeName/Obelisk+Blueprint extraMaterialsForTypeName/Obelisk+Blueprint] (JSON)
+{{{
+[ { "activityID" : 8,
+    "activityName" : "Invention",
+    "damagePerJob" : "1.0",
+    "quantity" : 64,
+    "requiredTypeCategoryID" : 17,
+    "requiredTypeGroupID" : 333,
+    "requiredTypeGroupName" : "Datacores",
+    "requiredTypeID" : 20410,
+    "requiredTypeName" : "Datacore - Gallentean Starship Engineering",
+    "requiredTypeNameGraphicIcon" : "64_02"
+  },
+  { "activityID" : 8,
+    "activityName" : "Invention",
+    "damagePerJob" : "1.0",
+    "quantity" : 64,
+    "requiredTypeCategoryID" : 17,
+    "requiredTypeGroupID" : 333,
+    "requiredTypeGroupName" : "Datacores",
+    "requiredTypeID" : 20424,
+    "requiredTypeName" : "Datacore - Mechanical Engineering",
+    "requiredTypeNameGraphicIcon" : "64_03"
+  },
+  { "activityID" : 1,
+    "activityName" : "Manufacturing",
+    "damagePerJob" : "0.0",
+    "quantity" : 1,
+    "requiredTypeCategoryID" : 16,
+    "requiredTypeGroupID" : 269,
+    "requiredTypeGroupName" : "Mechanic",
+    "requiredTypeID" : 22242,
+    "requiredTypeName" : "Capital Ship Construction",
+    "requiredTypeNameGraphicIcon" : "50_11"
+  },
+  { "activityID" : 8,
+    "activityName" : "Invention",
+    "damagePerJob" : "1.0",
+    "quantity" : 1,
+    "requiredTypeCategoryID" : 17,
+    "requiredTypeGroupID" : 716,
+    "requiredTypeGroupName" : "Data Interfaces",
+    "requiredTypeID" : 25855,
+    "requiredTypeName" : "Incognito Ship Data Interface",
+    "requiredTypeNameGraphicIcon" : "63_06"
+  }
+]
+}}}
+
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeName/Obelisk+Blueprint extraMaterialsForTypeName/Obelisk+Blueprint] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+    <activityID>8</activityID>
+    <activityName>Invention</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>64</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>333</requiredTypeGroupID>
+    <requiredTypeGroupName>Datacores</requiredTypeGroupName>
+    <requiredTypeID>20410</requiredTypeID>
+    <requiredTypeName>Datacore - Gallentean Starship Engineering</requiredTypeName>
+    <requiredTypeNameGraphicIcon>64_02</requiredTypeNameGraphicIcon>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+    <activityID>8</activityID>
+    <activityName>Invention</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>64</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>333</requiredTypeGroupID>
+    <requiredTypeGroupName>Datacores</requiredTypeGroupName>
+    <requiredTypeID>20424</requiredTypeID>
+    <requiredTypeName>Datacore - Mechanical Engineering</requiredTypeName>
+    <requiredTypeNameGraphicIcon>64_03</requiredTypeNameGraphicIcon>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>1</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>269</requiredTypeGroupID>
+    <requiredTypeGroupName>Mechanic</requiredTypeGroupName>
+    <requiredTypeID>22242</requiredTypeID>
+    <requiredTypeName>Capital Ship Construction</requiredTypeName>
+    <requiredTypeNameGraphicIcon>50_11</requiredTypeNameGraphicIcon>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+    <activityID>8</activityID>
+    <activityName>Invention</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>1</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>716</requiredTypeGroupID>
+    <requiredTypeGroupName>Data Interfaces</requiredTypeGroupName>
+    <requiredTypeID>25855</requiredTypeID>
+    <requiredTypeName>Incognito Ship Data Interface</requiredTypeName>
+    <requiredTypeNameGraphicIcon>63_06</requiredTypeNameGraphicIcon>
+  </row>
+</rowset>
+
+}}}
