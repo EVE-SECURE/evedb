@@ -17,8 +17,6 @@ Item type basic information for given typeID.
 
 [http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/blah-blah typeBasicInfoByTypeID/blah-blah] (HTTP 400)
 
-[http://odylab-evedb.appspot.com/blueprintTypeByTypeID/blah-blah blueprintTypeByTypeID/blah-blah] (HTTP 400)
-
 [http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/34 typeBasicInfoByTypeID/34] (JSON)
 {{{
 { "graphicIcon" : "06_14",
