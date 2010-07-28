@@ -1,0 +1,132 @@
+#summary Method lookupBlueprintType details
+
+= /lookupBlueprintType/(query) =
+
+List of matching blueprint item types
+
+== Attributes ==
+
+|| itemTypeID || Number ||
+|| name || String ||
+|| itemCategoryID || Number ||
+|| graphicIcon || String ||
+
+== Limitations ==
+
+  * Maximum 50 results (EveDb constraint)
+  * Minimum 3 letters (EveDb constraint)
+  * Only matches that begin with query string (AppEngine constraint)
+  * Case-sensitive (AppEngine constraint)
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/blah-blah lookupBlueprintType/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/blah-blah lookupBlueprintType/blah-blah] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset/>
+}}}
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/Mega lookupBlueprintType/Mega] (JSON)
+{{{
+[ { "graphicIcon" : "13_11",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 847,
+    "name" : "Mega Beam Laser I Blueprint"
+  },
+  { "graphicIcon" : "13_11",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 3050,
+    "name" : "Mega Beam Laser II Blueprint"
+  },
+  { "graphicIcon" : "01_08",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 30224,
+    "name" : "Mega Module Blueprint"
+  },
+  { "graphicIcon" : "13_15",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 846,
+    "name" : "Mega Pulse Laser I Blueprint"
+  },
+  { "graphicIcon" : "13_15",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 3058,
+    "name" : "Mega Pulse Laser II Blueprint"
+  },
+  { "graphicIcon" : "",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 995,
+    "name" : "Megathron Blueprint"
+  },
+  { "graphicIcon" : "",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 13203,
+    "name" : "Megathron Federate Issue Blueprint"
+  },
+  { "graphicIcon" : "",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 17729,
+    "name" : "Megathron Navy Issue Blueprint"
+  }
+]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupBlueprintType/Mega lookupBlueprintType/Mega] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>13_11</graphicIcon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>847</itemTypeID>
+    <name>Mega Beam Laser I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>13_11</graphicIcon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>3050</itemTypeID>
+    <name>Mega Beam Laser II Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>01_08</graphicIcon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>30224</itemTypeID>
+    <name>Mega Module Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>13_15</graphicIcon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>846</itemTypeID>
+    <name>Mega Pulse Laser I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>13_15</graphicIcon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>3058</itemTypeID>
+    <name>Mega Pulse Laser II Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon/>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>995</itemTypeID>
+    <name>Megathron Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon/>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>13203</itemTypeID>
+    <name>Megathron Federate Issue Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon/>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>17729</itemTypeID>
+    <name>Megathron Navy Issue Blueprint</name>
+  </row>
+</rowset>
+}}}
