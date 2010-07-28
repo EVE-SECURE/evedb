@@ -1,0 +1,16 @@
+#summary Method typeIdToTypeName details
+
+= /typeIdToTypeName/(typeID) =
+
+Convert item typeID to typeName.
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/typeIdToTypeName/1234567890 typeIdToTypeName/1234567890] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/typeIdToTypeName/blah-blah typeIdToTypeName/blah-blah] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/typeIdToTypeName/20187 typeIdToTypeName/20187] (TEXT)
+{{{
+Obelisk
+}}}
