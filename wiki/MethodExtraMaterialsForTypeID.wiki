@@ -23,7 +23,7 @@ List of extra materials for given item typeID.
 
 [http://odylab-evedb.appspot.com/extraMaterialsForTypeID/blah-blah extraMaterialsForTypeID/blah-blah] (HTTP 400)
 
-[http://odylab-evedb.appspot.com/extraMaterialsForTypeName/Obelisk+Blueprint extraMaterialsForTypeName/Obelisk+Blueprint] (JSON)
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/20188 extraMaterialsForTypeID/20188] (JSON)
 {{{
 [ { "activityID" : 8,
     "activityName" : "Invention",
@@ -72,7 +72,7 @@ List of extra materials for given item typeID.
 ]
 }}}
 
-[http://odylab-evedb.appspot.com/extraMaterialsForTypeName/Obelisk+Blueprint extraMaterialsForTypeName/Obelisk+Blueprint] (XML)
+[http://odylab-evedb.appspot.com/extraMaterialsForTypeID/20188 extraMaterialsForTypeID/20188] (XML)
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
