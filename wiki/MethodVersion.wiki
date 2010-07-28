@@ -1,0 +1,17 @@
+#summary Method version details
+
+= /version =
+
+Application version.
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/version], [http://tyr101.latest.odylab-evedb.appspot.com/version] (TEXT)
+{{{
+1.3-tyr101
+}}}
+
+[http://dom100.latest.odylab-evedb.appspot.com/version] (TEXT)
+{{{
+1.3-dom100
+}}}
