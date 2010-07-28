@@ -1,0 +1,77 @@
+#summary Method lookupResourceType details
+
+= /lookupResourceType/(query) =
+
+List of matching resource item types.
+
+== Attributes ==
+
+|| graphicIcon || String ||
+|| itemCategoryID || Number ||
+|| itemTypeID || Number ||
+|| name || String ||
+
+== Limitations ==
+
+  * Maximum 50 results (EveDb constraint)
+  * Minimum 3 letters (EveDb constraint)
+  * Only matches that begin with query string (AppEngine constraint)
+  * Case-sensitive (AppEngine constraint)
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/lookupResourceType/blah-blah lookupResourceType/blah-blah] (JSON)
+{{{
+[]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupResourceType/blah-blah lookupResourceType/blah-blah] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset/>
+}}}
+
+[http://odylab-evedb.appspot.com/lookupResourceType/Tri lookupResourceType/Tri] (JSON)
+{{{
+[ { "graphicIcon" : "69_14",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 25612,
+    "name" : "Trigger Unit"
+  },
+  { "graphicIcon" : "69_15",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 25598,
+    "name" : "Tripped Power Circuit"
+  },
+  { "graphicIcon" : "06_14",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 34,
+    "name" : "Tritanium"
+  }
+]
+}}}
+
+[http://odylab-evedb.appspot.com/lookupResourceType/Tri lookupResourceType/Tri] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>69_14</graphicIcon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>25612</itemTypeID>
+    <name>Trigger Unit</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>69_15</graphicIcon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>25598</itemTypeID>
+    <name>Tripped Power Circuit</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <graphicIcon>06_14</graphicIcon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>34</itemTypeID>
+    <name>Tritanium</name>
+  </row>
+</rowset>
+}}}
