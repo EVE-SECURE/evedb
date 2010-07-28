@@ -1,8 +1,0 @@
-#summary EveDb news and updates
-#labels Restrict-View-Commit
-
-= News =
-TBD
-
-= Updates =
-TBD
