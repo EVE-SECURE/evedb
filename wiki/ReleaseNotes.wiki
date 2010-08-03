@@ -1,7 +1,7 @@
 #summary EveDb release notes
 #labels Restrict-View-Commit
 
-= 2010.08.01, version 1.4 =
+= 2010.08.04, version 1.4 =
 
   * *Added XML support*
 
