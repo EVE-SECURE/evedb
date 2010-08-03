@@ -5,6 +5,8 @@
 
   * *Added XML support*
 
+  * Issue 8. Introduce retry sender implementation to mitigate URLFetch timeout exceptions
+  * Issue 7. Remove AppEngine client since URLFetch low-api deadline does not work
   * Issue 6. Create XML Schema for generated XML
   * Issue 5. Introduce new client for Google AppEngine URLFetch
   * Issue 4. baseMaterials and extraMaterials return unordered list
