@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class HttpRequestSenderImpl implements EveDbWsClient.HttpRequestSender {
@@ -12,7 +11,6 @@ public class HttpRequestSenderImpl implements EveDbWsClient.HttpRequestSender {
     @Override
     public String doGet(String urlString, String acceptHeader) {
         try {
-            System.out.println(urlString);
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -28,8 +26,6 @@ public class HttpRequestSenderImpl implements EveDbWsClient.HttpRequestSender {
             }
             reader.close();
             return stringBuilder.toString();
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
