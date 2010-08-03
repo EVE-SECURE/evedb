@@ -13,7 +13,6 @@ import java.net.URLEncoder;
 import java.util.List;
 
 public class EveDbWsClientImpl implements EveDbWsClient {
-
     private final String eveDbUrl;
     private final Gson gson;
     private final HttpRequestSender requestSender;

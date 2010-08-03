@@ -13,7 +13,7 @@ import java.net.URL;
 import static com.google.appengine.api.urlfetch.FetchOptions.Builder.withDeadline;
 
 public class HttpRequestSenderUrlFetchImpl implements EveDbWsClient.HttpRequestSender {
-    private GoogleAppEngineServices appEngineServices;
+    private final GoogleAppEngineServices appEngineServices;
 
     public HttpRequestSenderUrlFetchImpl(GoogleAppEngineServices appEngineServices) {
         this.appEngineServices = appEngineServices;
