@@ -1,5 +1,4 @@
 #summary EveDb release notes
-#labels Restrict-View-Commit
 
 = 2010.08.04, version 1.4 =
 
