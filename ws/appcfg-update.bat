@@ -1,1 +1,1 @@
-appcfg update target/evedb-ws-1.4-SNAPSHOT
+appcfg update target/evedb-ws-1.4
