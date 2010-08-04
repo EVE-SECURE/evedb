@@ -2,15 +2,15 @@
 
 = Current state =
 
-EveDb has very limited amount of methods, only those I initially needed for my calculations and information lookup. Hopefully, it will be gradually expanded by me or other people if such need will arise.
+EveDb has very limited amount of methods, only those initially needed for some calculations and information lookup. Hopefully, it will be gradually expanded if such need will arise.
 
 = TODO =
 
-  * XML support (making responses in both JSON/XML depending on `accept` in headers)
+  * ~~XML support (making responses in both JSON/XML depending on `accept` in headers)~~
   * Client libraries (at least one generic and one for AppEngine with longer timeouts)
   * More detailed and formal documentation, examples 
-  * Extract database dump from Datastore and put into downloads
-  * Tests, proper logging and error handling
+  * ~~Extract database dump from Datastore and put into downloads~~
+  * ~~Tests, proper logging and error handling~~
 
 = Known issues =
 
