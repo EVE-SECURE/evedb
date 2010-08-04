@@ -15,17 +15,17 @@ You can specify exact dump with URLs above, if none is specified the latest dump
 == Summary ==
 
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
-|| /baseMaterialsForTypeID || /typeID || JSON || YES || YES || List of base materials for given item type id ||
-|| /baseMaterialsForTypeName || /typeName || JSON || YES || YES || List of base materials for given item type name ||
-|| /blueprintTypeByTypeID || /typeID || JSON || YES || YES || Blueprint information for given blueprint type id ||
-|| /blueprintTypeByTypeName || /typeName || JSON || YES || YES || Blueprint information for given blueprint type name ||
-|| /extraMaterialsForTypeID || /typeID || JSON || YES || YES || List of extra materials for given item type id ||
-|| /extraMaterialsForTypeName || /typeName || JSON || YES || YES || List of extra materials for given item type id ||
-|| /lookupBlueprintType || /partialTypeName || JSON || YES || YES || List of matching blueprint item types ||
-|| /lookupResourceType || /partialTypeName || JSON || YES || YES || List of matching resource item types ||
-|| /lookupType || /partialTypeName || JSON || YES || YES || List of matching any item types ||
-|| /typeBasicInfoByTypeID || /typeID || JSON || YES || YES || Item type basic information for given type id ||
-|| /typeBasicInfoByTypeName || /typeName || JSON || YES || YES || Item type basic information for given type name ||
+|| /baseMaterialsForTypeID || /typeID || JSON/XML || YES || YES || List of base materials for given item type id ||
+|| /baseMaterialsForTypeName || /typeName || JSON/XML || YES || YES || List of base materials for given item type name ||
+|| /blueprintTypeByTypeID || /typeID || JSON/XML || YES || YES || Blueprint information for given blueprint type id ||
+|| /blueprintTypeByTypeName || /typeName || JSON/XML || YES || YES || Blueprint information for given blueprint type name ||
+|| /extraMaterialsForTypeID || /typeID || JSON/XML || YES || YES || List of extra materials for given item type id ||
+|| /extraMaterialsForTypeName || /typeName || JSON/XML || YES || YES || List of extra materials for given item type id ||
+|| /lookupBlueprintType || /partialTypeName || JSON/XML || YES || YES || List of matching blueprint item types ||
+|| /lookupResourceType || /partialTypeName || JSON/XML || YES || YES || List of matching resource item types ||
+|| /lookupType || /partialTypeName || JSON/XML || YES || YES || List of matching any item types ||
+|| /typeBasicInfoByTypeID || /typeID || JSON/XML || YES || YES || Item type basic information for given type id ||
+|| /typeBasicInfoByTypeName || /typeName || JSON/XML || YES || YES || Item type basic information for given type name ||
 || /typeIdToTypeName || /typeName || TEXT || YES || YES || Convert item type id to name ||
 || /typeNameToTypeID || /typeID || TEXT || YES || YES || Convert item type name to id ||
 || /version || NONE || TEXT || YES || YES || Application version ||
