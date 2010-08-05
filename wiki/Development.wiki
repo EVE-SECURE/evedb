@@ -7,8 +7,8 @@ EveDb has very limited amount of methods, only those initially needed for some c
 = TODO =
 
   * ~~XML support (making responses in both JSON/XML depending on `accept` in headers)~~
-  * Client libraries (at least one generic and one for AppEngine with longer timeouts)
-  * More detailed and formal documentation, examples 
+  * ~~Client libraries (at least one generic and one for AppEngine with longer timeouts)~~
+  * ~~More detailed and formal documentation, examples~~ 
   * ~~Extract database dump from Datastore and put into downloads~~
   * ~~Tests, proper logging and error handling~~
 
