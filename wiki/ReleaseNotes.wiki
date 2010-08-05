@@ -1,6 +1,8 @@
 #summary EveDb release notes
 
-= 2010.08.04, version 1.4 =
+= Release notes =
+
+== 2010.08.04, version 1.4 ==
 
   * *Added XML support*
 
@@ -13,7 +15,7 @@
   * Issue 2. Create script for datastore dump download
   * Issue 1. Return either JSON or XML based on accept header
 
-= 2010.07.16, version 1.3 =
+== 2010.07.16, version 1.3 ==
 
   * *Initial release on [http://code.google.com/p/evedb code.google.com]*
   * *dom100 and tyr101 are supported*
