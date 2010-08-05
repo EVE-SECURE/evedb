@@ -1,6 +1,8 @@
 #summary Available EveDb methods
 #labels Featured
 
+= Methods =
+
 == Summary ==
 
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
@@ -19,9 +21,8 @@
 || [MethodTypeNameToTypeID /typeNameToTypeID] || /typeID || TEXT || YES || YES || Convert item typeName to typeID ||
 || [MethodVersion /version] || NONE || TEXT || YES || YES || Application version ||
 
-= Methods =
-
 == Available dumps ==
+
 Currently, there are two dumps hosted on odylab-evedb:
   * Dominion 1.0.0: http://dom100.latest.odylab-evedb.appspot.com
   * Tyrannis 1.0.1: http://tyr101.latest.odylab-evedb.appspot.com
