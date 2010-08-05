@@ -1,7 +1,7 @@
 #summary Getting started with EveDb
 #labels Featured
 
-= Getting Started =
+= Getting started =
 
 == Using existing instance ==
 
