@@ -18,7 +18,7 @@ You can specify exact dump with URLs above, if none is specified the latest dump
 || [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID] || /typeID || JSON/XML || YES || YES || Blueprint information for given blueprint typeID ||
 || [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName] || /typeName || JSON/XML || YES || YES || Blueprint information for given blueprint typeName ||
 || [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of extra materials for given item typeID ||
-|| [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of extra materials for given item type id ||
+|| [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of extra materials for given item typeID ||
 || [MethodLookupBlueprintType /lookupBlueprintType] || /partialTypeName || JSON/XML || YES || YES || List of matching blueprint item types ||
 || [MethodLookupResourceType /lookupResourceType] || /partialTypeName || JSON/XML || YES || YES || List of matching resource item types ||
 || [MethodLookupType /lookupType] || /partialTypeName || JSON/XML || YES || YES || List of matching any item types ||
