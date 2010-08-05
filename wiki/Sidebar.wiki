@@ -1,5 +1,5 @@
   * [Motivation Motivation]
-  * [GettingStarted Getting Started]
+  * [GettingStarted Getting started]
   * [Methods Methods]
     ** [MethodBaseMaterialsForTypeID /baseMaterialsForTypeID]
     ** [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName]
