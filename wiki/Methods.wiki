@@ -13,17 +13,17 @@ You can specify exact dump with URLs above, if none is specified the latest dump
 == Summary ==
 
 || *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
-|| [MethodBaseMaterialsForTypeID /baseMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of base materials for given item type id ||
-|| [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of base materials for given item type name ||
-|| [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID] || /typeID || JSON/XML || YES || YES || Blueprint information for given blueprint type id ||
-|| [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName] || /typeName || JSON/XML || YES || YES || Blueprint information for given blueprint type name ||
-|| [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of extra materials for given item type id ||
+|| [MethodBaseMaterialsForTypeID /baseMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of base materials for given item typeID ||
+|| [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of base materials for given item typeName ||
+|| [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID] || /typeID || JSON/XML || YES || YES || Blueprint information for given blueprint typeID ||
+|| [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName] || /typeName || JSON/XML || YES || YES || Blueprint information for given blueprint typeName ||
+|| [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of extra materials for given item typeID ||
 || [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of extra materials for given item type id ||
 || [MethodLookupBlueprintType /lookupBlueprintType] || /partialTypeName || JSON/XML || YES || YES || List of matching blueprint item types ||
 || [MethodLookupResourceType /lookupResourceType] || /partialTypeName || JSON/XML || YES || YES || List of matching resource item types ||
 || [MethodLookupType /lookupType] || /partialTypeName || JSON/XML || YES || YES || List of matching any item types ||
-|| [MethodTypeBasicInfoByTypeID /typeBasicInfoByTypeID] || /typeID || JSON/XML || YES || YES || Item type basic information for given type id ||
-|| [MethodTypeBasicInfoByTypeName /typeBasicInfoByTypeName] || /typeName || JSON/XML || YES || YES || Item type basic information for given type name ||
-|| [MethodTypeIdToTypeName /typeIdToTypeName] || /typeName || TEXT || YES || YES || Convert item type id to name ||
-|| [MethodTypeNameToTypeID /typeNameToTypeID] || /typeID || TEXT || YES || YES || Convert item type name to id ||
+|| [MethodTypeBasicInfoByTypeID /typeBasicInfoByTypeID] || /typeID || JSON/XML || YES || YES || Item type basic information for given typeID ||
+|| [MethodTypeBasicInfoByTypeName /typeBasicInfoByTypeName] || /typeName || JSON/XML || YES || YES || Item type basic information for given typeName ||
+|| [MethodTypeIdToTypeName /typeIdToTypeName] || /typeName || TEXT || YES || YES || Convert item typeID to typeName ||
+|| [MethodTypeNameToTypeID /typeNameToTypeID] || /typeID || TEXT || YES || YES || Convert item typeName to typeID ||
 || [MethodVersion /version] || NONE || TEXT || YES || YES || Application version ||
