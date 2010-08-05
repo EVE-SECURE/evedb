@@ -1,26 +1,29 @@
 #summary Continuing development of EveDb
 
-= Current state =
+= Development =
+
+== Current state ==
 
 EveDb has very limited amount of methods, only those initially needed for some calculations and information lookup. Hopefully, it will be gradually expanded if such need will arise.
 
-= TODO =
+== TODO ==
 
+  * Write javadocs for evedb-ws-client library
   * ~~XML support (making responses in both JSON/XML depending on `accept` in headers)~~
   * ~~Client libraries (at least one generic and one for AppEngine with longer timeouts)~~
   * ~~More detailed and formal documentation, examples~~ 
   * ~~Extract database dump from Datastore and put into downloads~~
   * ~~Tests, proper logging and error handling~~
 
-= Known issues =
+== Known issues ==
 
-== Cold start ==
+=== Cold start ===
 
 Application cold start takes about 4-5 seconds. This can be improved by using `@LazySingleton` in Guice. Probably by other technologies, for instance, Python has much better cold start times. Optimizations that already had been done and considerably reduced cold start time:
   * [http://code.google.com/appengine/docs/java/datastore/usingjdo.html JDO] replaced with [http://code.google.com/p/objectify-appengine/ Objectify]
   * [http://static.springsource.org/spring/docs/2.0.x/reference/beans.html Spring] replaced with [http://code.google.com/p/google-guice/ Guice]
   * [https://jersey.dev.java.net/ Jersey] replaced with [http://www.restlet.org/ Restlet], and then replaced with plain Servlets
 
-== Lookup queries ==
+=== Lookup queries ===
 
 Datastore does not support SQL-like LIKE queries. Yeah, just like that. Do not expect that `lookupType/orax` would return you `Thorax`. There is a [http://code.google.com/intl/lv-LV/appengine/docs/python/datastore/queriesandindexes.html#Introducing_Indexes trick] how to make LIKE-queries with inequality filters on Datastore, however they are case-sensitive and limited for matching from the beginning.
