@@ -15,5 +15,6 @@
     ** [MethodTypeIdToTypeName /typeIdToTypeName]
     ** [MethodTypeNameToTypeID /typeNameToTypeID]
     ** [MethodVersion /version]
+  * [Datastore Datastore]
   * [Development Development]
   * [ReleaseNotes Release notes]
