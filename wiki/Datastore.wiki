@@ -8,12 +8,12 @@
 
 || *Attribute* || *Type* || *Indexed* ||
 || blueprintTypeID || Integer || YES ||
-|| blueprintTypeName || Integer || YES ||
+|| blueprintTypeName || String || YES ||
 || productTypeID || Integer || NO ||
-|| productTypeName || Integer || NO ||
+|| productTypeName || String || NO ||
 || productCategoryID || Integer || NO ||
 || productGraphicID || Integer || NO ||
-|| productTypeIcon || Integer || NO ||
+|| productTypeIcon || String || NO ||
 || productionTime || Integer || NO ||
 || techLevel || Integer || NO ||
 || researchProductivityTime || Integer || NO ||
@@ -24,5 +24,5 @@
 || materialModifier || Integer || NO ||
 || wasteFactor || Integer || NO ||
 || maxProductionLimit || Integer || NO ||
-|| published || Integer || YES ||
+|| published || Boolean || YES ||
 || dumpVersion || Integer || YES ||
