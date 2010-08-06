@@ -25,4 +25,72 @@
 || wasteFactor || Integer || NO ||
 || maxProductionLimit || Integer || NO ||
 || published || Boolean || YES ||
-|| dumpVersion || Integer || YES ||
+|| dumpVersion || String || YES ||
+
+=== InvType ===
+
+|| *Attribute* || *Type* || *Indexed* ||
+|| typeID || Integer || YES ||
+|| typeName || String || YES ||
+|| typeGraphicID || Integer || NO ||
+|| typeIcon || String || NO ||
+|| groupID || Integer || NO ||
+|| groupName || String || NO ||
+|| categoryID || Integer || YES ||
+|| categoryName || String || NO ||
+|| mass || Float || NO ||
+|| volume || Float || NO ||
+|| capacity || Float || NO ||
+|| portionSize || Integer || NO ||
+|| published || Boolean || YES ||
+|| dumpVersion || String || YES ||
+
+=== InvTypeMaterial ===
+{{{
+class InvTypeMaterial(db.Model):
+    typeID = db.IntegerProperty()
+    typeName = db.StringProperty()
+    typeGraphicID = db.IntegerProperty(indexed=False)
+    typeIcon = db.StringProperty(indexed=False)
+    typeGroupID = db.IntegerProperty(indexed=False)
+    typeGroupName = db.StringProperty(indexed=False)
+    typeCategoryID = db.IntegerProperty(indexed=False)
+    typeCategoryName = db.StringProperty(indexed=False)
+    materialTypeID = db.IntegerProperty()
+    materialTypeName = db.StringProperty(indexed=False)
+    materialTypeGraphicID = db.IntegerProperty(indexed=False)
+    materialTypeIcon = db.StringProperty(indexed=False)
+    materialTypeGroupID = db.IntegerProperty(indexed=False)
+    materialTypeGroupName = db.StringProperty(indexed=False)
+    materialTypeCategoryID = db.IntegerProperty(indexed=False)
+    materialTypeCategoryName = db.StringProperty(indexed=False)
+    quantity = db.IntegerProperty(indexed=False)
+    dumpVersion = db.StringProperty()
+}}}
+
+=== RamTypeRequirement ===
+{{{
+class RamTypeRequirement(db.Model):
+    typeID = db.IntegerProperty()
+    typeName = db.StringProperty()
+    activityID = db.IntegerProperty(indexed=False)
+    activityName = db.StringProperty(indexed=False)
+    typeGraphicID = db.IntegerProperty(indexed=False)
+    typeIcon = db.StringProperty(indexed=False)
+    typeGroupID = db.IntegerProperty(indexed=False)
+    typeGroupName = db.StringProperty(indexed=False)
+    typeCategoryID = db.IntegerProperty(indexed=False)
+    typeCategoryName = db.StringProperty(indexed=False)
+    requiredTypeID = db.IntegerProperty()
+    requiredTypeName = db.StringProperty(indexed=False)
+    requiredTypeGraphicID = db.IntegerProperty(indexed=False)
+    requiredTypeIcon = db.StringProperty(indexed=False)
+    requiredTypeGroupID = db.IntegerProperty(indexed=False)
+    requiredTypeGroupName = db.StringProperty(indexed=False)
+    requiredTypeCategoryID = db.IntegerProperty(indexed=False)
+    requiredTypeCategoryName = db.StringProperty(indexed=False)
+    quantity = db.IntegerProperty(indexed=False)
+    damagePerJob = db.FloatProperty(indexed=False)
+    recycle = db.BooleanProperty(indexed=False)
+    dumpVersion = db.StringProperty()
+}}}
