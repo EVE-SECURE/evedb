@@ -1,5 +1,28 @@
 #summary Uploading and downloading data from Datastore
 
-= Datastore dumps =
+= Datastore =
 
-TBD.
+== Entities ==
+
+=== InvBlueprintType ===
+
+|| *Attribute* || *Type* || *Indexed* ||
+|| blueprintTypeID || Integer || YES ||
+|| blueprintTypeName || Integer || YES ||
+|| productTypeID || Integer || NO ||
+|| productTypeName || Integer || NO ||
+|| productCategoryID || Integer || NO ||
+|| productGraphicID || Integer || NO ||
+|| productTypeIcon || Integer || NO ||
+|| productionTime || Integer || NO ||
+|| techLevel || Integer || NO ||
+|| researchProductivityTime || Integer || NO ||
+|| researchMaterialTime || Integer || NO ||
+|| researchCopyTime || Integer || NO ||
+|| researchTechTime || Integer || NO ||
+|| productivityModifier || Integer || NO ||
+|| materialModifier || Integer || NO ||
+|| wasteFactor || Integer || NO ||
+|| maxProductionLimit || Integer || NO ||
+|| published || Integer || YES ||
+|| dumpVersion || Integer || YES ||
