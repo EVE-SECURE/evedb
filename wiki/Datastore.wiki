@@ -79,29 +79,36 @@ SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/datab
 
 Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/InvTypeMaterialLoader.py InvTypeMaterialLoader.py]
 
-{{{
-class InvTypeMaterial(db.Model):
-    typeID = db.IntegerProperty()
-    typeName = db.StringProperty()
-    typeGraphicID = db.IntegerProperty(indexed=False)
-    typeIcon = db.StringProperty(indexed=False)
-    typeGroupID = db.IntegerProperty(indexed=False)
-    typeGroupName = db.StringProperty(indexed=False)
-    typeCategoryID = db.IntegerProperty(indexed=False)
-    typeCategoryName = db.StringProperty(indexed=False)
-    materialTypeID = db.IntegerProperty()
-    materialTypeName = db.StringProperty(indexed=False)
-    materialTypeGraphicID = db.IntegerProperty(indexed=False)
-    materialTypeIcon = db.StringProperty(indexed=False)
-    materialTypeGroupID = db.IntegerProperty(indexed=False)
-    materialTypeGroupName = db.StringProperty(indexed=False)
-    materialTypeCategoryID = db.IntegerProperty(indexed=False)
-    materialTypeCategoryName = db.StringProperty(indexed=False)
-    quantity = db.IntegerProperty(indexed=False)
-    dumpVersion = db.StringProperty()
-}}}
-
 === RamTypeRequirement ===
+
+|| *Attribute* || *Type* || *Indexed* ||
+|| typeID || Integer || YES ||
+|| typeName || String || YES ||
+|| activityID || Integer || NO ||
+|| activityName || String || NO ||
+|| typeGraphicID || Integer || NO ||
+|| typeIcon || String || NO ||
+|| typeGroupID || Integer || NO ||
+|| typeGroupName || String || NO ||
+|| typeCategoryID || Integer || NO ||
+|| typeCategoryName || String || NO ||
+|| requiredTypeID || Integer || YES ||
+|| requiredTypeName || String || NO ||
+|| requiredTypeGraphicID || Integer || NO ||
+|| requiredTypeIcon || String || NO ||
+|| requiredTypeGroupID || Integer || NO ||
+|| requiredTypeGroupName || String || NO ||
+|| requiredTypeCategoryID || Integer || NO ||
+|| requiredTypeCategoryName || String || NO ||
+|| quantity || Integer || NO ||
+|| damagePerJob || Float || NO ||
+|| recycle || Integer || NO ||
+|| dumpVersion || String || YES ||
+
+SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/database/data/ramTypeRequirements.sql ramTypeRequirements.sql]
+
+Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/RamTypeRequirementLoader.py RamTypeRequirementLoader.py]
+
 {{{
 class RamTypeRequirement(db.Model):
     typeID = db.IntegerProperty()
