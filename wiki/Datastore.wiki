@@ -1,5 +1,4 @@
 #summary Uploading and downloading data from Datastore
-#labels Restrict-View-Commit
 
 = Datastore dumps =
 
