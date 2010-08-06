@@ -8,6 +8,7 @@ EveDb has very limited amount of methods, only those initially needed for some c
 
 == TODO ==
 
+  * Improve Python loader scripts by removing duplicate functions
   * Write javadocs for evedb-ws-client library
   * ~~XML support (making responses in both JSON/XML depending on `accept` in headers)~~
   * ~~Client libraries (at least one generic and one for AppEngine with longer timeouts)~~
