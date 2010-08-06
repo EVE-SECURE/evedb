@@ -27,6 +27,10 @@
 || published || Boolean || YES ||
 || dumpVersion || String || YES ||
 
+Corresponding SQL query: [http://code.google.com/p/evedb/source/browse/trunk/database/data/invBlueprintTypes.sql invBlueprintTypes.sql]
+
+Python loader: [http://code.google.com/p/evedb/source/browse/trunk/database/python/InvBlueprintTypeLoader.py InvBlueprintTypeLoader.py]
+
 === InvType ===
 
 || *Attribute* || *Type* || *Indexed* ||
