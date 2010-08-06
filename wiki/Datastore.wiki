@@ -2,11 +2,13 @@
 
 = Datastore =
 
+== Statistics ==
+
 == Entities ==
 
 === InvBlueprintType ===
 
-|| *Attribute* || *Type* || *Indexed* ||
+|| *Property* || *Type* || *Indexed* ||
 || blueprintTypeID || Integer || YES ||
 || blueprintTypeName || String || YES ||
 || productTypeID || Integer || NO ||
@@ -33,7 +35,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 
 === InvType ===
 
-|| *Attribute* || *Type* || *Indexed* ||
+|| *Property* || *Type* || *Indexed* ||
 || typeID || Integer || YES ||
 || typeName || String || YES ||
 || typeGraphicID || Integer || NO ||
@@ -55,7 +57,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 
 === InvTypeMaterial ===
 
-|| *Attribute* || *Type* || *Indexed* ||
+|| *Property* || *Type* || *Indexed* ||
 || typeID || Integer || YES ||
 || typeName || String || YES ||
 || typeGraphicID || Integer || NO ||
@@ -81,7 +83,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 
 === RamTypeRequirement ===
 
-|| *Attribute* || *Type* || *Indexed* ||
+|| *Property* || *Type* || *Indexed* ||
 || typeID || Integer || YES ||
 || typeName || String || YES ||
 || activityID || Integer || NO ||
@@ -109,28 +111,4 @@ SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/datab
 
 Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/RamTypeRequirementLoader.py RamTypeRequirementLoader.py]
 
-{{{
-class RamTypeRequirement(db.Model):
-    typeID = db.IntegerProperty()
-    typeName = db.StringProperty()
-    activityID = db.IntegerProperty(indexed=False)
-    activityName = db.StringProperty(indexed=False)
-    typeGraphicID = db.IntegerProperty(indexed=False)
-    typeIcon = db.StringProperty(indexed=False)
-    typeGroupID = db.IntegerProperty(indexed=False)
-    typeGroupName = db.StringProperty(indexed=False)
-    typeCategoryID = db.IntegerProperty(indexed=False)
-    typeCategoryName = db.StringProperty(indexed=False)
-    requiredTypeID = db.IntegerProperty()
-    requiredTypeName = db.StringProperty(indexed=False)
-    requiredTypeGraphicID = db.IntegerProperty(indexed=False)
-    requiredTypeIcon = db.StringProperty(indexed=False)
-    requiredTypeGroupID = db.IntegerProperty(indexed=False)
-    requiredTypeGroupName = db.StringProperty(indexed=False)
-    requiredTypeCategoryID = db.IntegerProperty(indexed=False)
-    requiredTypeCategoryName = db.StringProperty(indexed=False)
-    quantity = db.IntegerProperty(indexed=False)
-    damagePerJob = db.FloatProperty(indexed=False)
-    recycle = db.BooleanProperty(indexed=False)
-    dumpVersion = db.StringProperty()
-}}}
+== Indexes ==
