@@ -27,9 +27,9 @@
 || published || Boolean || YES ||
 || dumpVersion || String || YES ||
 
-Corresponding SQL query: [http://code.google.com/p/evedb/source/browse/trunk/database/data/invBlueprintTypes.sql invBlueprintTypes.sql]
+SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/database/data/invBlueprintTypes.sql invBlueprintTypes.sql]
 
-Python loader: [http://code.google.com/p/evedb/source/browse/trunk/database/python/InvBlueprintTypeLoader.py InvBlueprintTypeLoader.py]
+Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/InvBlueprintTypeLoader.py InvBlueprintTypeLoader.py]
 
 === InvType ===
 
@@ -49,7 +49,36 @@ Python loader: [http://code.google.com/p/evedb/source/browse/trunk/database/pyth
 || published || Boolean || YES ||
 || dumpVersion || String || YES ||
 
+SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/database/data/invTypes.sql invTypes.sql]
+
+Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/InvTypeLoader.py InvTypeLoader.py]
+
 === InvTypeMaterial ===
+
+|| *Attribute* || *Type* || *Indexed* ||
+|| typeID || Integer || YES ||
+|| typeName || String || YES ||
+|| typeGraphicID || Integer || NO ||
+|| typeIcon || String || NO ||
+|| typeGroupID || Integer || NO ||
+|| typeGroupName || String || NO ||
+|| typeCategoryID || Integer || NO ||
+|| typeCategoryName || String || NO ||
+|| materialTypeID || Integer || YES ||
+|| materialTypeName || String || NO ||
+|| materialTypeGraphicID || Integer || NO ||
+|| materialTypeIcon || String || NO ||
+|| materialTypeGroupID || Integer || NO ||
+|| materialTypeGroupName || String || NO ||
+|| materialTypeCategoryID || Integer || NO ||
+|| materialTypeCategoryName || String || NO ||
+|| quantity || Integer || NO ||
+|| dumpVersion || String || YES ||
+
+SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/database/data/invTypeMaterials.sql invTypeMaterials.sql]
+
+Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/InvTypeMaterialLoader.py InvTypeMaterialLoader.py]
+
 {{{
 class InvTypeMaterial(db.Model):
     typeID = db.IntegerProperty()
