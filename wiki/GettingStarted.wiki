@@ -5,7 +5,39 @@
 
 == Using existing instance ==
 
-If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. I maintain couple of dump versions, so, feel free to use it. Just go to [Methods Methods] page and see what you can do.
+If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. Couple of dump versions are maintained there, so, feel free to use it. Just go to [Methods Methods] page and see what you can do.
+
+== Clients ==
+
+There are various ways how to communicate with web-services, since they are http and provide both JSON and XML output, it is not hard to use them in any popular programming language.
+
+=== evedb-ws-client ===
+
+Java library that can work with evedb instances. Easy and convenient way.
+
+Add following dependency:
+{{{
+<dependency>
+  <groupId>lv.odylab.evedb</groupId>
+  <artifactId>evedb-ws-client</artifactId>
+  <version>1.4</version>
+</dependency>
+}}}
+
+Add following repository:
+{{{
+<repository>
+  <id>evedb.googlecode.com</id>
+  <url>http://evedb.googlecode.com/svn/mvnrepo</url>
+</repository>
+}}}
+
+Usage:
+{{{
+String eveDbUrl = "http://dev.latest.odylab-evedb.appspot.com";
+EveDbWsClient client = new EveDbWsClientImpl(eveDbUrl, new HttpRequestSenderImpl());
+InvTypeBasicInfoDto invTypeBasicInfoDto = client.getTypeBasicInfoByTypeName("Tritanium");
+}}}
 
 == Creating own instance ==
 
