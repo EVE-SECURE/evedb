@@ -4,6 +4,8 @@
 
 == Statistics ==
 
+[http://evedb.googlecode.com/svn/wiki/DatastoreStatistics.png]
+
 == Entities ==
 
 === InvBlueprintType ===
