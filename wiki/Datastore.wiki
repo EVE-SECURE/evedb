@@ -2,6 +2,10 @@
 
 = Datastore =
 
+== Statistics ==
+
+[http://evedb.googlecode.com/svn/wiki/DatastoreStatistics.png]
+
 == Entities ==
 
 === InvBlueprintType ===
@@ -108,10 +112,6 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/database/data/ramTypeRequirements.sql ramTypeRequirements.sql]
 
 Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/RamTypeRequirementLoader.py RamTypeRequirementLoader.py]
-
-== Statistics ==
-
-[http://evedb.googlecode.com/svn/wiki/DatastoreStatistics.png]
 
 == Indexes ==
 
