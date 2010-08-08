@@ -14,6 +14,8 @@ You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (b
 
 == Downloading data ==
 
+You can download all application data in Datastore by using `database/download-data.bat`.
+
 == Datastore dumps ==
 
 EveDb provides Datastore dumps, they can be loaded in AppEngine. See [http://code.google.com/p/evedb/downloads/list dowloads] and download latest.
