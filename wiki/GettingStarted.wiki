@@ -9,23 +9,23 @@ If you do not want to create your own AppEngine application, load data into it a
 
 == Creating own instance ==
 
-If you want your own AppEngine application with running EveDb, you will have to create data set using static database dump (or download Datastore dump), upload it into Datastore and deploy Java application into AppEngine.
+If you want your own AppEngine application with running EveDb, you will have to create data set using static database dump (or download dump), upload it into Datastore and deploy Java application into AppEngine.
 
 === Loading data into Datastore ===
 
 See [WorkingWithDatastore working with Datastore].
 
-=== Deploy application ===
+=== Deploying application ===
 
 Build application with `mvn-clean-package.bat` and deploy with `ws/appcfg-update.bat`.
 
 == Clients ==
 
-There are various ways how to communicate with web-services, since they are http and provide both JSON and XML output, it is not hard to use them in any popular programming language.
+There are various ways how to communicate with web-services, since they are HTTP requests and provide JSON or XML responses, it is not hard to use them in any popular programming language.
 
 === evedb-ws-client ===
 
-As for Java, EveDb provides small library that can work with evedb instances in easy and convenient way.
+As for Java, EveDb provides small library that can work with EveDb instances in easy and convenient way.
 
 Add following dependency:
 {{{
