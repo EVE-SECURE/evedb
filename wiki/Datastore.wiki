@@ -1,6 +1,10 @@
-#summary Uploading and downloading data from Datastore
+#summary Entities and their properties in Datastore
 
 = Datastore =
+
+Information in Datastore is in form of denomarlized entities (tables or rather views). There is more information that current methods use and there are possibilities to easily write new methods that use information below.
+
+Indexed properties can be used in search criteria, otherwise, new index must be created.
 
 == Statistics ==
 
