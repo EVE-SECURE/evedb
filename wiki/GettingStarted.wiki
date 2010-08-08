@@ -5,7 +5,9 @@
 
 == Using existing instance ==
 
-If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. Couple of dump versions are maintained there, so, feel free to use it. Just go to [Methods Methods] page and see what you can do.
+If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. Couple of dump versions are maintained there, so, feel free to use it.
+
+If you want to have completely independend instance, with own data in Datastore, than go to [GettingStarted#Creating_own_instance creating own instance].
 
 == Clients ==
 
@@ -13,7 +15,7 @@ There are various ways how to communicate with web-services, since they are http
 
 === evedb-ws-client ===
 
-Java library that can work with evedb instances. Easy and convenient way.
+As for Java, EveDb provides small library that can work with evedb instances in easy and convenient way.
 
 Add following dependency:
 {{{
