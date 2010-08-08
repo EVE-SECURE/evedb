@@ -1,0 +1,17 @@
+#summary How to upload and download data from Datastore
+
+= Working with Datastore =
+
+== Creating dataset from static database dump ==
+
+You will need EVE Online static database dump to create dataset that will be loaded into Datastore. There is [http://www.eveonline.com/community/toolkit.asp official one], but it is MSSQL. I used MySQL conversion from [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev].
+
+Run SQL queries `database/data/*.sql` and store result in corresponding CSV files. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
+
+== Uploading data ==
+
+You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py` scripts to load CSV data into Datastore.
+
+== Downloading data ==
+
+EveDb provides Datastore dumps, they can be loaded in AppEngine. See [http://code.google.com/p/evedb/downloads/list dowloads] and download latest.
