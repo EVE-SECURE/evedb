@@ -1,4 +1,5 @@
 #summary EveDb release notes
+#labels Featured
 
 = Release notes =
 
