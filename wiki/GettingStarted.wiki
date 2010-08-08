@@ -27,7 +27,7 @@ There are various ways how to communicate with web-services, since they are HTTP
 
 As for Java, EveDb provides small library that can work with EveDb instances in easy and convenient way.
 
-Add following dependency:
+Add following Maven dependency:
 {{{
 <dependency>
   <groupId>lv.odylab.evedb</groupId>
