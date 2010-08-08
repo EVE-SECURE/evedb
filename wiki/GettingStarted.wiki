@@ -5,9 +5,35 @@
 
 == Using existing instance ==
 
-If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. Couple of dump versions are maintained there, so, feel free to use it. See [Methods methods] than are available in EveDb and next chapter about [Clients clients].
+If you do not want to create your own AppEngine application, load data into it and deploy, than you can use already existing and running one at [http://odylab-evedb.appspot.com/version http://odylab-evedb.appspot.com]. Couple of dump versions are maintained there, so, feel free to use it. See [Methods methods] than are available in EveDb and [GettingStarted#Clients clients].
 
-If you want to have completely independend instance, with own data in Datastore, than go to [GettingStarted#Creating_own_instance creating own instance].
+== Creating own instance ==
+
+If you want your own AppEngine application with running EveDb, you will have to create data set using static database dump (or download Datastore dump), upload it into Datastore and deploy Java application into AppEngine.
+
+=== Load data into Datastore ===
+
+==== Download Datastore dump ====
+
+EveDb provides Datastore dumps, they can be easely loaded in AppEngine. See [http://code.google.com/p/evedb/downloads/list dowloads] and download latest.
+
+==== Create from scratch ====
+
+===== Static database dump =====
+
+You will need EVE Online static database dump to create dataset that will be loaded into Datastore. There is [http://www.eveonline.com/community/toolkit.asp official one], but it is MSSQL. I used MySQL conversion from [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev].
+
+===== Create CSV files with data =====
+
+Run SQL queries `database/data/*.sql` and store result in corresponding CSV files. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
+
+===== Upload data into Datastore =====
+
+You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py` scripts to load CSV data into Datastore.
+
+=== Deploy application ===
+
+Build application with `mvn-clean-package.bat` and deploy with `ws/appcfg-update.bat`.
 
 == Clients ==
 
@@ -40,30 +66,3 @@ String eveDbUrl = "http://odylab-evedb.appspot.com";
 EveDbWsClient client = new EveDbWsClientImpl(eveDbUrl, new HttpRequestSenderImpl());
 InvTypeBasicInfoDto invTypeBasicInfoDto = client.getTypeBasicInfoByTypeName("Tritanium");
 }}}
-
-== Creating own instance ==
-
-If you want your own AppEngine application with running EveDb, you will have to create data set using static database dump, upload it into Datastore and deploy Java application into AppEngine.
-
-=== Load data into Datastore ===
-
-==== Download Datastore snapshot ====
-
-EveDb provides Datastore dumps, they can be easely loaded in AppEngine. See [Downloads dowloads] and download latest.
-
-==== Create from scratch ====
-===== Static database dump =====
-
-You will need EVE Online static database dump to create dataset that will be loaded into Datastore. There is [http://www.eveonline.com/community/toolkit.asp official one], but it is MSSQL. I used MySQL conversion from [http://wiki.eve-id.net/CCP_Database_Dump_Resources EVEDev].
-
-===== Create CSV files with data =====
-
-Run SQL queries `database/data/*.sql` and store result in corresponding CSV files. E.g. for file `invTypes.sql` you should have `invTypes.csv`.
-
-===== Upload data into Datastore =====
-
-You will need [http://code.google.com/appengine/downloads.html AppEngine SDK] (both Java and Python). I will assume that you read [http://code.google.com/appengine/ AppEngine docs] and managed to create application. Edit `database/python/app.yaml` to set your application id. Run `database/python/*Loader.py` scripts to load CSV data into Datastore.
-
-=== Deploy application ===
-
-Build application with `mvn-clean-package.bat` and deploy with `ws/appcfg-update.bat`.
