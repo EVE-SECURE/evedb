@@ -76,5 +76,9 @@
             <id>evedb.googlecode.com</id>
             <url>dav:https://evedb.googlecode.com/svn/mvnrepo</url>
         </repository>
+        <snapshotRepository>
+            <id>evedb.googlecode.com</id>
+            <url>dav:https://evedb.googlecode.com/svn/mvnsnapshotrepo</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
