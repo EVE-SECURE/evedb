@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>lv.odylab.evedb</groupId>
+    <artifactId>evedb</artifactId>
+    <name>evedb</name>
+    <packaging>pom</packaging>
+    <version>1.5-SNAPSHOT</version>
+
+    <description>RESTful web-services for EVE Online static database dump.</description>
+    <url>http://code.google.com/p/evedb/</url>
+
+    <properties>
+        <odylab.evedb.version>1.5-SNAPSHOT</odylab.evedb.version>
+        <odylab.appengine.version>1.10-SNAPSHOT</odylab.appengine.version>
+        <junit.version>4.4</junit.version>
+        <mockito.version>1.8.5</mockito.version>
+        <jetty.servlet.tester.version>6.1.9</jetty.servlet.tester.version>
+        <slf4j.version>1.5.8</slf4j.version>
+        <guice.version>2.0.1</guice.version>
+        <objectify.version>2.2.1</objectify.version>
+        <gson.version>1.4</gson.version>
+        <servlet.api.version>2.5</servlet.api.version>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>rpc</module>
+        <module>core</module>
+        <module>ws</module>
+        <module>ws-client</module>
+    </modules>
+
+    <scm>
+        <connection>scm:svn:http://evedb.googlecode.com/svn/trunk</connection>
+        <url>http://evedb.googlecode.com/svn/trunk</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>vleushin</id>
+            <name>Valery Leushin</name>
+            <email>vleushin@gmail.com</email>
+        </developer>
+    </developers>
+
+    <repositories>
+        <repository>
+            <id>evedb.googlecode.com</id>
+            <url>http://evedb.googlecode.com/svn/mvnrepo</url>
+        </repository>
+        <repository>
+            <id>guice-maven.googlecode.com</id>
+            <url>http://guice-maven.googlecode.com/svn/trunk</url>
+        </repository>
+        <repository>
+            <id>maven-gae-plugin.googlecode.com</id>
+            <url>http://maven-gae-plugin.googlecode.com/svn/repository</url>
+        </repository>
+        <repository>
+            <id>objectify-appengine.googlecode.com</id>
+            <url>http://objectify-appengine.googlecode.com/svn/maven</url>
+        </repository>
+        <repository>
+            <id>google-gson.googlecode.com</id>
+            <url>http://google-gson.googlecode.com/svn/mavenrepo</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>evedb.googlecode.com</id>
+            <url>dav:https://evedb.googlecode.com/svn/mvnrepo</url>
+        </repository>
+        <snapshotRepository>
+            <id>evedb.googlecode.com</id>
+            <url>dav:https://evedb.googlecode.com/svn/mvnsnapshotrepo</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
