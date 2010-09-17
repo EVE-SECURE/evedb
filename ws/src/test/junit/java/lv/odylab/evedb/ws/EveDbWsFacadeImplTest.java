@@ -345,9 +345,6 @@ public class EveDbWsFacadeImplTest {
             String methodName = method.getName();
             if (!excludedMethodNames.contains(methodName)) {
                 assertTrue(method.isAnnotationPresent(Caching.class), "Method " + method.getName() + " is not annotated with @Caching");
-                Caching cachingAnnotation = method.getAnnotation(Caching.class);
-                String correctKeyPrefix = wsFacade.getClass().getSimpleName() + "|" + methodName;
-                assertEquals("@Caching annotated method must have correct keyPrefix", correctKeyPrefix, cachingAnnotation.keyPrefix());
             }
         }
     }
