@@ -6,7 +6,11 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import lv.odylab.appengine.aspect.Caching;
 import lv.odylab.evedb.application.EveDbClientFacade;
-import lv.odylab.evedb.client.rpc.dto.*;
+import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
+import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
+import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
+import lv.odylab.evedb.client.rpc.dto.XmlResultContainer;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
