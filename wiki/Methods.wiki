@@ -25,5 +25,5 @@
 
 Only latest dump version is hosted on odylab-evedb:
   * Tyrannis 1.0.4: http://odylab-evedb.appspot.com
-  * _Tyrannis 1.0.1: http://tyr101.latest.odylab-evedb.appspot.com_
-  * _Dominion 1.0.0: http://dom100.latest.odylab-evedb.appspot.com_
+  * ~Tyrannis 1.0.1: http://tyr101.latest.odylab-evedb.appspot.com~
+  * ~Dominion 1.0.0: http://dom100.latest.odylab-evedb.appspot.com~
