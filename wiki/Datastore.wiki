@@ -20,7 +20,7 @@ Indexed properties can be used in search criteria, otherwise, new index must be 
 || productTypeID || Integer || NO ||
 || productTypeName || String || NO ||
 || productCategoryID || Integer || NO ||
-|| productGraphicID || Integer || NO ||
+|| productIconID || Integer || NO ||
 || productTypeIcon || String || NO ||
 || productionTime || Integer || NO ||
 || techLevel || Integer || NO ||
@@ -44,7 +44,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 || *Property* || *Type* || *Indexed* ||
 || typeID || Integer || YES ||
 || typeName || String || YES ||
-|| typeGraphicID || Integer || NO ||
+|| typeIconID || Integer || NO ||
 || typeIcon || String || NO ||
 || groupID || Integer || NO ||
 || groupName || String || NO ||
@@ -66,7 +66,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 || *Property* || *Type* || *Indexed* ||
 || typeID || Integer || YES ||
 || typeName || String || YES ||
-|| typeGraphicID || Integer || NO ||
+|| typeIconID || Integer || NO ||
 || typeIcon || String || NO ||
 || typeGroupID || Integer || NO ||
 || typeGroupName || String || NO ||
@@ -74,7 +74,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 || typeCategoryName || String || NO ||
 || materialTypeID || Integer || YES ||
 || materialTypeName || String || NO ||
-|| materialTypeGraphicID || Integer || NO ||
+|| materialTypeIconID || Integer || NO ||
 || materialTypeIcon || String || NO ||
 || materialTypeGroupID || Integer || NO ||
 || materialTypeGroupName || String || NO ||
@@ -94,7 +94,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 || typeName || String || YES ||
 || activityID || Integer || NO ||
 || activityName || String || NO ||
-|| typeGraphicID || Integer || NO ||
+|| typeIconID || Integer || NO ||
 || typeIcon || String || NO ||
 || typeGroupID || Integer || NO ||
 || typeGroupName || String || NO ||
@@ -102,7 +102,7 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 || typeCategoryName || String || NO ||
 || requiredTypeID || Integer || YES ||
 || requiredTypeName || String || NO ||
-|| requiredTypeGraphicID || Integer || NO ||
+|| requiredTypeIconID || Integer || NO ||
 || requiredTypeIcon || String || NO ||
 || requiredTypeGroupID || Integer || NO ||
 || requiredTypeGroupName || String || NO ||
