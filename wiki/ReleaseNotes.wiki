@@ -4,8 +4,8 @@
 
 == 2010.10.??, version 1.5 ==
   * *Migrated to tyr104*
-  * *New methods blueprintDetailsForTypeID and blueprintDetailsForTypeName*
   * *Older versions are not supported anymore (dom100, tyr101)*
+  * *New methods blueprintDetailsForTypeID and blueprintDetailsForTypeName*
 
   * Issue 13. Add new methods blueprintDetailsForTypeID and blueprintDetailsForTypeName
   * Issue 12. Migrate to tyr104
