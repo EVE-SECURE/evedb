@@ -20,10 +20,3 @@
 || [MethodTypeIdToTypeName /typeIdToTypeName] || /typeName || TEXT || YES || YES || Convert item typeID to typeName ||
 || [MethodTypeNameToTypeID /typeNameToTypeID] || /typeID || TEXT || YES || YES || Convert item typeName to typeID ||
 || [MethodVersion /version] || NONE || TEXT || YES || YES || Application version ||
-
-== Available dumps ==
-
-Only latest dump version is hosted on odylab-evedb:
-  * Tyrannis 1.0.4: http://odylab-evedb.appspot.com
-  * ~~Tyrannis 1.0.1~~: http://tyr101.latest.odylab-evedb.appspot.com
-  * ~~Dominion 1.0.0~~: http://dom100.latest.odylab-evedb.appspot.com
