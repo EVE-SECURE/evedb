@@ -20,7 +20,7 @@ Indexed properties can be used in search criteria, otherwise, new index must be 
 || productTypeID || Integer || NO ||
 || productTypeName || String || NO ||
 || productCategoryID || Integer || NO ||
-|| productIconID || Integer || NO ||
+|| productTypeIconID || Integer || NO ||
 || productTypeIcon || String || NO ||
 || productionTime || Integer || NO ||
 || techLevel || Integer || NO ||
