@@ -32,7 +32,7 @@ Add following Maven dependency:
 <dependency>
   <groupId>lv.odylab.evedb</groupId>
   <artifactId>evedb-ws-client</artifactId>
-  <version>1.4</version>
+  <version>1.5</version>
 </dependency>
 }}}
 
