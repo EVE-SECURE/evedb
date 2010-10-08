@@ -10,9 +10,15 @@ Blueprint information for given blueprint typeName.
 || blueprintTypeName || String ||
 || maxProductionLimit || Number ||
 || productCategoryID || Number ||
-|| productGraphicIcon || String ||
 || productTypeID || Number ||
 || productTypeName || String ||
+|| productionTime || Number ||
+|| productivityModifier || Number ||
+|| researchCopyTime || Number ||
+|| researchMaterialTime || Number ||
+|| researchProductivityTime || Number ||
+|| researchTechTime || Number ||
+|| techLevel || Number ||
 || wasteFactor || Number ||
 
 == Examples ==
