@@ -11,7 +11,6 @@
   * Issue 12. Migrate to tyr104
   * Issue 11. Caching is shared between application versions
   * Issue 10. Caching does not work
-  * Issue 9. HTTP 406 in Internet Explorer
 
 == 2010.08.04, version 1.4 ==
 
