@@ -3,8 +3,7 @@
 = Release notes =
 
 == 2010.10.??, version 1.5 ==
-  * *Migrated to tyr104*
-  * *Older versions are not supported anymore (dom100, tyr101)*
+  * *Migrated to tyr104, older versions are not supported anymore (dom100, tyr101)*
   * *New methods blueprintDetailsForTypeID and blueprintDetailsForTypeName*
 
   * Issue 14. Add new attributes in InvBlueprintTypeDto
