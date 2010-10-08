@@ -25,9 +25,15 @@ Blueprint information for given blueprint typeName.
   "blueprintTypeName" : "Obelisk Blueprint",
   "maxProductionLimit" : 1,
   "productCategoryID" : 6,
-  "productGraphicIcon" : "",
   "productTypeID" : 20187,
   "productTypeName" : "Obelisk",
+  "productionTime" : 1280000,
+  "productivityModifier" : 256000,
+  "researchCopyTime" : 2560000,
+  "researchMaterialTime" : 5120000,
+  "researchProductivityTime" : 7680000,
+  "researchTechTime" : 500000,
+  "techLevel" : 1,
   "wasteFactor" : 10
 }
 }}}
@@ -40,9 +46,15 @@ Blueprint information for given blueprint typeName.
   <blueprintTypeName>Obelisk Blueprint</blueprintTypeName>
   <maxProductionLimit>1</maxProductionLimit>
   <productCategoryID>6</productCategoryID>
-  <productGraphicIcon/>
   <productTypeID>20187</productTypeID>
   <productTypeName>Obelisk</productTypeName>
+  <productionTime>1280000</productionTime>
+  <productivityModifier>256000</productivityModifier>
+  <researchCopyTime>2560000</researchCopyTime>
+  <researchMaterialTime>5120000</researchMaterialTime>
+  <researchProductivityTime>7680000</researchProductivityTime>
+  <researchTechTime>500000</researchTechTime>
+  <techLevel>1</techLevel>
   <wasteFactor>10</wasteFactor>
-</invBlueprintTypeDto>
+</invBlueprintTypeDto> 
 }}}
