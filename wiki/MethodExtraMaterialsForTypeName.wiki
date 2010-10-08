@@ -14,8 +14,8 @@ List of extra materials for given item typeName.
 || requiredTypeGroupID || String ||
 || requiredTypeGroupName || String ||
 || requiredTypeID || Number ||
+|| requiredTypeIcon || String ||
 || requiredTypeName || String ||
-|| requiredTypeNameGraphicIcon || String ||
 
 == Examples ==
 
@@ -31,8 +31,8 @@ List of extra materials for given item typeName.
     "requiredTypeGroupID" : 333,
     "requiredTypeGroupName" : "Datacores",
     "requiredTypeID" : 20410,
-    "requiredTypeName" : "Datacore - Gallentean Starship Engineering",
-    "requiredTypeNameGraphicIcon" : "64_02"
+    "requiredTypeIcon" : "64_02",
+    "requiredTypeName" : "Datacore - Gallentean Starship Engineering"
   },
   { "activityID" : 8,
     "activityName" : "Invention",
@@ -42,8 +42,8 @@ List of extra materials for given item typeName.
     "requiredTypeGroupID" : 333,
     "requiredTypeGroupName" : "Datacores",
     "requiredTypeID" : 20424,
-    "requiredTypeName" : "Datacore - Mechanical Engineering",
-    "requiredTypeNameGraphicIcon" : "64_03"
+    "requiredTypeIcon" : "64_03",
+    "requiredTypeName" : "Datacore - Mechanical Engineering"
   },
   { "activityID" : 1,
     "activityName" : "Manufacturing",
@@ -53,8 +53,8 @@ List of extra materials for given item typeName.
     "requiredTypeGroupID" : 269,
     "requiredTypeGroupName" : "Mechanic",
     "requiredTypeID" : 22242,
-    "requiredTypeName" : "Capital Ship Construction",
-    "requiredTypeNameGraphicIcon" : "50_11"
+    "requiredTypeIcon" : "50_11",
+    "requiredTypeName" : "Capital Ship Construction"
   },
   { "activityID" : 8,
     "activityName" : "Invention",
@@ -64,8 +64,8 @@ List of extra materials for given item typeName.
     "requiredTypeGroupID" : 716,
     "requiredTypeGroupName" : "Data Interfaces",
     "requiredTypeID" : 25855,
-    "requiredTypeName" : "Incognito Ship Data Interface",
-    "requiredTypeNameGraphicIcon" : "63_06"
+    "requiredTypeIcon" : "63_06",
+    "requiredTypeName" : "Incognito Ship Data Interface"
   }
 ]
 }}}
@@ -74,7 +74,7 @@ List of extra materials for given item typeName.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <activityID>8</activityID>
     <activityName>Invention</activityName>
     <damagePerJob>1.0</damagePerJob>
@@ -83,10 +83,10 @@ List of extra materials for given item typeName.
     <requiredTypeGroupID>333</requiredTypeGroupID>
     <requiredTypeGroupName>Datacores</requiredTypeGroupName>
     <requiredTypeID>20410</requiredTypeID>
+    <requiredTypeIcon>64_02</requiredTypeIcon>
     <requiredTypeName>Datacore - Gallentean Starship Engineering</requiredTypeName>
-    <requiredTypeNameGraphicIcon>64_02</requiredTypeNameGraphicIcon>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <activityID>8</activityID>
     <activityName>Invention</activityName>
     <damagePerJob>1.0</damagePerJob>
@@ -95,10 +95,10 @@ List of extra materials for given item typeName.
     <requiredTypeGroupID>333</requiredTypeGroupID>
     <requiredTypeGroupName>Datacores</requiredTypeGroupName>
     <requiredTypeID>20424</requiredTypeID>
+    <requiredTypeIcon>64_03</requiredTypeIcon>
     <requiredTypeName>Datacore - Mechanical Engineering</requiredTypeName>
-    <requiredTypeNameGraphicIcon>64_03</requiredTypeNameGraphicIcon>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <activityID>1</activityID>
     <activityName>Manufacturing</activityName>
     <damagePerJob>0.0</damagePerJob>
@@ -107,10 +107,10 @@ List of extra materials for given item typeName.
     <requiredTypeGroupID>269</requiredTypeGroupID>
     <requiredTypeGroupName>Mechanic</requiredTypeGroupName>
     <requiredTypeID>22242</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Capital Ship Construction</requiredTypeName>
-    <requiredTypeNameGraphicIcon>50_11</requiredTypeNameGraphicIcon>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
+  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <activityID>8</activityID>
     <activityName>Invention</activityName>
     <damagePerJob>1.0</damagePerJob>
@@ -119,8 +119,8 @@ List of extra materials for given item typeName.
     <requiredTypeGroupID>716</requiredTypeGroupID>
     <requiredTypeGroupName>Data Interfaces</requiredTypeGroupName>
     <requiredTypeID>25855</requiredTypeID>
+    <requiredTypeIcon>63_06</requiredTypeIcon>
     <requiredTypeName>Incognito Ship Data Interface</requiredTypeName>
-    <requiredTypeNameGraphicIcon>63_06</requiredTypeNameGraphicIcon>
   </row>
 </rowset>
 
