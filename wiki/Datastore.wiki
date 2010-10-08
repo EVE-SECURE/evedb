@@ -121,6 +121,4 @@ Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/databa
 
 == Indexes ==
 
-|| _Image below is actual for old version -- 1.4_ ||
-
 [http://evedb.googlecode.com/svn/wiki/DatastoreIndexes.png]
