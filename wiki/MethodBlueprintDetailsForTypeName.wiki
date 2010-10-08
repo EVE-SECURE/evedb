@@ -1,0 +1,9 @@
+#summary Method blueprintDetailsForTypeName details
+
+= /blueprintDetailsForTypeName/(typeName) =
+
+Blueprint details for given blueprint typeName.
+
+== Attributes ==
+
+== Examples ==
