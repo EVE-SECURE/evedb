@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <xs:element name="blueprintDetailsDto" type="blueprintDetailsDto"/>
+
     <xs:element name="invBlueprintTypeDto" type="invBlueprintTypeDto"/>
 
     <xs:element name="invTypeBasicInfoDto" type="invTypeBasicInfoDto"/>
@@ -10,6 +12,41 @@
     <xs:element name="ramTypeRequirementDto" type="ramTypeRequirementDto"/>
 
     <xs:element name="rowset" type="xmlResultContainer"/>
+
+    <xs:complexType name="blueprintDetailsDto">
+        <xs:sequence>
+            <xs:element name="copyingRequirementDtos" type="ramTypeRequirementDto" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element ref="invBlueprintTypeDto" minOccurs="0"/>
+            <xs:element name="inventionRequirementDtos" type="ramTypeRequirementDto" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element name="manufacturingRequirementDtos" type="ramTypeRequirementDto" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element name="materialDtos" type="invTypeMaterialDto" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element name="materialProductivityRequirementDtos" type="ramTypeRequirementDto" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="reverseEngineeringRequirementDtos" type="ramTypeRequirementDto" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="timeProductivityRequirementDtos" type="ramTypeRequirementDto" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ramTypeRequirementDto">
+        <xs:sequence>
+            <xs:element name="activityID" type="xs:long" minOccurs="0"/>
+            <xs:element name="activityName" type="xs:string" minOccurs="0"/>
+            <xs:element name="damagePerJob" type="xs:string" minOccurs="0"/>
+            <xs:element name="quantity" type="xs:long" minOccurs="0"/>
+            <xs:element name="requiredTypeCategoryID" type="xs:long" minOccurs="0"/>
+            <xs:element name="requiredTypeGroupID" type="xs:long" minOccurs="0"/>
+            <xs:element name="requiredTypeGroupName" type="xs:string" minOccurs="0"/>
+            <xs:element name="requiredTypeID" type="xs:long" minOccurs="0"/>
+            <xs:element name="requiredTypeIcon" type="xs:string" minOccurs="0"/>
+            <xs:element name="requiredTypeName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="invBlueprintTypeDto">
         <xs:sequence>
@@ -31,15 +68,6 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="invTypeBasicInfoDto">
-        <xs:sequence>
-            <xs:element name="icon" type="xs:string" minOccurs="0"/>
-            <xs:element name="itemCategoryID" type="xs:long" minOccurs="0"/>
-            <xs:element name="itemTypeID" type="xs:long" minOccurs="0"/>
-            <xs:element name="name" type="xs:string" minOccurs="0"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="invTypeMaterialDto">
         <xs:sequence>
             <xs:element name="materialTypeCategoryID" type="xs:long" minOccurs="0"/>
@@ -50,18 +78,12 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="ramTypeRequirementDto">
+    <xs:complexType name="invTypeBasicInfoDto">
         <xs:sequence>
-            <xs:element name="activityID" type="xs:long" minOccurs="0"/>
-            <xs:element name="activityName" type="xs:string" minOccurs="0"/>
-            <xs:element name="damagePerJob" type="xs:string" minOccurs="0"/>
-            <xs:element name="quantity" type="xs:long" minOccurs="0"/>
-            <xs:element name="requiredTypeCategoryID" type="xs:long" minOccurs="0"/>
-            <xs:element name="requiredTypeGroupID" type="xs:long" minOccurs="0"/>
-            <xs:element name="requiredTypeGroupName" type="xs:string" minOccurs="0"/>
-            <xs:element name="requiredTypeID" type="xs:long" minOccurs="0"/>
-            <xs:element name="requiredTypeIcon" type="xs:string" minOccurs="0"/>
-            <xs:element name="requiredTypeName" type="xs:string" minOccurs="0"/>
+            <xs:element name="icon" type="xs:string" minOccurs="0"/>
+            <xs:element name="itemCategoryID" type="xs:long" minOccurs="0"/>
+            <xs:element name="itemTypeID" type="xs:long" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
