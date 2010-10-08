@@ -7,8 +7,8 @@ List of base materials for given item typeName.
 == Attributes ==
 
 || materialTypeCategoryID || Number ||
-|| materialTypeGraphicIcon || String ||
 || materialTypeID || Number ||
+|| materialTypeIcon || String ||
 || materialTypeName || String ||
 || quantity || Number ||
 
