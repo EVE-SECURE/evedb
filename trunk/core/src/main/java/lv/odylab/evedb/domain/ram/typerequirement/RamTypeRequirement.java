@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class RamTypeRequirement implements Serializable {
-    private static final long serialVersionUID = 3554002802876121626L;
+    private static final long serialVersionUID = -7338345618902398663L;
 
     @Id
     private Long id;
@@ -18,7 +18,7 @@ public class RamTypeRequirement implements Serializable {
     private String typeName;
     private Long activityID;
     private String activityName;
-    private Long typeGraphicID;
+    private Long typeIconID;
     private String typeIcon;
     private Long typeGroupID;
     private String typeGroupName;
@@ -27,7 +27,7 @@ public class RamTypeRequirement implements Serializable {
     @Indexed
     private Long requiredTypeID;
     private String requiredTypeName;
-    private Long requiredTypeGraphicID;
+    private Long requiredTypeIconID;
     private String requiredTypeIcon;
     private Long requiredTypeGroupID;
     private String requiredTypeGroupName;
@@ -79,12 +79,12 @@ public class RamTypeRequirement implements Serializable {
         this.activityName = activityName;
     }
 
-    public Long getTypeGraphicID() {
-        return typeGraphicID;
+    public Long getTypeIconID() {
+        return typeIconID;
     }
 
-    public void setTypeGraphicID(Long typeGraphicID) {
-        this.typeGraphicID = typeGraphicID;
+    public void setTypeIconID(Long typeIconID) {
+        this.typeIconID = typeIconID;
     }
 
     public String getTypeIcon() {
@@ -143,12 +143,12 @@ public class RamTypeRequirement implements Serializable {
         this.requiredTypeName = requiredTypeName;
     }
 
-    public Long getRequiredTypeGraphicID() {
-        return requiredTypeGraphicID;
+    public Long getRequiredTypeIconID() {
+        return requiredTypeIconID;
     }
 
-    public void setRequiredTypeGraphicID(Long requiredTypeGraphicID) {
-        this.requiredTypeGraphicID = requiredTypeGraphicID;
+    public void setRequiredTypeIconID(Long requiredTypeIconID) {
+        this.requiredTypeIconID = requiredTypeIconID;
     }
 
     public String getRequiredTypeIcon() {

@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvBlueprintType implements Serializable {
-    private static final long serialVersionUID = 1849660679967059647L;
+    private static final long serialVersionUID = -1531364479615244907L;
 
     @Id
     private Long id;
@@ -19,7 +19,7 @@ public class InvBlueprintType implements Serializable {
     private Long productTypeID;
     private Long productCategoryID;
     private String productTypeName;
-    private Long productTypeGraphicID;
+    private Long productTypeIconID;
     private String productTypeIcon;
     private Integer productionTime;
     private Integer techLevel;
@@ -84,12 +84,12 @@ public class InvBlueprintType implements Serializable {
         this.productTypeName = productTypeName;
     }
 
-    public Long getProductTypeGraphicID() {
-        return productTypeGraphicID;
+    public Long getProductTypeIconID() {
+        return productTypeIconID;
     }
 
-    public void setProductTypeGraphicID(Long productTypeGraphicID) {
-        this.productTypeGraphicID = productTypeGraphicID;
+    public void setProductTypeIconID(Long productTypeIconID) {
+        this.productTypeIconID = productTypeIconID;
     }
 
     public String getProductTypeIcon() {

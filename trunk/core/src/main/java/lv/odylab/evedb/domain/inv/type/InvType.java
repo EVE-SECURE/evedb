@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvType implements Serializable {
-    private static final long serialVersionUID = 5930413283618994507L;
+    private static final long serialVersionUID = -6172608943137366289L;
 
     @Id
     private Long id;
@@ -16,7 +16,7 @@ public class InvType implements Serializable {
     private Long typeID;
     @Indexed
     private String typeName;
-    private Long typeGraphicID;
+    private Long typeIconID;
     private String typeIcon;
     private Long groupID;
     private String groupName;
@@ -56,12 +56,12 @@ public class InvType implements Serializable {
         this.typeName = typeName;
     }
 
-    public Long getTypeGraphicID() {
-        return typeGraphicID;
+    public Long getTypeIconID() {
+        return typeIconID;
     }
 
-    public void setTypeGraphicID(Long typeGraphicID) {
-        this.typeGraphicID = typeGraphicID;
+    public void setTypeIconID(Long typeIconID) {
+        this.typeIconID = typeIconID;
     }
 
     public String getTypeIcon() {

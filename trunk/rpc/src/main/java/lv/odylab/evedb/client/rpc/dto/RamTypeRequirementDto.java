@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class RamTypeRequirementDto implements Serializable {
-    private static final long serialVersionUID = -148572142409945768L;
+    private static final long serialVersionUID = 1999371741294265927L;
 
     private Long activityID;
     private String activityName;
@@ -14,9 +14,9 @@ public class RamTypeRequirementDto implements Serializable {
     private Long requiredTypeCategoryID;
     private Long requiredTypeGroupID;
     private String requiredTypeGroupName;
+    private String requiredTypeIcon;
     private Long quantity;
     private String damagePerJob;
-    private String requiredTypeNameGraphicIcon;
 
     public Long getActivityID() {
         return activityID;
@@ -74,6 +74,14 @@ public class RamTypeRequirementDto implements Serializable {
         this.requiredTypeGroupName = requiredTypeGroupName;
     }
 
+    public String getRequiredTypeIcon() {
+        return requiredTypeIcon;
+    }
+
+    public void setRequiredTypeIcon(String requiredTypeIcon) {
+        this.requiredTypeIcon = requiredTypeIcon;
+    }
+
     public Long getQuantity() {
         return quantity;
     }
@@ -88,13 +96,5 @@ public class RamTypeRequirementDto implements Serializable {
 
     public void setDamagePerJob(String damagePerJob) {
         this.damagePerJob = damagePerJob;
-    }
-
-    public String getRequiredTypeNameGraphicIcon() {
-        return requiredTypeNameGraphicIcon;
-    }
-
-    public void setRequiredTypeNameGraphicIcon(String requiredTypeNameGraphicIcon) {
-        this.requiredTypeNameGraphicIcon = requiredTypeNameGraphicIcon;
     }
 }

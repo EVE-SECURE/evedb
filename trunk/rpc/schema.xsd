@@ -17,16 +17,23 @@
             <xs:element name="blueprintTypeName" type="xs:string" minOccurs="0"/>
             <xs:element name="maxProductionLimit" type="xs:int" minOccurs="0"/>
             <xs:element name="productCategoryID" type="xs:long" minOccurs="0"/>
-            <xs:element name="productGraphicIcon" type="xs:string" minOccurs="0"/>
+            <xs:element name="productIcon" type="xs:string" minOccurs="0"/>
             <xs:element name="productTypeID" type="xs:long" minOccurs="0"/>
             <xs:element name="productTypeName" type="xs:string" minOccurs="0"/>
+            <xs:element name="productionTime" type="xs:int" minOccurs="0"/>
+            <xs:element name="productivityModifier" type="xs:int" minOccurs="0"/>
+            <xs:element name="researchCopyTime" type="xs:int" minOccurs="0"/>
+            <xs:element name="researchMaterialTime" type="xs:int" minOccurs="0"/>
+            <xs:element name="researchProductivityTime" type="xs:int" minOccurs="0"/>
+            <xs:element name="researchTechTime" type="xs:int" minOccurs="0"/>
+            <xs:element name="techLevel" type="xs:int" minOccurs="0"/>
             <xs:element name="wasteFactor" type="xs:int" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="invTypeBasicInfoDto">
         <xs:sequence>
-            <xs:element name="graphicIcon" type="xs:string" minOccurs="0"/>
+            <xs:element name="icon" type="xs:string" minOccurs="0"/>
             <xs:element name="itemCategoryID" type="xs:long" minOccurs="0"/>
             <xs:element name="itemTypeID" type="xs:long" minOccurs="0"/>
             <xs:element name="name" type="xs:string" minOccurs="0"/>
@@ -36,8 +43,8 @@
     <xs:complexType name="invTypeMaterialDto">
         <xs:sequence>
             <xs:element name="materialTypeCategoryID" type="xs:long" minOccurs="0"/>
-            <xs:element name="materialTypeGraphicIcon" type="xs:string" minOccurs="0"/>
             <xs:element name="materialTypeID" type="xs:long" minOccurs="0"/>
+            <xs:element name="materialTypeIcon" type="xs:string" minOccurs="0"/>
             <xs:element name="materialTypeName" type="xs:string" minOccurs="0"/>
             <xs:element name="quantity" type="xs:long" minOccurs="0"/>
         </xs:sequence>
@@ -53,8 +60,8 @@
             <xs:element name="requiredTypeGroupID" type="xs:long" minOccurs="0"/>
             <xs:element name="requiredTypeGroupName" type="xs:string" minOccurs="0"/>
             <xs:element name="requiredTypeID" type="xs:long" minOccurs="0"/>
+            <xs:element name="requiredTypeIcon" type="xs:string" minOccurs="0"/>
             <xs:element name="requiredTypeName" type="xs:string" minOccurs="0"/>
-            <xs:element name="requiredTypeNameGraphicIcon" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 

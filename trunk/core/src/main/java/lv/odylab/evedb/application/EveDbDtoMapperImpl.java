@@ -19,7 +19,7 @@ public class EveDbDtoMapperImpl implements EveDbDtoMapper {
         invTypeMaterialDto.setMaterialTypeID(invTypeMaterial.getMaterialTypeID());
         invTypeMaterialDto.setMaterialTypeName(invTypeMaterial.getMaterialTypeName());
         invTypeMaterialDto.setMaterialTypeCategoryID(invTypeMaterial.getMaterialTypeCategoryID());
-        invTypeMaterialDto.setMaterialTypeGraphicIcon(invTypeMaterial.getMaterialTypeIcon());
+        invTypeMaterialDto.setMaterialTypeIcon(invTypeMaterial.getMaterialTypeIcon());
         invTypeMaterialDto.setQuantity(invTypeMaterial.getQuantity());
         return invTypeMaterialDto;
     }
@@ -32,7 +32,14 @@ public class EveDbDtoMapperImpl implements EveDbDtoMapper {
         invBlueprintTypeDto.setProductTypeID(invBlueprintType.getProductTypeID());
         invBlueprintTypeDto.setProductTypeName(invBlueprintType.getProductTypeName());
         invBlueprintTypeDto.setProductCategoryID(invBlueprintType.getProductCategoryID());
-        invBlueprintTypeDto.setProductGraphicIcon(invBlueprintType.getProductTypeIcon());
+        invBlueprintTypeDto.setProductIcon(invBlueprintType.getProductTypeIcon());
+        invBlueprintTypeDto.setTechLevel(invBlueprintType.getTechLevel());
+        invBlueprintTypeDto.setProductionTime(invBlueprintType.getProductionTime());
+        invBlueprintTypeDto.setResearchProductivityTime(invBlueprintType.getResearchProductivityTime());
+        invBlueprintTypeDto.setResearchMaterialTime(invBlueprintType.getResearchMaterialTime());
+        invBlueprintTypeDto.setResearchCopyTime(invBlueprintType.getResearchCopyTime());
+        invBlueprintTypeDto.setResearchTechTime(invBlueprintType.getResearchTechTime());
+        invBlueprintTypeDto.setProductivityModifier(invBlueprintType.getProductivityModifier());
         invBlueprintTypeDto.setWasteFactor(invBlueprintType.getWasteFactor());
         invBlueprintTypeDto.setMaxProductionLimit(invBlueprintType.getMaxProductionLimit());
         return invBlueprintTypeDto;
@@ -43,7 +50,7 @@ public class EveDbDtoMapperImpl implements EveDbDtoMapper {
         RamTypeRequirementDto ramTypeRequirementDto = new RamTypeRequirementDto();
         ramTypeRequirementDto.setRequiredTypeID(ramTypeRequirement.getRequiredTypeID());
         ramTypeRequirementDto.setRequiredTypeName(ramTypeRequirement.getRequiredTypeName());
-        ramTypeRequirementDto.setRequiredTypeNameGraphicIcon(ramTypeRequirement.getRequiredTypeIcon());
+        ramTypeRequirementDto.setRequiredTypeIcon(ramTypeRequirement.getRequiredTypeIcon());
         ramTypeRequirementDto.setRequiredTypeCategoryID(ramTypeRequirement.getRequiredTypeCategoryID());
         ramTypeRequirementDto.setRequiredTypeGroupID(ramTypeRequirement.getRequiredTypeGroupID());
         ramTypeRequirementDto.setRequiredTypeGroupName(ramTypeRequirement.getRequiredTypeGroupName());
@@ -60,7 +67,7 @@ public class EveDbDtoMapperImpl implements EveDbDtoMapper {
         invTypeBasicInfoDto.setItemTypeID(invType.getTypeID());
         invTypeBasicInfoDto.setItemCategoryID(invType.getCategoryID());
         invTypeBasicInfoDto.setName(invType.getTypeName());
-        invTypeBasicInfoDto.setGraphicIcon(invType.getTypeIcon());
+        invTypeBasicInfoDto.setIcon(invType.getTypeIcon());
         return invTypeBasicInfoDto;
     }
 }

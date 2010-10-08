@@ -7,7 +7,7 @@ class InvBlueprintType(db.Model):
     productTypeID = db.IntegerProperty(indexed=False)
     productTypeName = db.StringProperty(indexed=False)
     productCategoryID = db.IntegerProperty(indexed=False)
-    productGraphicID = db.IntegerProperty(indexed=False)
+    productTypeIconID = db.IntegerProperty(indexed=False)
     productTypeIcon = db.StringProperty(indexed=False)
     productionTime = db.IntegerProperty(indexed=False)
     techLevel = db.IntegerProperty(indexed=False)
@@ -53,7 +53,7 @@ class InvBlueprintTypeLoader(bulkloader.Loader):
                                     ('productTypeID', safe_int),
                                     ('productTypeName', safe_str),
                                     ('productCategoryID', safe_int),
-                                    ('productGraphicID', safe_int),
+                                    ('productTypeIconID', safe_int),
                                     ('productTypeIcon', safe_str),
                                     ('productionTime', safe_int),
                                     ('techLevel', safe_int),

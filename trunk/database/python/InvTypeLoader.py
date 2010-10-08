@@ -4,7 +4,7 @@ from google.appengine.tools import bulkloader
 class InvType(db.Model):
     typeID = db.IntegerProperty()
     typeName = db.StringProperty()
-    typeGraphicID = db.IntegerProperty(indexed=False)
+    typeIconID = db.IntegerProperty(indexed=False)
     typeIcon = db.StringProperty(indexed=False)
     groupID = db.IntegerProperty(indexed=False)
     groupName = db.StringProperty(indexed=False)
@@ -45,7 +45,7 @@ class InvTypeLoader(bulkloader.Loader):
         bulkloader.Loader.__init__(self, 'InvType',
                                    [('typeID', safe_int),
                                     ('typeName', safe_str),
-                                    ('typeGraphicID', safe_int),
+                                    ('typeIconID', safe_int),
                                     ('typeIcon', safe_str),
                                     ('groupID', safe_int),
                                     ('groupName', safe_str),
