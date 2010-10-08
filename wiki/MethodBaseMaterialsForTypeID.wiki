@@ -21,44 +21,44 @@ List of base materials for given item typeID.
 [http://odylab-evedb.appspot.com/baseMaterialsForTypeID/587 baseMaterialsForTypeID/587] (JSON)
 {{{
 [ { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "06_14",
     "materialTypeID" : 34,
+    "materialTypeIcon" : "06_14",
     "materialTypeName" : "Tritanium",
     "quantity" : 20524
   },
   { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "06_15",
     "materialTypeID" : 35,
+    "materialTypeIcon" : "06_15",
     "materialTypeName" : "Pyerite",
     "quantity" : 5529
   },
   { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "06_12",
     "materialTypeID" : 36,
+    "materialTypeIcon" : "06_12",
     "materialTypeName" : "Mexallon",
     "quantity" : 1841
   },
   { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "06_16",
     "materialTypeID" : 37,
+    "materialTypeIcon" : "06_16",
     "materialTypeName" : "Isogen",
     "quantity" : 317
   },
   { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "11_09",
     "materialTypeID" : 38,
+    "materialTypeIcon" : "11_09",
     "materialTypeName" : "Nocxium",
     "quantity" : 118
   },
   { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "11_11",
     "materialTypeID" : 39,
+    "materialTypeIcon" : "11_11",
     "materialTypeName" : "Zydrine",
     "quantity" : 13
   },
   { "materialTypeCategoryID" : 4,
-    "materialTypeGraphicIcon" : "11_10",
     "materialTypeID" : 40,
+    "materialTypeIcon" : "11_10",
     "materialTypeName" : "Megacyte",
     "quantity" : 1
   }
@@ -69,52 +69,52 @@ List of base materials for given item typeID.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>06_14</materialTypeGraphicIcon>
     <materialTypeID>34</materialTypeID>
+    <materialTypeIcon>06_14</materialTypeIcon>
     <materialTypeName>Tritanium</materialTypeName>
     <quantity>20524</quantity>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>06_15</materialTypeGraphicIcon>
     <materialTypeID>35</materialTypeID>
+    <materialTypeIcon>06_15</materialTypeIcon>
     <materialTypeName>Pyerite</materialTypeName>
     <quantity>5529</quantity>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>06_12</materialTypeGraphicIcon>
     <materialTypeID>36</materialTypeID>
+    <materialTypeIcon>06_12</materialTypeIcon>
     <materialTypeName>Mexallon</materialTypeName>
     <quantity>1841</quantity>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>06_16</materialTypeGraphicIcon>
     <materialTypeID>37</materialTypeID>
+    <materialTypeIcon>06_16</materialTypeIcon>
     <materialTypeName>Isogen</materialTypeName>
     <quantity>317</quantity>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>11_09</materialTypeGraphicIcon>
     <materialTypeID>38</materialTypeID>
+    <materialTypeIcon>11_09</materialTypeIcon>
     <materialTypeName>Nocxium</materialTypeName>
     <quantity>118</quantity>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>11_11</materialTypeGraphicIcon>
     <materialTypeID>39</materialTypeID>
+    <materialTypeIcon>11_11</materialTypeIcon>
     <materialTypeName>Zydrine</materialTypeName>
     <quantity>13</quantity>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
+  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <materialTypeCategoryID>4</materialTypeCategoryID>
-    <materialTypeGraphicIcon>11_10</materialTypeGraphicIcon>
     <materialTypeID>40</materialTypeID>
+    <materialTypeIcon>11_10</materialTypeIcon>
     <materialTypeName>Megacyte</materialTypeName>
     <quantity>1</quantity>
   </row>
