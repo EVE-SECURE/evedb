@@ -3,18 +3,21 @@ package lv.odylab.evedb.ws;
 import com.google.gson.JsonParseException;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static junit.framework.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class EveDbWsClientImplTest {
+    @Mock
     private EveDbWsClient.HttpRequestSender httpRequestSender;
     private EveDbWsClientImpl eveDbWsClient;
 
     @Before
     public void setUp() {
-        httpRequestSender = mock(EveDbWsClient.HttpRequestSender.class);
         eveDbWsClient = new EveDbWsClientImpl("eveDbUrl", httpRequestSender);
     }
 
@@ -40,6 +43,18 @@ public class EveDbWsClientImplTest {
     public void test_getBlueprintTypeByTypeName() {
         when(httpRequestSender.doGet("eveDbUrl/blueprintTypeByTypeName/typeName", "application/json")).thenReturn("blah-blah");
         eveDbWsClient.getBlueprintTypeByTypeName("typeName");
+    }
+
+    @Test(expected = JsonParseException.class)
+    public void test_getBlueprintDetailsForTypeID() {
+        when(httpRequestSender.doGet("eveDbUrl/blueprintDetailsForTypeID/1", "application/json")).thenReturn("blah-blah");
+        eveDbWsClient.getBlueprintDetailsForTypeID(1L);
+    }
+
+    @Test(expected = JsonParseException.class)
+    public void test_getBlueprintDetailsForTypeName() {
+        when(httpRequestSender.doGet("eveDbUrl/blueprintDetailsForTypeName/typeName", "application/json")).thenReturn("blah-blah");
+        eveDbWsClient.getBlueprintDetailsForTypeName("typeName");
     }
 
     @Test(expected = JsonParseException.class)

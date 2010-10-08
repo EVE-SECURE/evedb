@@ -2,6 +2,7 @@ package lv.odylab.evedb.application;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
@@ -10,6 +11,7 @@ import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintType;
 import lv.odylab.evedb.domain.inv.type.InvType;
 import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterial;
 import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
+import lv.odylab.evedb.service.BlueprintDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,9 +59,21 @@ public class EveDbClientFacadeImpl implements EveDbClientFacade {
     }
 
     @Override
-    public InvBlueprintTypeDto getBlueprintTypeByTypeName(String blueprintTypeName) {
-        InvBlueprintType invBlueprintType = applicationFacade.getBlueprintTypeByTypeName(blueprintTypeName);
+    public InvBlueprintTypeDto getBlueprintTypeByTypeName(String typeName) {
+        InvBlueprintType invBlueprintType = applicationFacade.getBlueprintTypeByTypeName(typeName);
         return invBlueprintType == null ? null : mapper.map(invBlueprintType);
+    }
+
+    @Override
+    public BlueprintDetailsDto getBlueprintDetailsForTypeID(Long typeID) {
+        BlueprintDetails blueprintDetails = applicationFacade.getBlueprintDetailsForTypeID(typeID);
+        return blueprintDetails == null ? null : mapper.map(blueprintDetails);
+    }
+
+    @Override
+    public BlueprintDetailsDto getBlueprintDetailsForTypeName(String typeName) {
+        BlueprintDetails blueprintDetails = applicationFacade.getBlueprintDetailsForTypeName(typeName);
+        return blueprintDetails == null ? null : mapper.map(blueprintDetails);
     }
 
     @Override

@@ -2,23 +2,26 @@ package lv.odylab.evedb.ws;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.io.IOException;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class HttpRequestSenderWithRetryImplTest {
+    @Mock
     private EveDbWsClient.HttpRequestSender httpRequestSender;
     private HttpRequestSenderWithRetryImpl httpRequestSenderWithRetry;
 
     @Before
     public void setUp() {
-        httpRequestSender = mock(EveDbWsClient.HttpRequestSender.class);
         httpRequestSenderWithRetry = new HttpRequestSenderWithRetryImpl(3, httpRequestSender);
     }
 

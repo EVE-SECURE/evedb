@@ -6,6 +6,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import lv.odylab.appengine.aspect.Caching;
 import lv.odylab.evedb.application.EveDbClientFacade;
+import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
@@ -43,7 +44,7 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
         }.getType();
 
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(InvBlueprintTypeDto.class, InvTypeMaterialDto.class, InvTypeBasicInfoDto.class, RamTypeRequirementDto.class, XmlResultContainer.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(InvBlueprintTypeDto.class, InvTypeMaterialDto.class, InvTypeBasicInfoDto.class, RamTypeRequirementDto.class, BlueprintDetailsDto.class, XmlResultContainer.class);
             marshaller = jaxbContext.createMarshaller();
         } catch (JAXBException e) {
             throw new RuntimeException("Unable to create jaxbContext or marshaller in eveDbWsFacade", e);
@@ -111,6 +112,34 @@ public class EveDbWsFacadeImpl implements EveDbWsFacade {
     public String getBlueprintTypeByTypeNameAsXml(String typeName) {
         InvBlueprintTypeDto invBlueprintTypeDto = clientFacade.getBlueprintTypeByTypeName(decodeString(typeName));
         return marshall(invBlueprintTypeDto);
+    }
+
+    @Override
+    @Caching
+    public String getBlueprintDetailsForTypeIdAsJson(Long typeID) {
+        BlueprintDetailsDto blueprintDetailsDto = clientFacade.getBlueprintDetailsForTypeID(typeID);
+        return gson.toJson(blueprintDetailsDto, BlueprintDetailsDto.class);
+    }
+
+    @Override
+    @Caching
+    public String getBlueprintDetailsForTypeIdAsXml(Long typeID) {
+        BlueprintDetailsDto blueprintDetailsDto = clientFacade.getBlueprintDetailsForTypeID(typeID);
+        return marshall(blueprintDetailsDto);
+    }
+
+    @Override
+    @Caching
+    public String getBlueprintDetailsForTypeNameAsJson(String typeName) {
+        BlueprintDetailsDto blueprintDetailsDto = clientFacade.getBlueprintDetailsForTypeName(decodeString(typeName));
+        return gson.toJson(blueprintDetailsDto, BlueprintDetailsDto.class);
+    }
+
+    @Override
+    @Caching
+    public String getBlueprintDetailsForTypeNameAsXml(String typeName) {
+        BlueprintDetailsDto blueprintDetailsDto = clientFacade.getBlueprintDetailsForTypeName(decodeString(typeName));
+        return marshall(blueprintDetailsDto);
     }
 
     @Override

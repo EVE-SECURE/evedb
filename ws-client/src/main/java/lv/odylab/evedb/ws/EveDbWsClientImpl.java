@@ -2,6 +2,7 @@ package lv.odylab.evedb.ws;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
@@ -63,6 +64,18 @@ public class EveDbWsClientImpl implements EveDbWsClient {
     public InvBlueprintTypeDto getBlueprintTypeByTypeName(String typeName) {
         String jsonString = requestSender.doGet(eveDbUrl + "/blueprintTypeByTypeName/" + encodeString(typeName), "application/json");
         return gson.fromJson(jsonString, InvBlueprintTypeDto.class);
+    }
+
+    @Override
+    public BlueprintDetailsDto getBlueprintDetailsForTypeID(Long typeID) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/blueprintDetailsForTypeID/" + typeID, "application/json");
+        return gson.fromJson(jsonString, BlueprintDetailsDto.class);
+    }
+
+    @Override
+    public BlueprintDetailsDto getBlueprintDetailsForTypeName(String typeName) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/blueprintDetailsForTypeName/" + encodeString(typeName), "application/json");
+        return gson.fromJson(jsonString, BlueprintDetailsDto.class);
     }
 
     @Override

@@ -20,6 +20,14 @@ public interface EveDbWsFacade {
 
     String getBlueprintTypeByTypeNameAsXml(String typeName);
 
+    String getBlueprintDetailsForTypeIdAsJson(Long typeID);
+
+    String getBlueprintDetailsForTypeIdAsXml(Long typeID);
+
+    String getBlueprintDetailsForTypeNameAsJson(String typeName);
+
+    String getBlueprintDetailsForTypeNameAsXml(String typeName);
+
     String getRamTypeRequirementsForTypeIdAsJson(Long typeID);
 
     String getRamTypeRequirementsForTypeIdAsXml(Long typeID);

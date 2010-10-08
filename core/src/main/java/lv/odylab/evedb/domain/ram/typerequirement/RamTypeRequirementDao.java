@@ -1,21 +1,26 @@
 package lv.odylab.evedb.domain.ram.typerequirement;
 
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import com.googlecode.objectify.ObjectifyFactory;
+import lv.odylab.appengine.aspect.Caching;
 import lv.odylab.evedb.domain.IdNotFoundException;
 import lv.odylab.evedb.domain.NameNotFoundException;
 
 import java.util.List;
 
+@Caching
 public class RamTypeRequirementDao {
     private final ObjectifyFactory objectifyFactory;
+    private final String dumpVersion;
 
     @Inject
-    public RamTypeRequirementDao(ObjectifyFactory objectifyFactory) {
+    public RamTypeRequirementDao(ObjectifyFactory objectifyFactory, @Named("dump.version") String dumpVersion) {
         this.objectifyFactory = objectifyFactory;
+        this.dumpVersion = dumpVersion;
     }
 
-    public List<RamTypeRequirement> getForTypeID(Long typeID, String dumpVersion) {
+    public List<RamTypeRequirement> getForTypeID(Long typeID) {
         List<RamTypeRequirement> ramTypeRequirements = objectifyFactory.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID)
@@ -26,7 +31,7 @@ public class RamTypeRequirementDao {
         return ramTypeRequirements;
     }
 
-    public List<RamTypeRequirement> getForTypeName(String typeName, String dumpVersion) {
+    public List<RamTypeRequirement> getForTypeName(String typeName) {
         List<RamTypeRequirement> ramTypeRequirements = objectifyFactory.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeName", typeName)

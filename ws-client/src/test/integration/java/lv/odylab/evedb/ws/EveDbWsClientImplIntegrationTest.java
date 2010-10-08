@@ -1,5 +1,6 @@
 package lv.odylab.evedb.ws;
 
+import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
@@ -40,6 +41,18 @@ public class EveDbWsClientImplIntegrationTest {
     public void testGetBlueprintTypeByTypeName() {
         InvBlueprintTypeDto invBlueprintTypeDto = client.getBlueprintTypeByTypeName("Obelisk Blueprint");
         assertEquals(Long.valueOf(20188), invBlueprintTypeDto.getBlueprintTypeID());
+    }
+
+    @Test
+    public void testGetBlueprintDetailsForTypeID() {
+        BlueprintDetailsDto blueprintDetailsDto = client.getBlueprintDetailsForTypeID(12024L);
+        assertEquals("Deimos Blueprint", blueprintDetailsDto.getInvBlueprintTypeDto().getBlueprintTypeName());
+    }
+
+    @Test
+    public void testGetBlueprintDetailsForTypeName() {
+        BlueprintDetailsDto blueprintDetailsDto = client.getBlueprintDetailsForTypeName("Deimos Blueprint");
+        assertEquals(Long.valueOf(12024), blueprintDetailsDto.getInvBlueprintTypeDto().getBlueprintTypeID());
     }
 
     @Test
@@ -96,6 +109,6 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testVersion() {
-        assertEquals("1.5-SNAPSHOT", client.getVersion());
+        assertEquals("1.5-SNAPSHOT-tyr104", client.getVersion());
     }
 }
