@@ -6,7 +6,7 @@ Item type basic information for given typeID.
 
 == Attributes ==
 
-|| graphicIcon || String ||
+|| icon || String ||
 || itemCategoryID || Number ||
 || itemTypeID || Number ||
 || name || String ||
