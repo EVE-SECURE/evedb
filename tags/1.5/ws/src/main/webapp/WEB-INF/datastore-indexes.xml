@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+
+    <datastore-index kind="InvBlueprintType" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="blueprintTypeID" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvBlueprintType" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="blueprintTypeName" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="InvType" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeID" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvType" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvType" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="published" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvType" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="published" direction="asc"/>
+        <property name="categoryID" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="InvTypeMaterial" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeID" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvTypeMaterial" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeID" direction="asc"/>
+        <property name="materialTypeID" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvTypeMaterial" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="InvTypeMaterial" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+        <property name="materialTypeID" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="RamTypeRequirement" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeID" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="RamTypeRequirement" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeID" direction="asc"/>
+        <property name="requiredTypeID" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="RamTypeRequirement" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="RamTypeRequirement" ancestor="false" source="manual">
+        <property name="dumpVersion" direction="asc"/>
+        <property name="typeName" direction="asc"/>
+        <property name="requiredTypeID" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>
