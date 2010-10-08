@@ -19,7 +19,7 @@ Item type basic information for given typeID.
 
 [http://odylab-evedb.appspot.com/typeBasicInfoByTypeID/34 typeBasicInfoByTypeID/34] (JSON)
 {{{
-{ "graphicIcon" : "06_14",
+{ "icon" : "06_14",
   "itemCategoryID" : 4,
   "itemTypeID" : 34,
   "name" : "Tritanium"
@@ -30,7 +30,7 @@ Item type basic information for given typeID.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <invTypeBasicInfoDto>
-  <graphicIcon>06_14</graphicIcon>
+  <icon>06_14</icon>
   <itemCategoryID>4</itemCategoryID>
   <itemTypeID>34</itemTypeID>
   <name>Tritanium</name>
