@@ -1,5 +1,6 @@
 package lv.odylab.evedb.ws;
 
+import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
@@ -22,6 +23,10 @@ public interface EveDbWsClient {
     InvBlueprintTypeDto getBlueprintTypeByTypeID(Long typeID);
 
     InvBlueprintTypeDto getBlueprintTypeByTypeName(String typeName);
+
+    BlueprintDetailsDto getBlueprintDetailsForTypeID(Long typeID);
+
+    BlueprintDetailsDto getBlueprintDetailsForTypeName(String typeName);
 
     List<RamTypeRequirementDto> getExtraMaterialsForTypeID(Long typeID);
 

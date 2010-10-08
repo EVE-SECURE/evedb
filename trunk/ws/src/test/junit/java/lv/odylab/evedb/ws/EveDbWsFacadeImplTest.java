@@ -3,6 +3,7 @@ package lv.odylab.evedb.ws;
 import com.google.gson.Gson;
 import lv.odylab.appengine.aspect.Caching;
 import lv.odylab.evedb.application.EveDbClientFacade;
+import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
@@ -11,6 +12,9 @@ import lv.odylab.evedb.domain.IdNotFoundException;
 import lv.odylab.evedb.domain.NameNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -18,16 +22,16 @@ import java.util.List;
 
 import static com.google.appengine.repackaged.com.google.common.base.X.assertTrue;
 import static junit.framework.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class EveDbWsFacadeImplTest {
+    @Mock
     private EveDbClientFacade clientFacade;
     private EveDbWsFacade wsFacade;
 
     @Before
     public void setUp() {
-        clientFacade = mock(EveDbClientFacade.class);
         wsFacade = new EveDbWsFacadeImpl(new Gson(), clientFacade);
     }
 
@@ -106,14 +110,20 @@ public class EveDbWsFacadeImplTest {
         invBlueprintTypeDto.setProductTypeName("Obelisk");
         invBlueprintTypeDto.setProductCategoryID(3L);
         invBlueprintTypeDto.setProductIcon("productIcon");
-        invBlueprintTypeDto.setWasteFactor(4);
-        invBlueprintTypeDto.setMaxProductionLimit(5);
+        invBlueprintTypeDto.setTechLevel(4);
+        invBlueprintTypeDto.setProductionTime(5);
+        invBlueprintTypeDto.setResearchProductivityTime(6);
+        invBlueprintTypeDto.setResearchMaterialTime(7);
+        invBlueprintTypeDto.setResearchCopyTime(8);
+        invBlueprintTypeDto.setResearchTechTime(9);
+        invBlueprintTypeDto.setProductivityModifier(10);
+        invBlueprintTypeDto.setMaxProductionLimit(11);
         when(clientFacade.getBlueprintTypeByTypeID(1L)).thenReturn(invBlueprintTypeDto);
         when(clientFacade.getBlueprintTypeByTypeName("typeName")).thenReturn(invBlueprintTypeDto);
-        assertEquals("{\"blueprintTypeID\":1,\"blueprintTypeName\":\"blueprintTypeName\",\"productTypeID\":2,\"productTypeName\":\"Obelisk\",\"productCategoryID\":3,\"productIcon\":\"productIcon\",\"wasteFactor\":4,\"maxProductionLimit\":5}", wsFacade.getBlueprintTypeByTypeIdAsJson(1L));
-        assertEquals("{\"blueprintTypeID\":1,\"blueprintTypeName\":\"blueprintTypeName\",\"productTypeID\":2,\"productTypeName\":\"Obelisk\",\"productCategoryID\":3,\"productIcon\":\"productIcon\",\"wasteFactor\":4,\"maxProductionLimit\":5}", wsFacade.getBlueprintTypeByTypeNameAsJson("typeName"));
-        assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><invBlueprintTypeDto><blueprintTypeID>1</blueprintTypeID><blueprintTypeName>blueprintTypeName</blueprintTypeName><maxProductionLimit>5</maxProductionLimit><productCategoryID>3</productCategoryID><productIcon>productIcon</productIcon><productTypeID>2</productTypeID><productTypeName>Obelisk</productTypeName><wasteFactor>4</wasteFactor></invBlueprintTypeDto>", wsFacade.getBlueprintTypeByTypeIdAsXml(1L));
-        assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><invBlueprintTypeDto><blueprintTypeID>1</blueprintTypeID><blueprintTypeName>blueprintTypeName</blueprintTypeName><maxProductionLimit>5</maxProductionLimit><productCategoryID>3</productCategoryID><productIcon>productIcon</productIcon><productTypeID>2</productTypeID><productTypeName>Obelisk</productTypeName><wasteFactor>4</wasteFactor></invBlueprintTypeDto>", wsFacade.getBlueprintTypeByTypeNameAsXml("typeName"));
+        assertEquals("{\"blueprintTypeID\":1,\"blueprintTypeName\":\"blueprintTypeName\",\"productTypeID\":2,\"productTypeName\":\"Obelisk\",\"productCategoryID\":3,\"productIcon\":\"productIcon\",\"techLevel\":4,\"productionTime\":5,\"researchProductivityTime\":6,\"researchMaterialTime\":7,\"researchCopyTime\":8,\"researchTechTime\":9,\"productivityModifier\":10,\"maxProductionLimit\":11}", wsFacade.getBlueprintTypeByTypeIdAsJson(1L));
+        assertEquals("{\"blueprintTypeID\":1,\"blueprintTypeName\":\"blueprintTypeName\",\"productTypeID\":2,\"productTypeName\":\"Obelisk\",\"productCategoryID\":3,\"productIcon\":\"productIcon\",\"techLevel\":4,\"productionTime\":5,\"researchProductivityTime\":6,\"researchMaterialTime\":7,\"researchCopyTime\":8,\"researchTechTime\":9,\"productivityModifier\":10,\"maxProductionLimit\":11}", wsFacade.getBlueprintTypeByTypeNameAsJson("typeName"));
+        assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><invBlueprintTypeDto><blueprintTypeID>1</blueprintTypeID><blueprintTypeName>blueprintTypeName</blueprintTypeName><maxProductionLimit>11</maxProductionLimit><productCategoryID>3</productCategoryID><productIcon>productIcon</productIcon><productTypeID>2</productTypeID><productTypeName>Obelisk</productTypeName><productionTime>5</productionTime><productivityModifier>10</productivityModifier><researchCopyTime>8</researchCopyTime><researchMaterialTime>7</researchMaterialTime><researchProductivityTime>6</researchProductivityTime><researchTechTime>9</researchTechTime><techLevel>4</techLevel></invBlueprintTypeDto>", wsFacade.getBlueprintTypeByTypeIdAsXml(1L));
+        assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><invBlueprintTypeDto><blueprintTypeID>1</blueprintTypeID><blueprintTypeName>blueprintTypeName</blueprintTypeName><maxProductionLimit>11</maxProductionLimit><productCategoryID>3</productCategoryID><productIcon>productIcon</productIcon><productTypeID>2</productTypeID><productTypeName>Obelisk</productTypeName><productionTime>5</productionTime><productivityModifier>10</productivityModifier><researchCopyTime>8</researchCopyTime><researchMaterialTime>7</researchMaterialTime><researchProductivityTime>6</researchProductivityTime><researchTechTime>9</researchTechTime><techLevel>4</techLevel></invBlueprintTypeDto>", wsFacade.getBlueprintTypeByTypeNameAsXml("typeName"));
     }
 
     @Test
@@ -149,6 +159,71 @@ public class EveDbWsFacadeImplTest {
     public void test_getBlueprintTypeByTypeNameAsXml_NotFound() {
         when(clientFacade.getBlueprintTypeByTypeName("typeName")).thenThrow(new NameNotFoundException("typeName"));
         wsFacade.getBlueprintTypeByTypeNameAsXml("typeName");
+    }
+
+    @Test
+    public void test_getBlueprintDetails() {
+        BlueprintDetailsDto blueprintDetailsDto = new BlueprintDetailsDto();
+        InvBlueprintTypeDto invBlueprintTypeDto = new InvBlueprintTypeDto();
+        invBlueprintTypeDto.setBlueprintTypeID(1L);
+        invBlueprintTypeDto.setBlueprintTypeName("blueprintTypeName");
+        invBlueprintTypeDto.setProductTypeID(2L);
+        invBlueprintTypeDto.setProductTypeName("Obelisk");
+        invBlueprintTypeDto.setProductCategoryID(3L);
+        invBlueprintTypeDto.setProductIcon("productIcon");
+        invBlueprintTypeDto.setWasteFactor(4);
+        invBlueprintTypeDto.setTechLevel(4);
+        invBlueprintTypeDto.setProductionTime(5);
+        invBlueprintTypeDto.setResearchProductivityTime(6);
+        invBlueprintTypeDto.setResearchMaterialTime(7);
+        invBlueprintTypeDto.setResearchCopyTime(8);
+        invBlueprintTypeDto.setResearchTechTime(9);
+        invBlueprintTypeDto.setProductivityModifier(10);
+        invBlueprintTypeDto.setMaxProductionLimit(11);
+        blueprintDetailsDto.setInvBlueprintTypeDto(invBlueprintTypeDto);
+        InvTypeMaterialDto invTypeMaterialDto = new InvTypeMaterialDto();
+        invTypeMaterialDto.setMaterialTypeID(12L);
+        invTypeMaterialDto.setMaterialTypeName("materialTypeName1");
+        invTypeMaterialDto.setMaterialTypeCategoryID(13L);
+        invTypeMaterialDto.setQuantity(14L);
+        invTypeMaterialDto.setMaterialTypeIcon("materialIcon1");
+        List<InvTypeMaterialDto> materialDtos = new ArrayList<InvTypeMaterialDto>();
+        materialDtos.add(invTypeMaterialDto);
+        blueprintDetailsDto.setMaterialDtos(materialDtos);
+        RamTypeRequirementDto ramTypeRequirementDto = new RamTypeRequirementDto();
+        ramTypeRequirementDto.setActivityID(15L);
+        ramTypeRequirementDto.setActivityName("activityName1");
+        ramTypeRequirementDto.setRequiredTypeID(16L);
+        ramTypeRequirementDto.setRequiredTypeCategoryID(17L);
+        ramTypeRequirementDto.setRequiredTypeGroupID(18L);
+        ramTypeRequirementDto.setRequiredTypeGroupName("requiredTypeGroupName1");
+        ramTypeRequirementDto.setQuantity(19L);
+        ramTypeRequirementDto.setDamagePerJob("0.6");
+        ramTypeRequirementDto.setRequiredTypeIcon("requiredTypeIcon1");
+        List<RamTypeRequirementDto> manufacturingRequirementDtos = new ArrayList<RamTypeRequirementDto>();
+        manufacturingRequirementDtos.add(ramTypeRequirementDto);
+        List<RamTypeRequirementDto> timeProductivityRequirementDtos = new ArrayList<RamTypeRequirementDto>();
+        timeProductivityRequirementDtos.add(ramTypeRequirementDto);
+        List<RamTypeRequirementDto> materialProductivityRequirementDtos = new ArrayList<RamTypeRequirementDto>();
+        materialProductivityRequirementDtos.add(ramTypeRequirementDto);
+        List<RamTypeRequirementDto> copyingRequirementDtos = new ArrayList<RamTypeRequirementDto>();
+        copyingRequirementDtos.add(ramTypeRequirementDto);
+        List<RamTypeRequirementDto> reverseEngineeringRequirementDtos = new ArrayList<RamTypeRequirementDto>();
+        reverseEngineeringRequirementDtos.add(ramTypeRequirementDto);
+        List<RamTypeRequirementDto> inventionRequirementDtos = new ArrayList<RamTypeRequirementDto>();
+        inventionRequirementDtos.add(ramTypeRequirementDto);
+        blueprintDetailsDto.setManufacturingRequirementDtos(manufacturingRequirementDtos);
+        blueprintDetailsDto.setTimeProductivityRequirementDtos(timeProductivityRequirementDtos);
+        blueprintDetailsDto.setMaterialProductivityRequirementDtos(materialProductivityRequirementDtos);
+        blueprintDetailsDto.setCopyingRequirementDtos(copyingRequirementDtos);
+        blueprintDetailsDto.setReverseEngineeringRequirementDtos(reverseEngineeringRequirementDtos);
+        blueprintDetailsDto.setInventionRequirementDtos(inventionRequirementDtos);
+        when(clientFacade.getBlueprintDetailsForTypeID(1L)).thenReturn(blueprintDetailsDto);
+        when(clientFacade.getBlueprintDetailsForTypeName("typeName")).thenReturn(blueprintDetailsDto);
+        assertEquals("{\"invBlueprintTypeDto\":{\"blueprintTypeID\":1,\"blueprintTypeName\":\"blueprintTypeName\",\"productTypeID\":2,\"productTypeName\":\"Obelisk\",\"productCategoryID\":3,\"productIcon\":\"productIcon\",\"techLevel\":4,\"productionTime\":5,\"researchProductivityTime\":6,\"researchMaterialTime\":7,\"researchCopyTime\":8,\"researchTechTime\":9,\"productivityModifier\":10,\"wasteFactor\":4,\"maxProductionLimit\":11},\"materialDtos\":[{\"materialTypeID\":12,\"materialTypeName\":\"materialTypeName1\",\"materialTypeCategoryID\":13,\"quantity\":14,\"materialTypeIcon\":\"materialIcon1\"}],\"manufacturingRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"timeProductivityRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"materialProductivityRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"copyingRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"reverseEngineeringRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"inventionRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}]}", wsFacade.getBlueprintDetailsForTypeIdAsJson(1L));
+        assertEquals("{\"invBlueprintTypeDto\":{\"blueprintTypeID\":1,\"blueprintTypeName\":\"blueprintTypeName\",\"productTypeID\":2,\"productTypeName\":\"Obelisk\",\"productCategoryID\":3,\"productIcon\":\"productIcon\",\"techLevel\":4,\"productionTime\":5,\"researchProductivityTime\":6,\"researchMaterialTime\":7,\"researchCopyTime\":8,\"researchTechTime\":9,\"productivityModifier\":10,\"wasteFactor\":4,\"maxProductionLimit\":11},\"materialDtos\":[{\"materialTypeID\":12,\"materialTypeName\":\"materialTypeName1\",\"materialTypeCategoryID\":13,\"quantity\":14,\"materialTypeIcon\":\"materialIcon1\"}],\"manufacturingRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"timeProductivityRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"materialProductivityRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"copyingRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"reverseEngineeringRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}],\"inventionRequirementDtos\":[{\"activityID\":15,\"activityName\":\"activityName1\",\"requiredTypeID\":16,\"requiredTypeCategoryID\":17,\"requiredTypeGroupID\":18,\"requiredTypeGroupName\":\"requiredTypeGroupName1\",\"requiredTypeIcon\":\"requiredTypeIcon1\",\"quantity\":19,\"damagePerJob\":\"0.6\"}]}", wsFacade.getBlueprintDetailsForTypeNameAsJson("typeName"));
+        assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><blueprintDetailsDto><copyingRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></copyingRequirementDtos><invBlueprintTypeDto><blueprintTypeID>1</blueprintTypeID><blueprintTypeName>blueprintTypeName</blueprintTypeName><maxProductionLimit>11</maxProductionLimit><productCategoryID>3</productCategoryID><productIcon>productIcon</productIcon><productTypeID>2</productTypeID><productTypeName>Obelisk</productTypeName><productionTime>5</productionTime><productivityModifier>10</productivityModifier><researchCopyTime>8</researchCopyTime><researchMaterialTime>7</researchMaterialTime><researchProductivityTime>6</researchProductivityTime><researchTechTime>9</researchTechTime><techLevel>4</techLevel><wasteFactor>4</wasteFactor></invBlueprintTypeDto><inventionRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></inventionRequirementDtos><manufacturingRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></manufacturingRequirementDtos><materialDtos><materialTypeCategoryID>13</materialTypeCategoryID><materialTypeID>12</materialTypeID><materialTypeIcon>materialIcon1</materialTypeIcon><materialTypeName>materialTypeName1</materialTypeName><quantity>14</quantity></materialDtos><materialProductivityRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></materialProductivityRequirementDtos><reverseEngineeringRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></reverseEngineeringRequirementDtos><timeProductivityRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></timeProductivityRequirementDtos></blueprintDetailsDto>", wsFacade.getBlueprintDetailsForTypeIdAsXml(1L));
+        assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><blueprintDetailsDto><copyingRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></copyingRequirementDtos><invBlueprintTypeDto><blueprintTypeID>1</blueprintTypeID><blueprintTypeName>blueprintTypeName</blueprintTypeName><maxProductionLimit>11</maxProductionLimit><productCategoryID>3</productCategoryID><productIcon>productIcon</productIcon><productTypeID>2</productTypeID><productTypeName>Obelisk</productTypeName><productionTime>5</productionTime><productivityModifier>10</productivityModifier><researchCopyTime>8</researchCopyTime><researchMaterialTime>7</researchMaterialTime><researchProductivityTime>6</researchProductivityTime><researchTechTime>9</researchTechTime><techLevel>4</techLevel><wasteFactor>4</wasteFactor></invBlueprintTypeDto><inventionRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></inventionRequirementDtos><manufacturingRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></manufacturingRequirementDtos><materialDtos><materialTypeCategoryID>13</materialTypeCategoryID><materialTypeID>12</materialTypeID><materialTypeIcon>materialIcon1</materialTypeIcon><materialTypeName>materialTypeName1</materialTypeName><quantity>14</quantity></materialDtos><materialProductivityRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></materialProductivityRequirementDtos><reverseEngineeringRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></reverseEngineeringRequirementDtos><timeProductivityRequirementDtos><activityID>15</activityID><activityName>activityName1</activityName><damagePerJob>0.6</damagePerJob><quantity>19</quantity><requiredTypeCategoryID>17</requiredTypeCategoryID><requiredTypeGroupID>18</requiredTypeGroupID><requiredTypeGroupName>requiredTypeGroupName1</requiredTypeGroupName><requiredTypeID>16</requiredTypeID><requiredTypeIcon>requiredTypeIcon1</requiredTypeIcon></timeProductivityRequirementDtos></blueprintDetailsDto>", wsFacade.getBlueprintDetailsForTypeNameAsXml("typeName"));
     }
 
     @Test

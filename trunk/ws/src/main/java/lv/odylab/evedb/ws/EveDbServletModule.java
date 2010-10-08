@@ -3,6 +3,8 @@ package lv.odylab.evedb.ws;
 import com.google.inject.servlet.ServletModule;
 import lv.odylab.evedb.ws.resource.BaseMaterialsForTypeIdResource;
 import lv.odylab.evedb.ws.resource.BaseMaterialsForTypeNameResource;
+import lv.odylab.evedb.ws.resource.BlueprintDetailsForTypeIdResource;
+import lv.odylab.evedb.ws.resource.BlueprintDetailsForTypeNameResource;
 import lv.odylab.evedb.ws.resource.BlueprintTypeByTypeIdResource;
 import lv.odylab.evedb.ws.resource.BlueprintTypeByTypeNameResource;
 import lv.odylab.evedb.ws.resource.ExtraMaterialsForTypeIdResource;
@@ -28,6 +30,8 @@ public class EveDbServletModule extends ServletModule {
         serve("/baseMaterialsForTypeName/*").with(BaseMaterialsForTypeNameResource.class);
         serve("/blueprintTypeByTypeID/*").with(BlueprintTypeByTypeIdResource.class);
         serve("/blueprintTypeByTypeName/*").with(BlueprintTypeByTypeNameResource.class);
+        serve("/blueprintDetailsForTypeID/*").with(BlueprintDetailsForTypeIdResource.class);
+        serve("/blueprintDetailsForTypeName/*").with(BlueprintDetailsForTypeNameResource.class);
         serve("/extraMaterialsForTypeID/*").with(ExtraMaterialsForTypeIdResource.class);
         serve("/extraMaterialsForTypeName/*").with(ExtraMaterialsForTypeNameResource.class);
         serve("/lookupBlueprintType/*").with(LookupBlueprintTypeResource.class);

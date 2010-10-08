@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class RamTypeRequirement implements Serializable {
-    private static final long serialVersionUID = -7338345618902398663L;
+    private static final long serialVersionUID = -2449669470826539655L;
 
     @Id
     private Long id;
@@ -207,7 +207,7 @@ public class RamTypeRequirement implements Serializable {
         this.damagePerJob = damagePerJob;
     }
 
-    public Boolean getRecycle() {
+    public Boolean isRecycle() {
         return recycle;
     }
 

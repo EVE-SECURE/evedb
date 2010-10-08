@@ -4,6 +4,7 @@ import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintType;
 import lv.odylab.evedb.domain.inv.type.InvType;
 import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterial;
 import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
+import lv.odylab.evedb.service.BlueprintDetails;
 
 import java.util.List;
 
@@ -18,6 +19,10 @@ public interface EveDbApplicationFacade {
     InvBlueprintType getBlueprintTypeByTypeID(Long typeID);
 
     InvBlueprintType getBlueprintTypeByTypeName(String typeName);
+
+    BlueprintDetails getBlueprintDetailsForTypeID(Long typeID);
+
+    BlueprintDetails getBlueprintDetailsForTypeName(String typeName);
 
     List<RamTypeRequirement> getRamTypeRequirementsForTypeID(Long typeID);
 
