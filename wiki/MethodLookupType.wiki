@@ -6,7 +6,7 @@ List of any matching item types.
 
 == Attributes ==
 
-|| graphicIcon || String ||
+|| icon || String ||
 || itemCategoryID || Number ||
 || itemTypeID || Number ||
 || name || String ||
@@ -33,87 +33,85 @@ List of any matching item types.
 
 [http://odylab-evedb.appspot.com/lookupType/Tri lookupType/Tri] (JSON)
 {{{
-[ { "graphicIcon" : "11_15",
+[ { "icon" : "11_15",
     "itemCategoryID" : 17,
     "itemTypeID" : 22140,
     "name" : "Tri-Vitoc"
   },
-  { "graphicIcon" : "70_10",
+  { "icon" : "70_10",
     "itemCategoryID" : 7,
     "itemTypeID" : 27951,
     "name" : "Triage Module I"
   },
-  { "graphicIcon" : "06_03",
+  { "icon" : "06_03",
     "itemCategoryID" : 9,
     "itemTypeID" : 27952,
     "name" : "Triage Module I Blueprint"
   },
-  { "graphicIcon" : "23_06",
+  { "icon" : "23_06",
     "itemCategoryID" : 25,
     "itemTypeID" : 17428,
     "name" : "Triclinic Bistot"
   },
-  { "graphicIcon" : "69_14",
+  { "icon" : "69_14",
     "itemCategoryID" : 4,
     "itemTypeID" : 25612,
     "name" : "Trigger Unit"
   },
-  { "graphicIcon" : "34_05",
+  { "icon" : "34_05",
     "itemCategoryID" : 17,
     "itemTypeID" : 11066,
     "name" : "Trinary Data"
   },
-  { "graphicIcon" : "01_08",
+  { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16307,
     "name" : "Triple-sheathed Adaptive Nano Plating I"
   },
-  { "graphicIcon" : "01_08",
+  { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16315,
     "name" : "Triple-sheathed Magnetic Plating I"
   },
-  { "graphicIcon" : "01_08",
+  { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16323,
     "name" : "Triple-sheathed Reactive Plating I"
   },
-  { "graphicIcon" : "01_08",
+  { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16331,
     "name" : "Triple-sheathed Reflective Plating I"
   },
-  { "graphicIcon" : "01_08",
+  { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16347,
     "name" : "Triple-sheathed Regenerative Plating I"
   },
-  { "graphicIcon" : "01_08",
+  { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16339,
     "name" : "Triple-sheathed Thermic Plating I"
   },
-  { "graphicIcon" : "69_15",
+  { "icon" : "69_15",
     "itemCategoryID" : 4,
     "itemTypeID" : 25598,
     "name" : "Tripped Power Circuit"
   },
-  { "graphicIcon" : "",
-    "itemCategoryID" : 6,
+  { "itemCategoryID" : 6,
     "itemTypeID" : 593,
     "name" : "Tristan"
   },
-  { "graphicIcon" : "",
-    "itemCategoryID" : 9,
+  { "itemCategoryID" : 9,
     "itemTypeID" : 940,
     "name" : "Tristan Blueprint"
   },
-  { "graphicIcon" : "34_06",
+  { "icon" : "34_06",
     "itemCategoryID" : 17,
     "itemTypeID" : 17916,
     "name" : "Tritan's Forked Key"
   },
-  { "graphicIcon" : "06_14",
+  { "icon" : "06_14",
     "itemCategoryID" : 4,
     "itemTypeID" : 34,
     "name" : "Tritanium"
@@ -125,107 +123,105 @@ List of any matching item types.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>11_15</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>11_15</icon>
     <itemCategoryID>17</itemCategoryID>
     <itemTypeID>22140</itemTypeID>
     <name>Tri-Vitoc</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>70_10</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>70_10</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>27951</itemTypeID>
     <name>Triage Module I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>06_03</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>06_03</icon>
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>27952</itemTypeID>
     <name>Triage Module I Blueprint</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>23_06</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>23_06</icon>
     <itemCategoryID>25</itemCategoryID>
     <itemTypeID>17428</itemTypeID>
     <name>Triclinic Bistot</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>69_14</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>69_14</icon>
     <itemCategoryID>4</itemCategoryID>
     <itemTypeID>25612</itemTypeID>
     <name>Trigger Unit</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>34_05</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>34_05</icon>
     <itemCategoryID>17</itemCategoryID>
     <itemTypeID>11066</itemTypeID>
     <name>Trinary Data</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>01_08</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16307</itemTypeID>
     <name>Triple-sheathed Adaptive Nano Plating I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>01_08</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16315</itemTypeID>
     <name>Triple-sheathed Magnetic Plating I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>01_08</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16323</itemTypeID>
     <name>Triple-sheathed Reactive Plating I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>01_08</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16331</itemTypeID>
     <name>Triple-sheathed Reflective Plating I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>01_08</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16347</itemTypeID>
     <name>Triple-sheathed Regenerative Plating I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>01_08</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16339</itemTypeID>
     <name>Triple-sheathed Thermic Plating I</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>69_15</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>69_15</icon>
     <itemCategoryID>4</itemCategoryID>
     <itemTypeID>25598</itemTypeID>
     <name>Tripped Power Circuit</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon/>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <itemCategoryID>6</itemCategoryID>
     <itemTypeID>593</itemTypeID>
     <name>Tristan</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon/>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>940</itemTypeID>
     <name>Tristan Blueprint</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>34_06</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>34_06</icon>
     <itemCategoryID>17</itemCategoryID>
     <itemTypeID>17916</itemTypeID>
     <name>Tritan's Forked Key</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <graphicIcon>06_14</graphicIcon>
+  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <icon>06_14</icon>
     <itemCategoryID>4</itemCategoryID>
     <itemTypeID>34</itemTypeID>
     <name>Tritanium</name>
   </row>
-</rowset>
+</rowset>  
 }}}
