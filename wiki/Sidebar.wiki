@@ -5,6 +5,8 @@
     ** [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName]
     ** [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID]
     ** [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName]
+    ** [MethodBlueprintDetailsForTypeID /blueprintDetailsForTypeID]
+    ** [MethodBlueprintDetailsForTypeName /blueprintDetailsForTypeName]
     ** [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID]
     ** [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName]
     ** [MethodLookupBlueprintType /lookupBlueprintType]
