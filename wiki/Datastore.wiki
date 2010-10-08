@@ -8,6 +8,8 @@ Indexed properties can be used in search criteria, otherwise, new index must be 
 
 == Statistics ==
 
+|| _Image below is actual for old version -- 1.4_ ||
+
 [http://evedb.googlecode.com/svn/wiki/DatastoreStatistics.png]
 
 == Entities ==
@@ -118,5 +120,7 @@ SQL query on the dump: [http://code.google.com/p/evedb/source/browse/trunk/datab
 Python loader script: [http://code.google.com/p/evedb/source/browse/trunk/database/python/RamTypeRequirementLoader.py RamTypeRequirementLoader.py]
 
 == Indexes ==
+
+|| _Image below is actual for old version -- 1.4_ ||
 
 [http://evedb.googlecode.com/svn/wiki/DatastoreIndexes.png]
