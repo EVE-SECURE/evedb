@@ -5,12 +5,12 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class InvTypeBasicInfoDto implements Serializable {
-    private static final long serialVersionUID = -2743012358611532079L;
+    private static final long serialVersionUID = -2168576274862526960L;
 
     private Long itemTypeID;
     private Long itemCategoryID;
     private String name;
-    private String graphicIcon;
+    private String icon;
 
     public Long getItemTypeID() {
         return itemTypeID;
@@ -36,11 +36,11 @@ public class InvTypeBasicInfoDto implements Serializable {
         this.name = name;
     }
 
-    public String getGraphicIcon() {
-        return graphicIcon;
+    public String getIcon() {
+        return icon;
     }
 
-    public void setGraphicIcon(String graphicIcon) {
-        this.graphicIcon = graphicIcon;
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 @XmlRootElement(name = "rowset")
 public class XmlResultContainer<T> implements Serializable {
-    private static final long serialVersionUID = -4377907135327072738L;
+    private static final long serialVersionUID = -4547148868155123501L;
 
     private List<T> result;
 

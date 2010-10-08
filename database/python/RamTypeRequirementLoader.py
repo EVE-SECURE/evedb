@@ -6,7 +6,7 @@ class RamTypeRequirement(db.Model):
     typeName = db.StringProperty()
     activityID = db.IntegerProperty(indexed=False)
     activityName = db.StringProperty(indexed=False)
-    typeGraphicID = db.IntegerProperty(indexed=False)
+    typeIconID = db.IntegerProperty(indexed=False)
     typeIcon = db.StringProperty(indexed=False)
     typeGroupID = db.IntegerProperty(indexed=False)
     typeGroupName = db.StringProperty(indexed=False)
@@ -14,7 +14,7 @@ class RamTypeRequirement(db.Model):
     typeCategoryName = db.StringProperty(indexed=False)
     requiredTypeID = db.IntegerProperty()
     requiredTypeName = db.StringProperty(indexed=False)
-    requiredTypeGraphicID = db.IntegerProperty(indexed=False)
+    requiredTypeIconID = db.IntegerProperty(indexed=False)
     requiredTypeIcon = db.StringProperty(indexed=False)
     requiredTypeGroupID = db.IntegerProperty(indexed=False)
     requiredTypeGroupName = db.StringProperty(indexed=False)
@@ -55,7 +55,7 @@ class RamTypeRequirementLoader(bulkloader.Loader):
                                     ('typeName', safe_str),
                                     ('activityID', safe_int),
                                     ('activityName', safe_str),
-                                    ('typeGraphicID', safe_int),
+                                    ('typeIconID', safe_int),
                                     ('typeIcon', safe_str),
                                     ('typeGroupID', safe_int),
                                     ('typeGroupName', safe_str),
@@ -63,7 +63,7 @@ class RamTypeRequirementLoader(bulkloader.Loader):
                                     ('typeCategoryName', safe_str),
                                     ('requiredTypeID', safe_int),
                                     ('requiredTypeName', safe_str),
-                                    ('requiredTypeGraphicID', safe_int),
+                                    ('requiredTypeIconID', safe_int),
                                     ('requiredTypeIcon', safe_str),
                                     ('requiredTypeGroupID', safe_int),
                                     ('requiredTypeGroupName', safe_str),

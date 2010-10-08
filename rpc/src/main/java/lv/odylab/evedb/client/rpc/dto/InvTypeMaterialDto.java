@@ -5,13 +5,13 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class InvTypeMaterialDto implements Serializable {
-    private static final long serialVersionUID = -6845371919018218708L;
+    private static final long serialVersionUID = 6760053478915931294L;
 
     private Long materialTypeID;
     private String materialTypeName;
     private Long materialTypeCategoryID;
     private Long quantity;
-    private String materialTypeGraphicIcon;
+    private String materialTypeIcon;
 
     public Long getMaterialTypeID() {
         return materialTypeID;
@@ -45,11 +45,11 @@ public class InvTypeMaterialDto implements Serializable {
         this.quantity = quantity;
     }
 
-    public String getMaterialTypeGraphicIcon() {
-        return materialTypeGraphicIcon;
+    public String getMaterialTypeIcon() {
+        return materialTypeIcon;
     }
 
-    public void setMaterialTypeGraphicIcon(String materialTypeGraphicIcon) {
-        this.materialTypeGraphicIcon = materialTypeGraphicIcon;
+    public void setMaterialTypeIcon(String materialTypeIcon) {
+        this.materialTypeIcon = materialTypeIcon;
     }
 }

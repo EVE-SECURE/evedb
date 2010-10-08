@@ -4,7 +4,7 @@ from google.appengine.tools import bulkloader
 class InvTypeMaterial(db.Model):
     typeID = db.IntegerProperty()
     typeName = db.StringProperty()
-    typeGraphicID = db.IntegerProperty(indexed=False)
+    typeIconID = db.IntegerProperty(indexed=False)
     typeIcon = db.StringProperty(indexed=False)
     typeGroupID = db.IntegerProperty(indexed=False)
     typeGroupName = db.StringProperty(indexed=False)
@@ -12,7 +12,7 @@ class InvTypeMaterial(db.Model):
     typeCategoryName = db.StringProperty(indexed=False)
     materialTypeID = db.IntegerProperty()
     materialTypeName = db.StringProperty(indexed=False)
-    materialTypeGraphicID = db.IntegerProperty(indexed=False)
+    materialTypeIconID = db.IntegerProperty(indexed=False)
     materialTypeIcon = db.StringProperty(indexed=False)
     materialTypeGroupID = db.IntegerProperty(indexed=False)
     materialTypeGroupName = db.StringProperty(indexed=False)
@@ -49,7 +49,7 @@ class InvTypeMaterialLoader(bulkloader.Loader):
         bulkloader.Loader.__init__(self, 'InvTypeMaterial',
                                    [('typeID', safe_int),
                                     ('typeName', safe_str),
-                                    ('typeGraphicID', safe_int),
+                                    ('typeIconID', safe_int),
                                     ('typeIcon', safe_str),
                                     ('typeGroupID', safe_int),
                                     ('typeGroupName', safe_str),
@@ -57,7 +57,7 @@ class InvTypeMaterialLoader(bulkloader.Loader):
                                     ('typeCategoryName', safe_str),
                                     ('materialTypeID', safe_int),
                                     ('materialTypeName', safe_str),
-                                    ('materialTypeGraphicID', safe_int),
+                                    ('materialTypeIconID', safe_int),
                                     ('materialTypeIcon', safe_str),
                                     ('materialTypeGroupID', safe_int),
                                     ('materialTypeGroupName', safe_str),

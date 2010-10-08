@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvTypeMaterial implements Serializable {
-    private static final long serialVersionUID = -7572727474660064936L;
+    private static final long serialVersionUID = 2907188354983908540L;
 
     @Id
     private Long id;
@@ -16,7 +16,7 @@ public class InvTypeMaterial implements Serializable {
     private Long typeID;
     @Indexed
     private String typeName;
-    private Long typeGraphicID;
+    private Long typeIconID;
     private String typeIcon;
     private Long typeGroupID;
     private String typeGroupName;
@@ -25,7 +25,7 @@ public class InvTypeMaterial implements Serializable {
     @Indexed
     private Long materialTypeID;
     private String materialTypeName;
-    private Long materialTypeGraphicID;
+    private Long materialTypeIconID;
     private String materialTypeIcon;
     private Long materialTypeGroupID;
     private String materialTypeGroupName;
@@ -59,12 +59,12 @@ public class InvTypeMaterial implements Serializable {
         this.typeName = typeName;
     }
 
-    public Long getTypeGraphicID() {
-        return typeGraphicID;
+    public Long getTypeIconID() {
+        return typeIconID;
     }
 
-    public void setTypeGraphicID(Long typeGraphicID) {
-        this.typeGraphicID = typeGraphicID;
+    public void setTypeIconID(Long typeIconID) {
+        this.typeIconID = typeIconID;
     }
 
     public String getTypeIcon() {
@@ -123,12 +123,12 @@ public class InvTypeMaterial implements Serializable {
         this.materialTypeName = materialTypeName;
     }
 
-    public Long getMaterialTypeGraphicID() {
-        return materialTypeGraphicID;
+    public Long getMaterialTypeIconID() {
+        return materialTypeIconID;
     }
 
-    public void setMaterialTypeGraphicID(Long materialTypeGraphicID) {
-        this.materialTypeGraphicID = materialTypeGraphicID;
+    public void setMaterialTypeIconID(Long materialTypeIconID) {
+        this.materialTypeIconID = materialTypeIconID;
     }
 
     public String getMaterialTypeIcon() {
