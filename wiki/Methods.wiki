@@ -10,6 +10,8 @@
 || [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName] || /typeName || JSON/XML || List of base materials for given item typeName ||
 || [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID] || /typeID || JSON/XML || Blueprint information for given blueprint typeID ||
 || [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName] || /typeName || JSON/XML || Blueprint information for given blueprint typeName ||
+|| [MethodBlueprintDetailsForTypeID /blueprintDetailsForTypeID] || /typeID || JSON/XML || Blueprint details for given blueprint typeID ||
+|| [MethodBlueprintDetailsForTypeName /blueprintDetailsForTypeName] || /typeName || JSON/XML || Blueprint details for given blueprint typeName ||
 || [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID] || /typeID || JSON/XML || List of extra materials for given item typeID ||
 || [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName] || /typeName || JSON/XML || List of extra materials for given item typeID ||
 || [MethodLookupBlueprintType /lookupBlueprintType] || /partialTypeName || JSON/XML || List of matching blueprint item types ||
