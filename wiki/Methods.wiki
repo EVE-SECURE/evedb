@@ -5,18 +5,18 @@
 
 == Summary ==
 
-|| *Method* || *Parameter* || *Response* || *dom100* || *tyr101* || *Description* ||
-|| [MethodBaseMaterialsForTypeID /baseMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of base materials for given item typeID ||
-|| [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of base materials for given item typeName ||
-|| [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID] || /typeID || JSON/XML || YES || YES || Blueprint information for given blueprint typeID ||
-|| [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName] || /typeName || JSON/XML || YES || YES || Blueprint information for given blueprint typeName ||
-|| [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID] || /typeID || JSON/XML || YES || YES || List of extra materials for given item typeID ||
-|| [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName] || /typeName || JSON/XML || YES || YES || List of extra materials for given item typeID ||
-|| [MethodLookupBlueprintType /lookupBlueprintType] || /partialTypeName || JSON/XML || YES || YES || List of matching blueprint item types ||
-|| [MethodLookupResourceType /lookupResourceType] || /partialTypeName || JSON/XML || YES || YES || List of matching resource item types ||
-|| [MethodLookupType /lookupType] || /partialTypeName || JSON/XML || YES || YES || List of matching any item types ||
-|| [MethodTypeBasicInfoByTypeID /typeBasicInfoByTypeID] || /typeID || JSON/XML || YES || YES || Item type basic information for given typeID ||
-|| [MethodTypeBasicInfoByTypeName /typeBasicInfoByTypeName] || /typeName || JSON/XML || YES || YES || Item type basic information for given typeName ||
-|| [MethodTypeIdToTypeName /typeIdToTypeName] || /typeName || TEXT || YES || YES || Convert item typeID to typeName ||
-|| [MethodTypeNameToTypeID /typeNameToTypeID] || /typeID || TEXT || YES || YES || Convert item typeName to typeID ||
-|| [MethodVersion /version] || NONE || TEXT || YES || YES || Application version ||
+|| *Method* || *Parameter* || *Response* || *Description* ||
+|| [MethodBaseMaterialsForTypeID /baseMaterialsForTypeID] || /typeID || JSON/XML || List of base materials for given item typeID ||
+|| [MethodBaseMaterialsForTypeName /baseMaterialsForTypeName] || /typeName || JSON/XML || List of base materials for given item typeName ||
+|| [MethodBlueprintTypeByTypeID /blueprintTypeByTypeID] || /typeID || JSON/XML || Blueprint information for given blueprint typeID ||
+|| [MethodBlueprintTypeByTypeName /blueprintTypeByTypeName] || /typeName || JSON/XML || Blueprint information for given blueprint typeName ||
+|| [MethodExtraMaterialsForTypeID /extraMaterialsForTypeID] || /typeID || JSON/XML || List of extra materials for given item typeID ||
+|| [MethodExtraMaterialsForTypeName /extraMaterialsForTypeName] || /typeName || JSON/XML || List of extra materials for given item typeID ||
+|| [MethodLookupBlueprintType /lookupBlueprintType] || /partialTypeName || JSON/XML || List of matching blueprint item types ||
+|| [MethodLookupResourceType /lookupResourceType] || /partialTypeName || JSON/XML || List of matching resource item types ||
+|| [MethodLookupType /lookupType] || /partialTypeName || JSON/XML || List of matching any item types ||
+|| [MethodTypeBasicInfoByTypeID /typeBasicInfoByTypeID] || /typeID || JSON/XML || Item type basic information for given typeID ||
+|| [MethodTypeBasicInfoByTypeName /typeBasicInfoByTypeName] || /typeName || JSON/XML || Item type basic information for given typeName ||
+|| [MethodTypeIdToTypeName /typeIdToTypeName] || /typeName || TEXT || Convert item typeID to typeName ||
+|| [MethodTypeNameToTypeID /typeNameToTypeID] || /typeID || TEXT || Convert item typeName to typeID ||
+|| [MethodVersion /version] || NONE || TEXT || Application version ||
