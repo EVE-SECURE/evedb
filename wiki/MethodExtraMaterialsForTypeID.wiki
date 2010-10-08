@@ -14,8 +14,8 @@ List of extra materials for given item typeID.
 || requiredTypeGroupID || String ||
 || requiredTypeGroupName || String ||
 || requiredTypeID || Number ||
-|| requiredTypeName || String ||
 || requiredTypeIcon || String ||
+|| requiredTypeName || String ||
 
 == Examples ==
 
