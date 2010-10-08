@@ -123,5 +123,4 @@ List of extra materials for given item typeName.
     <requiredTypeName>Incognito Ship Data Interface</requiredTypeName>
   </row>
 </rowset>
-
 }}}
