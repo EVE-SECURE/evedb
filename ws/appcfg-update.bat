@@ -1,1 +1,1 @@
-appcfg update target/evedb-ws-1.5
+appcfg update target/evedb-ws-1.5.1
