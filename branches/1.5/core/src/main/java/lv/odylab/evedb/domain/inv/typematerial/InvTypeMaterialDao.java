@@ -31,6 +31,13 @@ public class InvTypeMaterialDao {
         return invTypeMaterials;
     }
 
+    public List<InvTypeMaterial> getForTypeIdWithoutCheck(Long typeID) {
+        return objectifyFactory.begin().query(InvTypeMaterial.class)
+                .filter("dumpVersion", dumpVersion)
+                .filter("typeID", typeID)
+                .order("materialTypeID").list();
+    }
+
     public List<InvTypeMaterial> getForTypeName(String typeName) {
         List<InvTypeMaterial> invTypeMaterials = objectifyFactory.begin().query(InvTypeMaterial.class)
                 .filter("dumpVersion", dumpVersion)
