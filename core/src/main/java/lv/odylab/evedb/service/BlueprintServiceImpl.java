@@ -28,16 +28,16 @@ public class BlueprintServiceImpl implements BlueprintService {
     @Override
     public BlueprintDetails getBlueprintDetailsForTypeID(Long typeID) {
         InvBlueprintType invBlueprintType = invBlueprintTypeDao.getByTypeID(typeID);
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeID(invBlueprintType.getProductTypeID());
-        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeID(typeID);
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(invBlueprintType.getProductTypeID());
+        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeIdWithoutCheck(typeID);
         return createBlueprintDetails(invBlueprintType, invTypeMaterials, ramTypeRequirements);
     }
 
     @Override
     public BlueprintDetails getBlueprintDetailsForTypeName(String typeName) {
         InvBlueprintType invBlueprintType = invBlueprintTypeDao.getByTypeName(typeName);
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeID(invBlueprintType.getProductTypeID());
-        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeID(invBlueprintType.getBlueprintTypeID());
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(invBlueprintType.getProductTypeID());
+        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeIdWithoutCheck(invBlueprintType.getBlueprintTypeID());
         return createBlueprintDetails(invBlueprintType, invTypeMaterials, ramTypeRequirements);
     }
 
@@ -96,7 +96,7 @@ public class BlueprintServiceImpl implements BlueprintService {
         }
 
         for (RamTypeRequirement ramTypeRequirement : recyclableRequirements) {
-            List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeID(ramTypeRequirement.getRequiredTypeID());
+            List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(ramTypeRequirement.getRequiredTypeID());
             for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
                 InvTypeMaterial existingInvTypeMaterial = typeIdToInvTypeMaterialMap.get(invTypeMaterial.getMaterialTypeID());
                 if (existingInvTypeMaterial != null) {
