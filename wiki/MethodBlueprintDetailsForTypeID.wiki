@@ -8,7 +8,7 @@ Blueprint details for given blueprint typeID.
 
 || copyingRequirementDtos || List<ramTypeRequirementDto> ||
 || invBlueprintTypeDto || invBlueprintTypeDto ||
-|| inventionRequirementDtos || List<ramTypeRequirementDto> ||
+|| inventionRequirementDtos || List<<ramTypeRequirementDto>> ||
 || manufacturingRequirementDtos || List<ramTypeRequirementDto> ||
 || materialDtos || List<invTypeMaterialDto> ||
 || materialProductivityRequirementDtos || List<ramTypeRequirementDto> ||
