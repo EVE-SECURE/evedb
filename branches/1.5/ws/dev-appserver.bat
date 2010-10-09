@@ -1,1 +1,1 @@
-dev_appserver target/evedb-ws-1.5
+dev_appserver target/evedb-ws-1.5.1
