@@ -7,3 +7,678 @@ Blueprint details for given blueprint typeID.
 == Attributes ==
 
 == Examples ==
+
+[http://odylab-evedb.appspot.com/blueprintDetailsForTypeID/1234567890 blueprintDetailsForTypeID/1234567890] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/blueprintDetailsForTypeID/blah-blah blueprintDetailsForTypeID/blah-blah] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/blueprintDetailsForTypeID/12024 blueprintDetailsForTypeID/12024] (JSON)
+{{{
+{ "copyingRequirementDtos" : [ { "activityID" : 5,
+        "activityName" : "Copying",
+        "damagePerJob" : "1.0",
+        "quantity" : 140,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 280,
+        "requiredTypeGroupName" : "General",
+        "requiredTypeID" : 3812,
+        "requiredTypeIcon" : "10_16",
+        "requiredTypeName" : "Data Sheets"
+      },
+      { "activityID" : 5,
+        "activityName" : "Copying",
+        "damagePerJob" : "0.0",
+        "quantity" : 5,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11450,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Gallentean Starship Engineering"
+      },
+      { "activityID" : 5,
+        "activityName" : "Copying",
+        "damagePerJob" : "0.0",
+        "quantity" : 3,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11452,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Mechanical Engineering"
+      },
+      { "activityID" : 5,
+        "activityName" : "Copying",
+        "damagePerJob" : "0.95",
+        "quantity" : 12,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 332,
+        "requiredTypeGroupName" : "Tool",
+        "requiredTypeID" : 11467,
+        "requiredTypeIcon" : "41_01",
+        "requiredTypeName" : "R.Db - Duvolle Labs"
+      }
+    ],
+  "invBlueprintTypeDto" : { "blueprintTypeID" : 12024,
+      "blueprintTypeName" : "Deimos Blueprint",
+      "maxProductionLimit" : 10,
+      "productCategoryID" : 6,
+      "productTypeID" : 12023,
+      "productTypeName" : "Deimos",
+      "productionTime" : 160000,
+      "productivityModifier" : 32000,
+      "researchCopyTime" : 1600000,
+      "researchMaterialTime" : 640000,
+      "researchProductivityTime" : 960000,
+      "researchTechTime" : 2400000,
+      "techLevel" : 2,
+      "wasteFactor" : 10
+    },
+  "inventionRequirementDtos" : [  ],
+  "manufacturingRequirementDtos" : [ { "activityID" : 1,
+        "activityName" : "Manufacturing",
+        "damagePerJob" : "1.0",
+        "quantity" : 1,
+        "requiredTypeCategoryID" : 6,
+        "requiredTypeGroupID" : 26,
+        "requiredTypeGroupName" : "Cruiser",
+        "requiredTypeID" : 627,
+        "requiredTypeName" : "Thorax"
+      },
+      { "activityID" : 1,
+        "activityName" : "Manufacturing",
+        "damagePerJob" : "0.0",
+        "quantity" : 5,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 268,
+        "requiredTypeGroupName" : "Industry",
+        "requiredTypeID" : 3380,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Industry"
+      },
+      { "activityID" : 1,
+        "activityName" : "Manufacturing",
+        "damagePerJob" : "0.0",
+        "quantity" : 4,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 269,
+        "requiredTypeGroupName" : "Mechanic",
+        "requiredTypeID" : 3397,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Cruiser Construction"
+      },
+      { "activityID" : 1,
+        "activityName" : "Manufacturing",
+        "damagePerJob" : "0.0",
+        "quantity" : 1,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11450,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Gallentean Starship Engineering"
+      },
+      { "activityID" : 1,
+        "activityName" : "Manufacturing",
+        "damagePerJob" : "0.0",
+        "quantity" : 1,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11452,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Mechanical Engineering"
+      },
+      { "activityID" : 1,
+        "activityName" : "Manufacturing",
+        "damagePerJob" : "0.95",
+        "quantity" : 12,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 332,
+        "requiredTypeGroupName" : "Tool",
+        "requiredTypeID" : 11478,
+        "requiredTypeIcon" : "41_02",
+        "requiredTypeName" : "R.A.M.- Starship Tech"
+      }
+    ],
+  "materialDtos" : [ { "materialTypeCategoryID" : 43,
+        "materialTypeID" : 3828,
+        "materialTypeIcon" : "06_05",
+        "materialTypeName" : "Construction Blocks",
+        "quantity" : 125
+      },
+      { "materialTypeCategoryID" : 4,
+        "materialTypeID" : 11399,
+        "materialTypeIcon" : "35_02",
+        "materialTypeName" : "Morphite",
+        "quantity" : 100
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11531,
+        "materialTypeIcon" : "37_02",
+        "materialTypeName" : "Ion Thruster",
+        "quantity" : 50
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11535,
+        "materialTypeIcon" : "37_06",
+        "materialTypeName" : "Magnetometric Sensor Cluster",
+        "quantity" : 110
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11541,
+        "materialTypeIcon" : "37_10",
+        "materialTypeName" : "Photon Microprocessor",
+        "quantity" : 900
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11545,
+        "materialTypeIcon" : "37_14",
+        "materialTypeName" : "Crystalline Carbonide Armor Plate",
+        "quantity" : 3750
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11547,
+        "materialTypeIcon" : "39_02",
+        "materialTypeName" : "Fusion Reactor Unit",
+        "quantity" : 30
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11553,
+        "materialTypeIcon" : "39_06",
+        "materialTypeName" : "Oscillator Capacitor Unit",
+        "quantity" : 400
+      },
+      { "materialTypeCategoryID" : 17,
+        "materialTypeID" : 11556,
+        "materialTypeIcon" : "39_10",
+        "materialTypeName" : "Pulse Shield Emitter",
+        "quantity" : 300
+      }
+    ],
+  "materialProductivityRequirementDtos" : [ { "activityID" : 4,
+        "activityName" : "Researching Material Productivity",
+        "damagePerJob" : "0.0",
+        "quantity" : 5,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 3409,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Metallurgy"
+      },
+      { "activityID" : 4,
+        "activityName" : "Researching Material Productivity",
+        "damagePerJob" : "1.0",
+        "quantity" : 36,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 280,
+        "requiredTypeGroupName" : "General",
+        "requiredTypeID" : 3814,
+        "requiredTypeIcon" : "10_16",
+        "requiredTypeName" : "Reports"
+      },
+      { "activityID" : 4,
+        "activityName" : "Researching Material Productivity",
+        "damagePerJob" : "1.0",
+        "quantity" : 20,
+        "requiredTypeCategoryID" : 43,
+        "requiredTypeGroupID" : 1034,
+        "requiredTypeGroupName" : "Refined Commodities",
+        "requiredTypeID" : 9836,
+        "requiredTypeIcon" : "24_08",
+        "requiredTypeName" : "Consumer Electronics"
+      },
+      { "activityID" : 4,
+        "activityName" : "Researching Material Productivity",
+        "damagePerJob" : "0.0",
+        "quantity" : 3,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11450,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Gallentean Starship Engineering"
+      },
+      { "activityID" : 4,
+        "activityName" : "Researching Material Productivity",
+        "damagePerJob" : "0.0",
+        "quantity" : 2,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11452,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Mechanical Engineering"
+      },
+      { "activityID" : 4,
+        "activityName" : "Researching Material Productivity",
+        "damagePerJob" : "0.6",
+        "quantity" : 6,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 332,
+        "requiredTypeGroupName" : "Tool",
+        "requiredTypeID" : 11467,
+        "requiredTypeIcon" : "41_01",
+        "requiredTypeName" : "R.Db - Duvolle Labs"
+      }
+    ],
+  "reverseEngineeringRequirementDtos" : [  ],
+  "timeProductivityRequirementDtos" : [ { "activityID" : 3,
+        "activityName" : "Researching Time Productivity",
+        "damagePerJob" : "0.0",
+        "quantity" : 5,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 3403,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Research"
+      },
+      { "activityID" : 3,
+        "activityName" : "Researching Time Productivity",
+        "damagePerJob" : "1.0",
+        "quantity" : 36,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 280,
+        "requiredTypeGroupName" : "General",
+        "requiredTypeID" : 3814,
+        "requiredTypeIcon" : "10_16",
+        "requiredTypeName" : "Reports"
+      },
+      { "activityID" : 3,
+        "activityName" : "Researching Time Productivity",
+        "damagePerJob" : "1.0",
+        "quantity" : 20,
+        "requiredTypeCategoryID" : 43,
+        "requiredTypeGroupID" : 1034,
+        "requiredTypeGroupName" : "Refined Commodities",
+        "requiredTypeID" : 9836,
+        "requiredTypeIcon" : "24_08",
+        "requiredTypeName" : "Consumer Electronics"
+      },
+      { "activityID" : 3,
+        "activityName" : "Researching Time Productivity",
+        "damagePerJob" : "0.0",
+        "quantity" : 4,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11450,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Gallentean Starship Engineering"
+      },
+      { "activityID" : 3,
+        "activityName" : "Researching Time Productivity",
+        "damagePerJob" : "0.0",
+        "quantity" : 3,
+        "requiredTypeCategoryID" : 16,
+        "requiredTypeGroupID" : 270,
+        "requiredTypeGroupName" : "Science",
+        "requiredTypeID" : 11452,
+        "requiredTypeIcon" : "50_11",
+        "requiredTypeName" : "Mechanical Engineering"
+      },
+      { "activityID" : 3,
+        "activityName" : "Researching Time Productivity",
+        "damagePerJob" : "0.8",
+        "quantity" : 6,
+        "requiredTypeCategoryID" : 17,
+        "requiredTypeGroupID" : 332,
+        "requiredTypeGroupName" : "Tool",
+        "requiredTypeID" : 11467,
+        "requiredTypeIcon" : "41_01",
+        "requiredTypeName" : "R.Db - Duvolle Labs"
+      }
+    ]
+}
+}}}
+
+[http://odylab-evedb.appspot.com/blueprintDetailsForTypeID/12024 blueprintDetailsForTypeID/12024] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<blueprintDetailsDto>
+  <copyingRequirementDtos>
+    <activityID>5</activityID>
+    <activityName>Copying</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>140</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>280</requiredTypeGroupID>
+    <requiredTypeGroupName>General</requiredTypeGroupName>
+    <requiredTypeID>3812</requiredTypeID>
+    <requiredTypeIcon>10_16</requiredTypeIcon>
+    <requiredTypeName>Data Sheets</requiredTypeName>
+  </copyingRequirementDtos>
+  <copyingRequirementDtos>
+    <activityID>5</activityID>
+    <activityName>Copying</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>5</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11450</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+  </copyingRequirementDtos>
+  <copyingRequirementDtos>
+    <activityID>5</activityID>
+    <activityName>Copying</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>3</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11452</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Mechanical Engineering</requiredTypeName>
+  </copyingRequirementDtos>
+  <copyingRequirementDtos>
+    <activityID>5</activityID>
+    <activityName>Copying</activityName>
+    <damagePerJob>0.95</damagePerJob>
+    <quantity>12</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>332</requiredTypeGroupID>
+    <requiredTypeGroupName>Tool</requiredTypeGroupName>
+    <requiredTypeID>11467</requiredTypeID>
+    <requiredTypeIcon>41_01</requiredTypeIcon>
+    <requiredTypeName>R.Db - Duvolle Labs</requiredTypeName>
+  </copyingRequirementDtos>
+  <invBlueprintTypeDto>
+    <blueprintTypeID>12024</blueprintTypeID>
+    <blueprintTypeName>Deimos Blueprint</blueprintTypeName>
+    <maxProductionLimit>10</maxProductionLimit>
+    <productCategoryID>6</productCategoryID>
+    <productTypeID>12023</productTypeID>
+    <productTypeName>Deimos</productTypeName>
+    <productionTime>160000</productionTime>
+    <productivityModifier>32000</productivityModifier>
+    <researchCopyTime>1600000</researchCopyTime>
+    <researchMaterialTime>640000</researchMaterialTime>
+    <researchProductivityTime>960000</researchProductivityTime>
+    <researchTechTime>2400000</researchTechTime>
+    <techLevel>2</techLevel>
+    <wasteFactor>10</wasteFactor>
+  </invBlueprintTypeDto>
+  <manufacturingRequirementDtos>
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>1</quantity>
+    <requiredTypeCategoryID>6</requiredTypeCategoryID>
+    <requiredTypeGroupID>26</requiredTypeGroupID>
+    <requiredTypeGroupName>Cruiser</requiredTypeGroupName>
+    <requiredTypeID>627</requiredTypeID>
+    <requiredTypeName>Thorax</requiredTypeName>
+  </manufacturingRequirementDtos>
+  <manufacturingRequirementDtos>
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>5</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>268</requiredTypeGroupID>
+    <requiredTypeGroupName>Industry</requiredTypeGroupName>
+    <requiredTypeID>3380</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Industry</requiredTypeName>
+  </manufacturingRequirementDtos>
+  <manufacturingRequirementDtos>
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>4</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>269</requiredTypeGroupID>
+    <requiredTypeGroupName>Mechanic</requiredTypeGroupName>
+    <requiredTypeID>3397</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Cruiser Construction</requiredTypeName>
+  </manufacturingRequirementDtos>
+  <manufacturingRequirementDtos>
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>1</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11450</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+  </manufacturingRequirementDtos>
+  <manufacturingRequirementDtos>
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>1</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11452</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Mechanical Engineering</requiredTypeName>
+  </manufacturingRequirementDtos>
+  <manufacturingRequirementDtos>
+    <activityID>1</activityID>
+    <activityName>Manufacturing</activityName>
+    <damagePerJob>0.95</damagePerJob>
+    <quantity>12</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>332</requiredTypeGroupID>
+    <requiredTypeGroupName>Tool</requiredTypeGroupName>
+    <requiredTypeID>11478</requiredTypeID>
+    <requiredTypeIcon>41_02</requiredTypeIcon>
+    <requiredTypeName>R.A.M.- Starship Tech</requiredTypeName>
+  </manufacturingRequirementDtos>
+  <materialDtos>
+    <materialTypeCategoryID>43</materialTypeCategoryID>
+    <materialTypeID>3828</materialTypeID>
+    <materialTypeIcon>06_05</materialTypeIcon>
+    <materialTypeName>Construction Blocks</materialTypeName>
+    <quantity>125</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>4</materialTypeCategoryID>
+    <materialTypeID>11399</materialTypeID>
+    <materialTypeIcon>35_02</materialTypeIcon>
+    <materialTypeName>Morphite</materialTypeName>
+    <quantity>100</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11531</materialTypeID>
+    <materialTypeIcon>37_02</materialTypeIcon>
+    <materialTypeName>Ion Thruster</materialTypeName>
+    <quantity>50</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11535</materialTypeID>
+    <materialTypeIcon>37_06</materialTypeIcon>
+    <materialTypeName>Magnetometric Sensor Cluster</materialTypeName>
+    <quantity>110</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11541</materialTypeID>
+    <materialTypeIcon>37_10</materialTypeIcon>
+    <materialTypeName>Photon Microprocessor</materialTypeName>
+    <quantity>900</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11545</materialTypeID>
+    <materialTypeIcon>37_14</materialTypeIcon>
+    <materialTypeName>Crystalline Carbonide Armor Plate</materialTypeName>
+    <quantity>3750</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11547</materialTypeID>
+    <materialTypeIcon>39_02</materialTypeIcon>
+    <materialTypeName>Fusion Reactor Unit</materialTypeName>
+    <quantity>30</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11553</materialTypeID>
+    <materialTypeIcon>39_06</materialTypeIcon>
+    <materialTypeName>Oscillator Capacitor Unit</materialTypeName>
+    <quantity>400</quantity>
+  </materialDtos>
+  <materialDtos>
+    <materialTypeCategoryID>17</materialTypeCategoryID>
+    <materialTypeID>11556</materialTypeID>
+    <materialTypeIcon>39_10</materialTypeIcon>
+    <materialTypeName>Pulse Shield Emitter</materialTypeName>
+    <quantity>300</quantity>
+  </materialDtos>
+  <materialProductivityRequirementDtos>
+    <activityID>4</activityID>
+    <activityName>Researching Material Productivity</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>5</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>3409</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Metallurgy</requiredTypeName>
+  </materialProductivityRequirementDtos>
+  <materialProductivityRequirementDtos>
+    <activityID>4</activityID>
+    <activityName>Researching Material Productivity</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>36</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>280</requiredTypeGroupID>
+    <requiredTypeGroupName>General</requiredTypeGroupName>
+    <requiredTypeID>3814</requiredTypeID>
+    <requiredTypeIcon>10_16</requiredTypeIcon>
+    <requiredTypeName>Reports</requiredTypeName>
+  </materialProductivityRequirementDtos>
+  <materialProductivityRequirementDtos>
+    <activityID>4</activityID>
+    <activityName>Researching Material Productivity</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>20</quantity>
+    <requiredTypeCategoryID>43</requiredTypeCategoryID>
+    <requiredTypeGroupID>1034</requiredTypeGroupID>
+    <requiredTypeGroupName>Refined Commodities</requiredTypeGroupName>
+    <requiredTypeID>9836</requiredTypeID>
+    <requiredTypeIcon>24_08</requiredTypeIcon>
+    <requiredTypeName>Consumer Electronics</requiredTypeName>
+  </materialProductivityRequirementDtos>
+  <materialProductivityRequirementDtos>
+    <activityID>4</activityID>
+    <activityName>Researching Material Productivity</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>3</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11450</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+  </materialProductivityRequirementDtos>
+  <materialProductivityRequirementDtos>
+    <activityID>4</activityID>
+    <activityName>Researching Material Productivity</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>2</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11452</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Mechanical Engineering</requiredTypeName>
+  </materialProductivityRequirementDtos>
+  <materialProductivityRequirementDtos>
+    <activityID>4</activityID>
+    <activityName>Researching Material Productivity</activityName>
+    <damagePerJob>0.6</damagePerJob>
+    <quantity>6</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>332</requiredTypeGroupID>
+    <requiredTypeGroupName>Tool</requiredTypeGroupName>
+    <requiredTypeID>11467</requiredTypeID>
+    <requiredTypeIcon>41_01</requiredTypeIcon>
+    <requiredTypeName>R.Db - Duvolle Labs</requiredTypeName>
+  </materialProductivityRequirementDtos>
+  <timeProductivityRequirementDtos>
+    <activityID>3</activityID>
+    <activityName>Researching Time Productivity</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>5</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>3403</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Research</requiredTypeName>
+  </timeProductivityRequirementDtos>
+  <timeProductivityRequirementDtos>
+    <activityID>3</activityID>
+    <activityName>Researching Time Productivity</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>36</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>280</requiredTypeGroupID>
+    <requiredTypeGroupName>General</requiredTypeGroupName>
+    <requiredTypeID>3814</requiredTypeID>
+    <requiredTypeIcon>10_16</requiredTypeIcon>
+    <requiredTypeName>Reports</requiredTypeName>
+  </timeProductivityRequirementDtos>
+  <timeProductivityRequirementDtos>
+    <activityID>3</activityID>
+    <activityName>Researching Time Productivity</activityName>
+    <damagePerJob>1.0</damagePerJob>
+    <quantity>20</quantity>
+    <requiredTypeCategoryID>43</requiredTypeCategoryID>
+    <requiredTypeGroupID>1034</requiredTypeGroupID>
+    <requiredTypeGroupName>Refined Commodities</requiredTypeGroupName>
+    <requiredTypeID>9836</requiredTypeID>
+    <requiredTypeIcon>24_08</requiredTypeIcon>
+    <requiredTypeName>Consumer Electronics</requiredTypeName>
+  </timeProductivityRequirementDtos>
+  <timeProductivityRequirementDtos>
+    <activityID>3</activityID>
+    <activityName>Researching Time Productivity</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>4</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11450</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+  </timeProductivityRequirementDtos>
+  <timeProductivityRequirementDtos>
+    <activityID>3</activityID>
+    <activityName>Researching Time Productivity</activityName>
+    <damagePerJob>0.0</damagePerJob>
+    <quantity>3</quantity>
+    <requiredTypeCategoryID>16</requiredTypeCategoryID>
+    <requiredTypeGroupID>270</requiredTypeGroupID>
+    <requiredTypeGroupName>Science</requiredTypeGroupName>
+    <requiredTypeID>11452</requiredTypeID>
+    <requiredTypeIcon>50_11</requiredTypeIcon>
+    <requiredTypeName>Mechanical Engineering</requiredTypeName>
+  </timeProductivityRequirementDtos>
+  <timeProductivityRequirementDtos>
+    <activityID>3</activityID>
+    <activityName>Researching Time Productivity</activityName>
+    <damagePerJob>0.8</damagePerJob>
+    <quantity>6</quantity>
+    <requiredTypeCategoryID>17</requiredTypeCategoryID>
+    <requiredTypeGroupID>332</requiredTypeGroupID>
+    <requiredTypeGroupName>Tool</requiredTypeGroupName>
+    <requiredTypeID>11467</requiredTypeID>
+    <requiredTypeIcon>41_01</requiredTypeIcon>
+    <requiredTypeName>R.Db - Duvolle Labs</requiredTypeName>
+  </timeProductivityRequirementDtos>
+</blueprintDetailsDto>
+}}}
