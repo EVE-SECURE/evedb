@@ -6,6 +6,15 @@ Blueprint details for given blueprint typeID.
 
 == Attributes ==
 
+|| copyingRequirementDtos || List<ramTypeRequirementDto> ||
+|| invBlueprintTypeDto || invBlueprintTypeDto ||
+|| inventionRequirementDtos || List<ramTypeRequirementDto> ||
+|| manufacturingRequirementDtos || List<ramTypeRequirementDto> ||
+|| materialDtos || List<invTypeMaterialDto> ||
+|| materialProductivityRequirementDtos || List<ramTypeRequirementDto> ||
+|| reverseEngineeringRequirementDtos || List<ramTypeRequirementDto> ||
+|| timeProductivityRequirementDtos || List<ramTypeRequirementDto> ||
+
 == Examples ==
 
 [http://odylab-evedb.appspot.com/blueprintDetailsForTypeID/1234567890 blueprintDetailsForTypeID/1234567890] (HTTP 400)
