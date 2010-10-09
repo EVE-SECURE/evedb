@@ -109,6 +109,6 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testVersion() {
-        assertEquals("1.6-SNAPSHOT-tyr104", client.getVersion());
+        assertEquals("1.5.1-tyr104", client.getVersion());
     }
 }
