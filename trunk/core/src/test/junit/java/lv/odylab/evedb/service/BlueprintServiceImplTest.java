@@ -97,9 +97,9 @@ public class BlueprintServiceImplTest {
 
         when(invBlueprintTypeDao.getByTypeID(1L)).thenReturn(invBlueprintType);
         when(invBlueprintTypeDao.getByTypeName("typeName")).thenReturn(invBlueprintType);
-        when(invTypeMaterialDao.getForTypeID(2L)).thenReturn(invTypeMaterials);
-        when(invTypeMaterialDao.getForTypeID(6L)).thenReturn(invTypeMaterialsForRequirement);
-        when(ramTypeRequirementDao.getForTypeID(1L)).thenReturn(ramTypeRequirements);
+        when(invTypeMaterialDao.getForTypeIdWithoutCheck(2L)).thenReturn(invTypeMaterials);
+        when(invTypeMaterialDao.getForTypeIdWithoutCheck(6L)).thenReturn(invTypeMaterialsForRequirement);
+        when(ramTypeRequirementDao.getForTypeIdWithoutCheck(1L)).thenReturn(ramTypeRequirements);
     }
 
     @Test

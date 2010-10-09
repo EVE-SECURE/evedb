@@ -31,6 +31,13 @@ public class RamTypeRequirementDao {
         return ramTypeRequirements;
     }
 
+    public List<RamTypeRequirement> getForTypeIdWithoutCheck(Long typeID) {
+        return objectifyFactory.begin().query(RamTypeRequirement.class)
+                .filter("dumpVersion", dumpVersion)
+                .filter("typeID", typeID)
+                .order("requiredTypeID").list();
+    }
+
     public List<RamTypeRequirement> getForTypeName(String typeName) {
         List<RamTypeRequirement> ramTypeRequirements = objectifyFactory.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
