@@ -2,6 +2,15 @@
 
 = Release notes =
 
+== 2010.10.??, version 1.6 ==
+  ** Improved performance **
+
+  * Issue 18. Add schema migration/deletion agents
+  * Issue 17. Switch to app.yaml configuration
+  * Issue 16. Improve performance be removing Guice
+  * Issue 15. HTTP 400 on blueprintDetailsForTypeID
+  * Issue 9. HTTP 406 in Internet Explorer
+
 == 2010.10.09, version 1.5 ==
   * *Migrated to tyr104, older versions are not supported anymore (dom100, tyr101)*
   * *New methods blueprintDetailsForTypeID and blueprintDetailsForTypeName*
