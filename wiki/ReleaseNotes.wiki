@@ -3,7 +3,7 @@
 = Release notes =
 
 == 2010.10.??, version 1.6 ==
-  ** Improved performance **
+  * *Improved performance*
 
   * Issue 18. Add schema migration/deletion agents
   * Issue 17. Switch to app.yaml configuration
