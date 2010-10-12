@@ -1,6 +1,9 @@
 package lv.odylab.evedb.servlet;
 
 import com.google.gson.JsonParseException;
+import lv.odylab.evedb.client.BadRequestException;
+import lv.odylab.evedb.client.EveDbWsClient;
+import lv.odylab.evedb.client.EveDbWsClientImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

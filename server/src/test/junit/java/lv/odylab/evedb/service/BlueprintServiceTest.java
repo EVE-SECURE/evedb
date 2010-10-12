@@ -19,7 +19,7 @@ import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BlueprintServiceImplTest {
+public class BlueprintServiceTest {
     @Mock
     private InvBlueprintTypeDao invBlueprintTypeDao;
     @Mock
@@ -30,7 +30,7 @@ public class BlueprintServiceImplTest {
 
     @Before
     public void setUp() {
-        blueprintService = new BlueprintServiceImpl(invBlueprintTypeDao, invTypeMaterialDao, ramTypeRequirementDao);
+        blueprintService = new BlueprintService(invBlueprintTypeDao, invTypeMaterialDao, ramTypeRequirementDao);
 
         InvBlueprintType invBlueprintType = new InvBlueprintType();
         invBlueprintType.setBlueprintTypeID(1L);

@@ -1,4 +1,4 @@
-package lv.odylab.evedb.servlet;
+package lv.odylab.evedb.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

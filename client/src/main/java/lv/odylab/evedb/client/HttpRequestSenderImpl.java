@@ -1,4 +1,4 @@
-package lv.odylab.evedb.servlet;
+package lv.odylab.evedb.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;

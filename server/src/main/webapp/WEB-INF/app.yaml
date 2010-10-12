@@ -11,53 +11,53 @@ handlers:
   login: admin
 
 - url: /admin/clearCache
-  servlet: lv.odylab.evedb.servletrvlet.resource.admin.ClearCacheServlet
+  servlet: lv.odylab.evedb.servlet.admin.ClearCacheServlet
   login: admin
 
 - url: /baseMaterialsForTypeID/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.BaseMaterialsForTypeIdServlet
+  servlet: lv.odylab.evedb.servlet.BaseMaterialsForTypeIdServlet
 
 - url: /baseMaterialsForTypeName/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.BaseMaterialsForTypeNameServlet
+  servlet: lv.odylab.evedb.servlet.BaseMaterialsForTypeNameServlet
 
 - url: /blueprintDetailsForTypeID/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.BlueprintDetailsForTypeIdServlet
+  servlet: lv.odylab.evedb.servlet.BlueprintDetailsForTypeIdServlet
 
 - url: /blueprintDetailsForTypeName/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.BlueprintDetailsForTypeNameServlet
+  servlet: lv.odylab.evedb.servlet.BlueprintDetailsForTypeNameServlet
 
 - url: /blueprintTypeByTypeID/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.BlueprintTypeByTypeIdServlet
+  servlet: lv.odylab.evedb.servlet.BlueprintTypeByTypeIdServlet
 
 - url: /blueprintTypeByTypeName/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.BlueprintTypeByTypeNameServlet
+  servlet: lv.odylab.evedb.servlet.BlueprintTypeByTypeNameServlet
 
 - url: /extraMaterialsForTypeID/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.ExtraMaterialsForTypeIdServlet
+  servlet: lv.odylab.evedb.servlet.ExtraMaterialsForTypeIdServlet
 
 - url: /extraMaterialsForTypeName/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.ExtraMaterialsForTypeNameServlet
+  servlet: lv.odylab.evedb.servlet.ExtraMaterialsForTypeNameServlet
 
 - url: /lookupBlueprintType/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.LookupBlueprintTypeServlet
+  servlet: lv.odylab.evedb.servlet.LookupBlueprintTypeServlet
 
 - url: /lookupResourceType/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.LookupResourceTypeServlet
+  servlet: lv.odylab.evedb.servlet.LookupResourceTypeServlet
 
 - url: /lookupType/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.LookupTypeServlet
+  servlet: lv.odylab.evedb.servlet.LookupTypeServlet
 
 - url: /typeBasicInfoByTypeID/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.TypeBasicInfoByTypeIdServlet
+  servlet: lv.odylab.evedb.servlet.TypeBasicInfoByTypeIdServlet
 
 - url: /typeBasicInfoByTypeName/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.TypeBasicInfoByTypeNameServlet
+  servlet: lv.odylab.evedb.servlet.TypeBasicInfoByTypeNameServlet
 
 - url: /typeIdToTypeName/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.TypeIdToTypeNameServlet
+  servlet: lv.odylab.evedb.servlet.TypeIdToTypeNameServlet
 
 - url: /typeNameToTypeID/*
-  servlet: lv.odylab.evedb.servletrvlet.resource.TypeNameToTypeIdServlet
+  servlet: lv.odylab.evedb.servlet.TypeNameToTypeIdServlet
 
 - url: /version
-  servlet: lv.odylab.evedb.servletrvlet.resource.VersionServlet
+  servlet: lv.odylab.evedb.servlet.VersionServlet
