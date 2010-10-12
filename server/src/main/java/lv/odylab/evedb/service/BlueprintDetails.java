@@ -1,8 +1,8 @@
 package lv.odylab.evedb.service;
 
-import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintType;
-import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterial;
-import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
+import lv.odylab.evedb.domain.InvBlueprintType;
+import lv.odylab.evedb.domain.InvTypeMaterial;
+import lv.odylab.evedb.domain.RamTypeRequirement;
 
 import java.util.List;
 

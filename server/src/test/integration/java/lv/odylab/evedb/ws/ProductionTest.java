@@ -1,4 +1,4 @@
-package lv.odylab.evedb.ws;
+package lv.odylab.evedb.servlet;
 
 import org.junit.Test;
 
