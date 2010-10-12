@@ -1,8 +1,5 @@
-package lv.odylab.evedb.servlet;
+package lv.odylab.evedb.client;
 
-import lv.odylab.evedb.client.BadRequestException;
-import lv.odylab.evedb.client.EveDbWsClient;
-import lv.odylab.evedb.client.HttpRequestSenderWithRetryImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

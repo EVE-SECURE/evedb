@@ -1,8 +1,5 @@
-package lv.odylab.evedb.servlet;
+package lv.odylab.evedb.client;
 
-import lv.odylab.evedb.client.BadRequestException;
-import lv.odylab.evedb.client.EveDbWsClient;
-import lv.odylab.evedb.client.EveDbWsClientImpl;
 import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
