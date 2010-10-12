@@ -1,4 +1,4 @@
-package lv.odylab.evedb.servlet;
+package lv.odylab.evedb.client;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
