@@ -30,7 +30,6 @@
 
     <modules>
         <module>rpc</module>
-        <module>core</module>
         <module>ws</module>
         <module>ws-client</module>
     </modules>
