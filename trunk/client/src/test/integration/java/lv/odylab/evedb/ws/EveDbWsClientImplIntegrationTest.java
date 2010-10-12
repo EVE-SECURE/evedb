@@ -1,4 +1,4 @@
-package lv.odylab.evedb.ws;
+package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;

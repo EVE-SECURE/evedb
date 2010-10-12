@@ -5,10 +5,10 @@ import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
 import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
-import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintType;
-import lv.odylab.evedb.domain.inv.type.InvType;
-import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterial;
-import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
+import lv.odylab.evedb.domain.InvBlueprintType;
+import lv.odylab.evedb.domain.InvType;
+import lv.odylab.evedb.domain.InvTypeMaterial;
+import lv.odylab.evedb.domain.RamTypeRequirement;
 import lv.odylab.evedb.service.BlueprintDetails;
 
 import java.util.ArrayList;

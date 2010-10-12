@@ -1,11 +1,11 @@
 package lv.odylab.evedb.service;
 
-import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintType;
-import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintTypeDao;
-import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterial;
-import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterialDao;
-import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirement;
-import lv.odylab.evedb.domain.ram.typerequirement.RamTypeRequirementDao;
+import lv.odylab.evedb.domain.InvBlueprintType;
+import lv.odylab.evedb.domain.InvBlueprintTypeDao;
+import lv.odylab.evedb.domain.InvTypeMaterial;
+import lv.odylab.evedb.domain.InvTypeMaterialDao;
+import lv.odylab.evedb.domain.RamTypeRequirement;
+import lv.odylab.evedb.domain.RamTypeRequirementDao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
