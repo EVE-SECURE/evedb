@@ -10,7 +10,7 @@ public abstract class TextServlet extends EveDbServlet {
     @Override
     protected void writeResponse(String pathInfo, String acceptHeader, HttpServletResponse resp) throws IOException, JAXBException {
         resp.setContentType("text/plain");
-        writeText(provideResponse(pathInfo), resp.getWriter());
+        writeText(provideResponseFromCache(pathInfo), resp.getWriter());
     }
 
     protected void writeText(Object text, PrintWriter writer) {
