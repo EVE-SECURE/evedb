@@ -1,7 +1,7 @@
 package lv.odylab.evedb.servlet;
 
-import lv.odylab.evedb.DtoMapper;
 import lv.odylab.evedb.domain.InvBlueprintTypeDao;
+import lv.odylab.evedb.service.DtoMapper;
 
 import javax.servlet.ServletException;
 
