@@ -1,25 +1,23 @@
 package lv.odylab.evedb.domain.inv.blueprinttype;
 
-import com.google.inject.Inject;
-import com.google.inject.name.Named;
-import com.googlecode.objectify.ObjectifyFactory;
-import lv.odylab.appengine.aspect.Caching;
+import com.googlecode.objectify.ObjectifyService;
 import lv.odylab.evedb.domain.IdNotFoundException;
 import lv.odylab.evedb.domain.NameNotFoundException;
 
-@Caching
 public class InvBlueprintTypeDao {
-    private final ObjectifyFactory objectifyFactory;
+
+    static {
+        ObjectifyService.register(InvBlueprintType.class);
+    }
+
     private final String dumpVersion;
 
-    @Inject
-    public InvBlueprintTypeDao(ObjectifyFactory objectifyFactory, @Named("dump.version") String dumpVersion) {
-        this.objectifyFactory = objectifyFactory;
+    public InvBlueprintTypeDao(String dumpVersion) {
         this.dumpVersion = dumpVersion;
     }
 
     public InvBlueprintType getByTypeID(Long typeID) {
-        InvBlueprintType invBlueprintType = objectifyFactory.begin().query(InvBlueprintType.class)
+        InvBlueprintType invBlueprintType = ObjectifyService.begin().query(InvBlueprintType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("blueprintTypeID", typeID).get();
         if (invBlueprintType == null) {
@@ -29,7 +27,7 @@ public class InvBlueprintTypeDao {
     }
 
     public InvBlueprintType getByTypeName(String typeName) {
-        InvBlueprintType invBlueprintType = objectifyFactory.begin().query(InvBlueprintType.class)
+        InvBlueprintType invBlueprintType = ObjectifyService.begin().query(InvBlueprintType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("blueprintTypeName", typeName).get();
         if (invBlueprintType == null) {

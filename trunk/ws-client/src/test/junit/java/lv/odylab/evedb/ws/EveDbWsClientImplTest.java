@@ -12,6 +12,10 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EveDbWsClientImplTest {
+    @Test
+    public void none() {
+    }
+
     @Mock
     private EveDbWsClient.HttpRequestSender httpRequestSender;
     private EveDbWsClientImpl eveDbWsClient;
