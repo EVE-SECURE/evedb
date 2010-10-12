@@ -16,6 +16,10 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HttpRequestSenderWithRetryImplTest {
+    @Test
+    public void none() {
+    }
+
     @Mock
     private EveDbWsClient.HttpRequestSender httpRequestSender;
     private HttpRequestSenderWithRetryImpl httpRequestSenderWithRetry;

@@ -1,31 +1,26 @@
 package lv.odylab.evedb.domain.inv.type;
 
-import com.google.inject.Inject;
-import com.google.inject.name.Named;
-import com.googlecode.objectify.ObjectifyFactory;
-import lv.odylab.appengine.aspect.Caching;
+import com.googlecode.objectify.ObjectifyService;
 import lv.odylab.evedb.domain.IdNotFoundException;
 import lv.odylab.evedb.domain.NameNotFoundException;
 import lv.odylab.evedb.domain.TooShortPartialNameException;
 
 import java.util.List;
 
-@Caching
 public class InvTypeDao {
-    private static final Long CATEGORY_MATERIAL = 4L;
-    private static final Long CATEGORY_BLUEPRINT = 9L;
 
-    private final ObjectifyFactory objectifyFactory;
+    static {
+        ObjectifyService.register(InvType.class);
+    }
+
     private final String dumpVersion;
 
-    @Inject
-    public InvTypeDao(ObjectifyFactory objectifyFactory, @Named("dump.version") String dumpVersion) {
-        this.objectifyFactory = objectifyFactory;
+    public InvTypeDao(String dumpVersion) {
         this.dumpVersion = dumpVersion;
     }
 
     public InvType getByTypeID(Long typeID) {
-        InvType invType = objectifyFactory.begin().query(InvType.class)
+        InvType invType = ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID).get();
         if (invType == null) {
@@ -35,7 +30,7 @@ public class InvTypeDao {
     }
 
     public InvType getByTypeName(String typeName) {
-        InvType invType = objectifyFactory.begin().query(InvType.class)
+        InvType invType = ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeName", typeName).get();
         if (invType == null) {
@@ -48,7 +43,7 @@ public class InvTypeDao {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
-        return objectifyFactory.begin().query(InvType.class)
+        return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
                 .filter("typeName >=", partialTypeName)
@@ -61,10 +56,10 @@ public class InvTypeDao {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
-        return objectifyFactory.begin().query(InvType.class)
+        return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
-                .filter("categoryID", CATEGORY_MATERIAL)
+                .filter("categoryID", 4L)
                 .filter("typeName >=", partialTypeName)
                 .filter("typeName <", partialTypeName + "\uFFFD")
                 .order("typeName")
@@ -75,10 +70,10 @@ public class InvTypeDao {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
-        return objectifyFactory.begin().query(InvType.class)
+        return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
-                .filter("categoryID", CATEGORY_BLUEPRINT)
+                .filter("categoryID", 9L)
                 .filter("typeName >=", partialTypeName)
                 .filter("typeName <", partialTypeName + "\uFFFD")
                 .order("typeName")

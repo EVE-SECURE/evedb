@@ -1,6 +1,5 @@
 package lv.odylab.evedb.service;
 
-import com.google.inject.Inject;
 import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintType;
 import lv.odylab.evedb.domain.inv.blueprinttype.InvBlueprintTypeDao;
 import lv.odylab.evedb.domain.inv.typematerial.InvTypeMaterial;
@@ -18,7 +17,6 @@ public class BlueprintServiceImpl implements BlueprintService {
     private final InvTypeMaterialDao invTypeMaterialDao;
     private final RamTypeRequirementDao ramTypeRequirementDao;
 
-    @Inject
     public BlueprintServiceImpl(InvBlueprintTypeDao invBlueprintTypeDao, InvTypeMaterialDao invTypeMaterialDao, RamTypeRequirementDao ramTypeRequirementDao) {
         this.invBlueprintTypeDao = invBlueprintTypeDao;
         this.invTypeMaterialDao = invTypeMaterialDao;

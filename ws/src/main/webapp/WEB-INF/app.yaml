@@ -1,0 +1,63 @@
+application: odylab-evedb
+version: test
+runtime: java
+
+system_properties:
+  java.util.logging.config.file: WEB-INF/classes/logging.properties
+  
+handlers:
+- url: /remote_api
+  servlet: com.google.apphosting.utils.remoteapi.RemoteApiServlet
+  login: admin
+
+- url: /admin/clearCache
+  servlet: lv.odylab.evedb.ws.resource.admin.ClearCacheServlet
+  login: admin
+
+- url: /baseMaterialsForTypeID/*
+  servlet: lv.odylab.evedb.ws.resource.BaseMaterialsForTypeIdServlet
+
+- url: /baseMaterialsForTypeName/*
+  servlet: lv.odylab.evedb.ws.resource.BaseMaterialsForTypeNameServlet
+
+- url: /blueprintDetailsForTypeID/*
+  servlet: lv.odylab.evedb.ws.resource.BlueprintDetailsForTypeIdServlet
+
+- url: /blueprintDetailsForTypeName/*
+  servlet: lv.odylab.evedb.ws.resource.BlueprintDetailsForTypeNameServlet
+
+- url: /blueprintTypeByTypeID/*
+  servlet: lv.odylab.evedb.ws.resource.BlueprintTypeByTypeIdServlet
+
+- url: /blueprintTypeByTypeName/*
+  servlet: lv.odylab.evedb.ws.resource.BlueprintTypeByTypeNameServlet
+
+- url: /extraMaterialsForTypeID/*
+  servlet: lv.odylab.evedb.ws.resource.ExtraMaterialsForTypeIdServlet
+
+- url: /extraMaterialsForTypeName/*
+  servlet: lv.odylab.evedb.ws.resource.ExtraMaterialsForTypeNameServlet
+
+- url: /lookupBlueprintType/*
+  servlet: lv.odylab.evedb.ws.resource.LookupBlueprintTypeServlet
+
+- url: /lookupResourceType/*
+  servlet: lv.odylab.evedb.ws.resource.LookupResourceTypeServlet
+
+- url: /lookupType/*
+  servlet: lv.odylab.evedb.ws.resource.LookupTypeServlet
+
+- url: /typeBasicInfoByTypeID/*
+  servlet: lv.odylab.evedb.ws.resource.TypeBasicInfoByTypeIdServlet
+
+- url: /typeBasicInfoByTypeName/*
+  servlet: lv.odylab.evedb.ws.resource.TypeBasicInfoByTypeNameServlet
+
+- url: /typeIdToTypeName/*
+  servlet: lv.odylab.evedb.ws.resource.TypeIdToTypeNameServlet
+
+- url: /typeNameToTypeID/*
+  servlet: lv.odylab.evedb.ws.resource.TypeNameToTypeIdServlet
+
+- url: /version
+  servlet: lv.odylab.evedb.ws.resource.VersionServlet
