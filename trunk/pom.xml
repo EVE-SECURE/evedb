@@ -30,8 +30,8 @@
 
     <modules>
         <module>rpc</module>
-        <module>ws</module>
-        <module>ws-client</module>
+        <module>server</module>
+        <module>client</module>
     </modules>
 
     <developers>
@@ -46,6 +46,10 @@
         <repository>
             <id>odylab.googlecode.com</id>
             <url>http://odylab.googlecode.com/svn/mvnrepo</url>
+        </repository>
+        <repository>
+            <id>objectify-appengine.googlecode.com</id>
+            <url>http://objectify-appengine.googlecode.com/svn/maven</url>
         </repository>
         <repository>
             <id>google-gson.googlecode.com</id>
