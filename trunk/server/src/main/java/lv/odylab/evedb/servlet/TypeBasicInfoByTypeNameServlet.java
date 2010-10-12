@@ -1,8 +1,7 @@
-package lv.odylab.evedb.servlet.resource;
+package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.DtoMapper;
 import lv.odylab.evedb.domain.InvTypeDao;
-import lv.odylab.evedb.servlet.XmlJsonServlet;
 
 import javax.servlet.ServletException;
 

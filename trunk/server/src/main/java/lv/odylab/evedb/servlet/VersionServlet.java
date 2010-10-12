@@ -1,6 +1,4 @@
-package lv.odylab.evedb.servlet.resource;
-
-import lv.odylab.evedb.servlet.TextServlet;
+package lv.odylab.evedb.servlet;
 
 public class VersionServlet extends TextServlet {
 

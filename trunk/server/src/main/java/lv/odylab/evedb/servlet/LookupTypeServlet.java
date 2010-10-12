@@ -1,11 +1,10 @@
-package lv.odylab.evedb.servlet.resource;
+package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.DtoMapper;
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.client.rpc.dto.XmlResultContainer;
 import lv.odylab.evedb.domain.InvType;
 import lv.odylab.evedb.domain.InvTypeDao;
-import lv.odylab.evedb.servlet.XmlJsonServlet;
 
 import javax.servlet.ServletException;
 import javax.xml.bind.JAXBException;
