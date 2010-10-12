@@ -1,11 +1,10 @@
-package lv.odylab.evedb.servlet.resource;
+package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.DtoMapper;
 import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
 import lv.odylab.evedb.client.rpc.dto.XmlResultContainer;
 import lv.odylab.evedb.domain.InvTypeMaterial;
 import lv.odylab.evedb.domain.InvTypeMaterialDao;
-import lv.odylab.evedb.servlet.XmlJsonServlet;
 
 import javax.servlet.ServletException;
 import javax.xml.bind.JAXBException;
@@ -13,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseMaterialsForTypeNameServlet extends XmlJsonServlet {
+public class BaseMaterialsForTypeIdServlet extends XmlJsonServlet {
     private InvTypeMaterialDao invTypeMaterialDao;
     private DtoMapper dtoMapper;
 
@@ -24,8 +23,8 @@ public class BaseMaterialsForTypeNameServlet extends XmlJsonServlet {
     }
 
     @Override
-    protected Object provideResponse(String typeName) {
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeName(typeName);
+    protected Object provideResponse(String typeID) {
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeID(Long.valueOf(typeID));
         List<InvTypeMaterialDto> result = new ArrayList<InvTypeMaterialDto>();
         for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
             result.add(dtoMapper.map(invTypeMaterial));

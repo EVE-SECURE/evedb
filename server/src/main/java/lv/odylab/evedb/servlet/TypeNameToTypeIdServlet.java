@@ -1,7 +1,6 @@
-package lv.odylab.evedb.servlet.resource;
+package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.domain.InvTypeDao;
-import lv.odylab.evedb.servlet.TextServlet;
 
 import javax.servlet.ServletException;
 

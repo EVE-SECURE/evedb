@@ -1,4 +1,4 @@
-package lv.odylab.evedb.servlet.resource.admin;
+package lv.odylab.evedb.servlet.admin;
 
 import com.google.appengine.api.memcache.Stats;
 import lv.odylab.evedb.servlet.TextServlet;
