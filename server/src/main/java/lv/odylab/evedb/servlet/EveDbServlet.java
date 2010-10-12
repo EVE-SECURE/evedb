@@ -33,6 +33,7 @@ public abstract class EveDbServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Long start = System.currentTimeMillis();
         String acceptHeader = req.getHeader("accept");
         logger.info("Request ip address: {}, accept header: {}", req.getRemoteAddr(), acceptHeader);
 
@@ -57,11 +58,13 @@ public abstract class EveDbServlet extends HttpServlet {
             logger.error("Internal error", e);
             resp.sendError(500);
         }
+        Long end = System.currentTimeMillis();
+        logger.info("Execution took {}ms", end - start);
     }
 
     protected abstract void writeResponse(String pathInfo, String acceptHeader, HttpServletResponse resp) throws IOException, JAXBException;
 
-    protected Object provideResponseAndCache(String pathInfo) {
+    protected Object provideResponseFromCache(String pathInfo) {
         Long start = System.currentTimeMillis();
         String key = new StringBuilder(getClass().getSimpleName()).append("|").append(pathInfo).append("|").append(DUMP_VERSION).toString();
         Object data = getMemcacheService().get(key);

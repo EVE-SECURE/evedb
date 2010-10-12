@@ -23,10 +23,10 @@ public abstract class XmlJsonServlet extends EveDbServlet {
     protected void writeResponse(String pathInfo, String acceptHeader, HttpServletResponse resp) throws IOException, JAXBException {
         if ("application/json".equals(acceptHeader)) {
             resp.setContentType("application/json");
-            writeJson(provideResponseAndCache(pathInfo), resp.getWriter());
+            writeJson(provideResponseFromCache(pathInfo), resp.getWriter());
         } else {
             resp.setContentType("application/xml");
-            writeXml(provideResponseAndCache(pathInfo), resp.getWriter());
+            writeXml(provideResponseFromCache(pathInfo), resp.getWriter());
         }
     }
 
