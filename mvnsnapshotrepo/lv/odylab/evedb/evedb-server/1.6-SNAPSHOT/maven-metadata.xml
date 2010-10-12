@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>lv.odylab.evedb</groupId>
+  <artifactId>evedb-server</artifactId>
+  <version>1.6-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20101012.180250</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20101012180422</lastUpdated>
+  </versioning>
+</metadata>
