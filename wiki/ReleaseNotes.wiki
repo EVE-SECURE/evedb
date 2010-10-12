@@ -5,6 +5,7 @@
 == 2010.10.??, version 1.6 ==
   * *Improved performance*
 
+  * Issue 19. Merge modules "core" and "ws" into "server"
   * Issue 18. Add schema migration/deletion agents
   * Issue 17. Switch to app.yaml configuration
   * Issue 16. Improve performance be removing Guice
