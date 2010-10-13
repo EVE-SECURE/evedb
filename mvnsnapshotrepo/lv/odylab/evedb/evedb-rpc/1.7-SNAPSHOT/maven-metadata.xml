@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>lv.odylab.evedb</groupId>
+  <artifactId>evedb-rpc</artifactId>
+  <version>1.7-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20101013.163626</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20101013163658</lastUpdated>
+  </versioning>
+</metadata>
