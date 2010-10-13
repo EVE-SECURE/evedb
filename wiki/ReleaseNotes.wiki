@@ -2,7 +2,7 @@
 
 = Release notes =
 
-== 2010.10.??, version 1.6 ==
+== 2010.10.13, version 1.6 ==
   * *Improved performance*
 
   * Issue 19. Merge modules "core" and "ws" into "server"
