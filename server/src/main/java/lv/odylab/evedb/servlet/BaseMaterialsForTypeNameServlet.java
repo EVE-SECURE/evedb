@@ -20,13 +20,13 @@ public class BaseMaterialsForTypeNameServlet extends XmlJsonServlet {
 
     @Override
     public void init() throws ServletException {
-        invTypeMaterialDao = new InvTypeMaterialDao(DUMP_VERSION);
+        invTypeMaterialDao = new InvTypeMaterialDao();
         dtoMapper = new DtoMapper();
     }
 
     @Override
     protected Object provideResponse(String typeName) {
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeName(typeName);
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeName(typeName, DUMP_VERSION);
         List<InvTypeMaterialDto> result = new ArrayList<InvTypeMaterialDto>();
         for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
             result.add(dtoMapper.map(invTypeMaterial));

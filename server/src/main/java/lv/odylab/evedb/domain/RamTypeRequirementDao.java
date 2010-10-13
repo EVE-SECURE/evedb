@@ -10,13 +10,7 @@ public class RamTypeRequirementDao {
         ObjectifyService.register(RamTypeRequirement.class);
     }
 
-    private final String dumpVersion;
-
-    public RamTypeRequirementDao(String dumpVersion) {
-        this.dumpVersion = dumpVersion;
-    }
-
-    public List<RamTypeRequirement> getForTypeID(Long typeID) {
+    public List<RamTypeRequirement> getForTypeID(Long typeID, String dumpVersion) {
         List<RamTypeRequirement> ramTypeRequirements = ObjectifyService.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID)
@@ -27,14 +21,14 @@ public class RamTypeRequirementDao {
         return ramTypeRequirements;
     }
 
-    public List<RamTypeRequirement> getForTypeIdWithoutCheck(Long typeID) {
+    public List<RamTypeRequirement> getForTypeIdWithoutCheck(Long typeID, String dumpVersion) {
         return ObjectifyService.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID)
                 .order("requiredTypeID").list();
     }
 
-    public List<RamTypeRequirement> getForTypeName(String typeName) {
+    public List<RamTypeRequirement> getForTypeName(String typeName, String dumpVersion) {
         List<RamTypeRequirement> ramTypeRequirements = ObjectifyService.begin().query(RamTypeRequirement.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeName", typeName)

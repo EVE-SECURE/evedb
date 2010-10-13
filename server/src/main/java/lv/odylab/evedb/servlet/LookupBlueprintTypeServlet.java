@@ -20,13 +20,13 @@ public class LookupBlueprintTypeServlet extends XmlJsonServlet {
 
     @Override
     public void init() throws ServletException {
-        invTypeDao = new InvTypeDao(DUMP_VERSION);
+        invTypeDao = new InvTypeDao();
         dtoMapper = new DtoMapper();
     }
 
     @Override
     protected Object provideResponse(String query) {
-        List<InvType> invTypes = invTypeDao.findBlueprintByPartialTypeName(query, 50);
+        List<InvType> invTypes = invTypeDao.findBlueprintByPartialTypeName(query, 50, DUMP_VERSION);
         List<InvTypeBasicInfoDto> result = new ArrayList<InvTypeBasicInfoDto>();
         for (InvType invType : invTypes) {
             result.add(dtoMapper.map(invType));

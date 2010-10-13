@@ -661,14 +661,29 @@ public class ProductionTest {
         assertEquals(200, connection.getResponseCode());
         assertTrue(getResponse(connection).endsWith("-tyr104"));
         assertEquals("text/html", connection.getHeaderField("Content-Type"));
+    }
 
-        url = new URL(baseUrl + "/");
+    @Test
+    public void test_root() throws Exception {
+        URL url = new URL(baseUrl + "/");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        assertEquals(200, connection.getResponseCode());
+        assertTrue(getResponse(connection).endsWith("</html>"));
+        assertEquals("text/html", connection.getHeaderField("Content-Type"));
+
+        url = new URL(baseUrl + "/robots.txt");
         connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
-        connection.setRequestProperty("Accept", "text/plain");
         assertEquals(200, connection.getResponseCode());
-        assertTrue(getResponse(connection).endsWith("-tyr104"));
-        assertEquals("text/html", connection.getHeaderField("Content-Type"));
+        assertTrue(getResponse(connection).endsWith("Disallow: /"));
+        assertEquals("text/plain", connection.getHeaderField("Content-Type"));
+
+        url = new URL(baseUrl + "/favicon.ico");
+        connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        assertEquals(200, connection.getResponseCode());
+        assertEquals("image/x-icon", connection.getHeaderField("Content-Type"));
     }
 
     @Test

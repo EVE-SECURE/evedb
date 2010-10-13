@@ -20,13 +20,13 @@ public class ExtraMaterialsForTypeIdServlet extends XmlJsonServlet {
 
     @Override
     public void init() throws ServletException {
-        ramTypeRequirementDao = new RamTypeRequirementDao(DUMP_VERSION);
+        ramTypeRequirementDao = new RamTypeRequirementDao();
         dtoMapper = new DtoMapper();
     }
 
     @Override
     protected Object provideResponse(String typeID) {
-        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeID(Long.valueOf(typeID));
+        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeID(Long.valueOf(typeID), DUMP_VERSION);
         List<RamTypeRequirementDto> result = new ArrayList<RamTypeRequirementDto>();
         for (RamTypeRequirement ramTypeRequirement : ramTypeRequirements) {
             result.add(dtoMapper.map(ramTypeRequirement));
