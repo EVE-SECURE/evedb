@@ -1,19 +1,29 @@
 package lv.odylab.evedb.servlet.admin;
 
+import com.google.appengine.api.memcache.MemcacheService;
+import com.google.appengine.api.memcache.MemcacheServiceFactory;
 import com.google.appengine.api.memcache.Stats;
-import lv.odylab.evedb.servlet.TextServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ClearCacheServlet extends TextServlet {
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class ClearCacheServlet extends HttpServlet {
+    private static final long serialVersionUID = -7155614388636824616L;
+
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
-    protected Object provideResponse(String pathInfo) {
-        Stats stats = getMemcacheService().getStatistics();
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        MemcacheService memcacheService = MemcacheServiceFactory.getMemcacheService();
+        Stats stats = memcacheService.getStatistics();
         long itemCount = stats.getItemCount();
         logger.info("Clearing memcache, item count in cache: {}", itemCount);
-        getMemcacheService().clearAll();
-        return "OK, " + itemCount;
+        memcacheService.clearAll();
+        resp.getWriter().write("OK, " + itemCount);
     }
 }

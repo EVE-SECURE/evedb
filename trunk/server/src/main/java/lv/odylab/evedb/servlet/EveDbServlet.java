@@ -19,7 +19,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
 public abstract class EveDbServlet extends HttpServlet {
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+    protected final Logger logger = LoggerFactory.getLogger(getClass());
 
     protected static final String DUMP_VERSION = "tyr104";
 
@@ -63,24 +63,6 @@ public abstract class EveDbServlet extends HttpServlet {
     }
 
     protected abstract void writeResponse(String pathInfo, String acceptHeader, HttpServletResponse resp) throws IOException, JAXBException;
-
-    protected Object provideResponseFromCache(String pathInfo) {
-        Long start = System.currentTimeMillis();
-        String key = new StringBuilder(getClass().getSimpleName()).append("|").append(pathInfo).append("|").append(DUMP_VERSION).toString();
-        Object data = getMemcacheService().get(key);
-        if (data == null) {
-            logger.info("Key was not found in cache: {}, the result will be cached", key);
-            data = provideResponse(decodeString(pathInfo));
-            getMemcacheService().put(key, data);
-        } else {
-            logger.info("Key was found in cache: {}", key);
-        }
-        Long end = System.currentTimeMillis();
-        logger.info("Execution took {}ms", end - start);
-        return data;
-    }
-
-    protected abstract Object provideResponse(String pathInfo);
 
     protected MemcacheService getMemcacheService() {
         if (memcacheService == null) {

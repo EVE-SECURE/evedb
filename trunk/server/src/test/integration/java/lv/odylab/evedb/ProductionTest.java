@@ -12,7 +12,7 @@ import static com.google.appengine.repackaged.com.google.common.base.X.assertTru
 import static junit.framework.Assert.assertEquals;
 
 public class ProductionTest {
-    private final String baseUrl = "http://test.latest.odylab-evedb.appspot.com";
+    private final String baseUrl = "http://dev.latest.odylab-evedb.appspot.com";
 
     @Test
     public void test_clearCache() throws Exception {
@@ -660,7 +660,7 @@ public class ProductionTest {
         connection.setRequestProperty("Accept", "text/plain");
         assertEquals(200, connection.getResponseCode());
         assertTrue(getResponse(connection).endsWith("-tyr104"));
-        assertEquals("text/plain; charset=utf-8", connection.getHeaderField("Content-Type"));
+        assertEquals("text/html", connection.getHeaderField("Content-Type"));
 
         url = new URL(baseUrl + "/");
         connection = (HttpURLConnection) url.openConnection();
@@ -668,7 +668,7 @@ public class ProductionTest {
         connection.setRequestProperty("Accept", "text/plain");
         assertEquals(200, connection.getResponseCode());
         assertTrue(getResponse(connection).endsWith("-tyr104"));
-        assertEquals("text/plain; charset=utf-8", connection.getHeaderField("Content-Type"));
+        assertEquals("text/html", connection.getHeaderField("Content-Type"));
     }
 
     @Test

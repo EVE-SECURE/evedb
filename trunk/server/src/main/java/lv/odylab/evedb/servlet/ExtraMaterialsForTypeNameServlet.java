@@ -1,18 +1,20 @@
 package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
-import lv.odylab.evedb.client.rpc.dto.XmlResultContainer;
+import lv.odylab.evedb.client.rpc.dto.Rowset;
 import lv.odylab.evedb.domain.RamTypeRequirement;
 import lv.odylab.evedb.domain.RamTypeRequirementDao;
 import lv.odylab.evedb.service.DtoMapper;
 
 import javax.servlet.ServletException;
 import javax.xml.bind.JAXBException;
-import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ExtraMaterialsForTypeNameServlet extends XmlJsonServlet {
+    private static final long serialVersionUID = 4589882782233437361L;
+
     private RamTypeRequirementDao ramTypeRequirementDao;
     private DtoMapper dtoMapper;
 
@@ -33,7 +35,7 @@ public class ExtraMaterialsForTypeNameServlet extends XmlJsonServlet {
     }
 
     @Override
-    protected void writeXml(Object object, PrintWriter writer) throws JAXBException {
-        getMarshaller().marshal(new XmlResultContainer((List) object), writer);
+    protected void writeXml(Object object, Writer writer) throws JAXBException {
+        getMarshaller().marshal(new Rowset((List) object), writer);
     }
 }

@@ -1,18 +1,20 @@
 package lv.odylab.evedb.servlet;
 
 import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
-import lv.odylab.evedb.client.rpc.dto.XmlResultContainer;
+import lv.odylab.evedb.client.rpc.dto.Rowset;
 import lv.odylab.evedb.domain.InvType;
 import lv.odylab.evedb.domain.InvTypeDao;
 import lv.odylab.evedb.service.DtoMapper;
 
 import javax.servlet.ServletException;
 import javax.xml.bind.JAXBException;
-import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LookupBlueprintTypeServlet extends XmlJsonServlet {
+    private static final long serialVersionUID = 495994217790993238L;
+
     private InvTypeDao invTypeDao;
     private DtoMapper dtoMapper;
 
@@ -33,7 +35,7 @@ public class LookupBlueprintTypeServlet extends XmlJsonServlet {
     }
 
     @Override
-    protected void writeXml(Object object, PrintWriter writer) throws JAXBException {
-        getMarshaller().marshal(new XmlResultContainer((List) object), writer);
+    protected void writeXml(Object object, Writer writer) throws JAXBException {
+        getMarshaller().marshal(new Rowset((List) object), writer);
     }
 }

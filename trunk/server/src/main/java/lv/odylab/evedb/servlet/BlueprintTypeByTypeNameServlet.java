@@ -6,6 +6,8 @@ import lv.odylab.evedb.service.DtoMapper;
 import javax.servlet.ServletException;
 
 public class BlueprintTypeByTypeNameServlet extends XmlJsonServlet {
+    private static final long serialVersionUID = -7574761881653601894L;
+
     private InvBlueprintTypeDao invBlueprintTypeDao;
     private DtoMapper dtoMapper;
 
