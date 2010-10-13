@@ -1,1 +1,1 @@
-appcfg update target/evedb-server-1.7-SNAPSHOT
+appcfg update target/evedb-server-1.6

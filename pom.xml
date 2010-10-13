@@ -7,13 +7,13 @@
     <artifactId>evedb</artifactId>
     <name>evedb</name>
     <packaging>pom</packaging>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.6</version>
 
     <description>RESTful web-services for EVE Online static database dump.</description>
     <url>http://code.google.com/p/evedb/</url>
 
     <properties>
-        <odylab.evedb.version>1.7-SNAPSHOT</odylab.evedb.version>
+        <odylab.evedb.version>1.6</odylab.evedb.version>
         <junit.version>4.4</junit.version>
         <mockito.version>1.8.5</mockito.version>
         <jetty.servlet.tester.version>6.1.9</jetty.servlet.tester.version>
