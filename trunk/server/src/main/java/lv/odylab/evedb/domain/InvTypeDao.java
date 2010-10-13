@@ -10,13 +10,7 @@ public class InvTypeDao {
         ObjectifyService.register(InvType.class);
     }
 
-    private final String dumpVersion;
-
-    public InvTypeDao(String dumpVersion) {
-        this.dumpVersion = dumpVersion;
-    }
-
-    public InvType getByTypeID(Long typeID) {
+    public InvType getByTypeID(Long typeID, String dumpVersion) {
         InvType invType = ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID).get();
@@ -26,7 +20,7 @@ public class InvTypeDao {
         return invType;
     }
 
-    public InvType getByTypeName(String typeName) {
+    public InvType getByTypeName(String typeName, String dumpVersion) {
         InvType invType = ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeName", typeName).get();
@@ -36,7 +30,7 @@ public class InvTypeDao {
         return invType;
     }
 
-    public List<InvType> findByPartialTypeName(String partialTypeName, Integer limit) {
+    public List<InvType> findByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
@@ -49,7 +43,7 @@ public class InvTypeDao {
                 .limit(limit).list();
     }
 
-    public List<InvType> findResourceByPartialTypeName(String partialTypeName, Integer limit) {
+    public List<InvType> findResourceByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
@@ -63,7 +57,7 @@ public class InvTypeDao {
                 .limit(limit).list();
     }
 
-    public List<InvType> findBlueprintByPartialTypeName(String partialTypeName, Integer limit) {
+    public List<InvType> findBlueprintByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }

@@ -13,12 +13,12 @@ public class BlueprintTypeByTypeNameServlet extends XmlJsonServlet {
 
     @Override
     public void init() throws ServletException {
-        invBlueprintTypeDao = new InvBlueprintTypeDao(DUMP_VERSION);
+        invBlueprintTypeDao = new InvBlueprintTypeDao();
         dtoMapper = new DtoMapper();
     }
 
     @Override
     protected Object provideResponse(String typeName) {
-        return dtoMapper.map(invBlueprintTypeDao.getByTypeName(typeName));
+        return dtoMapper.map(invBlueprintTypeDao.getByTypeName(typeName, DUMP_VERSION));
     }
 }

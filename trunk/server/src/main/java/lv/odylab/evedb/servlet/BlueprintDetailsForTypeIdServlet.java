@@ -16,7 +16,7 @@ public class BlueprintDetailsForTypeIdServlet extends XmlJsonServlet {
 
     @Override
     public void init() throws ServletException {
-        blueprintService = new BlueprintService(new InvBlueprintTypeDao(DUMP_VERSION), new InvTypeMaterialDao(DUMP_VERSION), new RamTypeRequirementDao(DUMP_VERSION));
+        blueprintService = new BlueprintService(new InvBlueprintTypeDao(), new InvTypeMaterialDao(), new RamTypeRequirementDao(), DUMP_VERSION);
         dtoMapper = new DtoMapper();
     }
 

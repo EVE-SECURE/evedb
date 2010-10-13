@@ -13,12 +13,12 @@ public class TypeBasicInfoByTypeNameServlet extends XmlJsonServlet {
 
     @Override
     public void init() throws ServletException {
-        invTypeDao = new InvTypeDao(DUMP_VERSION);
+        invTypeDao = new InvTypeDao();
         dtoMapper = new DtoMapper();
     }
 
     @Override
     protected Object provideResponse(String typeName) {
-        return dtoMapper.map(invTypeDao.getByTypeName(typeName));
+        return dtoMapper.map(invTypeDao.getByTypeName(typeName, DUMP_VERSION));
     }
 }

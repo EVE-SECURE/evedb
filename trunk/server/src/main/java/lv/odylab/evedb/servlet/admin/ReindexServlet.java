@@ -34,10 +34,10 @@ public class ReindexServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     // TODO this is needed for ObjectifyService.register
-    private final InvBlueprintTypeDao invBlueprintTypeDao = new InvBlueprintTypeDao(null);
-    private final InvTypeDao invTypeDao = new InvTypeDao(null);
-    private final InvTypeMaterialDao invTypeMaterialDao = new InvTypeMaterialDao(null);
-    private final RamTypeRequirementDao ramTypeRequirementDao = new RamTypeRequirementDao(null);
+    private final InvBlueprintTypeDao invBlueprintTypeDao = new InvBlueprintTypeDao();
+    private final InvTypeDao invTypeDao = new InvTypeDao();
+    private final InvTypeMaterialDao invTypeMaterialDao = new InvTypeMaterialDao();
+    private final RamTypeRequirementDao ramTypeRequirementDao = new RamTypeRequirementDao();
 
     @Override
     public void init() throws ServletException {

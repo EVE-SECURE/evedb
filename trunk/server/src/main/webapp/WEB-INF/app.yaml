@@ -73,5 +73,5 @@ handlers:
 - url: /version
   servlet: lv.odylab.evedb.servlet.VersionServlet
 
-- url: /
-  servlet: lv.odylab.evedb.servlet.VersionServlet
+welcome_files:
+  - index.html
