@@ -1,0 +1,95 @@
+indexes:
+
+- kind: InvBlueprintType
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: blueprintTypeID
+
+- kind: InvBlueprintType
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: blueprintTypeName
+
+
+- kind: InvType
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeID
+
+- kind: InvType
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeName
+
+- kind: InvType
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: published
+  - name: typeName
+
+- kind: InvType
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: published
+  - name: categoryID
+  - name: typeName
+
+
+- kind: InvTypeMaterial
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeID
+
+- kind: InvTypeMaterial
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeID
+  - name: materialTypeID
+
+- kind: InvTypeMaterial
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeName
+
+- kind: InvTypeMaterial
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeName
+  - name: materialTypeID
+
+
+- kind: RamTypeRequirement
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeID
+
+- kind: RamTypeRequirement
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeID
+  - name: requiredTypeID
+
+- kind: RamTypeRequirement
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeName
+
+- kind: RamTypeRequirement
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: typeName
+  - name: requiredTypeID
