@@ -31,8 +31,8 @@ Add following Maven dependency:
 {{{
 <dependency>
   <groupId>lv.odylab.evedb</groupId>
-  <artifactId>evedb-ws-client</artifactId>
-  <version>1.5</version>
+  <artifactId>evedb-client</artifactId>
+  <version>1.6</version>
 </dependency>
 }}}
 
