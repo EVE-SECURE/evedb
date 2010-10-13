@@ -6,13 +6,15 @@ import java.io.Serializable;
 import java.util.List;
 
 @XmlRootElement(name = "rowset")
-public class XmlResultContainer implements Serializable {
+public class Rowset implements Serializable {
+    private static final long serialVersionUID = -4433970127027146955L;
+
     private List result;
 
-    public XmlResultContainer() {
+    public Rowset() {
     }
 
-    public XmlResultContainer(List resultObject) {
+    public Rowset(List resultObject) {
         result = resultObject;
     }
 

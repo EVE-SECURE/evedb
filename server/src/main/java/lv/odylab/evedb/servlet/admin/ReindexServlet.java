@@ -29,13 +29,15 @@ import java.util.Map;
 import static com.google.appengine.api.labs.taskqueue.TaskOptions.Builder.url;
 
 public class ReindexServlet extends HttpServlet {
+    private static final long serialVersionUID = -1121161608192976042L;
+
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     // TODO this is needed for ObjectifyService.register
-    private InvBlueprintTypeDao invBlueprintTypeDao = new InvBlueprintTypeDao(null);
-    private InvTypeDao invTypeDao = new InvTypeDao(null);
-    private InvTypeMaterialDao invTypeMaterialDao = new InvTypeMaterialDao(null);
-    private RamTypeRequirementDao ramTypeRequirementDao = new RamTypeRequirementDao(null);
+    private final InvBlueprintTypeDao invBlueprintTypeDao = new InvBlueprintTypeDao(null);
+    private final InvTypeDao invTypeDao = new InvTypeDao(null);
+    private final InvTypeMaterialDao invTypeMaterialDao = new InvTypeMaterialDao(null);
+    private final RamTypeRequirementDao ramTypeRequirementDao = new RamTypeRequirementDao(null);
 
     @Override
     public void init() throws ServletException {
