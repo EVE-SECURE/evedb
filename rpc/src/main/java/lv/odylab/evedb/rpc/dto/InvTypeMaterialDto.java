@@ -1,4 +1,4 @@
-package lv.odylab.evedb.client.rpc.dto;
+package lv.odylab.evedb.rpc.dto;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;

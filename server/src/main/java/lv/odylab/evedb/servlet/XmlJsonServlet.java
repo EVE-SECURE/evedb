@@ -2,12 +2,12 @@ package lv.odylab.evedb.servlet;
 
 import com.google.appengine.api.memcache.MemcacheService;
 import com.google.gson.Gson;
-import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
-import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
-import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
-import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
-import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
-import lv.odylab.evedb.client.rpc.dto.Rowset;
+import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
+import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
+import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
+import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
+import lv.odylab.evedb.rpc.dto.XmlRowsetDto;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBContext;
@@ -71,7 +71,7 @@ public abstract class XmlJsonServlet extends EveDbServlet {
 
     protected Marshaller getMarshaller() throws JAXBException {
         if (marshaller == null) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(InvBlueprintTypeDto.class, InvTypeMaterialDto.class, InvTypeBasicInfoDto.class, RamTypeRequirementDto.class, BlueprintDetailsDto.class, Rowset.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(InvBlueprintTypeDto.class, InvTypeMaterialDto.class, InvTypeBasicInfoDto.class, RamTypeRequirementDto.class, BlueprintDetailsDto.class, XmlRowsetDto.class);
             marshaller = jaxbContext.createMarshaller();
         }
         return marshaller;

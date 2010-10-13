@@ -1,14 +1,14 @@
 package lv.odylab.evedb.service;
 
-import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
-import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
-import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
-import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
-import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
 import lv.odylab.evedb.domain.InvBlueprintType;
 import lv.odylab.evedb.domain.InvType;
 import lv.odylab.evedb.domain.InvTypeMaterial;
 import lv.odylab.evedb.domain.RamTypeRequirement;
+import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
+import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
+import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
+import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 
 import java.util.ArrayList;
 import java.util.List;

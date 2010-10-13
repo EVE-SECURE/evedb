@@ -1,4 +1,4 @@
-package lv.odylab.evedb.client.rpc.dto;
+package lv.odylab.evedb.rpc.dto;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -6,15 +6,15 @@ import java.io.Serializable;
 import java.util.List;
 
 @XmlRootElement(name = "rowset")
-public class Rowset implements Serializable {
+public class XmlRowsetDto implements Serializable {
     private static final long serialVersionUID = -4433970127027146955L;
 
     private List result;
 
-    public Rowset() {
+    public XmlRowsetDto() {
     }
 
-    public Rowset(List resultObject) {
+    public XmlRowsetDto(List resultObject) {
         result = resultObject;
     }
 

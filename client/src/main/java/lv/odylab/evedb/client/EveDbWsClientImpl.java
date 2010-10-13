@@ -2,11 +2,11 @@ package lv.odylab.evedb.client;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import lv.odylab.evedb.client.rpc.dto.BlueprintDetailsDto;
-import lv.odylab.evedb.client.rpc.dto.InvBlueprintTypeDto;
-import lv.odylab.evedb.client.rpc.dto.InvTypeBasicInfoDto;
-import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
-import lv.odylab.evedb.client.rpc.dto.RamTypeRequirementDto;
+import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
+import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
+import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
+import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;

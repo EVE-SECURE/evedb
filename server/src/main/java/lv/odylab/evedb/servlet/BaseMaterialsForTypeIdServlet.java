@@ -1,9 +1,9 @@
 package lv.odylab.evedb.servlet;
 
-import lv.odylab.evedb.client.rpc.dto.InvTypeMaterialDto;
-import lv.odylab.evedb.client.rpc.dto.Rowset;
 import lv.odylab.evedb.domain.InvTypeMaterial;
 import lv.odylab.evedb.domain.InvTypeMaterialDao;
+import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.XmlRowsetDto;
 import lv.odylab.evedb.service.DtoMapper;
 
 import javax.servlet.ServletException;
@@ -36,6 +36,6 @@ public class BaseMaterialsForTypeIdServlet extends XmlJsonServlet {
 
     @Override
     protected void writeXml(Object object, Writer writer) throws JAXBException {
-        getMarshaller().marshal(new Rowset((List) object), writer);
+        getMarshaller().marshal(new XmlRowsetDto((List) object), writer);
     }
 }
