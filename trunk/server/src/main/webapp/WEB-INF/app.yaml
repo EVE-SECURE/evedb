@@ -25,6 +25,10 @@ handlers:
   servlet: lv.odylab.evedb.servlet.admin.ReindexServlet
   login: admin
 
+- url: /admin/tokenizeInvType
+  servlet: lv.odylab.evedb.servlet.admin.TokenizeInvTypeServlet
+  login: admin
+
 - url: /baseMaterialsForTypeID/*
   servlet: lv.odylab.evedb.servlet.BaseMaterialsForTypeIdServlet
 

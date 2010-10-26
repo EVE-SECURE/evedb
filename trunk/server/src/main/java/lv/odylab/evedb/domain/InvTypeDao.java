@@ -37,9 +37,9 @@ public class InvTypeDao {
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
-                .filter("typeName >=", partialTypeName)
-                .filter("typeName <", partialTypeName + "\uFFFD")
-                .order("typeName")
+                .filter("typeNameTokens >=", partialTypeName.toUpperCase())
+                .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
+                .order("typeNameTokens")
                 .limit(limit).list();
     }
 
@@ -51,9 +51,9 @@ public class InvTypeDao {
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
                 .filter("categoryID", 4L)
-                .filter("typeName >=", partialTypeName)
-                .filter("typeName <", partialTypeName + "\uFFFD")
-                .order("typeName")
+                .filter("typeNameTokens >=", partialTypeName.toUpperCase())
+                .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
+                .order("typeNameTokens")
                 .limit(limit).list();
     }
 
@@ -65,9 +65,9 @@ public class InvTypeDao {
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
                 .filter("categoryID", 9L)
-                .filter("typeName >=", partialTypeName)
-                .filter("typeName <", partialTypeName + "\uFFFD")
-                .order("typeName")
+                .filter("typeNameTokens >=", partialTypeName.toUpperCase())
+                .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
+                .order("typeNameTokens")
                 .limit(limit).list();
     }
 }
