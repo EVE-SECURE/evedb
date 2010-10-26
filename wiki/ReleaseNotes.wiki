@@ -2,6 +2,11 @@
 
 = Release notes =
 
+== 2010.11.??, version 1.7 ==
+  * *Added full search*
+
+  * Issue 20.
+
 == 2010.10.13, version 1.6 ==
   * *Improved performance*
 
