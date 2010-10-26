@@ -5,7 +5,7 @@
 == 2010.11.??, version 1.7 ==
   * *Added full search*
 
-  * Issue 20.
+  * Issue 20. Introduce full search
 
 == 2010.10.13, version 1.6 ==
   * *Improved performance*
