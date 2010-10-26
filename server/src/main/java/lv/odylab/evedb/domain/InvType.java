@@ -5,10 +5,11 @@ import com.googlecode.objectify.annotation.Unindexed;
 
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.List;
 
 @Unindexed
 public class InvType implements Serializable {
-    private static final long serialVersionUID = -6172608943137366289L;
+    private static final long serialVersionUID = 5449038652589595269L;
 
     @Id
     private Long id;
@@ -16,6 +17,8 @@ public class InvType implements Serializable {
     private Long typeID;
     @Indexed
     private String typeName;
+    @Indexed
+    private List<String> typeNameTokens;
     private Long typeIconID;
     private String typeIcon;
     private Long groupID;
@@ -54,6 +57,14 @@ public class InvType implements Serializable {
 
     public void setTypeName(String typeName) {
         this.typeName = typeName;
+    }
+
+    public List<String> getTypeNameTokens() {
+        return typeNameTokens;
+    }
+
+    public void setTypeNameTokens(List<String> typeNameTokens) {
+        this.typeNameTokens = typeNameTokens;
     }
 
     public Long getTypeIconID() {

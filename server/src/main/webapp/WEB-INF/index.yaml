@@ -30,7 +30,7 @@ indexes:
   properties:
   - name: dumpVersion
   - name: published
-  - name: typeName
+  - name: typeNameTokens
 
 - kind: InvType
   ancestor: no
@@ -38,7 +38,7 @@ indexes:
   - name: dumpVersion
   - name: published
   - name: categoryID
-  - name: typeName
+  - name: typeNameTokens
 
 
 - kind: InvTypeMaterial
