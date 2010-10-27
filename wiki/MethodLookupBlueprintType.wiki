@@ -32,16 +32,15 @@ List of matching blueprint item types.
 }}}
 
 [http://odylab-evedb.appspot.com/lookupBlueprintType/Mega lookupBlueprintType/Mega] (JSON)
-{{{
-[ { "icon" : "13_11",
+[ { "icon" : "13_15",
     "itemCategoryID" : 9,
-    "itemTypeID" : 847,
-    "name" : "Mega Beam Laser I Blueprint"
+    "itemTypeID" : 846,
+    "name" : "Mega Pulse Laser I Blueprint"
   },
   { "icon" : "13_11",
     "itemCategoryID" : 9,
-    "itemTypeID" : 3050,
-    "name" : "Mega Beam Laser II Blueprint"
+    "itemTypeID" : 847,
+    "name" : "Mega Beam Laser I Blueprint"
   },
   { "icon" : "01_08",
     "itemCategoryID" : 9,
@@ -50,8 +49,18 @@ List of matching blueprint item types.
   },
   { "icon" : "13_15",
     "itemCategoryID" : 9,
-    "itemTypeID" : 846,
-    "name" : "Mega Pulse Laser I Blueprint"
+    "itemTypeID" : 23847,
+    "name" : "'Halberd' Mega Pulse Laser I Blueprint"
+  },
+  { "icon" : "13_11",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 23849,
+    "name" : "'Catapult' Mega Beam Laser I Blueprint"
+  },
+  { "icon" : "13_11",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 3050,
+    "name" : "Mega Beam Laser II Blueprint"
   },
   { "icon" : "13_15",
     "itemCategoryID" : 9,
@@ -77,47 +86,59 @@ List of matching blueprint item types.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <icon>13_11</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>847</itemTypeID>
-    <name>Mega Beam Laser I Blueprint</name>
-  </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <icon>13_11</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>3050</itemTypeID>
-    <name>Mega Beam Laser II Blueprint</name>
-  </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <icon>01_08</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>30224</itemTypeID>
-    <name>Mega Module Blueprint</name>
-  </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>13_15</icon>
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>846</itemTypeID>
     <name>Mega Pulse Laser I Blueprint</name>
   </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>13_11</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>847</itemTypeID>
+    <name>Mega Beam Laser I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>01_08</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>30224</itemTypeID>
+    <name>Mega Module Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>13_15</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>23847</itemTypeID>
+    <name>'Halberd' Mega Pulse Laser I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>13_11</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>23849</itemTypeID>
+    <name>'Catapult' Mega Beam Laser I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>13_11</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>3050</itemTypeID>
+    <name>Mega Beam Laser II Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>13_15</icon>
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>3058</itemTypeID>
     <name>Mega Pulse Laser II Blueprint</name>
   </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>995</itemTypeID>
     <name>Megathron Blueprint</name>
   </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>13203</itemTypeID>
     <name>Megathron Federate Issue Blueprint</name>
   </row>
-  <row xsi:type="invTypeBasicInfoDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>17729</itemTypeID>
     <name>Megathron Navy Issue Blueprint</name>
