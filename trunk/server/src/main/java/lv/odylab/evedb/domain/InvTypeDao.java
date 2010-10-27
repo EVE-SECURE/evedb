@@ -1,7 +1,9 @@
 package lv.odylab.evedb.domain;
 
 import com.googlecode.objectify.ObjectifyService;
+import com.googlecode.objectify.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InvTypeDao {
@@ -34,6 +36,17 @@ public class InvTypeDao {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
+        List<String> words = getWords(partialTypeName);
+        if (words.size() > 1) {
+            Query<InvType> query = ObjectifyService.begin().query(InvType.class)
+                    .filter("dumpVersion", dumpVersion)
+                    .filter("published", Boolean.TRUE);
+            for (String word : words) {
+                query.filter("typeNameTokens", word.toUpperCase());
+            }
+            return query.order("typeNameTokens")
+                    .limit(limit).list();
+        }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
@@ -46,6 +59,18 @@ public class InvTypeDao {
     public List<InvType> findResourceByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
+        }
+        List<String> words = getWords(partialTypeName);
+        if (words.size() > 1) {
+            Query<InvType> query = ObjectifyService.begin().query(InvType.class)
+                    .filter("dumpVersion", dumpVersion)
+                    .filter("published", Boolean.TRUE)
+                    .filter("categoryID", 4L);
+            for (String word : words) {
+                query.filter("typeNameTokens", word.toUpperCase());
+            }
+            return query.order("typeNameTokens")
+                    .limit(limit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
@@ -61,6 +86,19 @@ public class InvTypeDao {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
+        List<String> words = getWords(partialTypeName);
+        if (words.size() > 1) {
+
+            Query<InvType> query = ObjectifyService.begin().query(InvType.class)
+                    .filter("dumpVersion", dumpVersion)
+                    .filter("published", Boolean.TRUE)
+                    .filter("categoryID", 9L);
+            for (String word : words) {
+                query.filter("typeNameTokens", word.toUpperCase());
+            }
+            return query.order("typeNameTokens")
+                    .limit(limit).list();
+        }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
@@ -69,5 +107,16 @@ public class InvTypeDao {
                 .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .limit(limit).list();
+    }
+
+    private List<String> getWords(String inputString) {
+        String[] words = inputString.split(" ");
+        List<String> result = new ArrayList<String>();
+        for (String word : words) {
+            if (word.length() > 0) {
+                result.add(word);
+            }
+        }
+        return result;
     }
 }
