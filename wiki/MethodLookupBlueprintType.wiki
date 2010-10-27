@@ -32,6 +32,7 @@ List of matching blueprint item types.
 }}}
 
 [http://odylab-evedb.appspot.com/lookupBlueprintType/Mega lookupBlueprintType/Mega] (JSON)
+{{{
 [ { "icon" : "13_15",
     "itemCategoryID" : 9,
     "itemTypeID" : 846,
