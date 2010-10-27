@@ -5,6 +5,7 @@
 == 2010.11.??, version 1.7 ==
   * *Added full search*
 
+  * Issue 21. Add dumpVersion attribute for blueprintTypeByTypeID and blueprintTypeByTypeName methods
   * Issue 20. Introduce full search
 
 == 2010.10.13, version 1.6 ==
