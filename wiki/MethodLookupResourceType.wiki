@@ -16,7 +16,7 @@ List of matching resource item types.
   * Maximum 50 results (EveDb constraint)
   * Minimum 3 letters (EveDb constraint)
   * Only matches that begin with query string (AppEngine constraint)
-  * Case-sensitive (AppEngine constraint)
+  * ~~Case-sensitive (AppEngine constraint)~~ Case-insensitive as of 1.7 
 
 == Examples ==
 
