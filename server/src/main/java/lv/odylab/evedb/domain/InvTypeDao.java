@@ -42,7 +42,7 @@ public class InvTypeDao {
                     .filter("dumpVersion", dumpVersion)
                     .filter("published", Boolean.TRUE);
             for (String word : words) {
-                query.filter("typeNameTokens", word.toUpperCase());
+                query.filter("typeNameTokens", word.trim().toUpperCase());
             }
             return query.order("typeNameTokens")
                     .limit(limit).list();
@@ -50,8 +50,8 @@ public class InvTypeDao {
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
-                .filter("typeNameTokens >=", partialTypeName.toUpperCase())
-                .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
+                .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
+                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .limit(limit).list();
     }
@@ -67,7 +67,7 @@ public class InvTypeDao {
                     .filter("published", Boolean.TRUE)
                     .filter("categoryID", 4L);
             for (String word : words) {
-                query.filter("typeNameTokens", word.toUpperCase());
+                query.filter("typeNameTokens", word.trim().toUpperCase());
             }
             return query.order("typeNameTokens")
                     .limit(limit).list();
@@ -76,8 +76,8 @@ public class InvTypeDao {
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
                 .filter("categoryID", 4L)
-                .filter("typeNameTokens >=", partialTypeName.toUpperCase())
-                .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
+                .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
+                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .limit(limit).list();
     }
@@ -94,7 +94,7 @@ public class InvTypeDao {
                     .filter("published", Boolean.TRUE)
                     .filter("categoryID", 9L);
             for (String word : words) {
-                query.filter("typeNameTokens", word.toUpperCase());
+                query.filter("typeNameTokens", word.trim().toUpperCase());
             }
             return query.order("typeNameTokens")
                     .limit(limit).list();
@@ -103,8 +103,8 @@ public class InvTypeDao {
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
                 .filter("categoryID", 9L)
-                .filter("typeNameTokens >=", partialTypeName.toUpperCase())
-                .filter("typeNameTokens <", partialTypeName.toUpperCase() + "\uFFFD")
+                .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
+                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .limit(limit).list();
     }
@@ -113,7 +113,7 @@ public class InvTypeDao {
         String[] words = inputString.split(" ");
         List<String> result = new ArrayList<String>();
         for (String word : words) {
-            if (word.length() > 0) {
+            if (word != null && word.trim().length() > 0) {
                 result.add(word);
             }
         }
