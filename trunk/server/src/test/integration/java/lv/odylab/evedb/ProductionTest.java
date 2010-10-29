@@ -526,6 +526,17 @@ public class ProductionTest {
     }
 
     @Test
+    public void test_lookupBlueprintType_FullSearch_Trimming() throws Exception {
+        URL url = new URL(baseUrl + "/lookupBlueprintType/gallente+");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.setRequestProperty("Accept", "application/json");
+        assertEquals(200, connection.getResponseCode());
+        assertEquals("[{\"itemTypeID\":21945,\"itemCategoryID\":9,\"name\":\"Gallente Administrative Outpost Platform Blueprint\",\"icon\":\"06_03\"},{\"itemTypeID\":2780,\"itemCategoryID\":9,\"name\":\"Gallente Control Tower Blueprint\",\"icon\":\"07_15\"},{\"itemTypeID\":2781,\"itemCategoryID\":9,\"name\":\"Gallente Control Tower Medium Blueprint\",\"icon\":\"07_15\"},{\"itemTypeID\":2782,\"itemCategoryID\":9,\"name\":\"Gallente Control Tower Small Blueprint\",\"icon\":\"07_15\"},{\"itemTypeID\":11130,\"itemCategoryID\":9,\"name\":\"Gallente Shuttle Blueprint\"}]", getResponse(connection));
+        assertEquals("application/json; charset=utf-8", connection.getHeaderField("Content-Type"));
+    }
+
+    @Test
     public void test_lookupResourceType() throws Exception {
         URL url = new URL(baseUrl + "/lookupResourceType/Tri");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
