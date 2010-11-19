@@ -99,7 +99,7 @@ public class BlueprintService {
                 InvTypeMaterial existingInvTypeMaterial = typeIdToInvTypeMaterialMap.get(invTypeMaterial.getMaterialTypeID());
                 if (existingInvTypeMaterial != null) {
                     Long existingQuantity = existingInvTypeMaterial.getQuantity();
-                    Long quantity = invTypeMaterial.getQuantity();
+                    Long quantity = invTypeMaterial.getQuantity() * ramTypeRequirement.getQuantity();
                     if (existingQuantity - quantity > 0) {
                         existingInvTypeMaterial.setQuantity(existingQuantity - quantity);
                     } else {
