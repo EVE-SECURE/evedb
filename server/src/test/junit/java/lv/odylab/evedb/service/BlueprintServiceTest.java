@@ -51,7 +51,7 @@ public class BlueprintServiceTest {
         List<RamTypeRequirement> ramTypeRequirements = new ArrayList<RamTypeRequirement>();
         RamTypeRequirement ramTypeRequirement1 = new RamTypeRequirement();
         ramTypeRequirement1.setRequiredTypeID(6L);
-        ramTypeRequirement1.setQuantity(1L);
+        ramTypeRequirement1.setQuantity(2L);
         ramTypeRequirement1.setActivityName("Manufacturing");
         ramTypeRequirement1.setRecycle(Boolean.TRUE);
         RamTypeRequirement ramTypeRequirement2 = new RamTypeRequirement();
@@ -113,7 +113,7 @@ public class BlueprintServiceTest {
     public void test_getBlueprintDetailsForTypeID() {
         BlueprintDetails blueprintDetails = blueprintService.getBlueprintDetailsForTypeID(1L);
         assertEquals(Long.valueOf(2), blueprintDetails.getBlueprintType().getProductTypeID());
-        assertEquals(2, blueprintDetails.getMaterials().size());
+        assertEquals(1, blueprintDetails.getMaterials().size());
         assertEquals(Long.valueOf(5), blueprintDetails.getMaterials().get(0).getQuantity());
         assertEquals(Long.valueOf(30), blueprintDetails.getMaterials().get(1).getQuantity());
         assertEquals(2, blueprintDetails.getManufacturingRequirements().size());
@@ -128,7 +128,7 @@ public class BlueprintServiceTest {
     public void test_getBlueprintDetailsForTypeName() {
         BlueprintDetails blueprintDetails = blueprintService.getBlueprintDetailsForTypeName("typeName");
         assertEquals(Long.valueOf(2), blueprintDetails.getBlueprintType().getProductTypeID());
-        assertEquals(2, blueprintDetails.getMaterials().size());
+        assertEquals(1, blueprintDetails.getMaterials().size());
         assertEquals(Long.valueOf(5), blueprintDetails.getMaterials().get(0).getQuantity());
         assertEquals(Long.valueOf(30), blueprintDetails.getMaterials().get(1).getQuantity());
         assertEquals(2, blueprintDetails.getManufacturingRequirements().size());
