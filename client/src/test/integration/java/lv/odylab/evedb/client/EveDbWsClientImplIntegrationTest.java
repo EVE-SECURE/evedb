@@ -76,7 +76,7 @@ public class EveDbWsClientImplIntegrationTest {
     @Test
     public void testLookupResourceType() {
         List<InvTypeBasicInfoDto> typeBasicInfoDtoList = client.lookupResourceType("Trit");
-        assertEquals(1, typeBasicInfoDtoList.size());
+        assertEquals(2, typeBasicInfoDtoList.size());
     }
 
     @Test
