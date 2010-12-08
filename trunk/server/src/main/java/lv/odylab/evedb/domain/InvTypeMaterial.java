@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvTypeMaterial implements Serializable {
-    private static final long serialVersionUID = 2907188354983908540L;
+    private static final long serialVersionUID = 7116511223133387882L;
 
     @Id
     private Long id;
@@ -31,6 +31,7 @@ public class InvTypeMaterial implements Serializable {
     private String materialTypeGroupName;
     private Long materialTypeCategoryID;
     private String materialTypeCategoryName;
+    private Double materialVolume;
     private Long quantity;
     @Indexed
     private String dumpVersion;
@@ -169,6 +170,14 @@ public class InvTypeMaterial implements Serializable {
 
     public void setMaterialTypeCategoryName(String materialTypeCategoryName) {
         this.materialTypeCategoryName = materialTypeCategoryName;
+    }
+
+    public Double getMaterialVolume() {
+        return materialVolume;
+    }
+
+    public void setMaterialVolume(Double materialVolume) {
+        this.materialVolume = materialVolume;
     }
 
     public Long getQuantity() {

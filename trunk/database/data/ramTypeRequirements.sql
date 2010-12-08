@@ -17,10 +17,11 @@ SELECT
   ig_required.groupName requiredTypeGroupName,
   ic_required.categoryID requiredTypeCategoryID,
   ic_required.categoryName requiredTypeCategoryName,
+  it_required.volume requiredTypeVolume,
   rtr.quantity,
   rtr.damagePerJob,
   rtr.recycle,
-  "tyr104" dumpVersion
+  'inc100' dumpVersion
 FROM
   ramTypeRequirements rtr
   LEFT JOIN ramActivities ra ON rtr.activityID = ra.activityID

@@ -18,6 +18,8 @@ class InvBlueprintType(db.Model):
     productivityModifier = db.IntegerProperty(indexed=False)
     materialModifier = db.IntegerProperty(indexed=False)
     wasteFactor = db.IntegerProperty(indexed=False)
+    productVolume = db.FloatProperty(indexed=False)
+    productPortionSize = db.IntegerProperty(indexed=False)
     maxProductionLimit = db.IntegerProperty(indexed=False)
     published = db.BooleanProperty()
     dumpVersion = db.StringProperty()
@@ -64,6 +66,8 @@ class InvBlueprintTypeLoader(bulkloader.Loader):
                                     ('productivityModifier', safe_int),
                                     ('materialModifier', safe_int),
                                     ('wasteFactor', safe_int),
+                                    ('productVolume', safe_float),
+                                    ('productPortionSize', safe_int),
                                     ('maxProductionLimit', safe_int),
                                     ('published', safe_bool),
                                     ('dumpVersion', safe_str)

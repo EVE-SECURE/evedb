@@ -20,6 +20,7 @@ class RamTypeRequirement(db.Model):
     requiredTypeGroupName = db.StringProperty(indexed=False)
     requiredTypeCategoryID = db.IntegerProperty(indexed=False)
     requiredTypeCategoryName = db.StringProperty(indexed=False)
+    requiredTypeVolume = db.FloatProperty(indexed=False)
     quantity = db.IntegerProperty(indexed=False)
     damagePerJob = db.FloatProperty(indexed=False)
     recycle = db.BooleanProperty(indexed=False)
@@ -69,6 +70,7 @@ class RamTypeRequirementLoader(bulkloader.Loader):
                                     ('requiredTypeGroupName', safe_str),
                                     ('requiredTypeCategoryID', safe_int),
                                     ('requiredTypeCategoryName', safe_str),
+                                    ('requiredTypeVolume', safe_float),
                                     ('quantity', safe_int),
                                     ('damagePerJob', safe_float),
                                     ('recycle', safe_bool),

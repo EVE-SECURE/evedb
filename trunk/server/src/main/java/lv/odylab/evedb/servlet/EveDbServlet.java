@@ -21,7 +21,7 @@ import java.net.URLDecoder;
 public abstract class EveDbServlet extends HttpServlet {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
 
-    protected static final String DUMP_VERSION = "tyr104";
+    protected static final String DUMP_VERSION = "inc100";
 
     private MemcacheService memcacheService;
 

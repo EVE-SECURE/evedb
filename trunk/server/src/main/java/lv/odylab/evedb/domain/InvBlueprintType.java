@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvBlueprintType implements Serializable {
-    private static final long serialVersionUID = -1531364479615244907L;
+    private static final long serialVersionUID = 8728399120061171471L;
 
     @Id
     private Long id;
@@ -30,6 +30,8 @@ public class InvBlueprintType implements Serializable {
     private Integer productivityModifier;
     private Integer materialModifier;
     private Integer wasteFactor;
+    private Double productVolume;
+    private Integer productPortionSize;
     private Integer maxProductionLimit;
     @Indexed
     private Boolean published;
@@ -170,6 +172,22 @@ public class InvBlueprintType implements Serializable {
 
     public void setWasteFactor(Integer wasteFactor) {
         this.wasteFactor = wasteFactor;
+    }
+
+    public Double getProductVolume() {
+        return productVolume;
+    }
+
+    public void setProductVolume(Double productVolume) {
+        this.productVolume = productVolume;
+    }
+
+    public Integer getProductPortionSize() {
+        return productPortionSize;
+    }
+
+    public void setProductPortionSize(Integer productPortionSize) {
+        this.productPortionSize = productPortionSize;
     }
 
     public Integer getMaxProductionLimit() {
