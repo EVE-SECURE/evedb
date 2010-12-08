@@ -15,8 +15,9 @@ SELECT
   ig_material.groupName materialTypeGroupName,
   ic_material.categoryID materialTypeCategoryID,
   ic_material.categoryName materialTypeCategoryName,
+  it_material.volume materialVolume,
   itm.quantity,
-  "tyr104" dumpVersion
+  'inc100' dumpVersion
 FROM
   invTypeMaterials itm
   LEFT JOIN invTypes it ON itm.typeID = it.typeID

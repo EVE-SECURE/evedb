@@ -1,0 +1,1 @@
+appcfg.py upload_data --url=http://localhost:8080/remote_api --config_file=python/InvTypeLoader.py --filename=data/invTypes.csv --kind=InvType ./python

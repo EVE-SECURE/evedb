@@ -820,7 +820,7 @@ public class ProductionTest {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Accept", "text/plain");
         assertEquals(200, connection.getResponseCode());
-        assertTrue(getResponse(connection).endsWith("-tyr104"));
+        assertTrue(getResponse(connection).endsWith("-inc100"));
         assertEquals("text/html", connection.getHeaderField("Content-Type"));
     }
 

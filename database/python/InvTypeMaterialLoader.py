@@ -18,6 +18,7 @@ class InvTypeMaterial(db.Model):
     materialTypeGroupName = db.StringProperty(indexed=False)
     materialTypeCategoryID = db.IntegerProperty(indexed=False)
     materialTypeCategoryName = db.StringProperty(indexed=False)
+    materialVolume = db.FloatProperty(indexed=False)
     quantity = db.IntegerProperty(indexed=False)
     dumpVersion = db.StringProperty()
 
@@ -63,6 +64,7 @@ class InvTypeMaterialLoader(bulkloader.Loader):
                                     ('materialTypeGroupName', safe_str),
                                     ('materialTypeCategoryID', safe_int),
                                     ('materialTypeCategoryName', safe_str),
+                                    ('materialVolume', safe_float),
                                     ('quantity', safe_int),
                                     ('dumpVersion', safe_str)
                                     ])

@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Unindexed
 public class RamTypeRequirement implements Serializable {
-    private static final long serialVersionUID = -2449669470826539655L;
+    private static final long serialVersionUID = 1512998621021565941L;
 
     @Id
     private Long id;
@@ -33,6 +33,7 @@ public class RamTypeRequirement implements Serializable {
     private String requiredTypeGroupName;
     private Long requiredTypeCategoryID;
     private String requiredTypeCategoryName;
+    private Double requiredTypeVolume;
     private Long quantity;
     private Double damagePerJob;
     private Boolean recycle;
@@ -189,6 +190,14 @@ public class RamTypeRequirement implements Serializable {
 
     public void setRequiredTypeCategoryName(String requiredTypeCategoryName) {
         this.requiredTypeCategoryName = requiredTypeCategoryName;
+    }
+
+    public Double getRequiredTypeVolume() {
+        return requiredTypeVolume;
+    }
+
+    public void setRequiredTypeVolume(Double requiredTypeVolume) {
+        this.requiredTypeVolume = requiredTypeVolume;
     }
 
     public Long getQuantity() {

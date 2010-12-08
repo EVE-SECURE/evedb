@@ -14,10 +14,12 @@ SELECT
   ibt.researchTechTime,
   ibt.productivityModifier,
   ibt.materialModifier,
-  ibt.wasteFactor,
+  ibt.wasteFactor,                                                                                                      
+  it_product.volume productVolume,
+  it_product.portionSize productPortionSize,
   ibt.maxProductionLimit,
   it.published published,
-  "tyr104" dumpVersion
+  'inc100' dumpVersion
 FROM
   invBlueprintTypes ibt
   LEFT JOIN invTypes it ON ibt.blueprintTypeID = it.typeID

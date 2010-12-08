@@ -15,7 +15,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.util.ArrayList;
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -95,10 +96,10 @@ public class BlueprintServiceTest {
         List<InvTypeMaterial> invTypeMaterialsForRequirement = new ArrayList<InvTypeMaterial>();
         InvTypeMaterial invTypeMaterialForRequirement1 = new InvTypeMaterial();
         invTypeMaterialForRequirement1.setMaterialTypeID(3L);
-        invTypeMaterialForRequirement1.setQuantity(5L);
+        invTypeMaterialForRequirement1.setQuantity(2L);
         InvTypeMaterial invTypeMaterialForRequirement2 = new InvTypeMaterial();
         invTypeMaterialForRequirement2.setMaterialTypeID(4L);
-        invTypeMaterialForRequirement2.setQuantity(25L);
+        invTypeMaterialForRequirement2.setQuantity(15L);
         invTypeMaterialsForRequirement.add(invTypeMaterialForRequirement1);
         invTypeMaterialsForRequirement.add(invTypeMaterialForRequirement2);
 
@@ -112,30 +113,30 @@ public class BlueprintServiceTest {
     @Test
     public void test_getBlueprintDetailsForTypeID() {
         BlueprintDetails blueprintDetails = blueprintService.getBlueprintDetailsForTypeID(1L);
-        assertEquals(Long.valueOf(2), blueprintDetails.getBlueprintType().getProductTypeID());
-        assertEquals(1, blueprintDetails.getMaterials().size());
-        assertEquals(Long.valueOf(5), blueprintDetails.getMaterials().get(0).getQuantity());
-        assertEquals(Long.valueOf(30), blueprintDetails.getMaterials().get(1).getQuantity());
-        assertEquals(2, blueprintDetails.getManufacturingRequirements().size());
-        assertEquals(1, blueprintDetails.getTimeProductivityRequirements().size());
-        assertEquals(1, blueprintDetails.getMaterialProductivityRequirements().size());
-        assertEquals(1, blueprintDetails.getCopyingRequirements().size());
-        assertEquals(1, blueprintDetails.getReverseEngineeringRequirements().size());
-        assertEquals(1, blueprintDetails.getInventionRequirements().size());
+        assertThat(blueprintDetails.getBlueprintType().getProductTypeID(), equalTo(2L));
+        assertThat(blueprintDetails.getMaterials().size(), equalTo(2));
+        assertThat(blueprintDetails.getMaterials().get(0).getQuantity(), equalTo(6L));
+        assertThat(blueprintDetails.getMaterials().get(1).getQuantity(), equalTo(30L));
+        assertThat(blueprintDetails.getManufacturingRequirements().size(), equalTo(2));
+        assertThat(blueprintDetails.getTimeProductivityRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getMaterialProductivityRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getCopyingRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getReverseEngineeringRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getInventionRequirements().size(), equalTo(1));
     }
 
     @Test
     public void test_getBlueprintDetailsForTypeName() {
         BlueprintDetails blueprintDetails = blueprintService.getBlueprintDetailsForTypeName("typeName");
-        assertEquals(Long.valueOf(2), blueprintDetails.getBlueprintType().getProductTypeID());
-        assertEquals(1, blueprintDetails.getMaterials().size());
-        assertEquals(Long.valueOf(5), blueprintDetails.getMaterials().get(0).getQuantity());
-        assertEquals(Long.valueOf(30), blueprintDetails.getMaterials().get(1).getQuantity());
-        assertEquals(2, blueprintDetails.getManufacturingRequirements().size());
-        assertEquals(1, blueprintDetails.getTimeProductivityRequirements().size());
-        assertEquals(1, blueprintDetails.getMaterialProductivityRequirements().size());
-        assertEquals(1, blueprintDetails.getCopyingRequirements().size());
-        assertEquals(1, blueprintDetails.getReverseEngineeringRequirements().size());
-        assertEquals(1, blueprintDetails.getInventionRequirements().size());
+        assertThat(blueprintDetails.getBlueprintType().getProductTypeID(), equalTo(2L));
+        assertThat(blueprintDetails.getMaterials().size(), equalTo(2));
+        assertThat(blueprintDetails.getMaterials().get(0).getQuantity(), equalTo(6L));
+        assertThat(blueprintDetails.getMaterials().get(1).getQuantity(), equalTo(30L));
+        assertThat(blueprintDetails.getManufacturingRequirements().size(), equalTo(2));
+        assertThat(blueprintDetails.getTimeProductivityRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getMaterialProductivityRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getCopyingRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getReverseEngineeringRequirements().size(), equalTo(1));
+        assertThat(blueprintDetails.getInventionRequirements().size(), equalTo(1));
     }
 }
