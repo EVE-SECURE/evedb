@@ -10,7 +10,7 @@
     <parent>
         <groupId>lv.odylab.evedb</groupId>
         <artifactId>evedb</artifactId>
-        <version>1.8-SNAPSHOT</version>
+        <version>1.7</version>
     </parent>
 
     <dependencies>

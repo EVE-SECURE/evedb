@@ -1,1 +1,1 @@
-mvn clean source:jar install deploy 
+mvn clean source:jar install deploy
