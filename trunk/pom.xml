@@ -23,6 +23,7 @@
         <objectify.version>2.2.1</objectify.version>
         <persistence.api.version>1.0</persistence.api.version>
         <servlet.api.version>2.5</servlet.api.version>
+        <maven.compiler.version>2.3.2</maven.compiler.version>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,6 +34,15 @@
         <module>server</module>
         <module>client</module>
     </modules>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+            </extension>
+        </extensions>
+    </build>
 
     <developers>
         <developer>
