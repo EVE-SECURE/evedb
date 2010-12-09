@@ -11,7 +11,7 @@
 
     <xs:element name="ramTypeRequirementDto" type="ramTypeRequirementDto"/>
 
-    <xs:element name="rowset" type="xmlResultContainer"/>
+    <xs:element name="rowset" type="xmlRowsetDto"/>
 
     <xs:complexType name="blueprintDetailsDto">
         <xs:sequence>
@@ -87,7 +87,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="xmlResultContainer">
+    <xs:complexType name="xmlRowsetDto">
         <xs:sequence>
             <xs:element name="row" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
