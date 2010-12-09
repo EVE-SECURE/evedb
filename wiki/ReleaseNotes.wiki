@@ -5,7 +5,7 @@
 == 2010.12.??, version 1.8 ==
   * Issue 21. Add dumpVersion attribute for blueprintTypeByTypeID and blueprintTypeByTypeName methods
 
-== 2010.12.08, version 1.7 ==
+== 2010.12.09, version 1.7 ==
   * *Migrated to inc100*
   * *Added full search*
 
