@@ -7,8 +7,6 @@ import java.util.List;
 
 @XmlRootElement(name = "rowset")
 public class XmlRowsetDto implements Serializable {
-    private static final long serialVersionUID = -4433970127027146955L;
-
     private List result;
 
     public XmlRowsetDto() {

@@ -5,8 +5,6 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class InvTypeMaterialDto implements Serializable {
-    private static final long serialVersionUID = 6760053478915931294L;
-
     private Long materialTypeID;
     private String materialTypeName;
     private Long materialTypeCategoryID;

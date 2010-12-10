@@ -5,8 +5,6 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class InvBlueprintTypeDto implements Serializable {
-    private static final long serialVersionUID = 6096413302031875463L;
-
     private Long blueprintTypeID;
     private String blueprintTypeName;
     private Long productTypeID;

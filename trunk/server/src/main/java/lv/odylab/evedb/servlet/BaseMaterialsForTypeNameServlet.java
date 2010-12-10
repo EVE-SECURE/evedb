@@ -13,8 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseMaterialsForTypeNameServlet extends XmlJsonServlet {
-    private static final long serialVersionUID = -351174938591480485L;
-
     private InvTypeMaterialDao invTypeMaterialDao;
     private DtoMapper dtoMapper;
 

@@ -9,8 +9,6 @@ import java.util.List;
 
 @Unindexed
 public class InvType implements Serializable {
-    private static final long serialVersionUID = 5449038652589595269L;
-
     @Id
     private Long id;
     @Indexed

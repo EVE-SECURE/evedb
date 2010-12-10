@@ -13,8 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LookupResourceTypeServlet extends XmlJsonServlet {
-    private static final long serialVersionUID = -5921415376938298084L;
-
     private InvTypeDao invTypeDao;
     private DtoMapper dtoMapper;
 
