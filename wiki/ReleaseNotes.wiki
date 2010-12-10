@@ -4,6 +4,10 @@
 = Release notes =
 
 == 2010.12.??, version 1.8 ==
+  * Issue 27. Precalculated BlueprintDetails
+  * Issue 26. Add new attribues productVolume and productPortionSize to InvBlueprintTypeDto
+  * Issue 25. Add new attribute requiredTypeVolume in RamTypeRequirementDto
+  * Issue 24. Add new attribute materialVolume in InvTypeMaterialDto
   * Issue 21. Add dumpVersion attribute for blueprintTypeByTypeID and blueprintTypeByTypeName methods
 
 == 2010.12.09, version 1.7 ==
