@@ -6,8 +6,6 @@ import lv.odylab.evedb.service.DtoMapper;
 import javax.servlet.ServletException;
 
 public class TypeBasicInfoByTypeNameServlet extends XmlJsonServlet {
-    private static final long serialVersionUID = -9058791884845375670L;
-
     private InvTypeDao invTypeDao;
     private DtoMapper dtoMapper;
 

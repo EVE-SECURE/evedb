@@ -5,8 +5,6 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class InvTypeBasicInfoDto implements Serializable {
-    private static final long serialVersionUID = -2168576274862526960L;
-
     private Long itemTypeID;
     private Long itemCategoryID;
     private String name;

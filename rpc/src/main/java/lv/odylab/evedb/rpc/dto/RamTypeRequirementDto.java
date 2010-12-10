@@ -5,8 +5,6 @@ import java.io.Serializable;
 
 @XmlRootElement
 public class RamTypeRequirementDto implements Serializable {
-    private static final long serialVersionUID = 1999371741294265927L;
-
     private Long activityID;
     private String activityName;
     private Long requiredTypeID;

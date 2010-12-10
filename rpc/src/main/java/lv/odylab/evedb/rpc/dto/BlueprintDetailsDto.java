@@ -6,8 +6,6 @@ import java.util.List;
 
 @XmlRootElement
 public class BlueprintDetailsDto implements Serializable {
-    private static final long serialVersionUID = 3874089120723899281L;
-
     private InvBlueprintTypeDto invBlueprintTypeDto;
     private List<InvTypeMaterialDto> materialDtos;
     private List<RamTypeRequirementDto> manufacturingRequirementDtos;

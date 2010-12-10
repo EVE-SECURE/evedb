@@ -13,8 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtraMaterialsForTypeNameServlet extends XmlJsonServlet {
-    private static final long serialVersionUID = 4589882782233437361L;
-
     private RamTypeRequirementDao ramTypeRequirementDao;
     private DtoMapper dtoMapper;
 

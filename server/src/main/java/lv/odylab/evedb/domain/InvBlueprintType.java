@@ -8,8 +8,6 @@ import java.io.Serializable;
 
 @Unindexed
 public class InvBlueprintType implements Serializable {
-    private static final long serialVersionUID = 8728399120061171471L;
-
     @Id
     private Long id;
     @Indexed

@@ -8,8 +8,6 @@ import java.io.Serializable;
 
 @Unindexed
 public class RamTypeRequirement implements Serializable {
-    private static final long serialVersionUID = 1512998621021565941L;
-
     @Id
     private Long id;
     @Indexed

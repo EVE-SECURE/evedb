@@ -27,8 +27,6 @@ import java.util.Map;
 import static com.google.appengine.api.labs.taskqueue.TaskOptions.Builder.url;
 
 public class TokenizeInvTypeServlet extends HttpServlet {
-    private static final long serialVersionUID = -4190667059565771964L;
-
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     // TODO this is needed for ObjectifyService.register
