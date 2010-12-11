@@ -26,6 +26,7 @@ public class DtoMapper {
         invTypeMaterialDto.setMaterialTypeCategoryID(invTypeMaterial.getMaterialTypeCategoryID());
         invTypeMaterialDto.setMaterialTypeIcon(invTypeMaterial.getMaterialTypeIcon());
         invTypeMaterialDto.setQuantity(invTypeMaterial.getQuantity());
+        invTypeMaterialDto.setMaterialVolume(BigDecimal.valueOf(invTypeMaterial.getMaterialVolume()).toPlainString());
         return invTypeMaterialDto;
     }
 
@@ -46,6 +47,9 @@ public class DtoMapper {
         invBlueprintTypeDto.setProductivityModifier(invBlueprintType.getProductivityModifier());
         invBlueprintTypeDto.setWasteFactor(invBlueprintType.getWasteFactor());
         invBlueprintTypeDto.setMaxProductionLimit(invBlueprintType.getMaxProductionLimit());
+        invBlueprintTypeDto.setProductVolume(BigDecimal.valueOf(invBlueprintType.getProductVolume()).toPlainString());
+        invBlueprintTypeDto.setProductPortionSize(invBlueprintType.getProductPortionSize());
+        invBlueprintTypeDto.setDumpVersion(invBlueprintType.getDumpVersion());
         return invBlueprintTypeDto;
     }
 
@@ -107,8 +111,9 @@ public class DtoMapper {
         ramTypeRequirementDto.setRequiredTypeGroupName(ramTypeRequirement.getRequiredTypeGroupName());
         ramTypeRequirementDto.setActivityID(ramTypeRequirement.getActivityID());
         ramTypeRequirementDto.setActivityName(ramTypeRequirement.getActivityName());
-        ramTypeRequirementDto.setDamagePerJob(String.valueOf(ramTypeRequirement.getDamagePerJob()));
+        ramTypeRequirementDto.setDamagePerJob(BigDecimal.valueOf(ramTypeRequirement.getDamagePerJob()).toPlainString());
         ramTypeRequirementDto.setQuantity(ramTypeRequirement.getQuantity());
+        ramTypeRequirementDto.setRequiredTypeVolume(BigDecimal.valueOf(ramTypeRequirement.getRequiredTypeVolume()).toPlainString());
         return ramTypeRequirementDto;
     }
 

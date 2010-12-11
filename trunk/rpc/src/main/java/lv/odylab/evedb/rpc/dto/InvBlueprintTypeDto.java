@@ -20,6 +20,9 @@ public class InvBlueprintTypeDto implements Serializable {
     private Integer productivityModifier;
     private Integer wasteFactor;
     private Integer maxProductionLimit;
+    private String productVolume;
+    private Integer productPortionSize;
+    private String dumpVersion;
 
     public Long getBlueprintTypeID() {
         return blueprintTypeID;
@@ -139,5 +142,29 @@ public class InvBlueprintTypeDto implements Serializable {
 
     public void setMaxProductionLimit(Integer maxProductionLimit) {
         this.maxProductionLimit = maxProductionLimit;
+    }
+
+    public String getProductVolume() {
+        return productVolume;
+    }
+
+    public void setProductVolume(String productVolume) {
+        this.productVolume = productVolume;
+    }
+
+    public Integer getProductPortionSize() {
+        return productPortionSize;
+    }
+
+    public void setProductPortionSize(Integer productPortionSize) {
+        this.productPortionSize = productPortionSize;
+    }
+
+    public String getDumpVersion() {
+        return dumpVersion;
+    }
+
+    public void setDumpVersion(String dumpVersion) {
+        this.dumpVersion = dumpVersion;
     }
 }
