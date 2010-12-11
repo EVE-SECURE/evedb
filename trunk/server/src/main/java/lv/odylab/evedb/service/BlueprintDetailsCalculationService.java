@@ -1,5 +1,6 @@
 package lv.odylab.evedb.service;
 
+import lv.odylab.evedb.domain.BlueprintDetails;
 import lv.odylab.evedb.domain.InvBlueprintType;
 import lv.odylab.evedb.domain.InvBlueprintTypeDao;
 import lv.odylab.evedb.domain.InvTypeMaterial;
@@ -12,13 +13,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BlueprintService {
+public class BlueprintDetailsCalculationService {
     private final InvBlueprintTypeDao invBlueprintTypeDao;
     private final InvTypeMaterialDao invTypeMaterialDao;
     private final RamTypeRequirementDao ramTypeRequirementDao;
     private final String dumpVersion;
 
-    public BlueprintService(InvBlueprintTypeDao invBlueprintTypeDao, InvTypeMaterialDao invTypeMaterialDao, RamTypeRequirementDao ramTypeRequirementDao, String dumpVersion) {
+    public BlueprintDetailsCalculationService(InvBlueprintTypeDao invBlueprintTypeDao, InvTypeMaterialDao invTypeMaterialDao, RamTypeRequirementDao ramTypeRequirementDao, String dumpVersion) {
         this.invBlueprintTypeDao = invBlueprintTypeDao;
         this.invTypeMaterialDao = invTypeMaterialDao;
         this.ramTypeRequirementDao = ramTypeRequirementDao;

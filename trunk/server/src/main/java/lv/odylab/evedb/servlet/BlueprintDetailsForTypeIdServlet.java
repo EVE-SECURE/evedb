@@ -1,25 +1,22 @@
 package lv.odylab.evedb.servlet;
 
-import lv.odylab.evedb.domain.InvBlueprintTypeDao;
-import lv.odylab.evedb.domain.InvTypeMaterialDao;
-import lv.odylab.evedb.domain.RamTypeRequirementDao;
-import lv.odylab.evedb.service.BlueprintService;
+import lv.odylab.evedb.domain.BlueprintDetailsDao;
 import lv.odylab.evedb.service.DtoMapper;
 
 import javax.servlet.ServletException;
 
 public class BlueprintDetailsForTypeIdServlet extends XmlJsonServlet {
-    private BlueprintService blueprintService;
+    private BlueprintDetailsDao blueprintDetailsDao;
     private DtoMapper dtoMapper;
 
     @Override
     public void init() throws ServletException {
-        blueprintService = new BlueprintService(new InvBlueprintTypeDao(), new InvTypeMaterialDao(), new RamTypeRequirementDao(), DUMP_VERSION);
+        blueprintDetailsDao = new BlueprintDetailsDao();
         dtoMapper = new DtoMapper();
     }
 
     @Override
     protected Object provideResponse(String typeName) {
-        return dtoMapper.map(blueprintService.getBlueprintDetailsForTypeID(Long.valueOf(typeName)));
+        return dtoMapper.map(blueprintDetailsDao.getBlueprintDetailsForTypeID(Long.valueOf(typeName), DUMP_VERSION));
     }
 }

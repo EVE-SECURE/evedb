@@ -10,10 +10,13 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Query;
+import lv.odylab.evedb.domain.BlueprintDetails;
+import lv.odylab.evedb.domain.BlueprintDetailsDao;
+import lv.odylab.evedb.domain.InvBlueprintType;
 import lv.odylab.evedb.domain.InvBlueprintTypeDao;
-import lv.odylab.evedb.domain.InvTypeDao;
 import lv.odylab.evedb.domain.InvTypeMaterialDao;
 import lv.odylab.evedb.domain.RamTypeRequirementDao;
+import lv.odylab.evedb.service.BlueprintDetailsCalculationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,18 +31,18 @@ import java.util.Map;
 
 import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
 
-public class ReindexServlet extends HttpServlet {
+public class CalculateBlueprintDetailsServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
+    private BlueprintDetailsCalculationService blueprintDetailsCalculationService;
+
     // TODO this is needed for ObjectifyService.register
-    private final InvBlueprintTypeDao invBlueprintTypeDao = new InvBlueprintTypeDao();
-    private final InvTypeDao invTypeDao = new InvTypeDao();
-    private final InvTypeMaterialDao invTypeMaterialDao = new InvTypeMaterialDao();
-    private final RamTypeRequirementDao ramTypeRequirementDao = new RamTypeRequirementDao();
+    private final BlueprintDetailsDao blueprintDetailsDao = new BlueprintDetailsDao();
 
     @Override
     public void init() throws ServletException {
         logger.info("Initializing servlet: {}", getClass().getSimpleName());
+        blueprintDetailsCalculationService = new BlueprintDetailsCalculationService(new InvBlueprintTypeDao(), new InvTypeMaterialDao(), new RamTypeRequirementDao(), "inc100");
     }
 
     @Override
@@ -49,56 +52,46 @@ public class ReindexServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String entityClass = req.getParameter("entityClass");
-        String dumpVersion = req.getParameter("dumpVersion");
-        String bookmark = req.getParameter("bookmark");
-        logger.info("Received following parameters: entityClass={}, dumpVersion={}, bookmark={}", new Object[]{entityClass, dumpVersion, bookmark});
-        if (entityClass == null || dumpVersion == null) {
-            resp.sendError(400, "entityClass and dumpVersion must be present");
-            return;
-        }
-
-        Class<?> clazz;
-        try {
-            clazz = Class.forName(entityClass);
-        } catch (ClassNotFoundException e) {
-            resp.sendError(400, "entityClass could not be found");
-            return;
-        }
-
         Objectify objectify = ObjectifyService.begin();
-        Query query = objectify.query(clazz).filter("dumpVersion", dumpVersion);
+        Query<InvBlueprintType> query = objectify.query(InvBlueprintType.class).filter("dumpVersion", "inc100");
+        String bookmark = req.getParameter("bookmark");
         if (bookmark != null) {
             logger.info("Proceeding query from bookmark: {}", bookmark);
             query.startCursor(Cursor.fromWebSafeString(bookmark));
         }
 
-        QueryResultIterable queryResult = query.fetchKeys();
-        QueryResultIterator iterator = queryResult.iterator();
-        List<Key<?>> keysToFetch = new ArrayList<Key<?>>();
+        QueryResultIterable<Key<InvBlueprintType>> queryResult = query.fetchKeys();
+        QueryResultIterator<Key<InvBlueprintType>> iterator = queryResult.iterator();
+        List<Key<InvBlueprintType>> keysToFetch = new ArrayList<Key<InvBlueprintType>>();
         while (iterator.hasNext()) {
-            keysToFetch.add((Key) iterator.next());
+            keysToFetch.add(iterator.next());
 
-            if (keysToFetch.size() > 999) {
-                Map<Key<Object>, Object> map = objectify.get(keysToFetch);
-                objectify.put(map.values());
+            if (keysToFetch.size() > 19) {
+                Map<Key<InvBlueprintType>, InvBlueprintType> map = objectify.get(keysToFetch);
+                List<BlueprintDetails> blueprintDetailsList = new ArrayList<BlueprintDetails>();
+                for (InvBlueprintType invBlueprintType : map.values()) {
+                    blueprintDetailsList.add(blueprintDetailsCalculationService.getBlueprintDetailsForTypeID(invBlueprintType.getBlueprintTypeID()));
+                }
+                objectify.put(blueprintDetailsList);
 
                 Cursor cursor = iterator.getCursor();
                 Queue queue = QueueFactory.getDefaultQueue();
                 String newBookmark = cursor.toWebSafeString();
-                queue.add(withUrl("/admin/reindex").method(TaskOptions.Method.POST)
-                        .param("entityClass", entityClass)
-                        .param("dumpVersion", dumpVersion)
+                queue.add(withUrl("/admin/calculateBlueprintDetails").method(TaskOptions.Method.POST)
                         .param("bookmark", newBookmark));
-                logger.info("100 objects processed, created new task with url: entityClass={}, dumpVersion={}, bookmark: {}", new Object[]{entityClass, dumpVersion, newBookmark});
+                logger.info("20 objects processed, created new task with url: bookmark: {}", newBookmark);
                 resp.getWriter().write("IN PROGRESS");
                 return;
             }
         }
 
-        Map<Key<Object>, Object> map = objectify.get(keysToFetch);
+        Map<Key<InvBlueprintType>, InvBlueprintType> map = objectify.get(keysToFetch);
         logger.info("Almost done, only {} objects left", map.size());
-        objectify.put(map.values());
+        List<BlueprintDetails> blueprintDetailsList = new ArrayList<BlueprintDetails>();
+        for (InvBlueprintType invBlueprintType : map.values()) {
+            blueprintDetailsList.add(blueprintDetailsCalculationService.getBlueprintDetailsForTypeID(invBlueprintType.getBlueprintTypeID()));
+        }
+        objectify.put(blueprintDetailsList);
         logger.info("Done.");
         resp.getWriter().write("DONE");
     }

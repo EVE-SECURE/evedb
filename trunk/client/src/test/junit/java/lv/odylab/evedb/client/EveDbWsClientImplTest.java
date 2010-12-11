@@ -7,15 +7,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static junit.framework.Assert.assertEquals;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EveDbWsClientImplTest {
-    @Test
-    public void none() {
-    }
-
     @Mock
     private EveDbWsClient.HttpRequestSender httpRequestSender;
     private EveDbWsClientImpl eveDbWsClient;
@@ -106,19 +103,19 @@ public class EveDbWsClientImplTest {
     @Test
     public void test_getTypeIdToTypeName() {
         when(httpRequestSender.doGet("eveDbUrl/typeIdToTypeName/1", "text/plain")).thenReturn("typeName");
-        assertEquals("typeName", eveDbWsClient.getTypeIdToTypeName(1L));
+        assertThat(eveDbWsClient.getTypeIdToTypeName(1L), equalTo("typeName"));
     }
 
     @Test
     public void test_getTypeNameToTypeID() {
         when(httpRequestSender.doGet("eveDbUrl/typeNameToTypeID/typeName", "text/plain")).thenReturn("1");
-        assertEquals(Long.valueOf(1), eveDbWsClient.getTypeNameToTypeID("typeName"));
+        assertThat(eveDbWsClient.getTypeNameToTypeID("typeName"), equalTo(Long.valueOf(1)));
     }
 
     @Test
     public void test_getVersion() {
         when(httpRequestSender.doGet("eveDbUrl/version", "text/plain")).thenReturn("version");
-        assertEquals("version", eveDbWsClient.getVersion());
+        assertThat(eveDbWsClient.getVersion(), equalTo("version"));
     }
 
     @Test(expected = BadRequestException.class)

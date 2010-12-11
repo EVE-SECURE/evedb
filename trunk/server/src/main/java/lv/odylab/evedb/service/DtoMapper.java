@@ -1,5 +1,6 @@
 package lv.odylab.evedb.service;
 
+import lv.odylab.evedb.domain.BlueprintDetails;
 import lv.odylab.evedb.domain.InvBlueprintType;
 import lv.odylab.evedb.domain.InvType;
 import lv.odylab.evedb.domain.InvTypeMaterial;
