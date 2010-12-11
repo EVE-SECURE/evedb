@@ -71,19 +71,7 @@ indexes:
   properties:
   - name: dumpVersion
   - name: typeID
-
-- kind: InvTypeMaterial
-  ancestor: no
-  properties:
-  - name: dumpVersion
-  - name: typeID
   - name: materialTypeID
-
-- kind: InvTypeMaterial
-  ancestor: no
-  properties:
-  - name: dumpVersion
-  - name: typeName
 
 - kind: InvTypeMaterial
   ancestor: no
@@ -92,12 +80,6 @@ indexes:
   - name: typeName
   - name: materialTypeID
 
-
-- kind: RamTypeRequirement
-  ancestor: no
-  properties:
-  - name: dumpVersion
-  - name: typeID
 
 - kind: RamTypeRequirement
   ancestor: no
@@ -111,10 +93,19 @@ indexes:
   properties:
   - name: dumpVersion
   - name: typeName
+  - name: requiredTypeID
 
-- kind: RamTypeRequirement
+
+- kind: PlanetSchematic
   ancestor: no
   properties:
   - name: dumpVersion
-  - name: typeName
+  - name: schematicTypeID
+  - name: requiredTypeID
+
+- kind: PlanetSchematic
+  ancestor: no
+  properties:
+  - name: dumpVersion
+  - name: schematicTypeName
   - name: requiredTypeID

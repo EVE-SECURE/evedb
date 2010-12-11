@@ -89,6 +89,18 @@ public class EveDbWsClientImplTest {
     }
 
     @Test(expected = JsonParseException.class)
+    public void test_getPlanetarySchematicForTypeID() {
+        when(httpRequestSender.doGet("eveDbUrl/planetSchematicForTypeID/1", "application/json")).thenReturn("blah-blah");
+        eveDbWsClient.getPlanetarySchematicForTypeID(1L);
+    }
+
+    @Test(expected = JsonParseException.class)
+    public void test_getPlanetarySchematicForTypeName() {
+        when(httpRequestSender.doGet("eveDbUrl/planetSchematicForTypeName/typeName", "application/json")).thenReturn("blah-blah");
+        eveDbWsClient.getPlanetarySchematicForTypeName("typeName");
+    }
+
+    @Test(expected = JsonParseException.class)
     public void test_getTypeBasicInfoByTypeID() {
         when(httpRequestSender.doGet("eveDbUrl/typeBasicInfoByTypeID/1", "application/json")).thenReturn("blah-blah");
         eveDbWsClient.getTypeBasicInfoByTypeID(1L);

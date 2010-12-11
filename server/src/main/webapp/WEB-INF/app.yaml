@@ -59,6 +59,12 @@ handlers:
 - url: /lookupType/*
   servlet: lv.odylab.evedb.servlet.LookupTypeServlet
 
+- url: /planetSchematicForTypeID/*
+  servlet: lv.odylab.evedb.servlet.PlanetSchematicsForTypeIdServlet
+
+- url: /planetSchematicForTypeName/*
+  servlet: lv.odylab.evedb.servlet.PlanetSchematicsForTypeNameServlet
+
 - url: /typeBasicInfoByTypeID/*
   servlet: lv.odylab.evedb.servlet.TypeBasicInfoByTypeIdServlet
 

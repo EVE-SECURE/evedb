@@ -2,8 +2,8 @@ from google.appengine.ext import db
 from google.appengine.tools import bulkloader
 
 class InvBlueprintType(db.Model):
-    blueprintTypeID = db.IntegerProperty()
-    blueprintTypeName = db.StringProperty()
+    blueprintTypeID = db.IntegerProperty(indexed=False)
+    blueprintTypeName = db.StringProperty(indexed=False)
     productTypeID = db.IntegerProperty(indexed=False)
     productTypeName = db.StringProperty(indexed=False)
     productCategoryID = db.IntegerProperty(indexed=False)
@@ -21,7 +21,7 @@ class InvBlueprintType(db.Model):
     productVolume = db.FloatProperty(indexed=False)
     productPortionSize = db.IntegerProperty(indexed=False)
     maxProductionLimit = db.IntegerProperty(indexed=False)
-    published = db.BooleanProperty()
+    published = db.BooleanProperty(indexed=False)
     dumpVersion = db.StringProperty()
 
 def safe_int(x):

@@ -6,6 +6,7 @@ import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.PlanetSchematicDto;
 import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 import lv.odylab.evedb.rpc.dto.XmlRowsetDto;
 
@@ -71,7 +72,7 @@ public abstract class XmlJsonServlet extends EveDbServlet {
 
     protected Marshaller getMarshaller() throws JAXBException {
         if (marshaller == null) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(InvBlueprintTypeDto.class, InvTypeMaterialDto.class, InvTypeBasicInfoDto.class, RamTypeRequirementDto.class, BlueprintDetailsDto.class, XmlRowsetDto.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(InvBlueprintTypeDto.class, InvTypeMaterialDto.class, InvTypeBasicInfoDto.class, RamTypeRequirementDto.class, BlueprintDetailsDto.class, PlanetSchematicDto.class, XmlRowsetDto.class);
             marshaller = jaxbContext.createMarshaller();
         }
         return marshaller;

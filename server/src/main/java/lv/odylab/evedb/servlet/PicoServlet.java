@@ -4,6 +4,7 @@ import lv.odylab.evedb.domain.BlueprintDetailsDao;
 import lv.odylab.evedb.domain.InvBlueprintTypeDao;
 import lv.odylab.evedb.domain.InvTypeDao;
 import lv.odylab.evedb.domain.InvTypeMaterialDao;
+import lv.odylab.evedb.domain.PlanetSchematicDao;
 import lv.odylab.evedb.domain.RamTypeRequirementDao;
 import lv.odylab.evedb.service.BlueprintDetailsCalculationService;
 import lv.odylab.evedb.service.DtoMapper;
@@ -27,6 +28,7 @@ public abstract class PicoServlet extends HttpServlet {
                 .addComponent(InvTypeMaterialDao.class)
                 .addComponent(RamTypeRequirementDao.class)
                 .addComponent(BlueprintDetailsDao.class)
+                .addComponent(PlanetSchematicDao.class)
                 .addComponent(BlueprintDetailsCalculationService.class);
     }
 

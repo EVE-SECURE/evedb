@@ -4,13 +4,16 @@ import lv.odylab.evedb.domain.BlueprintDetails;
 import lv.odylab.evedb.domain.InvBlueprintType;
 import lv.odylab.evedb.domain.InvType;
 import lv.odylab.evedb.domain.InvTypeMaterial;
+import lv.odylab.evedb.domain.PlanetSchematic;
 import lv.odylab.evedb.domain.RamTypeRequirement;
 import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.PlanetSchematicDto;
 import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -116,5 +119,25 @@ public class DtoMapper {
         invTypeBasicInfoDto.setName(invType.getTypeName());
         invTypeBasicInfoDto.setIcon(invType.getTypeIcon());
         return invTypeBasicInfoDto;
+    }
+
+    public PlanetSchematicDto map(PlanetSchematic planetSchematic) {
+        PlanetSchematicDto planetSchematicDto = new PlanetSchematicDto();
+        planetSchematicDto.setSchematicTypeID(planetSchematic.getSchematicTypeID());
+        planetSchematicDto.setSchematicTypeName(planetSchematic.getSchematicTypeName());
+        planetSchematicDto.setSchematicGroupID(planetSchematic.getSchematicGroupID());
+        planetSchematicDto.setSchematicGroupName(planetSchematic.getSchematicGroupName());
+        planetSchematicDto.setSchematicIcon(planetSchematic.getSchematicIcon());
+        planetSchematicDto.setSchematicCycleTime(planetSchematic.getSchematicCycleTime());
+        planetSchematicDto.setSchematicQuantity(planetSchematic.getSchematicQuantity());
+        planetSchematicDto.setSchematicVolume(BigDecimal.valueOf(planetSchematic.getSchematicVolume()));
+        planetSchematicDto.setRequiredTypeID(planetSchematic.getRequiredTypeID());
+        planetSchematicDto.setRequiredTypeName(planetSchematic.getRequiredTypeName());
+        planetSchematicDto.setRequiredGroupID(planetSchematic.getRequiredGroupID());
+        planetSchematicDto.setRequiredGroupName(planetSchematic.getRequiredGroupName());
+        planetSchematicDto.setRequiredIcon(planetSchematic.getRequiredIcon());
+        planetSchematicDto.setRequiredQuantity(planetSchematic.getRequiredQuantity());
+        planetSchematicDto.setRequiredVolume(BigDecimal.valueOf(planetSchematic.getRequiredVolume()));
+        return planetSchematicDto;
     }
 }

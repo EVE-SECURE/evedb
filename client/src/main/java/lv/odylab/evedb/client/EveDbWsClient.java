@@ -4,6 +4,7 @@ import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.PlanetSchematicDto;
 import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 
 import java.util.List;
@@ -37,6 +38,10 @@ public interface EveDbWsClient {
     List<InvTypeBasicInfoDto> lookupResourceType(String query);
 
     List<InvTypeBasicInfoDto> lookupType(String query);
+
+    List<PlanetSchematicDto> getPlanetarySchematicForTypeID(Long typeID);
+
+    List<PlanetSchematicDto> getPlanetarySchematicForTypeName(String typeName);
 
     InvTypeBasicInfoDto getTypeBasicInfoByTypeID(Long typeID);
 

@@ -2,19 +2,19 @@ from google.appengine.ext import db
 from google.appengine.tools import bulkloader
 
 class InvType(db.Model):
-    typeID = db.IntegerProperty()
-    typeName = db.StringProperty()
+    typeID = db.IntegerProperty(indexed=False)
+    typeName = db.StringProperty(indexed=False)
     typeIconID = db.IntegerProperty(indexed=False)
     typeIcon = db.StringProperty(indexed=False)
     groupID = db.IntegerProperty(indexed=False)
     groupName = db.StringProperty(indexed=False)
-    categoryID = db.IntegerProperty()
+    categoryID = db.IntegerProperty(indexed=False)
     categoryName = db.StringProperty(indexed=False)
     mass = db.FloatProperty(indexed=False)
     volume = db.FloatProperty(indexed=False)
     capacity = db.FloatProperty(indexed=False)
     portionSize = db.IntegerProperty(indexed=False)
-    published = db.BooleanProperty()
+    published = db.BooleanProperty(indexed=False)
     dumpVersion = db.StringProperty()
 
 def safe_int(x):

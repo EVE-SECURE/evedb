@@ -17,6 +17,6 @@ public class BlueprintDetailsForTypeNameServlet extends XmlJsonServlet {
 
     @Override
     protected Object provideResponse(String typeName) {
-        return mapper.map(blueprintDetailsDao.getBlueprintDetailsForTypeName(typeName));
+        return mapper.map(blueprintDetailsDao.getForTypeName(typeName));
     }
 }
