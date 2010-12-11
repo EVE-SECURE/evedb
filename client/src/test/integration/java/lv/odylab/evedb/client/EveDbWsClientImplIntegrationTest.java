@@ -9,7 +9,8 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 
 public class EveDbWsClientImplIntegrationTest {
     private final EveDbWsClient client = new EveDbWsClientImpl("http://dev.latest.odylab-evedb.appspot.com");
@@ -17,7 +18,7 @@ public class EveDbWsClientImplIntegrationTest {
     @Test
     public void testGetBaseMaterialsForTypeID() {
         List<InvTypeMaterialDto> invTypeMaterialDtoList = client.getBaseMaterialsForTypeID(20187L);
-        assertEquals(4, invTypeMaterialDtoList.size());
+        assertThat(invTypeMaterialDtoList.size(), equalTo(4));
     }
 
     @Test(expected = BadRequestException.class)
@@ -28,87 +29,87 @@ public class EveDbWsClientImplIntegrationTest {
     @Test
     public void testGetBaseMaterialsForTypeName() {
         List<InvTypeMaterialDto> invTypeMaterialDtoList = client.getBaseMaterialsForTypeName("Obelisk");
-        assertEquals(4, invTypeMaterialDtoList.size());
+        assertThat(invTypeMaterialDtoList.size(), equalTo(4));
     }
 
     @Test
     public void testGetBlueprintTypeByTypeID() {
         InvBlueprintTypeDto invBlueprintTypeDto = client.getBlueprintTypeByTypeID(20188L);
-        assertEquals("Obelisk Blueprint", invBlueprintTypeDto.getBlueprintTypeName());
+        assertThat(invBlueprintTypeDto.getBlueprintTypeName(), equalTo("Obelisk Blueprint"));
     }
 
     @Test
     public void testGetBlueprintTypeByTypeName() {
         InvBlueprintTypeDto invBlueprintTypeDto = client.getBlueprintTypeByTypeName("Obelisk Blueprint");
-        assertEquals(Long.valueOf(20188), invBlueprintTypeDto.getBlueprintTypeID());
+        assertThat(invBlueprintTypeDto.getBlueprintTypeID(), equalTo(20188L));
     }
 
     @Test
     public void testGetBlueprintDetailsForTypeID() {
         BlueprintDetailsDto blueprintDetailsDto = client.getBlueprintDetailsForTypeID(12024L);
-        assertEquals("Deimos Blueprint", blueprintDetailsDto.getInvBlueprintTypeDto().getBlueprintTypeName());
+        assertThat(blueprintDetailsDto.getInvBlueprintTypeDto().getBlueprintTypeName(), equalTo("Deimos Blueprint"));
     }
 
     @Test
     public void testGetBlueprintDetailsForTypeName() {
         BlueprintDetailsDto blueprintDetailsDto = client.getBlueprintDetailsForTypeName("Deimos Blueprint");
-        assertEquals(Long.valueOf(12024), blueprintDetailsDto.getInvBlueprintTypeDto().getBlueprintTypeID());
+        assertThat(blueprintDetailsDto.getInvBlueprintTypeDto().getBlueprintTypeID(), equalTo(12024L));
     }
 
     @Test
     public void testGetExtraMaterialsForTypeID() {
         List<RamTypeRequirementDto> ramTypeRequirementDtoList = client.getExtraMaterialsForTypeID(20188L);
-        assertEquals(4, ramTypeRequirementDtoList.size());
+        assertThat(ramTypeRequirementDtoList.size(), equalTo(4));
     }
 
     @Test
     public void testGetExtraMaterialsForTypeName() {
         List<RamTypeRequirementDto> ramTypeRequirementDtoList = client.getExtraMaterialsForTypeName("Obelisk Blueprint");
-        assertEquals(4, ramTypeRequirementDtoList.size());
+        assertThat(ramTypeRequirementDtoList.size(), equalTo(4));
     }
 
     @Test
     public void testLookupBlueprintType() {
         List<InvTypeBasicInfoDto> typeBasicInfoDtoList = client.lookupBlueprintType("Obeli");
-        assertEquals(1, typeBasicInfoDtoList.size());
+        assertThat(typeBasicInfoDtoList.size(), equalTo(1));
     }
 
     @Test
     public void testLookupResourceType() {
         List<InvTypeBasicInfoDto> typeBasicInfoDtoList = client.lookupResourceType("Trit");
-        assertEquals(2, typeBasicInfoDtoList.size());
+        assertThat(typeBasicInfoDtoList.size(), equalTo(2));
     }
 
     @Test
     public void testLookupType() {
         List<InvTypeBasicInfoDto> typeBasicInfoDtoList = client.lookupType("Obeli");
-        assertEquals(2, typeBasicInfoDtoList.size());
+        assertThat(typeBasicInfoDtoList.size(), equalTo(2));
     }
 
     @Test
     public void testGetTypeBasicInfoByTypeID() {
         InvTypeBasicInfoDto invTypeBasicInfoDto = client.getTypeBasicInfoByTypeID(20188L);
-        assertEquals("Obelisk Blueprint", invTypeBasicInfoDto.getName());
+        assertThat(invTypeBasicInfoDto.getName(), equalTo("Obelisk Blueprint"));
     }
 
     @Test
     public void testGetTypeBasicInfoByTypeName() {
         InvTypeBasicInfoDto invTypeBasicInfoDto = client.getTypeBasicInfoByTypeName("Obelisk");
-        assertEquals(Long.valueOf(20187), invTypeBasicInfoDto.getItemTypeID());
+        assertThat(invTypeBasicInfoDto.getItemTypeID(), equalTo(20187L));
     }
 
     @Test
     public void testTypeIdToTypeName() {
-        assertEquals("Obelisk", client.getTypeIdToTypeName(20187L));
+        assertThat(client.getTypeIdToTypeName(20187L), equalTo("Obelisk"));
     }
 
     @Test
     public void testTypeNameToTypeID() {
-        assertEquals(Long.valueOf(20187), client.getTypeNameToTypeID("Obelisk"));
+        assertThat(client.getTypeNameToTypeID("Obelisk"), equalTo(20187L));
     }
 
     @Test
     public void testVersion() {
-        assertEquals("1.8-SNAPSHOT-inc100", client.getVersion());
+        assertThat(client.getVersion(), equalTo("1.8-SNAPSHOT-inc100"));
     }
 }

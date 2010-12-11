@@ -1,20 +1,41 @@
-package lv.odylab.evedb.service;
+package lv.odylab.evedb.domain;
 
-import lv.odylab.evedb.domain.InvBlueprintType;
-import lv.odylab.evedb.domain.InvTypeMaterial;
-import lv.odylab.evedb.domain.RamTypeRequirement;
+import com.googlecode.objectify.annotation.Unindexed;
 
+import javax.persistence.Embedded;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class BlueprintDetails {
+@Unindexed
+public class BlueprintDetails implements Serializable {
+    @Id
+    private Long id;
+    @Embedded
     private InvBlueprintType blueprintType;
-    private List<InvTypeMaterial> materials;
-    private List<RamTypeRequirement> manufacturingRequirements;
-    private List<RamTypeRequirement> timeProductivityRequirements;
-    private List<RamTypeRequirement> materialProductivityRequirements;
-    private List<RamTypeRequirement> copyingRequirements;
-    private List<RamTypeRequirement> reverseEngineeringRequirements;
-    private List<RamTypeRequirement> inventionRequirements;
+    @Embedded
+    private List<InvTypeMaterial> materials = new ArrayList<InvTypeMaterial>();
+    @Embedded
+    private List<RamTypeRequirement> manufacturingRequirements = new ArrayList<RamTypeRequirement>();
+    @Embedded
+    private List<RamTypeRequirement> timeProductivityRequirements = new ArrayList<RamTypeRequirement>();
+    @Embedded
+    private List<RamTypeRequirement> materialProductivityRequirements = new ArrayList<RamTypeRequirement>();
+    @Embedded
+    private List<RamTypeRequirement> copyingRequirements = new ArrayList<RamTypeRequirement>();
+    @Embedded
+    private List<RamTypeRequirement> reverseEngineeringRequirements = new ArrayList<RamTypeRequirement>();
+    @Embedded
+    private List<RamTypeRequirement> inventionRequirements = new ArrayList<RamTypeRequirement>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public InvBlueprintType getBlueprintType() {
         return blueprintType;

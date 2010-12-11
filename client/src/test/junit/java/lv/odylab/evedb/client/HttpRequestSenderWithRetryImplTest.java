@@ -8,18 +8,15 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.io.IOException;
 
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HttpRequestSenderWithRetryImplTest {
-    @Test
-    public void none() {
-    }
-
     @Mock
     private EveDbWsClient.HttpRequestSender httpRequestSender;
     private HttpRequestSenderWithRetryImpl httpRequestSenderWithRetry;
@@ -32,7 +29,7 @@ public class HttpRequestSenderWithRetryImplTest {
     @Test
     public void testNoException() {
         when(httpRequestSender.doGet("urlString", "acceptHeader")).thenReturn("result");
-        assertEquals("result", httpRequestSenderWithRetry.doGet("urlString", "acceptHeader"));
+        assertThat(httpRequestSenderWithRetry.doGet("urlString", "acceptHeader"), equalTo("result"));
     }
 
     @Test
@@ -51,7 +48,7 @@ public class HttpRequestSenderWithRetryImplTest {
         when(httpRequestSender.doGet("urlString", "acceptHeader")).thenThrow(new RuntimeException(new IOException()))
                 .thenReturn("result");
         String result = httpRequestSenderWithRetry.doGet("urlString", "acceptHeader");
-        assertEquals("result", result);
+        assertThat(result, equalTo("result"));
         verify(httpRequestSender, times(2)).doGet("urlString", "acceptHeader");
     }
 
@@ -61,7 +58,7 @@ public class HttpRequestSenderWithRetryImplTest {
                 .thenThrow(new RuntimeException(new IOException()))
                 .thenReturn("result");
         String result = httpRequestSenderWithRetry.doGet("urlString", "acceptHeader");
-        assertEquals("result", result);
+        assertThat(result, equalTo("result"));
         verify(httpRequestSender, times(3)).doGet("urlString", "acceptHeader");
     }
 

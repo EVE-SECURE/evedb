@@ -3,9 +3,9 @@ package lv.odylab.evedb.servlet.admin;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.api.datastore.QueryResultIterable;
 import com.google.appengine.api.datastore.QueryResultIterator;
-import com.google.appengine.api.labs.taskqueue.Queue;
-import com.google.appengine.api.labs.taskqueue.QueueFactory;
-import com.google.appengine.api.labs.taskqueue.TaskOptions;
+import com.google.appengine.api.taskqueue.Queue;
+import com.google.appengine.api.taskqueue.QueueFactory;
+import com.google.appengine.api.taskqueue.TaskOptions;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static com.google.appengine.api.labs.taskqueue.TaskOptions.Builder.url;
+import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
 
 public class TokenizeInvTypeServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass());
@@ -56,7 +56,7 @@ public class TokenizeInvTypeServlet extends HttpServlet {
         Query<InvType> query = objectify.query(InvType.class).filter("dumpVersion", dumpVersion);
         if (bookmark != null) {
             logger.info("Proceeding query from bookmark: {}", bookmark);
-            query.cursor(Cursor.fromWebSafeString(bookmark));
+            query.startCursor(Cursor.fromWebSafeString(bookmark));
         }
 
         QueryResultIterable<Key<InvType>> queryResult = query.fetchKeys();
@@ -75,7 +75,7 @@ public class TokenizeInvTypeServlet extends HttpServlet {
                 Cursor cursor = iterator.getCursor();
                 Queue queue = QueueFactory.getDefaultQueue();
                 String newBookmark = cursor.toWebSafeString();
-                queue.add(url("/admin/tokenizeInvType").method(TaskOptions.Method.POST)
+                queue.add(withUrl("/admin/tokenizeInvType").method(TaskOptions.Method.POST)
                         .param("dumpVersion", dumpVersion)
                         .param("bookmark", newBookmark));
                 logger.info("50 objects processed, created new task with url: dumpVersion={}, bookmark: {}", new Object[]{dumpVersion, newBookmark});

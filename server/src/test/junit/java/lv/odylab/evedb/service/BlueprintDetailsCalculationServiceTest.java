@@ -1,5 +1,6 @@
 package lv.odylab.evedb.service;
 
+import lv.odylab.evedb.domain.BlueprintDetails;
 import lv.odylab.evedb.domain.InvBlueprintType;
 import lv.odylab.evedb.domain.InvBlueprintTypeDao;
 import lv.odylab.evedb.domain.InvTypeMaterial;
@@ -20,18 +21,18 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BlueprintServiceTest {
+public class BlueprintDetailsCalculationServiceTest {
     @Mock
     private InvBlueprintTypeDao invBlueprintTypeDao;
     @Mock
     private InvTypeMaterialDao invTypeMaterialDao;
     @Mock
     private RamTypeRequirementDao ramTypeRequirementDao;
-    private BlueprintService blueprintService;
+    private BlueprintDetailsCalculationService blueprintService;
 
     @Before
     public void setUp() {
-        blueprintService = new BlueprintService(invBlueprintTypeDao, invTypeMaterialDao, ramTypeRequirementDao, "dumpVersion");
+        blueprintService = new BlueprintDetailsCalculationService(invBlueprintTypeDao, invTypeMaterialDao, ramTypeRequirementDao, "dumpVersion");
 
         InvBlueprintType invBlueprintType = new InvBlueprintType();
         invBlueprintType.setBlueprintTypeID(1L);
