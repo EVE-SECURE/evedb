@@ -5,7 +5,7 @@
 
 == 2010.12.??, version 1.8 ==
   * *New methods planetSchematicForTypeID and planetSchematicForTypeName*
-  * *volumes now present in most returned dtos*
+  * *Volumes now present in most returned dtos*
 
   * Issue 30: Add new methods planetSchematicForTypeID and planetSchematicForTypeName
   * Issue 29: Introduce PicoContainer
