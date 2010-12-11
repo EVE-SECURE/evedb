@@ -45,6 +45,7 @@ public class InvTypeDao {
                 query.filter("typeNameTokens", word.trim().toUpperCase());
             }
             return query.order("typeNameTokens")
+                    .order("typeName")
                     .limit(limit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
@@ -53,6 +54,7 @@ public class InvTypeDao {
                 .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
                 .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
+                .order("typeName")
                 .limit(limit).list();
     }
 
@@ -70,6 +72,7 @@ public class InvTypeDao {
                 query.filter("typeNameTokens", word.trim().toUpperCase());
             }
             return query.order("typeNameTokens")
+                    .order("typeName")
                     .limit(limit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
@@ -79,6 +82,7 @@ public class InvTypeDao {
                 .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
                 .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
+                .order("typeName")
                 .limit(limit).list();
     }
 
@@ -97,6 +101,7 @@ public class InvTypeDao {
                 query.filter("typeNameTokens", word.trim().toUpperCase());
             }
             return query.order("typeNameTokens")
+                    .order("typeName")
                     .limit(limit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
@@ -106,6 +111,7 @@ public class InvTypeDao {
                 .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
                 .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
+                .order("typeName")
                 .limit(limit).list();
     }
 
