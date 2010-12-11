@@ -4,6 +4,9 @@
 = Release notes =
 
 == 2010.12.??, version 1.8 ==
+  * *New methods planetSchematicForTypeID and planetSchematicForTypeName*
+  * *volumes now present in most returned dtos*
+
   * Issue 30: Add new methods planetSchematicForTypeID and planetSchematicForTypeName
   * Issue 29: Introduce PicoContainer
   * Issue 28: lookupType, lookupResourceType and lookupBlueprintType return unordered list
