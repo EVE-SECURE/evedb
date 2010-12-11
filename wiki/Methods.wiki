@@ -17,6 +17,8 @@
 || [MethodLookupBlueprintType /lookupBlueprintType] || /partialTypeName || JSON/XML || List of matching blueprint item types ||
 || [MethodLookupResourceType /lookupResourceType] || /partialTypeName || JSON/XML || List of matching resource item types ||
 || [MethodLookupType /lookupType] || /partialTypeName || JSON/XML || List of matching any item types ||
+|| [MethodPlanetSchematicForTypeID /planetSchematicForTypeID] || /typeID || JSON/XML || Planetary commodity information for given typeID ||
+|| [MethodplanetSchematicForTypeName /planetSchematicForTypeName] || /typeName || JSON/XML || Planetary commodity information for given typeName ||
 || [MethodTypeBasicInfoByTypeID /typeBasicInfoByTypeID] || /typeID || JSON/XML || Item type basic information for given typeID ||
 || [MethodTypeBasicInfoByTypeName /typeBasicInfoByTypeName] || /typeName || JSON/XML || Item type basic information for given typeName ||
 || [MethodTypeIdToTypeName /typeIdToTypeName] || /typeName || TEXT || Convert item typeID to typeName ||
