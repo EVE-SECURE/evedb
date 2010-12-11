@@ -43,6 +43,11 @@
             <version>${slf4j.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.picocontainer</groupId>
+            <artifactId>picocontainer</artifactId>
+            <version>${picocontainer.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>${appengine.version}</version>

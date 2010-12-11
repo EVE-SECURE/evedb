@@ -11,7 +11,7 @@ public abstract class TextServlet extends EveDbServlet {
     @Override
     protected void writeResponse(String pathInfo, String acceptHeader, HttpServletResponse resp) throws IOException, JAXBException {
         MemcacheService memcacheService = getMemcacheService();
-        String key = new StringBuilder(getClass().getSimpleName()).append("|").append(pathInfo).append("|").append(DUMP_VERSION).append("|text").toString();
+        String key = new StringBuilder(getClass().getSimpleName()).append("|").append(pathInfo).append("|").append(getDumpVersion()).append("|text").toString();
         String result = (String) memcacheService.get(key);
         if (result == null) {
             logger.info("Key was not found in cache: {}, the result will be cached", key);

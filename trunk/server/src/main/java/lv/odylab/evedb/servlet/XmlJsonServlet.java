@@ -24,7 +24,7 @@ public abstract class XmlJsonServlet extends EveDbServlet {
     @Override
     protected void writeResponse(String pathInfo, String acceptHeader, HttpServletResponse resp) throws IOException, JAXBException {
         MemcacheService memcacheService = getMemcacheService();
-        StringBuilder keyBuilder = new StringBuilder(getClass().getSimpleName()).append("|").append(pathInfo).append("|").append(DUMP_VERSION);
+        StringBuilder keyBuilder = new StringBuilder(getClass().getSimpleName()).append("|").append(pathInfo).append("|").append(getDumpVersion());
         if ("application/json".equals(acceptHeader)) {
             String key = keyBuilder.append("|json").toString();
             String result = (String) memcacheService.get(key);

@@ -14,20 +14,20 @@ import java.util.List;
 
 public class BaseMaterialsForTypeIdServlet extends XmlJsonServlet {
     private InvTypeMaterialDao invTypeMaterialDao;
-    private DtoMapper dtoMapper;
+    private DtoMapper mapper;
 
     @Override
     public void init() throws ServletException {
-        invTypeMaterialDao = new InvTypeMaterialDao();
-        dtoMapper = new DtoMapper();
+        invTypeMaterialDao = getComponent(InvTypeMaterialDao.class);
+        mapper = getComponent(DtoMapper.class);
     }
 
     @Override
     protected Object provideResponse(String typeID) {
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeID(Long.valueOf(typeID), DUMP_VERSION);
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeID(Long.valueOf(typeID));
         List<InvTypeMaterialDto> result = new ArrayList<InvTypeMaterialDto>();
         for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
-            result.add(dtoMapper.map(invTypeMaterial));
+            result.add(mapper.map(invTypeMaterial));
         }
         return result;
     }

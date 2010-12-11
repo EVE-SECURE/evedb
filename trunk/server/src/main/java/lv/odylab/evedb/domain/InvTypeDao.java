@@ -12,7 +12,15 @@ public class InvTypeDao {
         ObjectifyService.register(InvType.class);
     }
 
-    public InvType getByTypeID(Long typeID, String dumpVersion) {
+    private final String dumpVersion;
+    private final Integer lookupResultLimit;
+
+    public InvTypeDao(String dumpVersion, Integer lookupResultLimit) {
+        this.dumpVersion = dumpVersion;
+        this.lookupResultLimit = lookupResultLimit;
+    }
+
+    public InvType getByTypeID(Long typeID) {
         InvType invType = ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeID", typeID).get();
@@ -22,7 +30,7 @@ public class InvTypeDao {
         return invType;
     }
 
-    public InvType getByTypeName(String typeName, String dumpVersion) {
+    public InvType getByTypeName(String typeName) {
         InvType invType = ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("typeName", typeName).get();
@@ -32,7 +40,7 @@ public class InvTypeDao {
         return invType;
     }
 
-    public List<InvType> findByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
+    public List<InvType> findByPartialTypeName(String partialTypeName) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
@@ -46,7 +54,7 @@ public class InvTypeDao {
             }
             return query.order("typeNameTokens")
                     .order("typeName")
-                    .limit(limit).list();
+                    .limit(lookupResultLimit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
@@ -55,10 +63,10 @@ public class InvTypeDao {
                 .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .order("typeName")
-                .limit(limit).list();
+                .limit(lookupResultLimit).list();
     }
 
-    public List<InvType> findResourceByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
+    public List<InvType> findResourceByPartialTypeName(String partialTypeName) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
@@ -73,7 +81,7 @@ public class InvTypeDao {
             }
             return query.order("typeNameTokens")
                     .order("typeName")
-                    .limit(limit).list();
+                    .limit(lookupResultLimit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
@@ -83,10 +91,10 @@ public class InvTypeDao {
                 .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .order("typeName")
-                .limit(limit).list();
+                .limit(lookupResultLimit).list();
     }
 
-    public List<InvType> findBlueprintByPartialTypeName(String partialTypeName, Integer limit, String dumpVersion) {
+    public List<InvType> findBlueprintByPartialTypeName(String partialTypeName) {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
@@ -102,7 +110,7 @@ public class InvTypeDao {
             }
             return query.order("typeNameTokens")
                     .order("typeName")
-                    .limit(limit).list();
+                    .limit(lookupResultLimit).list();
         }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
@@ -112,7 +120,7 @@ public class InvTypeDao {
                 .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
                 .order("typeNameTokens")
                 .order("typeName")
-                .limit(limit).list();
+                .limit(lookupResultLimit).list();
     }
 
     private List<String> getWords(String inputString) {

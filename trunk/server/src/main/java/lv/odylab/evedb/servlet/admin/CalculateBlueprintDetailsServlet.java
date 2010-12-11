@@ -13,15 +13,12 @@ import com.googlecode.objectify.Query;
 import lv.odylab.evedb.domain.BlueprintDetails;
 import lv.odylab.evedb.domain.BlueprintDetailsDao;
 import lv.odylab.evedb.domain.InvBlueprintType;
-import lv.odylab.evedb.domain.InvBlueprintTypeDao;
-import lv.odylab.evedb.domain.InvTypeMaterialDao;
-import lv.odylab.evedb.domain.RamTypeRequirementDao;
 import lv.odylab.evedb.service.BlueprintDetailsCalculationService;
+import lv.odylab.evedb.servlet.PicoServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -31,18 +28,16 @@ import java.util.Map;
 
 import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
 
-public class CalculateBlueprintDetailsServlet extends HttpServlet {
+public class CalculateBlueprintDetailsServlet extends PicoServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     private BlueprintDetailsCalculationService blueprintDetailsCalculationService;
 
-    // TODO this is needed for ObjectifyService.register
-    private final BlueprintDetailsDao blueprintDetailsDao = new BlueprintDetailsDao();
-
     @Override
     public void init() throws ServletException {
         logger.info("Initializing servlet: {}", getClass().getSimpleName());
-        blueprintDetailsCalculationService = new BlueprintDetailsCalculationService(new InvBlueprintTypeDao(), new InvTypeMaterialDao(), new RamTypeRequirementDao(), "inc100");
+        getComponent(BlueprintDetailsDao.class); // TODO this is needed for ObjectifyService.register
+        blueprintDetailsCalculationService = getComponent(BlueprintDetailsCalculationService.class);
     }
 
     @Override

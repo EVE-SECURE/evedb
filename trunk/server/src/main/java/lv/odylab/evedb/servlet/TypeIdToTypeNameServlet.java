@@ -9,11 +9,11 @@ public class TypeIdToTypeNameServlet extends TextServlet {
 
     @Override
     public void init() throws ServletException {
-        invTypeDao = new InvTypeDao();
+        invTypeDao = getComponent(InvTypeDao.class);
     }
 
     @Override
     protected String provideResponse(String typeID) {
-        return invTypeDao.getByTypeID(Long.valueOf(typeID), DUMP_VERSION).getTypeName();
+        return invTypeDao.getByTypeID(Long.valueOf(typeID)).getTypeName();
     }
 }

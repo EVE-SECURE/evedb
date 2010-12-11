@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
@@ -18,10 +17,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
-public abstract class EveDbServlet extends HttpServlet {
+public abstract class EveDbServlet extends PicoServlet {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
-
-    protected static final String DUMP_VERSION = "inc100";
 
     private MemcacheService memcacheService;
 
