@@ -2,15 +2,15 @@ from google.appengine.ext import db
 from google.appengine.tools import bulkloader
 
 class InvTypeMaterial(db.Model):
-    typeID = db.IntegerProperty()
-    typeName = db.StringProperty()
+    typeID = db.IntegerProperty(indexed=False)
+    typeName = db.StringProperty(indexed=False)
     typeIconID = db.IntegerProperty(indexed=False)
     typeIcon = db.StringProperty(indexed=False)
     typeGroupID = db.IntegerProperty(indexed=False)
     typeGroupName = db.StringProperty(indexed=False)
     typeCategoryID = db.IntegerProperty(indexed=False)
     typeCategoryName = db.StringProperty(indexed=False)
-    materialTypeID = db.IntegerProperty()
+    materialTypeID = db.IntegerProperty(indexed=False)
     materialTypeName = db.StringProperty(indexed=False)
     materialTypeIconID = db.IntegerProperty(indexed=False)
     materialTypeIcon = db.StringProperty(indexed=False)

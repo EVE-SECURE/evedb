@@ -13,6 +13,7 @@ import com.googlecode.objectify.Query;
 import lv.odylab.evedb.domain.InvBlueprintTypeDao;
 import lv.odylab.evedb.domain.InvTypeDao;
 import lv.odylab.evedb.domain.InvTypeMaterialDao;
+import lv.odylab.evedb.domain.PlanetSchematicDao;
 import lv.odylab.evedb.domain.RamTypeRequirementDao;
 import lv.odylab.evedb.servlet.PicoServlet;
 import org.slf4j.Logger;
@@ -40,6 +41,7 @@ public class ReindexServlet extends PicoServlet {
         getComponent(InvTypeDao.class);
         getComponent(InvTypeMaterialDao.class);
         getComponent(RamTypeRequirementDao.class);
+        getComponent(PlanetSchematicDao.class);
     }
 
     @Override

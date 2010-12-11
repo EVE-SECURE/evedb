@@ -4,6 +4,7 @@ import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.PlanetSchematicDto;
 import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 import org.junit.Test;
 
@@ -13,7 +14,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class EveDbWsClientImplIntegrationTest {
-    private final EveDbWsClient client = new EveDbWsClientImpl("http://dev.latest.odylab-evedb.appspot.com");
+    private final EveDbWsClient client = new EveDbWsClientImpl("http://inc100.latest.odylab-evedb.appspot.com");
 
     @Test
     public void testGetBaseMaterialsForTypeID() {
@@ -84,6 +85,18 @@ public class EveDbWsClientImplIntegrationTest {
     public void testLookupType() {
         List<InvTypeBasicInfoDto> typeBasicInfoDtoList = client.lookupType("Obeli");
         assertThat(typeBasicInfoDtoList.size(), equalTo(2));
+    }
+
+    @Test
+    public void testGetPlanetarySchematicForTypeID() {
+        List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetarySchematicForTypeID(9838L);
+        assertThat(planetSchematicDtos.size(), equalTo(2));
+    }
+
+    @Test
+    public void testgetPlanetarySchematicForTypeName() {
+        List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetarySchematicForTypeName("Rocket+Fuel");
+        assertThat(planetSchematicDtos.size(), equalTo(2));
     }
 
     @Test

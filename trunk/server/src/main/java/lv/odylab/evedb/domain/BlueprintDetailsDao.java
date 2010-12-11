@@ -14,7 +14,7 @@ public class BlueprintDetailsDao {
         this.dumpVersion = dumpVersion;
     }
 
-    public BlueprintDetails getBlueprintDetailsForTypeID(Long typeID) {
+    public BlueprintDetails getForTypeID(Long typeID) {
         BlueprintDetails blueprintDetails = ObjectifyService.begin().query(BlueprintDetails.class)
                 .filter("blueprintType.dumpVersion", dumpVersion)
                 .filter("blueprintType.blueprintTypeID", typeID).get();
@@ -24,7 +24,7 @@ public class BlueprintDetailsDao {
         return blueprintDetails;
     }
 
-    public BlueprintDetails getBlueprintDetailsForTypeName(String typeName) {
+    public BlueprintDetails getForTypeName(String typeName) {
         BlueprintDetails blueprintDetails = ObjectifyService.begin().query(BlueprintDetails.class)
                 .filter("blueprintType.dumpVersion", dumpVersion)
                 .filter("blueprintType.blueprintTypeName", typeName).get();

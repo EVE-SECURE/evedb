@@ -6,6 +6,7 @@ import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
 import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
 import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
 import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
+import lv.odylab.evedb.rpc.dto.PlanetSchematicDto;
 import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
 
 import java.io.UnsupportedEncodingException;
@@ -20,6 +21,7 @@ public class EveDbWsClientImpl implements EveDbWsClient {
     private final Type invTypeMaterialDtoListType;
     private final Type invTypeBasicInfoDtoListType;
     private final Type ramTypeRequirementDtoListType;
+    private final Type planetarySchematicDtoListType;
 
     public EveDbWsClientImpl(String eveDbUrl) {
         this(eveDbUrl, new HttpRequestSenderImpl(), new Gson());
@@ -39,6 +41,8 @@ public class EveDbWsClientImpl implements EveDbWsClient {
         this.invTypeBasicInfoDtoListType = new TypeToken<List<InvTypeBasicInfoDto>>() {
         }.getType();
         this.ramTypeRequirementDtoListType = new TypeToken<List<RamTypeRequirementDto>>() {
+        }.getType();
+        this.planetarySchematicDtoListType = new TypeToken<List<PlanetSchematicDto>>() {
         }.getType();
     }
 
@@ -106,6 +110,18 @@ public class EveDbWsClientImpl implements EveDbWsClient {
     public List<InvTypeBasicInfoDto> lookupType(String query) {
         String jsonString = requestSender.doGet(eveDbUrl + "/lookupType/" + encodeString(query), "application/json");
         return gson.fromJson(jsonString, invTypeBasicInfoDtoListType);
+    }
+
+    @Override
+    public List<PlanetSchematicDto> getPlanetarySchematicForTypeID(Long typeID) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/planetSchematicForTypeID/" + typeID, "application/json");
+        return gson.fromJson(jsonString, planetarySchematicDtoListType);
+    }
+
+    @Override
+    public List<PlanetSchematicDto> getPlanetarySchematicForTypeName(String typeName) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/planetSchematicForTypeName/" + typeName, "application/json");
+        return gson.fromJson(jsonString, planetarySchematicDtoListType);
     }
 
     @Override

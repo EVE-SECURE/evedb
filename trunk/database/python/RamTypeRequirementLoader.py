@@ -2,8 +2,8 @@ from google.appengine.ext import db
 from google.appengine.tools import bulkloader
 
 class RamTypeRequirement(db.Model):
-    typeID = db.IntegerProperty()
-    typeName = db.StringProperty()
+    typeID = db.IntegerProperty(indexed=False)
+    typeName = db.StringProperty(indexed=False)
     activityID = db.IntegerProperty(indexed=False)
     activityName = db.StringProperty(indexed=False)
     typeIconID = db.IntegerProperty(indexed=False)
@@ -12,7 +12,7 @@ class RamTypeRequirement(db.Model):
     typeGroupName = db.StringProperty(indexed=False)
     typeCategoryID = db.IntegerProperty(indexed=False)
     typeCategoryName = db.StringProperty(indexed=False)
-    requiredTypeID = db.IntegerProperty()
+    requiredTypeID = db.IntegerProperty(indexed=False)
     requiredTypeName = db.StringProperty(indexed=False)
     requiredTypeIconID = db.IntegerProperty(indexed=False)
     requiredTypeIcon = db.StringProperty(indexed=False)
