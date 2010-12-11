@@ -5,20 +5,20 @@
   <version>1.8-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20101209.204459</timestamp>
-      <buildNumber>1</buildNumber>
+      <timestamp>20101211.202505</timestamp>
+      <buildNumber>2</buildNumber>
     </snapshot>
-    <lastUpdated>20101209204459</lastUpdated>
+    <lastUpdated>20101211202505</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>war</extension>
-        <value>1.8-20101209.204459-1</value>
-        <updated>20101209204459</updated>
+        <value>1.8-20101211.202505-2</value>
+        <updated>20101211202505</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.8-20101209.204459-1</value>
-        <updated>20101209204459</updated>
+        <value>1.8-20101211.202505-2</value>
+        <updated>20101211202505</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
