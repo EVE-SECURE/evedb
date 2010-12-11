@@ -1,0 +1,3 @@
+#summary Method planetSchematicForTypeID details
+
+= /planetSchematicForTypeID/(typeID) =
