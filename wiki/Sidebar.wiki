@@ -12,6 +12,8 @@
     ** [MethodLookupBlueprintType /lookupBlueprintType]
     ** [MethodLookupResourceType /lookupResourceType]
     ** [MethodLookupType /lookupType]
+    ** [MethodPlanetSchematicForTypeID /planetSchematicForTypeID]
+    ** [MethodPlanetSchematicForTypeName /planetSchematicForTypeName]
     ** [MethodTypeBasicInfoByTypeID /typeBasicInfoByTypeID]
     ** [MethodTypeBasicInfoByTypeName /typeBasicInfoByTypeName]
     ** [MethodTypeIdToTypeName /typeIdToTypeName]
