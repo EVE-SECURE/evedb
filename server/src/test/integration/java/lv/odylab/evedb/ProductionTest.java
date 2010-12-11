@@ -891,6 +891,17 @@ public class ProductionTest {
         assertThat(connection.getHeaderField("Content-Type"), equalTo("text/plain; charset=utf-8"));
     }
 
+    @Test
+    public void test_inc100specific_Noctis() throws Exception {
+        URL url = new URL(baseUrl + "/blueprintDetailsForTypeName/Noctis+Blueprint");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.setRequestProperty("Accept", "application/json");
+        assertThat(connection.getResponseCode(), equalTo(200));
+        assertThat(getResponse(connection), equalTo("{\"invBlueprintTypeDto\":{\"blueprintTypeID\":3039,\"blueprintTypeName\":\"Noctis Blueprint\",\"productTypeID\":2998,\"productTypeName\":\"Noctis\",\"productCategoryID\":6,\"techLevel\":1,\"productionTime\":12000,\"researchProductivityTime\":240000,\"researchMaterialTime\":240000,\"researchCopyTime\":240000,\"researchTechTime\":180000,\"productivityModifier\":2400,\"wasteFactor\":10,\"maxProductionLimit\":15},\"materialDtos\":[{\"materialTypeID\":34,\"materialTypeName\":\"Tritanium\",\"materialTypeCategoryID\":4,\"quantity\":3349410,\"materialTypeIcon\":\"06_14\"},{\"materialTypeID\":35,\"materialTypeName\":\"Pyerite\",\"materialTypeCategoryID\":4,\"quantity\":936043,\"materialTypeIcon\":\"06_15\"},{\"materialTypeID\":36,\"materialTypeName\":\"Mexallon\",\"materialTypeCategoryID\":4,\"quantity\":276936,\"materialTypeIcon\":\"06_12\"},{\"materialTypeID\":37,\"materialTypeName\":\"Isogen\",\"materialTypeCategoryID\":4,\"quantity\":50713,\"materialTypeIcon\":\"06_16\"},{\"materialTypeID\":38,\"materialTypeName\":\"Nocxium\",\"materialTypeCategoryID\":4,\"quantity\":24630,\"materialTypeIcon\":\"11_09\"},{\"materialTypeID\":39,\"materialTypeName\":\"Zydrine\",\"materialTypeCategoryID\":4,\"quantity\":3438,\"materialTypeIcon\":\"11_11\"},{\"materialTypeID\":40,\"materialTypeName\":\"Megacyte\",\"materialTypeCategoryID\":4,\"quantity\":1580,\"materialTypeIcon\":\"11_10\"}],\"manufacturingRequirementDtos\":[{\"activityID\":1,\"activityName\":\"Manufacturing\",\"requiredTypeID\":3380,\"requiredTypeName\":\"Industry\",\"requiredTypeCategoryID\":16,\"requiredTypeGroupID\":268,\"requiredTypeGroupName\":\"Industry\",\"requiredTypeIcon\":\"50_11\",\"quantity\":1,\"damagePerJob\":\"0.0\"}],\"timeProductivityRequirementDtos\":[],\"materialProductivityRequirementDtos\":[],\"copyingRequirementDtos\":[],\"reverseEngineeringRequirementDtos\":[],\"inventionRequirementDtos\":[]}"));
+        assertThat(connection.getHeaderField("Content-Type"), equalTo("application/json; charset=utf-8"));
+    }
+
     private String getResponse(HttpURLConnection connection) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         StringBuilder stringBuilder = new StringBuilder();
