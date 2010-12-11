@@ -13,8 +13,9 @@ public class RamTypeRequirementDto implements Serializable {
     private Long requiredTypeGroupID;
     private String requiredTypeGroupName;
     private String requiredTypeIcon;
-    private Long quantity;
     private String damagePerJob;
+    private Long quantity;
+    private String requiredTypeVolume;
 
     public Long getActivityID() {
         return activityID;
@@ -80,6 +81,14 @@ public class RamTypeRequirementDto implements Serializable {
         this.requiredTypeIcon = requiredTypeIcon;
     }
 
+    public String getDamagePerJob() {
+        return damagePerJob;
+    }
+
+    public void setDamagePerJob(String damagePerJob) {
+        this.damagePerJob = damagePerJob;
+    }
+
     public Long getQuantity() {
         return quantity;
     }
@@ -88,11 +97,11 @@ public class RamTypeRequirementDto implements Serializable {
         this.quantity = quantity;
     }
 
-    public String getDamagePerJob() {
-        return damagePerJob;
+    public String getRequiredTypeVolume() {
+        return requiredTypeVolume;
     }
 
-    public void setDamagePerJob(String damagePerJob) {
-        this.damagePerJob = damagePerJob;
+    public void setRequiredTypeVolume(String requiredTypeVolume) {
+        this.requiredTypeVolume = requiredTypeVolume;
     }
 }
