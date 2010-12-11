@@ -4,52 +4,53 @@
 = Release notes =
 
 == 2010.12.??, version 1.8 ==
-  * Issue 27. Precalculated BlueprintDetails
-  * Issue 26. Add new attribues productVolume and productPortionSize to InvBlueprintTypeDto
-  * Issue 25. Add new attribute requiredTypeVolume in RamTypeRequirementDto
-  * Issue 24. Add new attribute materialVolume in InvTypeMaterialDto
-  * Issue 21. Add dumpVersion attribute for blueprintTypeByTypeID and blueprintTypeByTypeName methods
+  * Issue 28: lookupType, lookupResourceType and lookupBlueprintType return unordered list
+  * Issue 27: Precalculated BlueprintDetails
+  * Issue 26: Add new attribues productVolume and productPortionSize to InvBlueprintTypeDto
+  * Issue 25: Add new attribute requiredTypeVolume in RamTypeRequirementDto
+  * Issue 24: Add new attribute materialVolume in InvTypeMaterialDto
+  * Issue 21: Add dumpVersion attribute for blueprintTypeByTypeID and blueprintTypeByTypeName methods
 
 == 2010.12.09, version 1.7 ==
   * *Migrated to inc100*
   * *Added full search*
 
-  * Issue 23. Migrate to inc100
-  * Issue 22. Wrong number of tritanium for Mobile Large Warp Disruptor I Blueprint
-  * Issue 20. Introduce full search
+  * Issue 23: Migrate to inc100
+  * Issue 22: Wrong number of tritanium for Mobile Large Warp Disruptor I Blueprint
+  * Issue 20: Introduce full search
 
 == 2010.10.13, version 1.6 ==
   * *Improved performance*
 
-  * Issue 19. Merge modules "core" and "ws" into "server"
-  * Issue 18. Add schema migration/deletion agents
-  * Issue 17. Switch to app.yaml configuration
-  * Issue 16. Improve performance be removing Guice
-  * Issue 15. HTTP 400 on blueprintDetailsForTypeID
-  * Issue 9. HTTP 406 in Internet Explorer
+  * Issue 19: Merge modules "core" and "ws" into "server"
+  * Issue 18: Add schema migration/deletion agents
+  * Issue 17: Switch to app.yaml configuration
+  * Issue 16: Improve performance be removing Guice
+  * Issue 15: HTTP 400 on blueprintDetailsForTypeID
+  * Issue 9: HTTP 406 in Internet Explorer
 
 == 2010.10.09, version 1.5 ==
   * *Migrated to tyr104, older versions are not supported anymore (dom100, tyr101)*
   * *New methods blueprintDetailsForTypeID and blueprintDetailsForTypeName*
 
-  * Issue 14. Add new attributes in InvBlueprintTypeDto
-  * Issue 13. Add new methods blueprintDetailsForTypeID and blueprintDetailsForTypeName
-  * Issue 12. Migrate to tyr104
-  * Issue 11. Caching is shared between application versions
-  * Issue 10. Caching does not work
+  * Issue 14: Add new attributes in InvBlueprintTypeDto
+  * Issue 13: Add new methods blueprintDetailsForTypeID and blueprintDetailsForTypeName
+  * Issue 12: Migrate to tyr104
+  * Issue 11: Caching is shared between application versions
+  * Issue 10: Caching does not work
 
 == 2010.08.04, version 1.4 ==
 
   * *Added XML support*
 
-  * Issue 8. Introduce retry sender implementation to mitigate URLFetch timeout exceptions
-  * Issue 7. Remove AppEngine client since URLFetch low-api deadline does not work
-  * Issue 6. Create XML Schema for generated XML
-  * Issue 5. Introduce new client for Google AppEngine URLFetch
-  * Issue 4. baseMaterials and extraMaterials return unordered list
-  * Issue 3. Replace slf4j-log4j with slf4j-jdk14
-  * Issue 2. Create script for datastore dump download
-  * Issue 1. Return either JSON or XML based on accept header
+  * Issue 8: Introduce retry sender implementation to mitigate URLFetch timeout exceptions
+  * Issue 7: Remove AppEngine client since URLFetch low-api deadline does not work
+  * Issue 6: Create XML Schema for generated XML
+  * Issue 5: Introduce new client for Google AppEngine URLFetch
+  * Issue 4: baseMaterials and extraMaterials return unordered list
+  * Issue 3: Replace slf4j-log4j with slf4j-jdk14
+  * Issue 2: Create script for datastore dump download
+  * Issue 1: Return either JSON or XML based on accept header
 
 == 2010.07.16, version 1.3 ==
 
