@@ -31,6 +31,16 @@ indexes:
   - name: dumpVersion
   - name: published
   - name: typeNameTokens
+  - name: typeName
+
+- kind: InvType
+  ancestor: no
+  properties:
+  - name: categoryID
+  - name: dumpVersion
+  - name: published
+  - name: typeNameTokens
+  - name: typeName
 
 - kind: InvType
   ancestor: no
@@ -40,14 +50,6 @@ indexes:
   - name: typeNameTokens
   - name: typeNameTokens
   - name: typeName
-
-- kind: InvType
-  ancestor: no
-  properties:
-  - name: dumpVersion
-  - name: published
-  - name: categoryID
-  - name: typeNameTokens
 
 - kind: InvType
   ancestor: no

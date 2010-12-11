@@ -92,7 +92,7 @@ public class ReindexServlet extends PicoServlet {
                         .param("entityClass", entityClass)
                         .param("dumpVersion", dumpVersion)
                         .param("bookmark", newBookmark));
-                logger.info("100 objects processed, created new task with url: entityClass={}, dumpVersion={}, bookmark: {}", new Object[]{entityClass, dumpVersion, newBookmark});
+                logger.info("1000 objects processed, created new task with url: entityClass={}, dumpVersion={}, bookmark: {}", new Object[]{entityClass, dumpVersion, newBookmark});
                 resp.getWriter().write("IN PROGRESS");
                 return;
             }
