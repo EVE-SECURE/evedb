@@ -48,7 +48,7 @@ public class CalculateBlueprintDetailsServlet extends PicoServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Objectify objectify = ObjectifyService.begin();
-        Query<InvBlueprintType> query = objectify.query(InvBlueprintType.class).filter("dumpVersion", "inc100");
+        Query<InvBlueprintType> query = objectify.query(InvBlueprintType.class).filter("dumpVersion", getDumpVersion());
         String bookmark = req.getParameter("bookmark");
         if (bookmark != null) {
             logger.info("Proceeding query from bookmark: {}", bookmark);

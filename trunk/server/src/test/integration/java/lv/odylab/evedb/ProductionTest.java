@@ -13,7 +13,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class ProductionTest {
-    private final String baseUrl = "http://inc100.latest.odylab-evedb.appspot.com";
+    private final String baseUrl = "http://dev.latest.odylab-evedb.appspot.com";
 
     @Test
     public void test_admin_clearCache() throws Exception {
