@@ -8,7 +8,13 @@ public class BlueprintDetailsDao {
         ObjectifyService.register(BlueprintDetails.class);
     }
 
-    public BlueprintDetails getBlueprintDetailsForTypeID(Long typeID, String dumpVersion) {
+    private final String dumpVersion;
+
+    public BlueprintDetailsDao(String dumpVersion) {
+        this.dumpVersion = dumpVersion;
+    }
+
+    public BlueprintDetails getBlueprintDetailsForTypeID(Long typeID) {
         BlueprintDetails blueprintDetails = ObjectifyService.begin().query(BlueprintDetails.class)
                 .filter("blueprintType.dumpVersion", dumpVersion)
                 .filter("blueprintType.blueprintTypeID", typeID).get();
@@ -18,7 +24,7 @@ public class BlueprintDetailsDao {
         return blueprintDetails;
     }
 
-    public BlueprintDetails getBlueprintDetailsForTypeName(String typeName, String dumpVersion) {
+    public BlueprintDetails getBlueprintDetailsForTypeName(String typeName) {
         BlueprintDetails blueprintDetails = ObjectifyService.begin().query(BlueprintDetails.class)
                 .filter("blueprintType.dumpVersion", dumpVersion)
                 .filter("blueprintType.blueprintTypeName", typeName).get();

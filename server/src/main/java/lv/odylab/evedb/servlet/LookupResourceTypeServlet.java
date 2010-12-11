@@ -14,20 +14,20 @@ import java.util.List;
 
 public class LookupResourceTypeServlet extends XmlJsonServlet {
     private InvTypeDao invTypeDao;
-    private DtoMapper dtoMapper;
+    private DtoMapper mapper;
 
     @Override
     public void init() throws ServletException {
-        invTypeDao = new InvTypeDao();
-        dtoMapper = new DtoMapper();
+        invTypeDao = getComponent(InvTypeDao.class);
+        mapper = getComponent(DtoMapper.class);
     }
 
     @Override
     protected Object provideResponse(String query) {
-        List<InvType> invTypes = invTypeDao.findResourceByPartialTypeName(query, 50, DUMP_VERSION);
+        List<InvType> invTypes = invTypeDao.findResourceByPartialTypeName(query);
         List<InvTypeBasicInfoDto> result = new ArrayList<InvTypeBasicInfoDto>();
         for (InvType invType : invTypes) {
-            result.add(dtoMapper.map(invType));
+            result.add(mapper.map(invType));
         }
         return result;
     }

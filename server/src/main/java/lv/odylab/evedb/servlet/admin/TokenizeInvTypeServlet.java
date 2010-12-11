@@ -12,11 +12,11 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Query;
 import lv.odylab.evedb.domain.InvType;
 import lv.odylab.evedb.domain.InvTypeDao;
+import lv.odylab.evedb.servlet.PicoServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -26,15 +26,13 @@ import java.util.Map;
 
 import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
 
-public class TokenizeInvTypeServlet extends HttpServlet {
+public class TokenizeInvTypeServlet extends PicoServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass());
-
-    // TODO this is needed for ObjectifyService.register
-    private final InvTypeDao invTypeDao = new InvTypeDao();
 
     @Override
     public void init() throws ServletException {
         logger.info("Initializing servlet: {}", getClass().getSimpleName());
+        getComponent(InvTypeDao.class); // TODO this is needed for ObjectifyService.register
     }
 
     @Override
@@ -65,7 +63,7 @@ public class TokenizeInvTypeServlet extends HttpServlet {
         while (iterator.hasNext()) {
             keysToFetch.add(iterator.next());
 
-            if (keysToFetch.size() > 49) {
+            if (keysToFetch.size() > 999) {
                 Map<Key<InvType>, InvType> map = objectify.get(keysToFetch);
                 for (InvType invType : map.values()) {
                     populateTokens(invType);
@@ -78,7 +76,7 @@ public class TokenizeInvTypeServlet extends HttpServlet {
                 queue.add(withUrl("/admin/tokenizeInvType").method(TaskOptions.Method.POST)
                         .param("dumpVersion", dumpVersion)
                         .param("bookmark", newBookmark));
-                logger.info("50 objects processed, created new task with url: dumpVersion={}, bookmark: {}", new Object[]{dumpVersion, newBookmark});
+                logger.info("1000 objects processed, created new task with url: dumpVersion={}, bookmark: {}", new Object[]{dumpVersion, newBookmark});
                 resp.getWriter().write("IN PROGRESS");
                 return;
             }

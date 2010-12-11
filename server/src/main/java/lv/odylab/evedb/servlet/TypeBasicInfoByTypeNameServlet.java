@@ -7,16 +7,16 @@ import javax.servlet.ServletException;
 
 public class TypeBasicInfoByTypeNameServlet extends XmlJsonServlet {
     private InvTypeDao invTypeDao;
-    private DtoMapper dtoMapper;
+    private DtoMapper mapper;
 
     @Override
     public void init() throws ServletException {
-        invTypeDao = new InvTypeDao();
-        dtoMapper = new DtoMapper();
+        invTypeDao = getComponent(InvTypeDao.class);
+        mapper = getComponent(DtoMapper.class);
     }
 
     @Override
     protected Object provideResponse(String typeName) {
-        return dtoMapper.map(invTypeDao.getByTypeName(typeName, DUMP_VERSION));
+        return mapper.map(invTypeDao.getByTypeName(typeName));
     }
 }

@@ -7,16 +7,16 @@ import javax.servlet.ServletException;
 
 public class BlueprintTypeByTypeIdServlet extends XmlJsonServlet {
     private InvBlueprintTypeDao invBlueprintTypeDao;
-    private DtoMapper dtoMapper;
+    private DtoMapper mapper;
 
     @Override
     public void init() throws ServletException {
-        invBlueprintTypeDao = new InvBlueprintTypeDao();
-        dtoMapper = new DtoMapper();
+        invBlueprintTypeDao = getComponent(InvBlueprintTypeDao.class);
+        mapper = getComponent(DtoMapper.class);
     }
 
     @Override
     protected Object provideResponse(String typeID) {
-        return dtoMapper.map(invBlueprintTypeDao.getByTypeID(Long.valueOf(typeID), DUMP_VERSION));
+        return mapper.map(invBlueprintTypeDao.getByTypeID(Long.valueOf(typeID)));
     }
 }

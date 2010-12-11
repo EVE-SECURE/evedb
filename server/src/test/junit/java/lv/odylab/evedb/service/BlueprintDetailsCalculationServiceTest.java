@@ -32,7 +32,7 @@ public class BlueprintDetailsCalculationServiceTest {
 
     @Before
     public void setUp() {
-        blueprintService = new BlueprintDetailsCalculationService(invBlueprintTypeDao, invTypeMaterialDao, ramTypeRequirementDao, "dumpVersion");
+        blueprintService = new BlueprintDetailsCalculationService(invBlueprintTypeDao, invTypeMaterialDao, ramTypeRequirementDao);
 
         InvBlueprintType invBlueprintType = new InvBlueprintType();
         invBlueprintType.setBlueprintTypeID(1L);
@@ -104,11 +104,11 @@ public class BlueprintDetailsCalculationServiceTest {
         invTypeMaterialsForRequirement.add(invTypeMaterialForRequirement1);
         invTypeMaterialsForRequirement.add(invTypeMaterialForRequirement2);
 
-        when(invBlueprintTypeDao.getByTypeID(1L, "dumpVersion")).thenReturn(invBlueprintType);
-        when(invBlueprintTypeDao.getByTypeName("typeName", "dumpVersion")).thenReturn(invBlueprintType);
-        when(invTypeMaterialDao.getForTypeIdWithoutCheck(2L, "dumpVersion")).thenReturn(invTypeMaterials);
-        when(invTypeMaterialDao.getForTypeIdWithoutCheck(6L, "dumpVersion")).thenReturn(invTypeMaterialsForRequirement);
-        when(ramTypeRequirementDao.getForTypeIdWithoutCheck(1L, "dumpVersion")).thenReturn(ramTypeRequirements);
+        when(invBlueprintTypeDao.getByTypeID(1L)).thenReturn(invBlueprintType);
+        when(invBlueprintTypeDao.getByTypeName("typeName")).thenReturn(invBlueprintType);
+        when(invTypeMaterialDao.getForTypeIdWithoutCheck(2L)).thenReturn(invTypeMaterials);
+        when(invTypeMaterialDao.getForTypeIdWithoutCheck(6L)).thenReturn(invTypeMaterialsForRequirement);
+        when(ramTypeRequirementDao.getForTypeIdWithoutCheck(1L)).thenReturn(ramTypeRequirements);
     }
 
     @Test

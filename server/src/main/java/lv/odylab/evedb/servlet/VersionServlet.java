@@ -1,14 +1,13 @@
 package lv.odylab.evedb.servlet;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class VersionServlet extends HttpServlet {
+public class VersionServlet extends PicoServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write("1.8-SNAPSHOT-inc100");
+        resp.getWriter().write("1.8-SNAPSHOT-" + getDumpVersion());
     }
 }

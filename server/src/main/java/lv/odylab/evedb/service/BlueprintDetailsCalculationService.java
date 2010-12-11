@@ -17,26 +17,24 @@ public class BlueprintDetailsCalculationService {
     private final InvBlueprintTypeDao invBlueprintTypeDao;
     private final InvTypeMaterialDao invTypeMaterialDao;
     private final RamTypeRequirementDao ramTypeRequirementDao;
-    private final String dumpVersion;
 
-    public BlueprintDetailsCalculationService(InvBlueprintTypeDao invBlueprintTypeDao, InvTypeMaterialDao invTypeMaterialDao, RamTypeRequirementDao ramTypeRequirementDao, String dumpVersion) {
+    public BlueprintDetailsCalculationService(InvBlueprintTypeDao invBlueprintTypeDao, InvTypeMaterialDao invTypeMaterialDao, RamTypeRequirementDao ramTypeRequirementDao) {
         this.invBlueprintTypeDao = invBlueprintTypeDao;
         this.invTypeMaterialDao = invTypeMaterialDao;
         this.ramTypeRequirementDao = ramTypeRequirementDao;
-        this.dumpVersion = dumpVersion;
     }
 
     public BlueprintDetails getBlueprintDetailsForTypeID(Long typeID) {
-        InvBlueprintType invBlueprintType = invBlueprintTypeDao.getByTypeID(typeID, dumpVersion);
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(invBlueprintType.getProductTypeID(), dumpVersion);
-        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeIdWithoutCheck(typeID, dumpVersion);
+        InvBlueprintType invBlueprintType = invBlueprintTypeDao.getByTypeID(typeID);
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(invBlueprintType.getProductTypeID());
+        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeIdWithoutCheck(typeID);
         return createBlueprintDetails(invBlueprintType, invTypeMaterials, ramTypeRequirements);
     }
 
     public BlueprintDetails getBlueprintDetailsForTypeName(String typeName) {
-        InvBlueprintType invBlueprintType = invBlueprintTypeDao.getByTypeName(typeName, dumpVersion);
-        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(invBlueprintType.getProductTypeID(), dumpVersion);
-        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeIdWithoutCheck(invBlueprintType.getBlueprintTypeID(), dumpVersion);
+        InvBlueprintType invBlueprintType = invBlueprintTypeDao.getByTypeName(typeName);
+        List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(invBlueprintType.getProductTypeID());
+        List<RamTypeRequirement> ramTypeRequirements = ramTypeRequirementDao.getForTypeIdWithoutCheck(invBlueprintType.getBlueprintTypeID());
         return createBlueprintDetails(invBlueprintType, invTypeMaterials, ramTypeRequirements);
     }
 
@@ -95,7 +93,7 @@ public class BlueprintDetailsCalculationService {
         }
 
         for (RamTypeRequirement ramTypeRequirement : recyclableRequirements) {
-            List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(ramTypeRequirement.getRequiredTypeID(), dumpVersion);
+            List<InvTypeMaterial> invTypeMaterials = invTypeMaterialDao.getForTypeIdWithoutCheck(ramTypeRequirement.getRequiredTypeID());
             for (InvTypeMaterial invTypeMaterial : invTypeMaterials) {
                 InvTypeMaterial existingInvTypeMaterial = typeIdToInvTypeMaterialMap.get(invTypeMaterial.getMaterialTypeID());
                 if (existingInvTypeMaterial != null) {

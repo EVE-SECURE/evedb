@@ -14,11 +14,11 @@ import lv.odylab.evedb.domain.InvBlueprintTypeDao;
 import lv.odylab.evedb.domain.InvTypeDao;
 import lv.odylab.evedb.domain.InvTypeMaterialDao;
 import lv.odylab.evedb.domain.RamTypeRequirementDao;
+import lv.odylab.evedb.servlet.PicoServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -28,18 +28,18 @@ import java.util.Map;
 
 import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
 
-public class ReindexServlet extends HttpServlet {
+public class ReindexServlet extends PicoServlet {
     private final Logger logger = LoggerFactory.getLogger(getClass());
-
-    // TODO this is needed for ObjectifyService.register
-    private final InvBlueprintTypeDao invBlueprintTypeDao = new InvBlueprintTypeDao();
-    private final InvTypeDao invTypeDao = new InvTypeDao();
-    private final InvTypeMaterialDao invTypeMaterialDao = new InvTypeMaterialDao();
-    private final RamTypeRequirementDao ramTypeRequirementDao = new RamTypeRequirementDao();
 
     @Override
     public void init() throws ServletException {
         logger.info("Initializing servlet: {}", getClass().getSimpleName());
+
+        // TODO this is needed for ObjectifyService.register
+        getComponent(InvBlueprintTypeDao.class);
+        getComponent(InvTypeDao.class);
+        getComponent(InvTypeMaterialDao.class);
+        getComponent(RamTypeRequirementDao.class);
     }
 
     @Override
