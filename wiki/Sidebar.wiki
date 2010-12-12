@@ -19,7 +19,5 @@
     ** [MethodTypeIdToTypeName /typeIdToTypeName]
     ** [MethodTypeNameToTypeID /typeNameToTypeID]
     ** [MethodVersion /version]
-  * [Datastore Datastore]
-    ** [WorkingWithDatastore Working with Datastore]
   * [Development Development]
   * [ReleaseNotes Release notes]
