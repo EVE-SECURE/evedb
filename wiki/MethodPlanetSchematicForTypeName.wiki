@@ -1,3 +1,91 @@
 #summary Method planetSchematicForTypeName details
 
 = /planetSchematicForTypeName/(typeName) =
+
+Planetary commodity information for given typeName.
+
+== Attributes ==
+
+|| requiredGroupID || Number ||
+
+== Examples ==
+
+[http://odylab-evedb.appspot.com/planetSchematicForTypeName/blah-blah planetSchematicForTypeName/blah-blah] (HTTP 400)
+
+[http://odylab-evedb.appspot.com/planetSchematicForTypeName/Superconductor planetSchematicForTypeName/Superconductor] (JSON)
+{{{
+[ { "requiredGroupID" : 1042,
+    "requiredGroupName" : "Basic Commodities",
+    "requiredIcon" : "96_07",
+    "requiredQuantity" : 40,
+    "requiredTypeID" : 2389,
+    "requiredTypeName" : "Plasmoids",
+    "requiredVolume" : 0.38,
+    "schematicCycleTime" : 3600,
+    "schematicGroupID" : 1034,
+    "schematicGroupName" : "Refined Commodities",
+    "schematicIcon" : "24_09",
+    "schematicQuantity" : 5,
+    "schematicTypeID" : 9838,
+    "schematicTypeName" : "Superconductors",
+    "schematicVolume" : 1.5
+  },
+  { "requiredGroupID" : 280,
+    "requiredGroupName" : "General",
+    "requiredIcon" : "10_04",
+    "requiredQuantity" : 40,
+    "requiredTypeID" : 3645,
+    "requiredTypeName" : "Water",
+    "requiredVolume" : 0.38,
+    "schematicCycleTime" : 3600,
+    "schematicGroupID" : 1034,
+    "schematicGroupName" : "Refined Commodities",
+    "schematicIcon" : "24_09",
+    "schematicQuantity" : 5,
+    "schematicTypeID" : 9838,
+    "schematicTypeName" : "Superconductors",
+    "schematicVolume" : 1.5
+  }
+]
+}}}
+
+[http://odylab-evedb.appspot.com/planetSchematicForTypeName/Superconductor planetSchematicForTypeName/Superconductor] (XML)
+{{{
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rowset>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="planetSchematicDto">
+    <requiredGroupID>1042</requiredGroupID>
+    <requiredGroupName>Basic Commodities</requiredGroupName>
+    <requiredIcon>96_07</requiredIcon>
+    <requiredQuantity>40</requiredQuantity>
+    <requiredTypeID>2389</requiredTypeID>
+    <requiredTypeName>Plasmoids</requiredTypeName>
+    <requiredVolume>0.38</requiredVolume>
+    <schematicCycleTime>3600</schematicCycleTime>
+    <schematicGroupID>1034</schematicGroupID>
+    <schematicGroupName>Refined Commodities</schematicGroupName>
+    <schematicIcon>24_09</schematicIcon>
+    <schematicQuantity>5</schematicQuantity>
+    <schematicTypeID>9838</schematicTypeID>
+    <schematicTypeName>Superconductors</schematicTypeName>
+    <schematicVolume>1.5</schematicVolume>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="planetSchematicDto">
+    <requiredGroupID>280</requiredGroupID>
+    <requiredGroupName>General</requiredGroupName>
+    <requiredIcon>10_04</requiredIcon>
+    <requiredQuantity>40</requiredQuantity>
+    <requiredTypeID>3645</requiredTypeID>
+    <requiredTypeName>Water</requiredTypeName>
+    <requiredVolume>0.38</requiredVolume>
+    <schematicCycleTime>3600</schematicCycleTime>
+    <schematicGroupID>1034</schematicGroupID>
+    <schematicGroupName>Refined Commodities</schematicGroupName>
+    <schematicIcon>24_09</schematicIcon>
+    <schematicQuantity>5</schematicQuantity>
+    <schematicTypeID>9838</schematicTypeID>
+    <schematicTypeName>Superconductors</schematicTypeName>
+    <schematicVolume>1.5</schematicVolume>
+  </row>
+</rowset>
+}}}
