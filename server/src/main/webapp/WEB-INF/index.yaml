@@ -31,25 +31,6 @@ indexes:
   - name: dumpVersion
   - name: published
   - name: typeNameTokens
-  - name: typeName
-
-- kind: InvType
-  ancestor: no
-  properties:
-  - name: categoryID
-  - name: dumpVersion
-  - name: published
-  - name: typeNameTokens
-  - name: typeName
-
-- kind: InvType
-  ancestor: no
-  properties:
-  - name: dumpVersion
-  - name: published
-  - name: typeNameTokens
-  - name: typeNameTokens
-  - name: typeName
 
 - kind: InvType
   ancestor: no
@@ -58,14 +39,6 @@ indexes:
   - name: published
   - name: categoryID
   - name: typeNameTokens
-  - name: typeNameTokens
-  - name: typeName
-
-- kind: InvType
-  ancestor: no
-  properties:
-  - name: typeNameTokens
-  - name: typeName
 
 
 - kind: InvTypeMaterial
