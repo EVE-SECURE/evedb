@@ -44,7 +44,7 @@ Planetary commodity information for given typeID.
     "schematicQuantity" : 5,
     "schematicTypeID" : 9838,
     "schematicTypeName" : "Superconductors",
-    "schematicVolume" : 1.5
+    "schematicVolume" : "1.5"
   },
   { "requiredGroupID" : 280,
     "requiredGroupName" : "General",
@@ -60,7 +60,7 @@ Planetary commodity information for given typeID.
     "schematicQuantity" : 5,
     "schematicTypeID" : 9838,
     "schematicTypeName" : "Superconductors",
-    "schematicVolume" : 1.5
+    "schematicVolume" : "1.5"
   }
 ]
 }}}
