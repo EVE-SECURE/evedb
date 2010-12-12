@@ -1,0 +1,1 @@
+appcfg.py upload_data --config_file=python/PlanetSchematicLoader.py --filename=data/planetSchematics.csv --kind=PlanetSchematic ./python

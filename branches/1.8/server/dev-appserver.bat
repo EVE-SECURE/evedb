@@ -1,0 +1,1 @@
+dev_appserver target/evedb-server-1.8-SNAPSHOT
