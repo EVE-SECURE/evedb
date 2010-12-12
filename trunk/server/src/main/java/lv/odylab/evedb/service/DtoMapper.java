@@ -135,14 +135,14 @@ public class DtoMapper {
         planetSchematicDto.setSchematicIcon(planetSchematic.getSchematicIcon());
         planetSchematicDto.setSchematicCycleTime(planetSchematic.getSchematicCycleTime());
         planetSchematicDto.setSchematicQuantity(planetSchematic.getSchematicQuantity());
-        planetSchematicDto.setSchematicVolume(BigDecimal.valueOf(planetSchematic.getSchematicVolume()));
+        planetSchematicDto.setSchematicVolume(BigDecimal.valueOf(planetSchematic.getSchematicVolume()).toPlainString());
         planetSchematicDto.setRequiredTypeID(planetSchematic.getRequiredTypeID());
         planetSchematicDto.setRequiredTypeName(planetSchematic.getRequiredTypeName());
         planetSchematicDto.setRequiredGroupID(planetSchematic.getRequiredGroupID());
         planetSchematicDto.setRequiredGroupName(planetSchematic.getRequiredGroupName());
         planetSchematicDto.setRequiredIcon(planetSchematic.getRequiredIcon());
         planetSchematicDto.setRequiredQuantity(planetSchematic.getRequiredQuantity());
-        planetSchematicDto.setRequiredVolume(BigDecimal.valueOf(planetSchematic.getRequiredVolume()));
+        planetSchematicDto.setRequiredVolume(BigDecimal.valueOf(planetSchematic.getRequiredVolume()).toPlainString());
         return planetSchematicDto;
     }
 }
