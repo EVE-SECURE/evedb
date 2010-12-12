@@ -32,7 +32,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "General",
         "requiredTypeID" : 3812,
         "requiredTypeIcon" : "10_16",
-        "requiredTypeName" : "Data Sheets"
+        "requiredTypeName" : "Data Sheets",
+        "requiredTypeVolume" : "1.0"
       },
       { "activityID" : 5,
         "activityName" : "Copying",
@@ -43,7 +44,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11450,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Gallentean Starship Engineering"
+        "requiredTypeName" : "Gallentean Starship Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 5,
         "activityName" : "Copying",
@@ -54,7 +56,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11452,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Mechanical Engineering"
+        "requiredTypeName" : "Mechanical Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 5,
         "activityName" : "Copying",
@@ -65,15 +68,19 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Tool",
         "requiredTypeID" : 11467,
         "requiredTypeIcon" : "41_01",
-        "requiredTypeName" : "R.Db - Duvolle Labs"
+        "requiredTypeName" : "R.Db - Duvolle Labs",
+        "requiredTypeVolume" : "4.0"
       }
     ],
   "invBlueprintTypeDto" : { "blueprintTypeID" : 12024,
       "blueprintTypeName" : "Deimos Blueprint",
+      "dumpVersion" : "inc100",
       "maxProductionLimit" : 10,
       "productCategoryID" : 6,
+      "productPortionSize" : 1,
       "productTypeID" : 12023,
       "productTypeName" : "Deimos",
+      "productVolume" : "112000.0",
       "productionTime" : 160000,
       "productivityModifier" : 32000,
       "researchCopyTime" : 1600000,
@@ -92,7 +99,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupID" : 26,
         "requiredTypeGroupName" : "Cruiser",
         "requiredTypeID" : 627,
-        "requiredTypeName" : "Thorax"
+        "requiredTypeName" : "Thorax",
+        "requiredTypeVolume" : "112000.0"
       },
       { "activityID" : 1,
         "activityName" : "Manufacturing",
@@ -103,7 +111,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Industry",
         "requiredTypeID" : 3380,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Industry"
+        "requiredTypeName" : "Industry",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 1,
         "activityName" : "Manufacturing",
@@ -114,7 +123,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Mechanic",
         "requiredTypeID" : 3397,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Cruiser Construction"
+        "requiredTypeName" : "Cruiser Construction",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 1,
         "activityName" : "Manufacturing",
@@ -125,7 +135,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11450,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Gallentean Starship Engineering"
+        "requiredTypeName" : "Gallentean Starship Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 1,
         "activityName" : "Manufacturing",
@@ -136,7 +147,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11452,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Mechanical Engineering"
+        "requiredTypeName" : "Mechanical Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 1,
         "activityName" : "Manufacturing",
@@ -147,61 +159,71 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Tool",
         "requiredTypeID" : 11478,
         "requiredTypeIcon" : "41_02",
-        "requiredTypeName" : "R.A.M.- Starship Tech"
+        "requiredTypeName" : "R.A.M.- Starship Tech",
+        "requiredTypeVolume" : "4.0"
       }
     ],
   "materialDtos" : [ { "materialTypeCategoryID" : 43,
         "materialTypeID" : 3828,
         "materialTypeIcon" : "06_05",
         "materialTypeName" : "Construction Blocks",
+        "materialVolume" : "1.5",
         "quantity" : 125
       },
       { "materialTypeCategoryID" : 4,
         "materialTypeID" : 11399,
         "materialTypeIcon" : "35_02",
         "materialTypeName" : "Morphite",
+        "materialVolume" : "0.01",
         "quantity" : 100
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11531,
         "materialTypeIcon" : "37_02",
         "materialTypeName" : "Ion Thruster",
+        "materialVolume" : "1.0",
         "quantity" : 50
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11535,
         "materialTypeIcon" : "37_06",
         "materialTypeName" : "Magnetometric Sensor Cluster",
+        "materialVolume" : "1.0",
         "quantity" : 110
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11541,
         "materialTypeIcon" : "37_10",
         "materialTypeName" : "Photon Microprocessor",
+        "materialVolume" : "1.0",
         "quantity" : 900
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11545,
         "materialTypeIcon" : "37_14",
         "materialTypeName" : "Crystalline Carbonide Armor Plate",
+        "materialVolume" : "1.0",
         "quantity" : 3750
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11547,
         "materialTypeIcon" : "39_02",
         "materialTypeName" : "Fusion Reactor Unit",
+        "materialVolume" : "1.0",
         "quantity" : 30
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11553,
         "materialTypeIcon" : "39_06",
         "materialTypeName" : "Oscillator Capacitor Unit",
+        "materialVolume" : "1.0",
         "quantity" : 400
       },
       { "materialTypeCategoryID" : 17,
         "materialTypeID" : 11556,
         "materialTypeIcon" : "39_10",
         "materialTypeName" : "Pulse Shield Emitter",
+        "materialVolume" : "1.0",
         "quantity" : 300
       }
     ],
@@ -214,7 +236,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 3409,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Metallurgy"
+        "requiredTypeName" : "Metallurgy",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 4,
         "activityName" : "Researching Material Productivity",
@@ -225,7 +248,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "General",
         "requiredTypeID" : 3814,
         "requiredTypeIcon" : "10_16",
-        "requiredTypeName" : "Reports"
+        "requiredTypeName" : "Reports",
+        "requiredTypeVolume" : "0.1"
       },
       { "activityID" : 4,
         "activityName" : "Researching Material Productivity",
@@ -236,7 +260,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Refined Commodities",
         "requiredTypeID" : 9836,
         "requiredTypeIcon" : "24_08",
-        "requiredTypeName" : "Consumer Electronics"
+        "requiredTypeName" : "Consumer Electronics",
+        "requiredTypeVolume" : "1.5"
       },
       { "activityID" : 4,
         "activityName" : "Researching Material Productivity",
@@ -247,7 +272,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11450,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Gallentean Starship Engineering"
+        "requiredTypeName" : "Gallentean Starship Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 4,
         "activityName" : "Researching Material Productivity",
@@ -258,7 +284,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11452,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Mechanical Engineering"
+        "requiredTypeName" : "Mechanical Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 4,
         "activityName" : "Researching Material Productivity",
@@ -269,7 +296,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Tool",
         "requiredTypeID" : 11467,
         "requiredTypeIcon" : "41_01",
-        "requiredTypeName" : "R.Db - Duvolle Labs"
+        "requiredTypeName" : "R.Db - Duvolle Labs",
+        "requiredTypeVolume" : "4.0"
       }
     ],
   "reverseEngineeringRequirementDtos" : [  ],
@@ -282,7 +310,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 3403,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Research"
+        "requiredTypeName" : "Research",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 3,
         "activityName" : "Researching Time Productivity",
@@ -293,7 +322,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "General",
         "requiredTypeID" : 3814,
         "requiredTypeIcon" : "10_16",
-        "requiredTypeName" : "Reports"
+        "requiredTypeName" : "Reports",
+        "requiredTypeVolume" : "0.1"
       },
       { "activityID" : 3,
         "activityName" : "Researching Time Productivity",
@@ -304,7 +334,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Refined Commodities",
         "requiredTypeID" : 9836,
         "requiredTypeIcon" : "24_08",
-        "requiredTypeName" : "Consumer Electronics"
+        "requiredTypeName" : "Consumer Electronics",
+        "requiredTypeVolume" : "1.5"
       },
       { "activityID" : 3,
         "activityName" : "Researching Time Productivity",
@@ -315,7 +346,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11450,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Gallentean Starship Engineering"
+        "requiredTypeName" : "Gallentean Starship Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 3,
         "activityName" : "Researching Time Productivity",
@@ -326,7 +358,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Science",
         "requiredTypeID" : 11452,
         "requiredTypeIcon" : "50_11",
-        "requiredTypeName" : "Mechanical Engineering"
+        "requiredTypeName" : "Mechanical Engineering",
+        "requiredTypeVolume" : "0.01"
       },
       { "activityID" : 3,
         "activityName" : "Researching Time Productivity",
@@ -337,7 +370,8 @@ Blueprint details for given blueprint typeID.
         "requiredTypeGroupName" : "Tool",
         "requiredTypeID" : 11467,
         "requiredTypeIcon" : "41_01",
-        "requiredTypeName" : "R.Db - Duvolle Labs"
+        "requiredTypeName" : "R.Db - Duvolle Labs",
+        "requiredTypeVolume" : "4.0"
       }
     ]
 }
@@ -358,6 +392,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3812</requiredTypeID>
     <requiredTypeIcon>10_16</requiredTypeIcon>
     <requiredTypeName>Data Sheets</requiredTypeName>
+    <requiredTypeVolume>1.0</requiredTypeVolume>
   </copyingRequirementDtos>
   <copyingRequirementDtos>
     <activityID>5</activityID>
@@ -370,6 +405,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11450</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </copyingRequirementDtos>
   <copyingRequirementDtos>
     <activityID>5</activityID>
@@ -382,6 +418,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11452</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Mechanical Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </copyingRequirementDtos>
   <copyingRequirementDtos>
     <activityID>5</activityID>
@@ -394,14 +431,18 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11467</requiredTypeID>
     <requiredTypeIcon>41_01</requiredTypeIcon>
     <requiredTypeName>R.Db - Duvolle Labs</requiredTypeName>
+    <requiredTypeVolume>4.0</requiredTypeVolume>
   </copyingRequirementDtos>
   <invBlueprintTypeDto>
     <blueprintTypeID>12024</blueprintTypeID>
     <blueprintTypeName>Deimos Blueprint</blueprintTypeName>
+    <dumpVersion>inc100</dumpVersion>
     <maxProductionLimit>10</maxProductionLimit>
     <productCategoryID>6</productCategoryID>
+    <productPortionSize>1</productPortionSize>
     <productTypeID>12023</productTypeID>
     <productTypeName>Deimos</productTypeName>
+    <productVolume>112000.0</productVolume>
     <productionTime>160000</productionTime>
     <productivityModifier>32000</productivityModifier>
     <researchCopyTime>1600000</researchCopyTime>
@@ -421,6 +462,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeGroupName>Cruiser</requiredTypeGroupName>
     <requiredTypeID>627</requiredTypeID>
     <requiredTypeName>Thorax</requiredTypeName>
+    <requiredTypeVolume>112000.0</requiredTypeVolume>
   </manufacturingRequirementDtos>
   <manufacturingRequirementDtos>
     <activityID>1</activityID>
@@ -433,6 +475,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3380</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Industry</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </manufacturingRequirementDtos>
   <manufacturingRequirementDtos>
     <activityID>1</activityID>
@@ -445,6 +488,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3397</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Cruiser Construction</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </manufacturingRequirementDtos>
   <manufacturingRequirementDtos>
     <activityID>1</activityID>
@@ -457,6 +501,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11450</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </manufacturingRequirementDtos>
   <manufacturingRequirementDtos>
     <activityID>1</activityID>
@@ -469,6 +514,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11452</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Mechanical Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </manufacturingRequirementDtos>
   <manufacturingRequirementDtos>
     <activityID>1</activityID>
@@ -481,12 +527,14 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11478</requiredTypeID>
     <requiredTypeIcon>41_02</requiredTypeIcon>
     <requiredTypeName>R.A.M.- Starship Tech</requiredTypeName>
+    <requiredTypeVolume>4.0</requiredTypeVolume>
   </manufacturingRequirementDtos>
   <materialDtos>
     <materialTypeCategoryID>43</materialTypeCategoryID>
     <materialTypeID>3828</materialTypeID>
     <materialTypeIcon>06_05</materialTypeIcon>
     <materialTypeName>Construction Blocks</materialTypeName>
+    <materialVolume>1.5</materialVolume>
     <quantity>125</quantity>
   </materialDtos>
   <materialDtos>
@@ -494,6 +542,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11399</materialTypeID>
     <materialTypeIcon>35_02</materialTypeIcon>
     <materialTypeName>Morphite</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>100</quantity>
   </materialDtos>
   <materialDtos>
@@ -501,6 +550,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11531</materialTypeID>
     <materialTypeIcon>37_02</materialTypeIcon>
     <materialTypeName>Ion Thruster</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>50</quantity>
   </materialDtos>
   <materialDtos>
@@ -508,6 +558,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11535</materialTypeID>
     <materialTypeIcon>37_06</materialTypeIcon>
     <materialTypeName>Magnetometric Sensor Cluster</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>110</quantity>
   </materialDtos>
   <materialDtos>
@@ -515,6 +566,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11541</materialTypeID>
     <materialTypeIcon>37_10</materialTypeIcon>
     <materialTypeName>Photon Microprocessor</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>900</quantity>
   </materialDtos>
   <materialDtos>
@@ -522,6 +574,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11545</materialTypeID>
     <materialTypeIcon>37_14</materialTypeIcon>
     <materialTypeName>Crystalline Carbonide Armor Plate</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>3750</quantity>
   </materialDtos>
   <materialDtos>
@@ -529,6 +582,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11547</materialTypeID>
     <materialTypeIcon>39_02</materialTypeIcon>
     <materialTypeName>Fusion Reactor Unit</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>30</quantity>
   </materialDtos>
   <materialDtos>
@@ -536,6 +590,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11553</materialTypeID>
     <materialTypeIcon>39_06</materialTypeIcon>
     <materialTypeName>Oscillator Capacitor Unit</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>400</quantity>
   </materialDtos>
   <materialDtos>
@@ -543,6 +598,7 @@ Blueprint details for given blueprint typeID.
     <materialTypeID>11556</materialTypeID>
     <materialTypeIcon>39_10</materialTypeIcon>
     <materialTypeName>Pulse Shield Emitter</materialTypeName>
+    <materialVolume>1.0</materialVolume>
     <quantity>300</quantity>
   </materialDtos>
   <materialProductivityRequirementDtos>
@@ -556,6 +612,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3409</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Metallurgy</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </materialProductivityRequirementDtos>
   <materialProductivityRequirementDtos>
     <activityID>4</activityID>
@@ -568,6 +625,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3814</requiredTypeID>
     <requiredTypeIcon>10_16</requiredTypeIcon>
     <requiredTypeName>Reports</requiredTypeName>
+    <requiredTypeVolume>0.1</requiredTypeVolume>
   </materialProductivityRequirementDtos>
   <materialProductivityRequirementDtos>
     <activityID>4</activityID>
@@ -580,6 +638,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>9836</requiredTypeID>
     <requiredTypeIcon>24_08</requiredTypeIcon>
     <requiredTypeName>Consumer Electronics</requiredTypeName>
+    <requiredTypeVolume>1.5</requiredTypeVolume>
   </materialProductivityRequirementDtos>
   <materialProductivityRequirementDtos>
     <activityID>4</activityID>
@@ -592,6 +651,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11450</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </materialProductivityRequirementDtos>
   <materialProductivityRequirementDtos>
     <activityID>4</activityID>
@@ -604,6 +664,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11452</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Mechanical Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </materialProductivityRequirementDtos>
   <materialProductivityRequirementDtos>
     <activityID>4</activityID>
@@ -616,6 +677,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11467</requiredTypeID>
     <requiredTypeIcon>41_01</requiredTypeIcon>
     <requiredTypeName>R.Db - Duvolle Labs</requiredTypeName>
+    <requiredTypeVolume>4.0</requiredTypeVolume>
   </materialProductivityRequirementDtos>
   <timeProductivityRequirementDtos>
     <activityID>3</activityID>
@@ -628,6 +690,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3403</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Research</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </timeProductivityRequirementDtos>
   <timeProductivityRequirementDtos>
     <activityID>3</activityID>
@@ -640,6 +703,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>3814</requiredTypeID>
     <requiredTypeIcon>10_16</requiredTypeIcon>
     <requiredTypeName>Reports</requiredTypeName>
+    <requiredTypeVolume>0.1</requiredTypeVolume>
   </timeProductivityRequirementDtos>
   <timeProductivityRequirementDtos>
     <activityID>3</activityID>
@@ -652,6 +716,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>9836</requiredTypeID>
     <requiredTypeIcon>24_08</requiredTypeIcon>
     <requiredTypeName>Consumer Electronics</requiredTypeName>
+    <requiredTypeVolume>1.5</requiredTypeVolume>
   </timeProductivityRequirementDtos>
   <timeProductivityRequirementDtos>
     <activityID>3</activityID>
@@ -664,6 +729,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11450</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Gallentean Starship Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </timeProductivityRequirementDtos>
   <timeProductivityRequirementDtos>
     <activityID>3</activityID>
@@ -676,6 +742,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11452</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Mechanical Engineering</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </timeProductivityRequirementDtos>
   <timeProductivityRequirementDtos>
     <activityID>3</activityID>
@@ -688,6 +755,7 @@ Blueprint details for given blueprint typeID.
     <requiredTypeID>11467</requiredTypeID>
     <requiredTypeIcon>41_01</requiredTypeIcon>
     <requiredTypeName>R.Db - Duvolle Labs</requiredTypeName>
+    <requiredTypeVolume>4.0</requiredTypeVolume>
   </timeProductivityRequirementDtos>
 </blueprintDetailsDto>
 }}}
