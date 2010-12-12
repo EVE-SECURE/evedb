@@ -8,10 +8,13 @@ Blueprint information for given blueprint typeName.
 
 || blueprintTypeID || Number ||
 || blueprintTypeName || String ||
+|| dumpVersion || String ||
 || maxProductionLimit || Number ||
 || productCategoryID || Number ||
+|| productPortionSize || Number ||
 || productTypeID || Number ||
 || productTypeName || String ||
+|| productVolume || String ||
 || productionTime || Number ||
 || productivityModifier || Number ||
 || researchCopyTime || Number ||
@@ -29,10 +32,13 @@ Blueprint information for given blueprint typeName.
 {{{
 { "blueprintTypeID" : 20188,
   "blueprintTypeName" : "Obelisk Blueprint",
+  "dumpVersion" : "inc100",
   "maxProductionLimit" : 1,
   "productCategoryID" : 6,
+  "productPortionSize" : 1,
   "productTypeID" : 20187,
   "productTypeName" : "Obelisk",
+  "productVolume" : "17550000",
   "productionTime" : 1280000,
   "productivityModifier" : 256000,
   "researchCopyTime" : 2560000,
@@ -50,10 +56,13 @@ Blueprint information for given blueprint typeName.
 <invBlueprintTypeDto>
   <blueprintTypeID>20188</blueprintTypeID>
   <blueprintTypeName>Obelisk Blueprint</blueprintTypeName>
+  <dumpVersion>inc100</dumpVersion>
   <maxProductionLimit>1</maxProductionLimit>
   <productCategoryID>6</productCategoryID>
+  <productPortionSize>1</productPortionSize>
   <productTypeID>20187</productTypeID>
   <productTypeName>Obelisk</productTypeName>
+  <productVolume>17550000</productVolume>
   <productionTime>1280000</productionTime>
   <productivityModifier>256000</productivityModifier>
   <researchCopyTime>2560000</researchCopyTime>
@@ -62,5 +71,5 @@ Blueprint information for given blueprint typeName.
   <researchTechTime>500000</researchTechTime>
   <techLevel>1</techLevel>
   <wasteFactor>10</wasteFactor>
-</invBlueprintTypeDto> 
+</invBlueprintTypeDto>
 }}}
