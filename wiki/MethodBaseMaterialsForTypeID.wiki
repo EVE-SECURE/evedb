@@ -10,7 +10,7 @@ List of base materials for given item typeID.
 || materialTypeID || Number ||
 || materialTypeIcon || String ||
 || materialTypeName || String ||
-|| materialVolume || Double ||
+|| materialVolume || String ||
 || quantity || Number ||
 
 == Examples ==
