@@ -7,6 +7,7 @@
   * *New methods planetSchematicForTypeID and planetSchematicForTypeName*
   * *Volumes now present in most returned dtos*
 
+  * Issue 31: Method lookupType throws exception when passed mulple words in query
   * Issue 30: Add new methods planetSchematicForTypeID and planetSchematicForTypeName
   * Issue 29: Introduce PicoContainer
   * Issue 28: lookupType, lookupResourceType and lookupBlueprintType return unordered list
