@@ -33,15 +33,20 @@ List of matching resource item types.
 
 [http://odylab-evedb.appspot.com/lookupResourceType/Tri lookupResourceType/Tri] (JSON)
 {{{
-[ { "icon" : "69_14",
+[ { "icon" : "69_11",
     "itemCategoryID" : 4,
-    "itemTypeID" : 25612,
-    "name" : "Trigger Unit"
+    "itemTypeID" : 25595,
+    "name" : "Alloyed Tritanium Bar"
   },
   { "icon" : "69_13",
     "itemCategoryID" : 4,
     "itemTypeID" : 25593,
     "name" : "Smashed Trigger Unit"
+  },
+  { "icon" : "69_14",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 25612,
+    "name" : "Trigger Unit"
   },
   { "icon" : "69_15",
     "itemCategoryID" : 4,
@@ -52,11 +57,6 @@ List of matching resource item types.
     "itemCategoryID" : 4,
     "itemTypeID" : 34,
     "name" : "Tritanium"
-  },
-  { "icon" : "69_11",
-    "itemCategoryID" : 4,
-    "itemTypeID" : 25595,
-    "name" : "Alloyed Tritanium Bar"
   }
 ]
 }}}
@@ -66,16 +66,22 @@ List of matching resource item types.
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>69_14</icon>
+    <icon>69_11</icon>
     <itemCategoryID>4</itemCategoryID>
-    <itemTypeID>25612</itemTypeID>
-    <name>Trigger Unit</name>
+    <itemTypeID>25595</itemTypeID>
+    <name>Alloyed Tritanium Bar</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>69_13</icon>
     <itemCategoryID>4</itemCategoryID>
     <itemTypeID>25593</itemTypeID>
     <name>Smashed Trigger Unit</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>69_14</icon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>25612</itemTypeID>
+    <name>Trigger Unit</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>69_15</icon>
@@ -89,12 +95,5 @@ List of matching resource item types.
     <itemTypeID>34</itemTypeID>
     <name>Tritanium</name>
   </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>69_11</icon>
-    <itemCategoryID>4</itemCategoryID>
-    <itemTypeID>25595</itemTypeID>
-    <name>Alloyed Tritanium Bar</name>
-  </row>
 </rowset>
-
 }}}
