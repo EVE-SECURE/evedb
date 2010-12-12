@@ -1,0 +1,84 @@
+application: odylab-evedb
+version: prod
+runtime: java
+
+system_properties:
+  java.util.logging.config.file: WEB-INF/classes/logging.properties
+  
+handlers:
+- url: /remote_api
+  servlet: com.google.apphosting.utils.remoteapi.RemoteApiServlet
+  login: admin
+
+- url: /admin/clearCache
+  servlet: lv.odylab.evedb.servlet.admin.ClearCacheServlet
+  login: admin
+
+- url: /admin/reindex
+  servlet: lv.odylab.evedb.servlet.admin.ReindexServlet
+  login: admin
+
+- url: /admin/tokenizeInvType
+  servlet: lv.odylab.evedb.servlet.admin.TokenizeInvTypeServlet
+  login: admin
+
+- url: /admin/calculateBlueprintDetails
+  servlet: lv.odylab.evedb.servlet.admin.CalculateBlueprintDetailsServlet
+  login: admin
+
+- url: /baseMaterialsForTypeID/*
+  servlet: lv.odylab.evedb.servlet.BaseMaterialsForTypeIdServlet
+
+- url: /baseMaterialsForTypeName/*
+  servlet: lv.odylab.evedb.servlet.BaseMaterialsForTypeNameServlet
+
+- url: /blueprintDetailsForTypeID/*
+  servlet: lv.odylab.evedb.servlet.BlueprintDetailsForTypeIdServlet
+
+- url: /blueprintDetailsForTypeName/*
+  servlet: lv.odylab.evedb.servlet.BlueprintDetailsForTypeNameServlet
+
+- url: /blueprintTypeByTypeID/*
+  servlet: lv.odylab.evedb.servlet.BlueprintTypeByTypeIdServlet
+
+- url: /blueprintTypeByTypeName/*
+  servlet: lv.odylab.evedb.servlet.BlueprintTypeByTypeNameServlet
+
+- url: /extraMaterialsForTypeID/*
+  servlet: lv.odylab.evedb.servlet.ExtraMaterialsForTypeIdServlet
+
+- url: /extraMaterialsForTypeName/*
+  servlet: lv.odylab.evedb.servlet.ExtraMaterialsForTypeNameServlet
+
+- url: /lookupBlueprintType/*
+  servlet: lv.odylab.evedb.servlet.LookupBlueprintTypeServlet
+
+- url: /lookupResourceType/*
+  servlet: lv.odylab.evedb.servlet.LookupResourceTypeServlet
+
+- url: /lookupType/*
+  servlet: lv.odylab.evedb.servlet.LookupTypeServlet
+
+- url: /planetSchematicForTypeID/*
+  servlet: lv.odylab.evedb.servlet.PlanetSchematicsForTypeIdServlet
+
+- url: /planetSchematicForTypeName/*
+  servlet: lv.odylab.evedb.servlet.PlanetSchematicsForTypeNameServlet
+
+- url: /typeBasicInfoByTypeID/*
+  servlet: lv.odylab.evedb.servlet.TypeBasicInfoByTypeIdServlet
+
+- url: /typeBasicInfoByTypeName/*
+  servlet: lv.odylab.evedb.servlet.TypeBasicInfoByTypeNameServlet
+
+- url: /typeIdToTypeName/*
+  servlet: lv.odylab.evedb.servlet.TypeIdToTypeNameServlet
+
+- url: /typeNameToTypeID/*
+  servlet: lv.odylab.evedb.servlet.TypeNameToTypeIdServlet
+
+- url: /version
+  servlet: lv.odylab.evedb.servlet.VersionServlet
+
+welcome_files:
+  - index.html
