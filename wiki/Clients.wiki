@@ -1,4 +1,0 @@
-#summary Available clients for using EveDb
-
-= evedb-ws-client =
-TBD
