@@ -10,6 +10,7 @@ List of base materials for given item typeName.
 || materialTypeID || Number ||
 || materialTypeIcon || String ||
 || materialTypeName || String ||
+|| materialVolume || Double ||
 || quantity || Number ||
 
 == Examples ==
@@ -22,42 +23,49 @@ List of base materials for given item typeName.
     "materialTypeID" : 34,
     "materialTypeIcon" : "06_14",
     "materialTypeName" : "Tritanium",
+    "materialVolume" : "0.01",
     "quantity" : 20524
   },
   { "materialTypeCategoryID" : 4,
     "materialTypeID" : 35,
     "materialTypeIcon" : "06_15",
     "materialTypeName" : "Pyerite",
+    "materialVolume" : "0.01",
     "quantity" : 5529
   },
   { "materialTypeCategoryID" : 4,
     "materialTypeID" : 36,
     "materialTypeIcon" : "06_12",
     "materialTypeName" : "Mexallon",
+    "materialVolume" : "0.01",
     "quantity" : 1841
   },
   { "materialTypeCategoryID" : 4,
     "materialTypeID" : 37,
     "materialTypeIcon" : "06_16",
     "materialTypeName" : "Isogen",
+    "materialVolume" : "0.01",
     "quantity" : 317
   },
   { "materialTypeCategoryID" : 4,
     "materialTypeID" : 38,
     "materialTypeIcon" : "11_09",
     "materialTypeName" : "Nocxium",
+    "materialVolume" : "0.01",
     "quantity" : 118
   },
   { "materialTypeCategoryID" : 4,
     "materialTypeID" : 39,
     "materialTypeIcon" : "11_11",
     "materialTypeName" : "Zydrine",
+    "materialVolume" : "0.01",
     "quantity" : 13
   },
   { "materialTypeCategoryID" : 4,
     "materialTypeID" : 40,
     "materialTypeIcon" : "11_10",
     "materialTypeName" : "Megacyte",
+    "materialVolume" : "0.01",
     "quantity" : 1
   }
 ]
@@ -67,53 +75,60 @@ List of base materials for given item typeName.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>34</materialTypeID>
     <materialTypeIcon>06_14</materialTypeIcon>
     <materialTypeName>Tritanium</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>20524</quantity>
   </row>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>35</materialTypeID>
     <materialTypeIcon>06_15</materialTypeIcon>
     <materialTypeName>Pyerite</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>5529</quantity>
   </row>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>36</materialTypeID>
     <materialTypeIcon>06_12</materialTypeIcon>
     <materialTypeName>Mexallon</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>1841</quantity>
   </row>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>37</materialTypeID>
     <materialTypeIcon>06_16</materialTypeIcon>
     <materialTypeName>Isogen</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>317</quantity>
   </row>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>38</materialTypeID>
     <materialTypeIcon>11_09</materialTypeIcon>
     <materialTypeName>Nocxium</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>118</quantity>
   </row>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>39</materialTypeID>
     <materialTypeIcon>11_11</materialTypeIcon>
     <materialTypeName>Zydrine</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>13</quantity>
   </row>
-  <row xsi:type="invTypeMaterialDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeMaterialDto">
     <materialTypeCategoryID>4</materialTypeCategoryID>
     <materialTypeID>40</materialTypeID>
     <materialTypeIcon>11_10</materialTypeIcon>
     <materialTypeName>Megacyte</materialTypeName>
+    <materialVolume>0.01</materialVolume>
     <quantity>1</quantity>
   </row>
 </rowset>
