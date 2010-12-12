@@ -1,1 +1,1 @@
-dev_appserver target/evedb-server-1.8-SNAPSHOT
+dev_appserver target/evedb-server-1.9-SNAPSHOT
