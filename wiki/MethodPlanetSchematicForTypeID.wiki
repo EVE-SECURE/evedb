@@ -7,6 +7,20 @@ Planetary commodity information for given typeID.
 == Attributes ==
 
 || requiredGroupID || Number ||
+|| requiredGroupName || String ||
+|| requiredIcon || String ||
+|| requiredQuantity || Number ||
+|| requiredTypeID || Number ||
+|| requiredTypeName || String ||
+|| requiredVolume || String ||
+|| schematicCycleTime || Number ||
+|| schematicGroupID || Number ||
+|| schematicGroupName || String ||
+|| schematicIcon || String ||
+|| schematicQuantity || Number ||
+|| schematicTypeID || Number ||
+|| schematicTypeName || String ||
+|| schematicVolume || String ||
 
 == Examples ==
 
