@@ -14,7 +14,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class EveDbWsClientImplIntegrationTest {
-    private final EveDbWsClient client = new EveDbWsClientImpl("http://dev.latest.odylab-evedb.appspot.com");
+    private final EveDbWsClient client = new EveDbWsClientImpl("http://prod.latest.odylab-evedb.appspot.com");
 
     @Test
     public void testGetBaseMaterialsForTypeID() {
@@ -123,6 +123,6 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testVersion() {
-        assertThat(client.getVersion(), equalTo("1.8-SNAPSHOT-inc100"));
+        assertThat(client.getVersion(), equalTo("1.8-inc100"));
     }
 }
