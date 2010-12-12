@@ -1,5 +1,5 @@
 application: odylab-evedb
-version: dev
+version: prod
 runtime: java
 
 system_properties:
