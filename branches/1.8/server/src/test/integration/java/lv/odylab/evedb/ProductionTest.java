@@ -13,7 +13,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class ProductionTest {
-    private final String baseUrl = "http://dev.latest.odylab-evedb.appspot.com";
+    private final String baseUrl = "http://prod.latest.odylab-evedb.appspot.com";
 
     @Test
     public void test_admin_clearCache() throws Exception {
@@ -909,7 +909,7 @@ public class ProductionTest {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Accept", "application/json");
         assertThat(connection.getResponseCode(), equalTo(200));
-        assertThat(getResponse(connection), equalTo("[{\"schematicTypeID\":9838,\"schematicTypeName\":\"Superconductors\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_09\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":1.5,\"requiredTypeID\":2389,\"requiredTypeName\":\"Plasmoids\",\"requiredGroupID\":1042,\"requiredGroupName\":\"Basic Commodities\",\"requiredIcon\":\"96_07\",\"requiredQuantity\":40,\"requiredVolume\":0.38},{\"schematicTypeID\":9838,\"schematicTypeName\":\"Superconductors\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_09\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":1.5,\"requiredTypeID\":3645,\"requiredTypeName\":\"Water\",\"requiredGroupID\":280,\"requiredGroupName\":\"General\",\"requiredIcon\":\"10_04\",\"requiredQuantity\":40,\"requiredVolume\":0.38}]"));
+        assertThat(getResponse(connection), equalTo("[{\"schematicTypeID\":9838,\"schematicTypeName\":\"Superconductors\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_09\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":\"1.5\",\"requiredTypeID\":2389,\"requiredTypeName\":\"Plasmoids\",\"requiredGroupID\":1042,\"requiredGroupName\":\"Basic Commodities\",\"requiredIcon\":\"96_07\",\"requiredQuantity\":40,\"requiredVolume\":\"0.38\"},{\"schematicTypeID\":9838,\"schematicTypeName\":\"Superconductors\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_09\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":\"1.5\",\"requiredTypeID\":3645,\"requiredTypeName\":\"Water\",\"requiredGroupID\":280,\"requiredGroupName\":\"General\",\"requiredIcon\":\"10_04\",\"requiredQuantity\":40,\"requiredVolume\":\"0.38\"}]"));
         assertThat(connection.getHeaderField("Content-Type"), equalTo("application/json; charset=utf-8"));
 
         connection = (HttpURLConnection) url.openConnection();
@@ -955,7 +955,7 @@ public class ProductionTest {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Accept", "application/json");
         assertThat(connection.getResponseCode(), equalTo(200));
-        assertThat(getResponse(connection), equalTo("[{\"schematicTypeID\":9830,\"schematicTypeName\":\"Rocket Fuel\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_05\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":1.5,\"requiredTypeID\":2389,\"requiredTypeName\":\"Plasmoids\",\"requiredGroupID\":1042,\"requiredGroupName\":\"Basic Commodities\",\"requiredIcon\":\"96_07\",\"requiredQuantity\":40,\"requiredVolume\":0.38},{\"schematicTypeID\":9830,\"schematicTypeName\":\"Rocket Fuel\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_05\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":1.5,\"requiredTypeID\":2390,\"requiredTypeName\":\"Electrolytes\",\"requiredGroupID\":1042,\"requiredGroupName\":\"Basic Commodities\",\"requiredIcon\":\"96_09\",\"requiredQuantity\":40,\"requiredVolume\":0.38}]"));
+        assertThat(getResponse(connection), equalTo("[{\"schematicTypeID\":9830,\"schematicTypeName\":\"Rocket Fuel\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_05\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":\"1.5\",\"requiredTypeID\":2389,\"requiredTypeName\":\"Plasmoids\",\"requiredGroupID\":1042,\"requiredGroupName\":\"Basic Commodities\",\"requiredIcon\":\"96_07\",\"requiredQuantity\":40,\"requiredVolume\":\"0.38\"},{\"schematicTypeID\":9830,\"schematicTypeName\":\"Rocket Fuel\",\"schematicGroupID\":1034,\"schematicGroupName\":\"Refined Commodities\",\"schematicIcon\":\"24_05\",\"schematicCycleTime\":3600,\"schematicQuantity\":5,\"schematicVolume\":\"1.5\",\"requiredTypeID\":2390,\"requiredTypeName\":\"Electrolytes\",\"requiredGroupID\":1042,\"requiredGroupName\":\"Basic Commodities\",\"requiredIcon\":\"96_09\",\"requiredQuantity\":40,\"requiredVolume\":\"0.38\"}]"));
         assertThat(connection.getHeaderField("Content-Type"), equalTo("application/json; charset=utf-8"));
 
         connection = (HttpURLConnection) url.openConnection();
