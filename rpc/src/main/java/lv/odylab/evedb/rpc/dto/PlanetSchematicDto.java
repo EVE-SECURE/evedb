@@ -2,7 +2,6 @@ package lv.odylab.evedb.rpc.dto;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 @XmlRootElement
 public class PlanetSchematicDto implements Serializable {
@@ -13,14 +12,14 @@ public class PlanetSchematicDto implements Serializable {
     private String schematicIcon;
     private Long schematicCycleTime;
     private Long schematicQuantity;
-    private BigDecimal schematicVolume;
+    private String schematicVolume;
     private Long requiredTypeID;
     private String requiredTypeName;
     private Long requiredGroupID;
     private String requiredGroupName;
     private String requiredIcon;
     private Long requiredQuantity;
-    private BigDecimal requiredVolume;
+    private String requiredVolume;
 
     public Long getSchematicTypeID() {
         return schematicTypeID;
@@ -78,11 +77,11 @@ public class PlanetSchematicDto implements Serializable {
         this.schematicQuantity = schematicQuantity;
     }
 
-    public BigDecimal getSchematicVolume() {
+    public String getSchematicVolume() {
         return schematicVolume;
     }
 
-    public void setSchematicVolume(BigDecimal schematicVolume) {
+    public void setSchematicVolume(String schematicVolume) {
         this.schematicVolume = schematicVolume;
     }
 
@@ -134,11 +133,11 @@ public class PlanetSchematicDto implements Serializable {
         this.requiredQuantity = requiredQuantity;
     }
 
-    public BigDecimal getRequiredVolume() {
+    public String getRequiredVolume() {
         return requiredVolume;
     }
 
-    public void setRequiredVolume(BigDecimal requiredVolume) {
+    public void setRequiredVolume(String requiredVolume) {
         this.requiredVolume = requiredVolume;
     }
 }
