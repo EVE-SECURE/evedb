@@ -33,53 +33,30 @@ List of any matching item types.
 
 [http://odylab-evedb.appspot.com/lookupType/Tri lookupType/Tri] (JSON)
 {{{
-[ { "icon" : "55_16",
+[ { "icon" : "69_11",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 25595,
+    "name" : "Alloyed Tritanium Bar"
+  },
+  { "icon" : "55_13",
     "itemCategoryID" : 17,
-    "itemTypeID" : 23147,
-    "name" : "Takmahl Tri-polished Lens"
+    "itemTypeID" : 21729,
+    "name" : "Angel Advanced Trigger Mechanism"
   },
-  { "icon" : "11_15",
+  { "icon" : "55_13",
     "itemCategoryID" : 17,
-    "itemTypeID" : 22140,
-    "name" : "Tri-Vitoc"
+    "itemTypeID" : 21731,
+    "name" : "Angel Simple Trigger Mechanism"
   },
-  { "icon" : "70_10",
-    "itemCategoryID" : 7,
-    "itemTypeID" : 27951,
-    "name" : "Triage Module I"
-  },
-  { "icon" : "06_03",
-    "itemCategoryID" : 9,
-    "itemTypeID" : 27952,
-    "name" : "Triage Module I Blueprint"
-  },
-  { "itemCategoryID" : 6,
-    "itemTypeID" : 26842,
-    "name" : "Tempest Tribal Issue"
+  { "icon" : "55_13",
+    "itemCategoryID" : 17,
+    "itemTypeID" : 21730,
+    "name" : "Angel Standard Trigger Mechanism"
   },
   { "icon" : "34_06",
     "itemCategoryID" : 17,
     "itemTypeID" : 28830,
     "name" : "Brutor Tribe Roster"
-  },
-  { "icon" : "71_02",
-    "itemCategoryID" : 25,
-    "itemTypeID" : 28390,
-    "name" : "Compressed Triclinic Bistot"
-  },
-  { "itemCategoryID" : 9,
-    "itemTypeID" : 28451,
-    "name" : "Compressed Triclinic Bistot Blueprint"
-  },
-  { "icon" : "23_06",
-    "itemCategoryID" : 25,
-    "itemTypeID" : 17428,
-    "name" : "Triclinic Bistot"
-  },
-  { "icon" : "03_02",
-    "itemCategoryID" : 9,
-    "itemTypeID" : 17322,
-    "name" : "Thermonuclear Trigger Unit Blueprint"
   },
   { "icon" : "41_07",
     "itemCategoryID" : 17,
@@ -91,40 +68,24 @@ List of any matching item types.
     "itemTypeID" : 29106,
     "name" : "Capital Thermonuclear Trigger Unit Blueprint"
   },
-  { "icon" : "69_14",
-    "itemCategoryID" : 4,
-    "itemTypeID" : 25612,
-    "name" : "Trigger Unit"
+  { "icon" : "71_02",
+    "itemCategoryID" : 25,
+    "itemTypeID" : 28390,
+    "name" : "Compressed Triclinic Bistot"
   },
-  { "icon" : "41_07",
+  { "itemCategoryID" : 9,
+    "itemTypeID" : 28451,
+    "name" : "Compressed Triclinic Bistot Blueprint"
+  },
+  { "icon" : "45_10",
     "itemCategoryID" : 17,
-    "itemTypeID" : 11691,
-    "name" : "Thermonuclear Trigger Unit"
+    "itemTypeID" : 2979,
+    "name" : "Crate of Industrial-Grade Tritanium-Alloy Scraps"
   },
-  { "icon" : "55_13",
+  { "icon" : "45_10",
     "itemCategoryID" : 17,
-    "itemTypeID" : 21730,
-    "name" : "Angel Standard Trigger Mechanism"
-  },
-  { "icon" : "55_13",
-    "itemCategoryID" : 17,
-    "itemTypeID" : 21731,
-    "name" : "Angel Simple Trigger Mechanism"
-  },
-  { "icon" : "69_13",
-    "itemCategoryID" : 4,
-    "itemTypeID" : 25593,
-    "name" : "Smashed Trigger Unit"
-  },
-  { "icon" : "55_13",
-    "itemCategoryID" : 17,
-    "itemTypeID" : 21729,
-    "name" : "Angel Advanced Trigger Mechanism"
-  },
-  { "icon" : "55_12",
-    "itemCategoryID" : 17,
-    "itemTypeID" : 23170,
-    "name" : "Yan Jung Trigonometric Laws"
+    "itemTypeID" : 2980,
+    "name" : "Large Crate of Industrial-Grade Tritanium-Alloy Scraps"
   },
   { "icon" : "68_10",
     "itemCategoryID" : 7,
@@ -135,26 +96,6 @@ List of any matching item types.
     "itemCategoryID" : 9,
     "itemTypeID" : 25895,
     "name" : "Large Trimark Armor Pump I Blueprint"
-  },
-  { "icon" : "68_10",
-    "itemCategoryID" : 7,
-    "itemTypeID" : 30987,
-    "name" : "Small Trimark Armor Pump I"
-  },
-  { "icon" : "02_10",
-    "itemCategoryID" : 9,
-    "itemTypeID" : 30988,
-    "name" : "Small Trimark Armor Pump I Blueprint"
-  },
-  { "icon" : "68_10",
-    "itemCategoryID" : 7,
-    "itemTypeID" : 31059,
-    "name" : "Medium Trimark Armor Pump II"
-  },
-  { "icon" : "02_10",
-    "itemCategoryID" : 9,
-    "itemTypeID" : 31060,
-    "name" : "Medium Trimark Armor Pump II Blueprint"
   },
   { "icon" : "68_10",
     "itemCategoryID" : 7,
@@ -178,6 +119,26 @@ List of any matching item types.
   },
   { "icon" : "68_10",
     "itemCategoryID" : 7,
+    "itemTypeID" : 31059,
+    "name" : "Medium Trimark Armor Pump II"
+  },
+  { "icon" : "02_10",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 31060,
+    "name" : "Medium Trimark Armor Pump II Blueprint"
+  },
+  { "icon" : "68_10",
+    "itemCategoryID" : 7,
+    "itemTypeID" : 30987,
+    "name" : "Small Trimark Armor Pump I"
+  },
+  { "icon" : "02_10",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 30988,
+    "name" : "Small Trimark Armor Pump I Blueprint"
+  },
+  { "icon" : "68_10",
+    "itemCategoryID" : 7,
     "itemTypeID" : 31057,
     "name" : "Small Trimark Armor Pump II"
   },
@@ -186,10 +147,64 @@ List of any matching item types.
     "itemTypeID" : 31058,
     "name" : "Small Trimark Armor Pump II Blueprint"
   },
+  { "icon" : "69_13",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 25593,
+    "name" : "Smashed Trigger Unit"
+  },
+  { "icon" : "55_16",
+    "itemCategoryID" : 17,
+    "itemTypeID" : 23147,
+    "name" : "Takmahl Tri-polished Lens"
+  },
+  { "itemCategoryID" : 6,
+    "itemTypeID" : 26842,
+    "name" : "Tempest Tribal Issue"
+  },
+  { "icon" : "41_07",
+    "itemCategoryID" : 17,
+    "itemTypeID" : 11691,
+    "name" : "Thermonuclear Trigger Unit"
+  },
+  { "icon" : "03_02",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 17322,
+    "name" : "Thermonuclear Trigger Unit Blueprint"
+  },
+  { "icon" : "11_15",
+    "itemCategoryID" : 17,
+    "itemTypeID" : 22140,
+    "name" : "Tri-Vitoc"
+  },
+  { "icon" : "70_10",
+    "itemCategoryID" : 7,
+    "itemTypeID" : 27951,
+    "name" : "Triage Module I"
+  },
+  { "icon" : "06_03",
+    "itemCategoryID" : 9,
+    "itemTypeID" : 27952,
+    "name" : "Triage Module I Blueprint"
+  },
+  { "icon" : "23_06",
+    "itemCategoryID" : 25,
+    "itemTypeID" : 17428,
+    "name" : "Triclinic Bistot"
+  },
+  { "icon" : "69_14",
+    "itemCategoryID" : 4,
+    "itemTypeID" : 25612,
+    "name" : "Trigger Unit"
+  },
   { "icon" : "34_05",
     "itemCategoryID" : 17,
     "itemTypeID" : 11066,
     "name" : "Trinary Data"
+  },
+  { "icon" : "01_08",
+    "itemCategoryID" : 7,
+    "itemTypeID" : 16307,
+    "name" : "Triple-sheathed Adaptive Nano Plating I"
   },
   { "icon" : "01_08",
     "itemCategoryID" : 7,
@@ -208,18 +223,13 @@ List of any matching item types.
   },
   { "icon" : "01_08",
     "itemCategoryID" : 7,
-    "itemTypeID" : 16307,
-    "name" : "Triple-sheathed Adaptive Nano Plating I"
+    "itemTypeID" : 16347,
+    "name" : "Triple-sheathed Regenerative Plating I"
   },
   { "icon" : "01_08",
     "itemCategoryID" : 7,
     "itemTypeID" : 16339,
     "name" : "Triple-sheathed Thermic Plating I"
-  },
-  { "icon" : "01_08",
-    "itemCategoryID" : 7,
-    "itemTypeID" : 16347,
-    "name" : "Triple-sheathed Regenerative Plating I"
   },
   { "icon" : "69_15",
     "itemCategoryID" : 4,
@@ -244,10 +254,10 @@ List of any matching item types.
     "itemTypeID" : 34,
     "name" : "Tritanium"
   },
-  { "icon" : "69_11",
-    "itemCategoryID" : 4,
-    "itemTypeID" : 25595,
-    "name" : "Alloyed Tritanium Bar"
+  { "icon" : "55_12",
+    "itemCategoryID" : 17,
+    "itemTypeID" : 23170,
+    "name" : "Yan Jung Trigonometric Laws"
   }
 ]
 }}}
@@ -257,62 +267,34 @@ List of any matching item types.
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>55_16</icon>
+    <icon>69_11</icon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>25595</itemTypeID>
+    <name>Alloyed Tritanium Bar</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>55_13</icon>
     <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>23147</itemTypeID>
-    <name>Takmahl Tri-polished Lens</name>
+    <itemTypeID>21729</itemTypeID>
+    <name>Angel Advanced Trigger Mechanism</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>11_15</icon>
+    <icon>55_13</icon>
     <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>22140</itemTypeID>
-    <name>Tri-Vitoc</name>
+    <itemTypeID>21731</itemTypeID>
+    <name>Angel Simple Trigger Mechanism</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>70_10</icon>
-    <itemCategoryID>7</itemCategoryID>
-    <itemTypeID>27951</itemTypeID>
-    <name>Triage Module I</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>06_03</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>27952</itemTypeID>
-    <name>Triage Module I Blueprint</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <itemCategoryID>6</itemCategoryID>
-    <itemTypeID>26842</itemTypeID>
-    <name>Tempest Tribal Issue</name>
+    <icon>55_13</icon>
+    <itemCategoryID>17</itemCategoryID>
+    <itemTypeID>21730</itemTypeID>
+    <name>Angel Standard Trigger Mechanism</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>34_06</icon>
     <itemCategoryID>17</itemCategoryID>
     <itemTypeID>28830</itemTypeID>
     <name>Brutor Tribe Roster</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>71_02</icon>
-    <itemCategoryID>25</itemCategoryID>
-    <itemTypeID>28390</itemTypeID>
-    <name>Compressed Triclinic Bistot</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>28451</itemTypeID>
-    <name>Compressed Triclinic Bistot Blueprint</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>23_06</icon>
-    <itemCategoryID>25</itemCategoryID>
-    <itemTypeID>17428</itemTypeID>
-    <name>Triclinic Bistot</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>03_02</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>17322</itemTypeID>
-    <name>Thermonuclear Trigger Unit Blueprint</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>41_07</icon>
@@ -327,46 +309,27 @@ List of any matching item types.
     <name>Capital Thermonuclear Trigger Unit Blueprint</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>69_14</icon>
-    <itemCategoryID>4</itemCategoryID>
-    <itemTypeID>25612</itemTypeID>
-    <name>Trigger Unit</name>
+    <icon>71_02</icon>
+    <itemCategoryID>25</itemCategoryID>
+    <itemTypeID>28390</itemTypeID>
+    <name>Compressed Triclinic Bistot</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>41_07</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>28451</itemTypeID>
+    <name>Compressed Triclinic Bistot Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>45_10</icon>
     <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>11691</itemTypeID>
-    <name>Thermonuclear Trigger Unit</name>
+    <itemTypeID>2979</itemTypeID>
+    <name>Crate of Industrial-Grade Tritanium-Alloy Scraps</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>55_13</icon>
+    <icon>45_10</icon>
     <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>21730</itemTypeID>
-    <name>Angel Standard Trigger Mechanism</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>55_13</icon>
-    <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>21731</itemTypeID>
-    <name>Angel Simple Trigger Mechanism</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>69_13</icon>
-    <itemCategoryID>4</itemCategoryID>
-    <itemTypeID>25593</itemTypeID>
-    <name>Smashed Trigger Unit</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>55_13</icon>
-    <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>21729</itemTypeID>
-    <name>Angel Advanced Trigger Mechanism</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>55_12</icon>
-    <itemCategoryID>17</itemCategoryID>
-    <itemTypeID>23170</itemTypeID>
-    <name>Yan Jung Trigonometric Laws</name>
+    <itemTypeID>2980</itemTypeID>
+    <name>Large Crate of Industrial-Grade Tritanium-Alloy Scraps</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>68_10</icon>
@@ -379,30 +342,6 @@ List of any matching item types.
     <itemCategoryID>9</itemCategoryID>
     <itemTypeID>25895</itemTypeID>
     <name>Large Trimark Armor Pump I Blueprint</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>68_10</icon>
-    <itemCategoryID>7</itemCategoryID>
-    <itemTypeID>30987</itemTypeID>
-    <name>Small Trimark Armor Pump I</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>02_10</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>30988</itemTypeID>
-    <name>Small Trimark Armor Pump I Blueprint</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>68_10</icon>
-    <itemCategoryID>7</itemCategoryID>
-    <itemTypeID>31059</itemTypeID>
-    <name>Medium Trimark Armor Pump II</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>02_10</icon>
-    <itemCategoryID>9</itemCategoryID>
-    <itemTypeID>31060</itemTypeID>
-    <name>Medium Trimark Armor Pump II Blueprint</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>68_10</icon>
@@ -431,6 +370,30 @@ List of any matching item types.
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>68_10</icon>
     <itemCategoryID>7</itemCategoryID>
+    <itemTypeID>31059</itemTypeID>
+    <name>Medium Trimark Armor Pump II</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>02_10</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>31060</itemTypeID>
+    <name>Medium Trimark Armor Pump II Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>68_10</icon>
+    <itemCategoryID>7</itemCategoryID>
+    <itemTypeID>30987</itemTypeID>
+    <name>Small Trimark Armor Pump I</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>02_10</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>30988</itemTypeID>
+    <name>Small Trimark Armor Pump I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>68_10</icon>
+    <itemCategoryID>7</itemCategoryID>
     <itemTypeID>31057</itemTypeID>
     <name>Small Trimark Armor Pump II</name>
   </row>
@@ -441,10 +404,75 @@ List of any matching item types.
     <name>Small Trimark Armor Pump II Blueprint</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>69_13</icon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>25593</itemTypeID>
+    <name>Smashed Trigger Unit</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>55_16</icon>
+    <itemCategoryID>17</itemCategoryID>
+    <itemTypeID>23147</itemTypeID>
+    <name>Takmahl Tri-polished Lens</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <itemCategoryID>6</itemCategoryID>
+    <itemTypeID>26842</itemTypeID>
+    <name>Tempest Tribal Issue</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>41_07</icon>
+    <itemCategoryID>17</itemCategoryID>
+    <itemTypeID>11691</itemTypeID>
+    <name>Thermonuclear Trigger Unit</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>03_02</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>17322</itemTypeID>
+    <name>Thermonuclear Trigger Unit Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>11_15</icon>
+    <itemCategoryID>17</itemCategoryID>
+    <itemTypeID>22140</itemTypeID>
+    <name>Tri-Vitoc</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>70_10</icon>
+    <itemCategoryID>7</itemCategoryID>
+    <itemTypeID>27951</itemTypeID>
+    <name>Triage Module I</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>06_03</icon>
+    <itemCategoryID>9</itemCategoryID>
+    <itemTypeID>27952</itemTypeID>
+    <name>Triage Module I Blueprint</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>23_06</icon>
+    <itemCategoryID>25</itemCategoryID>
+    <itemTypeID>17428</itemTypeID>
+    <name>Triclinic Bistot</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>69_14</icon>
+    <itemCategoryID>4</itemCategoryID>
+    <itemTypeID>25612</itemTypeID>
+    <name>Trigger Unit</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>34_05</icon>
     <itemCategoryID>17</itemCategoryID>
     <itemTypeID>11066</itemTypeID>
     <name>Trinary Data</name>
+  </row>
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
+    <icon>01_08</icon>
+    <itemCategoryID>7</itemCategoryID>
+    <itemTypeID>16307</itemTypeID>
+    <name>Triple-sheathed Adaptive Nano Plating I</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>01_08</icon>
@@ -467,20 +495,14 @@ List of any matching item types.
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
-    <itemTypeID>16307</itemTypeID>
-    <name>Triple-sheathed Adaptive Nano Plating I</name>
+    <itemTypeID>16347</itemTypeID>
+    <name>Triple-sheathed Regenerative Plating I</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>01_08</icon>
     <itemCategoryID>7</itemCategoryID>
     <itemTypeID>16339</itemTypeID>
     <name>Triple-sheathed Thermic Plating I</name>
-  </row>
-  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>01_08</icon>
-    <itemCategoryID>7</itemCategoryID>
-    <itemTypeID>16347</itemTypeID>
-    <name>Triple-sheathed Regenerative Plating I</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
     <icon>69_15</icon>
@@ -511,10 +533,10 @@ List of any matching item types.
     <name>Tritanium</name>
   </row>
   <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invTypeBasicInfoDto">
-    <icon>69_11</icon>
-    <itemCategoryID>4</itemCategoryID>
-    <itemTypeID>25595</itemTypeID>
-    <name>Alloyed Tritanium Bar</name>
+    <icon>55_12</icon>
+    <itemCategoryID>17</itemCategoryID>
+    <itemTypeID>23170</itemTypeID>
+    <name>Yan Jung Trigonometric Laws</name>
   </row>
 </rowset>
 }}}
