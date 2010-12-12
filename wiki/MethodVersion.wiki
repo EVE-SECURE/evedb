@@ -6,7 +6,7 @@ Application version.
 
 == Examples ==
 
-[http://odylab-evedb.appspot.com/version], [http:/odylab-evedb.appspot.com/version] (TEXT)
+[http://odylab-evedb.appspot.com/version] (TEXT)
 {{{
 1.3-tyr101
 }}}
