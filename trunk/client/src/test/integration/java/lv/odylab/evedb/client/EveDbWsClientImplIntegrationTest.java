@@ -123,6 +123,6 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testVersion() {
-        assertThat(client.getVersion(), equalTo("1.8-SNAPSHOT-inc100"));
+        assertThat(client.getVersion(), equalTo("1.9-SNAPSHOT-inc100"));
     }
 }
