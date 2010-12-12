@@ -17,7 +17,7 @@ See [WorkingWithDatastore working with Datastore].
 
 === Deploying application ===
 
-Build application with `mvn-clean-package.bat` and deploy with `ws/appcfg-update.bat`.
+Build application with `mvn-clean-install.bat` and deploy with `ws/appcfg-update.bat`.
 
 == Clients ==
 
