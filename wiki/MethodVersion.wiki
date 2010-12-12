@@ -2,7 +2,7 @@
 
 = /version =
 
-Application version.
+Current application version.
 
 == Examples ==
 
