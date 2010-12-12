@@ -19,5 +19,4 @@
     ** [MethodTypeIdToTypeName /typeIdToTypeName]
     ** [MethodTypeNameToTypeID /typeNameToTypeID]
     ** [MethodVersion /version]
-  * [Development Development]
   * [ReleaseNotes Release notes]
