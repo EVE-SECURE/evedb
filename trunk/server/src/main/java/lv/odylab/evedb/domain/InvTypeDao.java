@@ -4,6 +4,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Query;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class InvTypeDao {
@@ -44,6 +45,35 @@ public class InvTypeDao {
         if (partialTypeName.length() < 3) {
             throw new TooShortPartialNameException(partialTypeName);
         }
+        Query<InvType> query = createQuery(partialTypeName);
+        List<InvType> result = query.limit(lookupResultLimit).list();
+        Collections.sort(result, new InvTypeNameComparator());
+        return result;
+    }
+
+    public List<InvType> findResourceByPartialTypeName(String partialTypeName) {
+        if (partialTypeName.length() < 3) {
+            throw new TooShortPartialNameException(partialTypeName);
+        }
+        Query<InvType> query = createQuery(partialTypeName);
+        query.filter("categoryID", 4L);
+        List<InvType> result = query.limit(lookupResultLimit).list();
+        Collections.sort(result, new InvTypeNameComparator());
+        return result;
+    }
+
+    public List<InvType> findBlueprintByPartialTypeName(String partialTypeName) {
+        if (partialTypeName.length() < 3) {
+            throw new TooShortPartialNameException(partialTypeName);
+        }
+        Query<InvType> query = createQuery(partialTypeName);
+        query.filter("categoryID", 9L);
+        List<InvType> result = query.limit(lookupResultLimit).list();
+        Collections.sort(result, new InvTypeNameComparator());
+        return result;
+    }
+
+    private Query<InvType> createQuery(String partialTypeName) {
         List<String> words = getWords(partialTypeName);
         if (words.size() > 1) {
             Query<InvType> query = ObjectifyService.begin().query(InvType.class)
@@ -52,75 +82,13 @@ public class InvTypeDao {
             for (String word : words) {
                 query.filter("typeNameTokens", word.trim().toUpperCase());
             }
-            return query.order("typeNameTokens")
-                    .order("typeName")
-                    .limit(lookupResultLimit).list();
+            return query;
         }
         return ObjectifyService.begin().query(InvType.class)
                 .filter("dumpVersion", dumpVersion)
                 .filter("published", Boolean.TRUE)
                 .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
-                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
-                .order("typeNameTokens")
-                .order("typeName")
-                .limit(lookupResultLimit).list();
-    }
-
-    public List<InvType> findResourceByPartialTypeName(String partialTypeName) {
-        if (partialTypeName.length() < 3) {
-            throw new TooShortPartialNameException(partialTypeName);
-        }
-        List<String> words = getWords(partialTypeName);
-        if (words.size() > 1) {
-            Query<InvType> query = ObjectifyService.begin().query(InvType.class)
-                    .filter("dumpVersion", dumpVersion)
-                    .filter("published", Boolean.TRUE)
-                    .filter("categoryID", 4L);
-            for (String word : words) {
-                query.filter("typeNameTokens", word.trim().toUpperCase());
-            }
-            return query.order("typeNameTokens")
-                    .order("typeName")
-                    .limit(lookupResultLimit).list();
-        }
-        return ObjectifyService.begin().query(InvType.class)
-                .filter("dumpVersion", dumpVersion)
-                .filter("published", Boolean.TRUE)
-                .filter("categoryID", 4L)
-                .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
-                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
-                .order("typeNameTokens")
-                .order("typeName")
-                .limit(lookupResultLimit).list();
-    }
-
-    public List<InvType> findBlueprintByPartialTypeName(String partialTypeName) {
-        if (partialTypeName.length() < 3) {
-            throw new TooShortPartialNameException(partialTypeName);
-        }
-        List<String> words = getWords(partialTypeName);
-        if (words.size() > 1) {
-
-            Query<InvType> query = ObjectifyService.begin().query(InvType.class)
-                    .filter("dumpVersion", dumpVersion)
-                    .filter("published", Boolean.TRUE)
-                    .filter("categoryID", 9L);
-            for (String word : words) {
-                query.filter("typeNameTokens", word.trim().toUpperCase());
-            }
-            return query.order("typeNameTokens")
-                    .order("typeName")
-                    .limit(lookupResultLimit).list();
-        }
-        return ObjectifyService.begin().query(InvType.class)
-                .filter("dumpVersion", dumpVersion)
-                .filter("published", Boolean.TRUE)
-                .filter("categoryID", 9L)
-                .filter("typeNameTokens >=", partialTypeName.trim().toUpperCase())
-                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD")
-                .order("typeNameTokens")
-                .order("typeName")
-                .limit(lookupResultLimit).list();
+                .filter("typeNameTokens <", partialTypeName.trim().toUpperCase() + "\uFFFD");
     }
 
     private List<String> getWords(String inputString) {
