@@ -16,6 +16,7 @@ List of extra materials for given item typeID.
 || requiredTypeID || Number ||
 || requiredTypeIcon || String ||
 || requiredTypeName || String ||
+|| requiredTypeVolume || String ||
 
 == Examples ==
 
@@ -34,7 +35,8 @@ List of extra materials for given item typeID.
     "requiredTypeGroupName" : "Datacores",
     "requiredTypeID" : 20410,
     "requiredTypeIcon" : "64_02",
-    "requiredTypeName" : "Datacore - Gallentean Starship Engineering"
+    "requiredTypeName" : "Datacore - Gallentean Starship Engineering",
+    "requiredTypeVolume" : "1.0"
   },
   { "activityID" : 8,
     "activityName" : "Invention",
@@ -45,7 +47,8 @@ List of extra materials for given item typeID.
     "requiredTypeGroupName" : "Datacores",
     "requiredTypeID" : 20424,
     "requiredTypeIcon" : "64_03",
-    "requiredTypeName" : "Datacore - Mechanical Engineering"
+    "requiredTypeName" : "Datacore - Mechanical Engineering",
+    "requiredTypeVolume" : "1.0"
   },
   { "activityID" : 1,
     "activityName" : "Manufacturing",
@@ -56,7 +59,8 @@ List of extra materials for given item typeID.
     "requiredTypeGroupName" : "Mechanic",
     "requiredTypeID" : 22242,
     "requiredTypeIcon" : "50_11",
-    "requiredTypeName" : "Capital Ship Construction"
+    "requiredTypeName" : "Capital Ship Construction",
+    "requiredTypeVolume" : "0.01"
   },
   { "activityID" : 8,
     "activityName" : "Invention",
@@ -67,7 +71,8 @@ List of extra materials for given item typeID.
     "requiredTypeGroupName" : "Data Interfaces",
     "requiredTypeID" : 25855,
     "requiredTypeIcon" : "63_06",
-    "requiredTypeName" : "Incognito Ship Data Interface"
+    "requiredTypeName" : "Incognito Ship Data Interface",
+    "requiredTypeVolume" : "1.0"
   }
 ]
 }}}
@@ -76,7 +81,7 @@ List of extra materials for given item typeID.
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
-  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
     <activityID>8</activityID>
     <activityName>Invention</activityName>
     <damagePerJob>1.0</damagePerJob>
@@ -87,8 +92,9 @@ List of extra materials for given item typeID.
     <requiredTypeID>20410</requiredTypeID>
     <requiredTypeIcon>64_02</requiredTypeIcon>
     <requiredTypeName>Datacore - Gallentean Starship Engineering</requiredTypeName>
+    <requiredTypeVolume>1.0</requiredTypeVolume>
   </row>
-  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
     <activityID>8</activityID>
     <activityName>Invention</activityName>
     <damagePerJob>1.0</damagePerJob>
@@ -99,8 +105,9 @@ List of extra materials for given item typeID.
     <requiredTypeID>20424</requiredTypeID>
     <requiredTypeIcon>64_03</requiredTypeIcon>
     <requiredTypeName>Datacore - Mechanical Engineering</requiredTypeName>
+    <requiredTypeVolume>1.0</requiredTypeVolume>
   </row>
-  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
     <activityID>1</activityID>
     <activityName>Manufacturing</activityName>
     <damagePerJob>0.0</damagePerJob>
@@ -111,8 +118,9 @@ List of extra materials for given item typeID.
     <requiredTypeID>22242</requiredTypeID>
     <requiredTypeIcon>50_11</requiredTypeIcon>
     <requiredTypeName>Capital Ship Construction</requiredTypeName>
+    <requiredTypeVolume>0.01</requiredTypeVolume>
   </row>
-  <row xsi:type="ramTypeRequirementDto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ramTypeRequirementDto">
     <activityID>8</activityID>
     <activityName>Invention</activityName>
     <damagePerJob>1.0</damagePerJob>
@@ -123,6 +131,7 @@ List of extra materials for given item typeID.
     <requiredTypeID>25855</requiredTypeID>
     <requiredTypeIcon>63_06</requiredTypeIcon>
     <requiredTypeName>Incognito Ship Data Interface</requiredTypeName>
+    <requiredTypeVolume>1.0</requiredTypeVolume>
   </row>
 </rowset>
 }}}
