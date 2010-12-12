@@ -12,7 +12,7 @@ Planetary commodity information for given typeName.
 
 [http://odylab-evedb.appspot.com/planetSchematicForTypeName/blah-blah planetSchematicForTypeName/blah-blah] (HTTP 400)
 
-[http://odylab-evedb.appspot.com/planetSchematicForTypeName/Superconductor planetSchematicForTypeName/Superconductor] (JSON)
+[http://odylab-evedb.appspot.com/planetSchematicForTypeName/Superconductors planetSchematicForTypeName/Superconductors] (JSON)
 {{{
 [ { "requiredGroupID" : 1042,
     "requiredGroupName" : "Basic Commodities",
@@ -49,7 +49,7 @@ Planetary commodity information for given typeName.
 ]
 }}}
 
-[http://odylab-evedb.appspot.com/planetSchematicForTypeName/Superconductor planetSchematicForTypeName/Superconductor] (XML)
+[http://odylab-evedb.appspot.com/planetSchematicForTypeName/Superconductors planetSchematicForTypeName/Superconductors] (XML)
 {{{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rowset>
