@@ -89,13 +89,13 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testGetPlanetarySchematicForTypeID() {
-        List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetarySchematicForTypeID(9838L);
+        List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetSchematicForTypeID(9838L);
         assertThat(planetSchematicDtos.size(), equalTo(2));
     }
 
     @Test
     public void testgetPlanetarySchematicForTypeName() {
-        List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetarySchematicForTypeName("Rocket+Fuel");
+        List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetSchematicForTypeName("Rocket Fuel");
         assertThat(planetSchematicDtos.size(), equalTo(2));
     }
 

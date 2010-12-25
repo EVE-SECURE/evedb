@@ -113,14 +113,14 @@ public class EveDbWsClientImpl implements EveDbWsClient {
     }
 
     @Override
-    public List<PlanetSchematicDto> getPlanetarySchematicForTypeID(Long typeID) {
+    public List<PlanetSchematicDto> getPlanetSchematicForTypeID(Long typeID) {
         String jsonString = requestSender.doGet(eveDbUrl + "/planetSchematicForTypeID/" + typeID, "application/json");
         return gson.fromJson(jsonString, planetarySchematicDtoListType);
     }
 
     @Override
-    public List<PlanetSchematicDto> getPlanetarySchematicForTypeName(String typeName) {
-        String jsonString = requestSender.doGet(eveDbUrl + "/planetSchematicForTypeName/" + typeName, "application/json");
+    public List<PlanetSchematicDto> getPlanetSchematicForTypeName(String typeName) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/planetSchematicForTypeName/" + encodeString(typeName), "application/json");
         return gson.fromJson(jsonString, planetarySchematicDtoListType);
     }
 
