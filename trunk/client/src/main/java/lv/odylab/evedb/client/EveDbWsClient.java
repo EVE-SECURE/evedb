@@ -39,9 +39,9 @@ public interface EveDbWsClient {
 
     List<InvTypeBasicInfoDto> lookupType(String query);
 
-    List<PlanetSchematicDto> getPlanetarySchematicForTypeID(Long typeID);
+    List<PlanetSchematicDto> getPlanetSchematicForTypeID(Long typeID);
 
-    List<PlanetSchematicDto> getPlanetarySchematicForTypeName(String typeName);
+    List<PlanetSchematicDto> getPlanetSchematicForTypeName(String typeName);
 
     InvTypeBasicInfoDto getTypeBasicInfoByTypeID(Long typeID);
 
