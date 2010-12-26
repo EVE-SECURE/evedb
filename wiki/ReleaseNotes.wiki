@@ -4,6 +4,9 @@
 = Release notes =
 
 == 2010.12.??, version 1.9 ==
+   * *Migrated to inc101*
+
+  * Issue 33: Migrate to inc101
   * Issue 32: Add parent blueprint and product information for blueprintDetailsForTypeID and blueprintDetailsForTypeName methods
 
 == 2010.12.12, version 1.8 ==
