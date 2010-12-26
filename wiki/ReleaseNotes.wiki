@@ -3,6 +3,9 @@
 
 = Release notes =
 
+== 2010.12.??, version 1.9 ==
+  * Issue 21: Add dumpVersion attribute for blueprintTypeByTypeID and blueprintTypeByTypeName methods
+
 == 2010.12.12, version 1.8 ==
   * *New methods planetSchematicForTypeID and planetSchematicForTypeName*
   * *Volumes now present in most returned dtos*
