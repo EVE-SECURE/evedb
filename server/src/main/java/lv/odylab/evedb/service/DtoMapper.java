@@ -38,6 +38,10 @@ public class DtoMapper {
         invBlueprintTypeDto.setProductTypeName(invBlueprintType.getProductTypeName());
         invBlueprintTypeDto.setProductCategoryID(invBlueprintType.getProductCategoryID());
         invBlueprintTypeDto.setProductIcon(invBlueprintType.getProductTypeIcon());
+        invBlueprintTypeDto.setParentBlueprintTypeID(invBlueprintType.getParentBlueprintTypeID());
+        invBlueprintTypeDto.setParentBlueprintTypeName(invBlueprintType.getParentBlueprintTypeName());
+        invBlueprintTypeDto.setParentProductTypeID(invBlueprintType.getParentProductTypeID());
+        invBlueprintTypeDto.setParentProductTypeName(invBlueprintType.getParentProductTypeName());
         invBlueprintTypeDto.setTechLevel(invBlueprintType.getTechLevel());
         invBlueprintTypeDto.setProductionTime(invBlueprintType.getProductionTime());
         invBlueprintTypeDto.setResearchProductivityTime(invBlueprintType.getResearchProductivityTime());

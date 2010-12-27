@@ -17,7 +17,7 @@ SELECT
   ic_material.categoryName materialTypeCategoryName,
   it_material.volume materialVolume,
   itm.quantity,
-  'inc100' dumpVersion
+  'inc101' dumpVersion
 FROM
   invTypeMaterials itm
   LEFT JOIN invTypes it ON itm.typeID = it.typeID

@@ -84,6 +84,9 @@ public class TokenizeInvTypeServlet extends PicoServlet {
 
         Map<Key<InvType>, InvType> map = objectify.get(keysToFetch);
         logger.info("Almost done, only {} objects left", map.size());
+        for (InvType invType : map.values()) {
+            populateTokens(invType);
+        }
         objectify.put(map.values());
         logger.info("Done.");
         resp.getWriter().write("DONE");
