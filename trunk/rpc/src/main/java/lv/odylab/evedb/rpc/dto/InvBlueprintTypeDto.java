@@ -11,6 +11,10 @@ public class InvBlueprintTypeDto implements Serializable {
     private String productTypeName;
     private Long productCategoryID;
     private String productIcon;
+    private Long parentBlueprintTypeID;
+    private String parentBlueprintTypeName;
+    private Long parentProductTypeID;
+    private String parentProductTypeName;
     private Integer techLevel;
     private Integer productionTime;
     private Integer researchProductivityTime;
@@ -70,6 +74,38 @@ public class InvBlueprintTypeDto implements Serializable {
 
     public void setProductIcon(String productIcon) {
         this.productIcon = productIcon;
+    }
+
+    public Long getParentBlueprintTypeID() {
+        return parentBlueprintTypeID;
+    }
+
+    public void setParentBlueprintTypeID(Long parentBlueprintTypeID) {
+        this.parentBlueprintTypeID = parentBlueprintTypeID;
+    }
+
+    public String getParentBlueprintTypeName() {
+        return parentBlueprintTypeName;
+    }
+
+    public void setParentBlueprintTypeName(String parentBlueprintTypeName) {
+        this.parentBlueprintTypeName = parentBlueprintTypeName;
+    }
+
+    public Long getParentProductTypeID() {
+        return parentProductTypeID;
+    }
+
+    public void setParentProductTypeID(Long parentProductTypeID) {
+        this.parentProductTypeID = parentProductTypeID;
+    }
+
+    public String getParentProductTypeName() {
+        return parentProductTypeName;
+    }
+
+    public void setParentProductTypeName(String parentProductTypeName) {
+        this.parentProductTypeName = parentProductTypeName;
     }
 
     public Integer getTechLevel() {

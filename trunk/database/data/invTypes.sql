@@ -12,7 +12,7 @@ SELECT
   it.capacity,
   it.portionSize,
   it.published,
-  'inc100' dumpVersion
+  'inc101' dumpVersion
 FROM
   invTypes it
   LEFT JOIN invGroups ig ON it.groupID = ig.groupID
