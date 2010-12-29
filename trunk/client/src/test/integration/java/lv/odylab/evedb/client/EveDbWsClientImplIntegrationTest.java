@@ -17,6 +17,18 @@ public class EveDbWsClientImplIntegrationTest {
     private final EveDbWsClient client = new EveDbWsClientImpl("http://inc101.latest.odylab-evedb.appspot.com");
 
     @Test
+    public void testGetBaseItemsForTypeID() {
+        List<InvTypeBasicInfoDto> invTypeBasicInfoDtoList = client.getBaseItemsForTypeID(2046L);
+        assertThat(invTypeBasicInfoDtoList.size(), equalTo(7));
+    }
+
+    @Test
+    public void testGetBaseItemsForTypeName() {
+        List<InvTypeBasicInfoDto> invTypeBasicInfoDtoList = client.getBaseItemsForTypeName("Damage Control I");
+        assertThat(invTypeBasicInfoDtoList.size(), equalTo(7));
+    }
+
+    @Test
     public void testGetBaseMaterialsForTypeID() {
         List<InvTypeMaterialDto> invTypeMaterialDtoList = client.getBaseMaterialsForTypeID(20187L);
         assertThat(invTypeMaterialDtoList.size(), equalTo(4));

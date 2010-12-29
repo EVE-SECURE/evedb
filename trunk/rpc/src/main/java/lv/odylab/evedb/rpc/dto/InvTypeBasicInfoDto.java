@@ -9,6 +9,7 @@ public class InvTypeBasicInfoDto implements Serializable {
     private Long itemCategoryID;
     private String name;
     private String icon;
+    private Integer metaLevel;
 
     public Long getItemTypeID() {
         return itemTypeID;
@@ -40,5 +41,13 @@ public class InvTypeBasicInfoDto implements Serializable {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public Integer getMetaLevel() {
+        return metaLevel;
+    }
+
+    public void setMetaLevel(Integer metaLevel) {
+        this.metaLevel = metaLevel;
     }
 }

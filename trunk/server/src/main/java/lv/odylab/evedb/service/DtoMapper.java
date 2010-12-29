@@ -127,6 +127,7 @@ public class DtoMapper {
         invTypeBasicInfoDto.setItemCategoryID(invType.getCategoryID());
         invTypeBasicInfoDto.setName(invType.getTypeName());
         invTypeBasicInfoDto.setIcon(invType.getTypeIcon());
+        invTypeBasicInfoDto.setMetaLevel(invType.getMetaLevel());
         return invTypeBasicInfoDto;
     }
 

@@ -26,6 +26,12 @@ handlers:
   servlet: lv.odylab.evedb.servlet.admin.CalculateBlueprintDetailsServlet
   login: admin
 
+- url: /baseItemsForTypeID/*
+  servlet: lv.odylab.evedb.servlet.BaseItemsForTypeIdServlet
+
+- url: /baseItemsForTypeName/*
+  servlet: lv.odylab.evedb.servlet.BaseItemsForTypeNameServlet
+
 - url: /baseMaterialsForTypeID/*
   servlet: lv.odylab.evedb.servlet.BaseMaterialsForTypeIdServlet
 

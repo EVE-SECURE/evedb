@@ -17,6 +17,10 @@ public interface EveDbWsClient {
 
     }
 
+    List<InvTypeBasicInfoDto> getBaseItemsForTypeID(Long typeID);
+
+    List<InvTypeBasicInfoDto> getBaseItemsForTypeName(String typeName);
+
     List<InvTypeMaterialDto> getBaseMaterialsForTypeID(Long typeID);
 
     List<InvTypeMaterialDto> getBaseMaterialsForTypeName(String typeName);
