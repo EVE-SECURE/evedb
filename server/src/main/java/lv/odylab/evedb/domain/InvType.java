@@ -24,6 +24,12 @@ public class InvType implements Serializable {
     @Indexed
     private Long categoryID;
     private String categoryName;
+    @Indexed
+    private Integer metaLevel;
+    @Indexed
+    private Long parentTypeID;
+    @Indexed
+    private String parentTypeName;
     private Double mass;
     private Double volume;
     private Double capacity;
@@ -111,6 +117,30 @@ public class InvType implements Serializable {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public Integer getMetaLevel() {
+        return metaLevel;
+    }
+
+    public void setMetaLevel(Integer metaLevel) {
+        this.metaLevel = metaLevel;
+    }
+
+    public Long getParentTypeID() {
+        return parentTypeID;
+    }
+
+    public void setParentTypeID(Long parentTypeID) {
+        this.parentTypeID = parentTypeID;
+    }
+
+    public String getParentTypeName() {
+        return parentTypeName;
+    }
+
+    public void setParentTypeName(String parentTypeName) {
+        this.parentTypeName = parentTypeName;
     }
 
     public Double getMass() {

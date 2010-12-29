@@ -23,6 +23,18 @@ public class EveDbWsClientImplTest {
     }
 
     @Test(expected = JsonParseException.class)
+    public void test_getBaseItemsForTypeID() {
+        when(httpRequestSender.doGet("eveDbUrl/baseItemsForTypeID/1", "application/json")).thenReturn("blah-blah");
+        eveDbWsClient.getBaseItemsForTypeID(1L);
+    }
+
+    @Test(expected = JsonParseException.class)
+    public void test_getBaseItemsForTypeName() {
+        when(httpRequestSender.doGet("eveDbUrl/baseItemsForTypeName/typeName", "application/json")).thenReturn("blah-blah");
+        eveDbWsClient.getBaseItemsForTypeName("typeName");
+    }
+
+    @Test(expected = JsonParseException.class)
     public void test_getBaseMaterialsForTypeID() {
         when(httpRequestSender.doGet("eveDbUrl/baseMaterialsForTypeID/1", "application/json")).thenReturn("blah-blah");
         eveDbWsClient.getBaseMaterialsForTypeID(1L);

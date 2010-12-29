@@ -47,6 +47,18 @@ public class EveDbWsClientImpl implements EveDbWsClient {
     }
 
     @Override
+    public List<InvTypeBasicInfoDto> getBaseItemsForTypeID(Long typeID) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/baseItemsForTypeID/" + typeID, "application/json");
+        return gson.fromJson(jsonString, invTypeBasicInfoDtoListType);
+    }
+
+    @Override
+    public List<InvTypeBasicInfoDto> getBaseItemsForTypeName(String typeName) {
+        String jsonString = requestSender.doGet(eveDbUrl + "/baseItemsForTypeName/" + encodeString(typeName), "application/json");
+        return gson.fromJson(jsonString, invTypeBasicInfoDtoListType);
+    }
+
+    @Override
     public List<InvTypeMaterialDto> getBaseMaterialsForTypeID(Long typeID) {
         String jsonString = requestSender.doGet(eveDbUrl + "/baseMaterialsForTypeID/" + typeID, "application/json");
         return gson.fromJson(jsonString, invTypeMaterialDtoListType);

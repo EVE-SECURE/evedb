@@ -101,4 +101,18 @@ public class InvTypeDao {
         }
         return result;
     }
+
+    public List<InvType> getBaseItemsForTypeID(Long typeID) {
+        return ObjectifyService.begin().query(InvType.class)
+                .filter("dumpVersion", dumpVersion)
+                .filter("published", Boolean.TRUE)
+                .filter("parentTypeID", typeID).list();
+    }
+
+    public List<InvType> getBaseItemsForTypeName(String typeName) {
+        return ObjectifyService.begin().query(InvType.class)
+                .filter("dumpVersion", dumpVersion)
+                .filter("published", Boolean.TRUE)
+                .filter("parentTypeName", typeName).list();
+    }
 }

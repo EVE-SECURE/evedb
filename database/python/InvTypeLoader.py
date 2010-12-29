@@ -10,6 +10,9 @@ class InvType(db.Model):
     groupName = db.StringProperty(indexed=False)
     categoryID = db.IntegerProperty(indexed=False)
     categoryName = db.StringProperty(indexed=False)
+    metaLevel = db.IntegerProperty(indexed=False)
+    parentTypeID = db.IntegerProperty(indexed=False)
+    parentTypeName = db.StringProperty(indexed=False)
     mass = db.FloatProperty(indexed=False)
     volume = db.FloatProperty(indexed=False)
     capacity = db.FloatProperty(indexed=False)
@@ -51,6 +54,9 @@ class InvTypeLoader(bulkloader.Loader):
                                     ('groupName', safe_str),
                                     ('categoryID', safe_int),
                                     ('categoryName', safe_str),
+                                    ('metaLevel', safe_int),
+                                    ('parentTypeID', safe_int),
+                                    ('parentTypeName', safe_str),
                                     ('mass', safe_float),
                                     ('volume', safe_float),
                                     ('capacity', safe_float),
