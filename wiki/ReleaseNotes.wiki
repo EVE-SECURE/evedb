@@ -3,9 +3,10 @@
 
 = Release notes =
 
-== 2010.12.??, version 1.9 ==
-  * *Migrated to inc101*
+== 2011.01.??, version 1.9 ==
+  * *Migrated to inc110*
 
+  * Issue 36: Migrate to inc110
   * Issue 35: Introduce two new methods baseItemsForTypeID and baseItemsForTypeName
   * Issue 34: Add attribute metaLevel in InvTypeBasicInfoDto
   * Issue 33: Migrate to inc101
