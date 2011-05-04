@@ -21,7 +21,7 @@ SELECT
   rtr.quantity,
   rtr.damagePerJob,
   rtr.recycle,
-  'inc110' dumpVersion
+  'inc14' dumpVersion
 FROM
   ramTypeRequirements rtr
   LEFT JOIN ramActivities ra ON rtr.activityID = ra.activityID

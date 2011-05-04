@@ -19,7 +19,7 @@
         <jetty.servlet.tester.version>6.1.9</jetty.servlet.tester.version>
         <slf4j.version>1.5.8</slf4j.version>
         <picocontainer.version>2.11</picocontainer.version>
-        <appengine.version>1.4.0</appengine.version>
+        <appengine.version>1.4.3</appengine.version>
         <gson.version>1.4</gson.version>
         <objectify.version>2.2.2</objectify.version>
         <persistence.api.version>1.0</persistence.api.version>
