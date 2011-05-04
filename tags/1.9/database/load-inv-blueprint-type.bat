@@ -1,0 +1,1 @@
+appcfg.py upload_data --config_file=python/InvBlueprintTypeLoader.py --filename=data/invBlueprintTypes.csv --kind=InvBlueprintType --batch_size=100 ./python
