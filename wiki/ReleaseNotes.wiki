@@ -3,7 +3,7 @@
 
 = Release notes =
 
-== 2011.04.14, version 1.10 ==
+== 2012.04.14, version 1.10 ==
   * *Migrated to cru16*
   
   * Issue 38: Migrate to cru16
