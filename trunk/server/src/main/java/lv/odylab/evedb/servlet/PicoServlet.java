@@ -9,7 +9,7 @@ import org.picocontainer.MutablePicoContainer;
 import javax.servlet.http.HttpServlet;
 
 public abstract class PicoServlet extends HttpServlet {
-    private static final String DUMP_VERSION = "cru100";
+    private static final String DUMP_VERSION = "cru16";
 
     private static final MutablePicoContainer picoContainer;
 

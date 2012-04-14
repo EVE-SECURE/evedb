@@ -15,7 +15,7 @@ SELECT
   it.capacity,
   it.portionSize,
   it.published,
-  'cru100' dumpVersion
+  'cru16' dumpVersion
 FROM
   invTypes it
   LEFT JOIN invGroups ig ON it.groupID = ig.groupID

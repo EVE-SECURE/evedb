@@ -1,1 +1,1 @@
-python C:\Development\appengine-1.5.5\appcfg.py upload_data --config_file=python/InvTypeLoader.py --filename=data/invTypes.csv --kind=InvType --batch_size=100 --db_filename=bulkloader-progress-20111208.083243.sql3 ./python
+appcfg.py upload_data --config_file=python/InvTypeLoader.py --filename=data/invTypes.csv --kind=InvType --batch_size=100 ./python

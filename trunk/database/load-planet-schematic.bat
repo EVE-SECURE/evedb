@@ -1,1 +1,1 @@
-python C:\Development\appengine-1.5.5\appcfg.py upload_data --config_file=python/PlanetSchematicLoader.py --filename=data/planetSchematics.csv --kind=PlanetSchematic ./python
+appcfg.py upload_data --config_file=python/PlanetSchematicLoader.py --filename=data/planetSchematics.csv --kind=PlanetSchematic ./python
