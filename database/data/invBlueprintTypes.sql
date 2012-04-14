@@ -23,7 +23,7 @@ SELECT
   it_product.portionSize productPortionSize,
   ibt.maxProductionLimit,
   it.published published,
-  'cru100' dumpVersion
+  'cru16' dumpVersion
 FROM
   invBlueprintTypes ibt
   LEFT JOIN (SELECT * FROM invMetaTypes WHERE metaGroupID = 2) imt ON ibt.productTypeID = imt.typeID -- Tech2 metagroup
