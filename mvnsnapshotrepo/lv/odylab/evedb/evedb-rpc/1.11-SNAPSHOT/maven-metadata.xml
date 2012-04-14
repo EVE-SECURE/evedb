@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>lv.odylab.evedb</groupId>
+  <artifactId>evedb-rpc</artifactId>
+  <version>1.11-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20120414.204429</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20120414204429</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.11-20120414.204429-1</value>
+        <updated>20120414204429</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.11-20120414.204429-1</value>
+        <updated>20120414204429</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
