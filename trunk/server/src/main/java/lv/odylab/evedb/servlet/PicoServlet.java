@@ -1,11 +1,6 @@
 package lv.odylab.evedb.servlet;
 
-import lv.odylab.evedb.domain.BlueprintDetailsDao;
-import lv.odylab.evedb.domain.InvBlueprintTypeDao;
-import lv.odylab.evedb.domain.InvTypeDao;
-import lv.odylab.evedb.domain.InvTypeMaterialDao;
-import lv.odylab.evedb.domain.PlanetSchematicDao;
-import lv.odylab.evedb.domain.RamTypeRequirementDao;
+import lv.odylab.evedb.domain.*;
 import lv.odylab.evedb.service.BlueprintDetailsCalculationService;
 import lv.odylab.evedb.service.DtoMapper;
 import org.picocontainer.DefaultPicoContainer;
@@ -14,7 +9,7 @@ import org.picocontainer.MutablePicoContainer;
 import javax.servlet.http.HttpServlet;
 
 public abstract class PicoServlet extends HttpServlet {
-    private static final String DUMP_VERSION = "inc14";
+    private static final String DUMP_VERSION = "cru100";
 
     private static final MutablePicoContainer picoContainer;
 
