@@ -1,6 +1,5 @@
 package lv.odylab.evedb.client;
 
-import lv.odylab.evedb.rpc.dto.*;
 import org.junit.Test;
 
 import java.util.List;
@@ -130,6 +129,6 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testVersion() {
-        assertThat(client.getVersion(), equalTo("1.10-SNAPSHOT-cru16"));
+        assertThat(client.getVersion(), equalTo("1.11-SNAPSHOT-cru16"));
     }
 }

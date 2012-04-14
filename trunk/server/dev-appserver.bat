@@ -1,1 +1,1 @@
-C:\Development\appengine-java-sdk-1.6.4.1\dev_appserver target/evedb-server-1.10-SNAPSHOT
+C:\Development\appengine-java-sdk-1.6.4.1\dev_appserver target/evedb-server-1.11-SNAPSHOT
