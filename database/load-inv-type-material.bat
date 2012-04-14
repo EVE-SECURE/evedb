@@ -1,1 +1,1 @@
-appcfg.py upload_data --config_file=python/InvTypeMaterialLoader.py --filename=data/invTypeMaterials.csv --kind=InvTypeMaterial --batch_size=200 ./python
+python C:\Development\appengine-1.5.5\appcfg.py upload_data --config_file=python/InvTypeMaterialLoader.py --filename=data/invTypeMaterials.csv --kind=InvTypeMaterial --batch_size=100 --db_filename=bulkloader-progress-20111209.223354.sql3 ./python

@@ -1,11 +1,6 @@
 package lv.odylab.evedb.client;
 
-import lv.odylab.evedb.rpc.dto.BlueprintDetailsDto;
-import lv.odylab.evedb.rpc.dto.InvBlueprintTypeDto;
-import lv.odylab.evedb.rpc.dto.InvTypeBasicInfoDto;
-import lv.odylab.evedb.rpc.dto.InvTypeMaterialDto;
-import lv.odylab.evedb.rpc.dto.PlanetSchematicDto;
-import lv.odylab.evedb.rpc.dto.RamTypeRequirementDto;
+import lv.odylab.evedb.rpc.dto.*;
 import org.junit.Test;
 
 import java.util.List;
@@ -14,7 +9,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class EveDbWsClientImplIntegrationTest {
-    private final EveDbWsClient client = new EveDbWsClientImpl("http://inc14.latest.odylab-evedb.appspot.com");
+    private final EveDbWsClient client = new EveDbWsClientImpl("http://cru100.latest.odylab-evedb.appspot.com");
 
     @Test
     public void testGetBaseItemsForTypeID() {
@@ -106,7 +101,7 @@ public class EveDbWsClientImplIntegrationTest {
     }
 
     @Test
-    public void testgetPlanetarySchematicForTypeName() {
+    public void testGetPlanetarySchematicForTypeName() {
         List<PlanetSchematicDto> planetSchematicDtos = client.getPlanetSchematicForTypeName("Rocket Fuel");
         assertThat(planetSchematicDtos.size(), equalTo(2));
     }
@@ -135,6 +130,6 @@ public class EveDbWsClientImplIntegrationTest {
 
     @Test
     public void testVersion() {
-        assertThat(client.getVersion(), equalTo("1.10-SNAPSHOT-inc14"));
+        assertThat(client.getVersion(), equalTo("1.10-SNAPSHOT-cru100"));
     }
 }

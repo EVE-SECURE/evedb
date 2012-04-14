@@ -1,1 +1,1 @@
-appcfg.py upload_data --config_file=python/RamTypeRequirementLoader.py --filename=data/ramTypeRequirements.csv --kind=RamTypeRequirement --batch_size=100 ./python
+python C:\Development\appengine-1.5.5\appcfg.py upload_data --config_file=python/RamTypeRequirementLoader.py --filename=data/ramTypeRequirements.csv --kind=RamTypeRequirement --batch_size=100 --db_filename=bulkloader-progress-20111209.232951.sql3 ./python

@@ -22,7 +22,7 @@ SELECT
   ei_pstm2.iconFile schematicIcon,
   pstm2.quantity requiredQuantity,
   it_pstm2.volume requiredVolume,
-  'inc14' dumpVersion
+  'cru100' dumpVersion
 FROM
   planetSchematics ps
   LEFT JOIN (select * FROM planetSchematicsTypeMap where isInput=0) pstm ON ps.schematicID = pstm.schematicID
