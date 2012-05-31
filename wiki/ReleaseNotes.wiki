@@ -3,6 +3,12 @@
 
 = Release notes =
 
+== 2012.06.01, version 1.11 ==
+  * *Migrated to inf10*
+  
+  * Issue 40: Migrate to inf10
+  * Issue 39: Introduce materialTypeGroupID in InvTypeMaterialDto
+
 == 2012.04.14, version 1.10 ==
   * *Migrated to cru16*
   
