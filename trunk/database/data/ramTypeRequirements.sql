@@ -21,7 +21,10 @@ SELECT
   rtr.quantity,
   rtr.damagePerJob,
   rtr.recycle,
-  'cru16' dumpVersion
+  'inf10' dumpVersion
+INTO OUTFILE 'ramTypeRequirements.sql.result'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
 FROM
   ramTypeRequirements rtr
   LEFT JOIN ramActivities ra ON rtr.activityID = ra.activityID
