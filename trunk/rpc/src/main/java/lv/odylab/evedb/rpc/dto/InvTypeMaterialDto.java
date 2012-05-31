@@ -8,6 +8,7 @@ public class InvTypeMaterialDto implements Serializable {
     private Long materialTypeID;
     private String materialTypeName;
     private Long materialTypeCategoryID;
+    private Long materialTypeGroupID;
     private String materialTypeIcon;
     private String materialVolume;
     private Long quantity;
@@ -34,6 +35,14 @@ public class InvTypeMaterialDto implements Serializable {
 
     public void setMaterialTypeCategoryID(Long materialTypeCategoryID) {
         this.materialTypeCategoryID = materialTypeCategoryID;
+    }
+
+    public Long getMaterialTypeGroupID() {
+        return materialTypeGroupID;
+    }
+
+    public void setMaterialTypeGroupID(Long materialTypeGroupID) {
+        this.materialTypeGroupID = materialTypeGroupID;
     }
 
     public String getMaterialTypeIcon() {
