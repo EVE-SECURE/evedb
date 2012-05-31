@@ -23,7 +23,10 @@ SELECT
   it_product.portionSize productPortionSize,
   ibt.maxProductionLimit,
   it.published published,
-  'cru16' dumpVersion
+  'inf10' dumpVersion
+INTO OUTFILE 'invBlueprintTypes.sql.result'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
 FROM
   invBlueprintTypes ibt
   LEFT JOIN (SELECT * FROM invMetaTypes WHERE metaGroupID = 2) imt ON ibt.productTypeID = imt.typeID -- Tech2 metagroup

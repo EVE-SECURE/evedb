@@ -17,7 +17,10 @@ SELECT
   ic_material.categoryName materialTypeCategoryName,
   it_material.volume materialVolume,
   itm.quantity,
-  'cru16' dumpVersion
+  'inf10' dumpVersion
+INTO OUTFILE 'invTypeMaterials.sql.result'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
 FROM
   invTypeMaterials itm
   LEFT JOIN invTypes it ON itm.typeID = it.typeID

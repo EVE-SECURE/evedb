@@ -22,7 +22,10 @@ SELECT
   ei_pstm2.iconFile schematicIcon,
   pstm2.quantity requiredQuantity,
   it_pstm2.volume requiredVolume,
-  'cru16' dumpVersion
+  'inf10' dumpVersion
+INTO OUTFILE 'planetSchematics.sql.result'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
 FROM
   planetSchematics ps
   LEFT JOIN (select * FROM planetSchematicsTypeMap where isInput=0) pstm ON ps.schematicID = pstm.schematicID

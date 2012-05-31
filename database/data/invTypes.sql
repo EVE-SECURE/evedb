@@ -15,7 +15,10 @@ SELECT
   it.capacity,
   it.portionSize,
   it.published,
-  'cru16' dumpVersion
+  'inf10' dumpVersion
+INTO OUTFILE 'invTypes.sql.result'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
 FROM
   invTypes it
   LEFT JOIN invGroups ig ON it.groupID = ig.groupID
