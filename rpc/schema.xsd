@@ -71,6 +71,7 @@
     <xs:complexType name="invTypeMaterialDto">
         <xs:sequence>
             <xs:element name="materialTypeCategoryID" type="xs:long" minOccurs="0"/>
+            <xs:element name="materialTypeGroupID" type="xs:long" minOccurs="0"/>
             <xs:element name="materialTypeID" type="xs:long" minOccurs="0"/>
             <xs:element name="materialTypeIcon" type="xs:string" minOccurs="0"/>
             <xs:element name="materialTypeName" type="xs:string" minOccurs="0"/>

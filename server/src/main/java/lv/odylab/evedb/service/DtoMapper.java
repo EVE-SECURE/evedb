@@ -24,6 +24,7 @@ public class DtoMapper {
         invTypeMaterialDto.setMaterialTypeID(invTypeMaterial.getMaterialTypeID());
         invTypeMaterialDto.setMaterialTypeName(invTypeMaterial.getMaterialTypeName());
         invTypeMaterialDto.setMaterialTypeCategoryID(invTypeMaterial.getMaterialTypeCategoryID());
+        invTypeMaterialDto.setMaterialTypeGroupID(invTypeMaterial.getMaterialTypeGroupID());
         invTypeMaterialDto.setMaterialTypeIcon(invTypeMaterial.getMaterialTypeIcon());
         invTypeMaterialDto.setQuantity(invTypeMaterial.getQuantity());
         invTypeMaterialDto.setMaterialVolume(BigDecimal.valueOf(invTypeMaterial.getMaterialVolume()).toPlainString());
